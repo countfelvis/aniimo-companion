@@ -43,7 +43,7 @@ const icon='<svg viewBox="0 0 100 100" fill="none" stroke="#929ba8" stroke-width
 const sparklingOptions=["Basic","I","II","III","IV","V","VI","VII","VIII","IX","X","Dazzling","Shadow"];
 // Built-in artwork manifest: add verified, licensed images as assets/<name>/<variant>.webp
 // A missing asset falls back gracefully; no fabricated image URLs are used.
-const artManifest={"Scorchhowl":{"Basic":"assets/scorchhowl/Basic.webp","I":"assets/scorchhowl/I.webp","II":"assets/scorchhowl/II.webp","III":"assets/scorchhowl/III.webp","IV":"assets/scorchhowl/IV.webp","V":"assets/scorchhowl/V.webp","VI":"assets/scorchhowl/VI.webp","VII":"assets/scorchhowl/VII.webp","VIII":"assets/scorchhowl/VIII.webp","IX":"assets/scorchhowl/IX.webp","X":"assets/scorchhowl/X.webp","Dazzling":"assets/scorchhowl/Dazzling.webp","Shadow":"assets/scorchhowl/Shadow.webp"}};
+const artManifest={"Scorchhowl":{"Basic":"assets/Scorchhowl/Basic.webp","I":"assets/Scorchhowl/I.webp","II":"assets/Scorchhowl/II.webp","III":"assets/Scorchhowl/III.webp","IV":"assets/Scorchhowl/IV.webp","V":"assets/Scorchhowl/V.webp","VI":"assets/Scorchhowl/VI.webp","VII":"assets/Scorchhowl/VII.webp","VIII":"assets/Scorchhowl/VIII.webp","IX":"assets/Scorchhowl/IX.webp","X":"assets/Scorchhowl/X.webp","Dazzling":"assets/Scorchhowl/Dazzling.webp","Shadow":"assets/Scorchhowl/Shadow.webp"}};
 const builtInArt=(c,v)=>artManifest[c.name]?.[v]||"";
 const artFor=(c,v)=>appearanceOf(c).images?.[v]||builtInArt(c,v);
 const appearanceOf=c=>c.appearance&&typeof c.appearance==="object"?c.appearance:{};
