@@ -283,7 +283,7 @@ const opt=ready?optimizeBuild(b,b.optimizerMode||"optimal"):null;
 const preview=opt&&!opt.error?(()=>{const noChange=opt.moves.every(v=>v===0);const pct=points>0?Math.max(0,Math.min(100,100*opt.spent/points)):0;return `<div class="reco-result"><div class="reco-status"><span class="reco-status-icon">${noChange?"✓":"↗"}</span><div><strong>${noChange?"No changes recommended":"Suggested allocation"}</strong><div class="hint">${noChange?"Your current allocation already matches this modeled recommendation; remaining points do not reach another useful ×4 threshold.":"A provisional plan for your available Awakening points."}</div></div></div><div class="reco-budget"><div><strong>${opt.spent} / ${points}</strong><small>Points allocated</small></div><div class="reco-unspent"><strong>${opt.unused}</strong><small>Unspent</small></div></div><div class="reco-progress"><i style="width:${pct}%"></i></div><div class="reco-list-title"><strong>${noChange?"Current build":"Upgrades to make"}</strong><span>Current → Target</span></div><div class="reco-list">${attrs.map((attr,i)=>{const change=opt.moves[i],current=potential(b,i),target=current===null?null:current+change;if(change===0)return "";return `<div class="reco-line"><span>${esc(attr)}${rec.has(i)?" <em>👍</em>":""}</span><span class="reco-numbers">${current===null?"—":current} <span>→</span> ${target===null?"—":target} <b class="changed">+${change}</b></span></div>`}).join("")}${noChange?'<p class="reco-empty">All current capability thresholds are already covered by this plan.</p>':""}</div><details class="reco-all"><summary>Show all six capabilities</summary><div class="reco-list">${attrs.map((attr,i)=>{const change=opt.moves[i],current=potential(b,i),target=current===null?null:current+change;return `<div class="reco-line"><span>${esc(attr)}${rec.has(i)?" <em>👍</em>":""}</span><span class="reco-numbers">${current===null?"—":current} <span>→</span> ${target===null?"—":target} <b class="${change===0?"unchanged":"changed"}">${change===0?"✓":`+${change}`}</b></span></div>`}).join("")}</div></details><details class="reco-explain"><summary>How was this calculated?</summary><p class="hint">This provisional model prioritizes reachable multiples-of-four, giving higher weights to 👍 attributes. Innate plus acquired potential cannot exceed the modeled cap of 20; bonus potential is counted separately. Nonpreferred stats may still receive points. Unreachable thresholds can leave points unused. This is not verified combat-optimal guidance.</p></details></div>`})():"";
 return `<div class="row planner-head"><h2>${esc(name)} · Build</h2><button class="btn" onclick="closeDialog()">✕</button></div>
 <div class="planner-hero"><div><span class="mini-label">AWAKENING POINTS AVAILABLE</span><div class="points-number">${r===null?"—":r}<small> / ${points===null?"—":points}</small></div><div class="hint">${points===null?"Enter level and stars":used?used+" points spent":"No points allocated yet"}</div></div><span class="planner-rank">${b.level?"Lv. "+b.level:"Level ?"} · ${b.stars?b.stars+" ★":"Stars ?"}</span></div>
-<section class="shot-import"><h3>📷 Import build from screenshot</h3><p>Upload your Capability Awakening screenshot, review the detected values, then confirm once. Already spent points? You can add the acquired breakdown below.</p><label class="btn primary">Choose screenshot<input type="file" id="buildShotFile" accept="image/*" style="display:none"></label><div id="shotReview" class="shot-review"><img id="buildShotPreview" class="shot-preview" alt="Your selected screenshot"><div class="shot-notice" id="shotImportNote">Confirm the numbers against your screenshot. Scanning your screenshot…</div><p class="hint" style="margin:8px 0">Star rank is matched against verified emblem shapes when available. Currently the 5★ emblem has a reference; other ranks must be confirmed manually.</p><div class="shot-meta"><label>Stars<select id="shotStars" class="input"><option value="">Unknown</option>${[1,2,3,4,5,6,7].map(n=>`<option value="${n}" ${b.stars===n?"selected":""}>${n} ★</option>`).join("")}</select></label><label>Level<input id="shotLevel" class="input" type="number" min="1" max="70" placeholder="1–70"></label><label>Points spent<input id="shotSpent" class="input" type="number" min="0" placeholder="e.g. 0"></label></div><p style="margin:12px 0 4px"><strong>Base capability values (large circle numbers)</strong></p><div class="shot-fields">${attrs.map((a,i)=>`<label>${esc(a)}<input class="input" data-shotstat="${i}" type="number" min="0" max="99" placeholder="—"></label>`).join("")}</div><p style="margin:10px 0 4px"><strong>Bonus capability points (blue indicators)</strong></p><p class="hint">The scanner checks the small cyan +N labels inside each circle. Missing or uncertain numbers remain blank for manual confirmation; blank does not mean zero.</p><div id="bonusSource" class="hint" role="status" style="margin:8px 0"></div><div id="shotEffective" class="hint" style="margin:8px 0">Effective totals: enter or verify bonuses to preview.</div><div class="shot-fields">${attrs.map((a,i)=>`<label>${esc(a)} bonus<input class="input" data-shotbonus="${i}" type="number" min="0" max="30" placeholder="—"></label>`).join("")}</div><p style="margin:10px 0 4px"><strong>👍 Preferred capabilities</strong></p><div class="shot-reco">${attrs.map((a,i)=>`<label><input type="checkbox" data-shotfav="${i}" ${(b.recommended||[]).includes(i)?"checked":""}>${esc(a)}</label>`).join("")}</div><div id="spentImport" class="spent-import" hidden><strong>Already awakened? Confirm the acquired points</strong><p class="hint">The six circles show base values, but they do not separate innate from acquired. Add a second screenshot of an attribute's detail screen for reference, then enter each acquired amount. Nothing is guessed or overwritten until you confirm.</p><label class="btn" style="display:inline-block">Add detail screenshot (optional)<input id="detailShotFile" type="file" accept="image/*" hidden></label><img id="detailShotPreview" class="shot-preview" style="display:none;margin-top:10px" alt="Awakening attribute details"><div class="shot-fields">${attrs.map((a,i)=>`<label>${esc(a)} acquired<input class="input" data-shotacquired="${i}" type="number" min="0" max="20" placeholder="—"></label>`).join("")}</div><p id="spentCheck" class="hint">All six acquired values are required when points have been spent.</p></div><div class="shot-actions"><button type="button" class="btn primary" id="applyScreenshot">Confirm &amp; save build</button><button type="button" class="btn" id="discardScreenshot">Cancel</button></div><p class="hint" style="margin-top:10px">Review every value before saving. The scanner will not invent bonus values. Base values inside circles do not include bonuses.</p></div></section>
+<section class="shot-import"><h3>📷 Import build from screenshot</h3><p>Upload your Capability Awakening screenshot, review the detected values, then confirm once. Already spent points? You can add the acquired breakdown below.</p><label class="btn primary">Choose screenshot<input type="file" id="buildShotFile" accept="image/*" style="display:none"></label><div id="shotReview" class="shot-review"><img id="buildShotPreview" class="shot-preview" alt="Your selected screenshot"><div class="shot-notice" id="shotImportNote">Confirm the numbers against your screenshot. Scanning your screenshot…</div><p class="hint" style="margin:8px 0">Star rank is matched against verified emblem shapes when available. A five-star emblem reference is available, but unverified matches must be confirmed manually.</p><div class="shot-meta"><label>Stars<select id="shotStars" class="input"><option value="">Unknown</option>${[1,2,3,4,5,6,7].map(n=>`<option value="${n}" ${b.stars===n?"selected":""}>${n} ★</option>`).join("")}</select></label><label>Level<input id="shotLevel" class="input" type="number" min="1" max="70" placeholder="1–70"></label><label>Points spent<input id="shotSpent" class="input" type="number" min="0" placeholder="e.g. 0"></label></div><p style="margin:12px 0 4px"><strong>Base capability values (large circle numbers)</strong></p><div class="shot-fields">${attrs.map((a,i)=>`<label>${esc(a)}<input class="input" data-shotstat="${i}" type="number" min="0" max="99" placeholder="—"></label>`).join("")}</div><p style="margin:10px 0 4px"><strong>Bonus capability points (blue indicators)</strong></p><p class="hint">The scanner checks the small cyan +N labels inside each circle. Missing or uncertain numbers remain blank for manual confirmation; blank does not mean zero.</p><div id="bonusSource" class="hint" role="status" style="margin:8px 0"></div><div id="shotEffective" class="hint" style="margin:8px 0">Effective totals: enter or verify bonuses to preview.</div><div class="shot-fields">${attrs.map((a,i)=>`<label>${esc(a)} bonus<input class="input" data-shotbonus="${i}" type="number" min="0" max="30" placeholder="—"></label>`).join("")}</div><p style="margin:10px 0 4px"><strong>👍 Preferred capabilities</strong></p><div class="shot-reco">${attrs.map((a,i)=>`<label><input type="checkbox" data-shotfav="${i}" ${(b.recommended||[]).includes(i)?"checked":""}>${esc(a)}</label>`).join("")}</div><div id="spentImport" class="spent-import" hidden><strong>Already awakened? Confirm the acquired points</strong><p class="hint">The six circles show base values, but they do not separate innate from acquired. Add a second screenshot of an attribute's detail screen for reference, then enter each acquired amount. Nothing is guessed or overwritten until you confirm.</p><label class="btn" style="display:inline-block">Add detail screenshot (optional)<input id="detailShotFile" type="file" accept="image/*" hidden></label><img id="detailShotPreview" class="shot-preview" style="display:none;margin-top:10px" alt="Awakening attribute details"><div class="shot-fields">${attrs.map((a,i)=>`<label>${esc(a)} acquired<input class="input" data-shotacquired="${i}" type="number" min="0" max="20" placeholder="—"></label>`).join("")}</div><p id="spentCheck" class="hint">All six acquired values are required when points have been spent.</p></div><div class="shot-actions"><button type="button" class="btn primary" id="applyScreenshot">Confirm &amp; save build</button><button type="button" class="btn" id="discardScreenshot">Cancel</button></div><p class="hint" style="margin-top:10px">Review every value before saving. The scanner will not invent bonus values. Base values inside circles do not include bonuses.</p></div></section>
 <div class="cap-heading"><strong>Your capabilities</strong><span class="hint">Effective totals · 👍 preferred</span></div><div class="cap-grid">${tiles}</div>
 <div class="planner-reco"><div class="mode-heading"><strong>Optimization mode</strong><span class="hint">Choose how to plan</span></div><div class="mode-switch"><button type="button" class="mode-option ${(b.optimizerMode||"optimal")==="optimal"?"active":""}" data-optmode="optimal">Optimize everything<small>May reset points</small></button><button type="button" class="mode-option ${b.optimizerMode==="preserve"?"active":""}" data-optmode="preserve">Keep current build<small>No reset</small></button></div><p class="hint">${!known?"Import a screenshot or enter six innate values manually.":points===null?"Import a screenshot or enter your level and stars.":!rec.size?"Select recommended 👍 capabilities.":unassignedSpent(b)>0?"Reconcile spent points first.":opt?.error?esc(opt.error):""}</p>${preview}</div>
 <details class="planner-advanced" id="buildEditor"><summary>✎ Manual adjustments (optional) <span>For bonuses, Capafruit or corrections</span></summary><div class="planner-editor"><div class="toolbar"><label style="flex:1">Stars<select id="bStars"><option value="">Unknown</option>${[1,2,3,4,5,6,7].map(n=>`<option value="${n}" ${String(b.stars)===String(n)?"selected":""}>${n} ★</option>`).join("")}</select></label><label style="flex:1">Level<input class="input" id="bLevel" type="number" min="1" max="999" value="${b.level??""}" placeholder="Level"></label></div>
@@ -387,8 +387,8 @@ function detectVerifiedStarEmblem(img){
  const c=document.createElement('canvas');c.width=32;c.height=32;
  const ctx=c.getContext('2d',{willReadFrequently:true});
  let best=0;
- for(let dx=-.008;dx<=.0081;dx+=.002){for(let dy=-.012;dy<=.0121;dy+=.003){
-  const x=W*(.740+dx)-W*.0104,y=H*(.209+dy)-H*.0226;
+ for(let dx=-.020;dx<=.0201;dx+=.002){for(let dy=-.019;dy<=.0191;dy+=.003){
+  const x=W*(.752+dx)-W*.0104,y=H*(.209+dy)-H*.0226;
   ctx.clearRect(0,0,32,32);ctx.drawImage(img,x,y,W*.0208,H*.0453,0,0,32,32);
   const data=ctx.getImageData(0,0,32,32).data;
   let intersection=0,union=0,observed=0;
@@ -435,22 +435,36 @@ function detectAniimoStars(img){
 // If none is visible, return null instead of reusing stale values or assuming 0.
 // Read the small cyan +N INSIDE the top edge of each capability circle.
 // The large white number below it is the base value; they must not be conflated.
+function cyanBonusCrop(img,x,y,w,h){
+ const W=img.naturalWidth,H=img.naturalHeight;
+ const sx=Math.max(0,Math.floor(x*W)),sy=Math.max(0,Math.floor(y*H));
+ const sw=Math.min(W-sx,Math.ceil(w*W)),sh=Math.min(H-sy,Math.ceil(h*H));
+ const c=document.createElement('canvas');c.width=Math.max(160,sw*7);c.height=Math.max(80,sh*7);
+ const ctx=c.getContext('2d',{willReadFrequently:true});ctx.drawImage(img,sx,sy,sw,sh,0,0,c.width,c.height);
+ const data=ctx.getImageData(0,0,c.width,c.height);let colored=0;
+ for(let i=0;i<data.data.length;i+=4){
+  const r=data.data[i],g=data.data[i+1],b=data.data[i+2];
+  const cyan=g>130&&b>150&&b>r*1.13&&g>r*1.12&&Math.abs(g-b)<95;
+  if(cyan)colored++;
+  const v=cyan?0:255;data.data[i]=data.data[i+1]=data.data[i+2]=v;
+ }
+ ctx.putImageData(data,0,0);return {canvas:c,colored};
+}
 async function scanVisibleBonuses(img,worker){
  const centers=[[.209,.463],[.521,.694],[.557,.462],[.293,.601],[.629,.611],[.282,.374]];
  const output=[];
  await worker.setParameters({tessedit_char_whitelist:"+0123456789",tessedit_pageseg_mode:"7"});
  for(const [cx,cy] of centers){
   const votes=[];
-  // Blue bonus text is at roughly y=center-.037, centered horizontally.
-  // Crop tightly so the large base numeral cannot be mistaken for a bonus.
-  for(const [dx,dy,w,h] of [[-.016,-.064,.032,.040],[-.019,-.070,.038,.047]]){
-   for(const threshold of [null,105,150]){
-    const crop=aniimoCrop(img,cx+dx,cy+dy,w,h,threshold);
-    const result=await worker.recognize(crop);
-    const raw=(result.data.text||"").replace(/\s/g,"");
-    const match=raw.match(/\+(\d{1,2})(?!\d)/);
-    if(match&&Number(match[1])>=1&&Number(match[1])<=20)votes.push(Number(match[1]));
-   }
+  // Cyan numerals are above the large white base values, INSIDE each circle.
+  // Isolating cyan prevents the base number from contaminating OCR.
+  for(const [dx,dy,w,h] of [[-.012,-.054,.024,.036],[-.016,-.060,.032,.045],[-.013,-.048,.026,.030]]){
+   const {canvas,colored}=cyanBonusCrop(img,cx+dx,cy+dy,w,h);
+   if(colored<12)continue;
+   const result=await worker.recognize(canvas);
+   const raw=(result.data.text||"").replace(/\s/g,"");
+   const match=raw.match(/\+?(\d{1,2})/);
+   if(match&&Number(match[1])>=1&&Number(match[1])<=9)votes.push(Number(match[1]));
   }
   const counts=new Map();for(const v of votes)counts.set(v,(counts.get(v)||0)+1);
   const best=[...counts].sort((a,b)=>b[1]-a[1])[0];
@@ -458,6 +472,7 @@ async function scanVisibleBonuses(img,worker){
  }
  return output;
 }
+
 async function scanAniimoScreenshot(img,progress){
  const ratio=img.naturalWidth/img.naturalHeight;
  if(ratio<1.7||ratio>2.5)throw Error("Use a full landscape Capability Awakening screenshot (not a cropped portrait)");
@@ -528,7 +543,7 @@ function setupBuildScreenshot(name){
   if(hasSavedBonus){
    review.querySelectorAll("[data-shotbonus]").forEach((el,i)=>el.value=savedBonuses[i]);
    $("bonusSource").textContent="Previously saved bonuses loaded for review (NOT detected from this screenshot). Confirm all six before saving.";
-  }else{$("bonusSource").textContent="No verified saved bonuses found. Upload attribute detail screens or enter the six bonus amounts manually; the overview alone does not show them.";}
+  }else{$("bonusSource").textContent="No verified saved bonuses found. Upload attribute detail screens or enter the six bonus amounts manually; the scanner could not read them confidently.";}
 
   try{
    note.textContent="Loading on-device OCR (first use requires internet)…";
