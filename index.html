@@ -137,7 +137,7 @@
 @media(max-width:390px){.shot-star-reference{width:60px;flex-basis:60px}.shot-star-reference canvas{width:60px;height:60px}}
 .spent-import{padding:9px 11px;margin:9px 0}.spent-import p{margin:3px 0;font-size:11px}.shot-stat-card{gap:6px}
 
-/* v0.64: compact original-image reference and cleaner import header */
+/* v0.68: compact original-image reference and cleaner import header */
 .shot-import{padding:15px!important}
 .shot-import>h3{margin:0 0 5px;font-size:19px}
 .shot-import>p{margin:0 0 12px;color:#b9c9c3;font-size:13px;line-height:1.35}
@@ -149,7 +149,31 @@
 .shot-selected-preview img{display:block;width:100%;height:auto;max-height:210px;object-fit:contain;border-radius:8px;background:#141e21}
 .shot-star-picker{margin:10px 0 12px;padding:12px}
 .shot-star-heading .hint{font-size:12px;line-height:1.35}
-</style></head><body><header><div><small>ANIIMO COMPANION · LOCAL PROTOTYPE v0.64</small><h1>My Collection</h1></div><span class="pill">Guest mode</span></header><nav class="tabs" id="tabs"><button data-tab="collection" class="active">◈ Collection</button><button data-tab="items">▣ Items</button><button data-tab="upgrades">⇄ Upgrades</button><button data-tab="settings">⚙ Settings</button></nav><main class="shell"><section id="collection"><div class="stats" id="stats"></div><div class="bar"><div id="progress"></div></div><div class="toolbar"><input class="input" id="search" placeholder="Search Prismana…"><select id="filter"><option value="all">All statuses</option><option value="complete">Complete</option><option value="progress">In progress</option><option value="none">Not caught</option></select></div><div class="grid" id="creatures"></div></section><section id="items" class="hide"><h2>Held-item inventory</h2><p class="muted">Total owned includes bound copies. Available = total − bound.</p><input id="itemsearch" class="input" style="width:100%" placeholder="Search held items…"><div id="itemlist"></div></section><section id="upgrades" class="hide"><h2>Build & upgrade review</h2><div class="panel"><h3>Keep your current builds</h3><p class="muted">Existing assignments are preserved. New items are listed for research, but the prototype does not claim they are upgrades without verified effects and build comparisons.</p></div><div class="panel"><h3>New items to evaluate</h3><div id="newitems"></div></div><div class="panel"><h3>Needs binding</h3><div id="needs"></div></div></section><section id="settings" class="hide"><h2>Settings</h2><div class="panel"><h3>Import & export</h3><p class="hint">Build-tab screenshot scanning uses on-device OCR for landscape Capability Awakening images. Review all detected values before saving; images are not uploaded to our server.</p><input id="screens" type="file" accept="image/*" multiple class="input" style="width:100%"><div id="shotlist"></div><div class="toolbar"><button class="btn" id="bulk">Bulk select caught Prismana</button><button class="btn" id="export">Export JSON backup</button><label class="btn" style="cursor:pointer">Import JSON backup<input id="restore" type="file" accept=".json,application/json" hidden></label></div></div><div class="panel"><h3>Storage & privacy</h3><p class="hint">Your edits auto-save in this browser using local storage. Clearing site data may erase them. Export a backup regularly. Accounts, cloud sync, and automated game-data updates are not available. OCR downloads its recognition engine on first use.</p><button class="btn" id="reset">Reset to sample collection</button></div><div class="panel"><h3>Artwork</h3><p class="hint">Choose each Prismana’s Sparkling color in its Appearance tab. Paste a direct image URL or select a saved image from your device. The appearance gallery supports built-in images through the art manifest, plus personal overrides. Scorchhowl includes 13 built-in appearances. Held-item artwork includes 27 screenshot-sourced icons; newly cataloged items start at zero owned until you update inventory. Other Prismana appearances are awaiting artwork.</p></div></section></main><div id="modal" class="modal hide"><div class="dialog" id="dialog"></div></div><script>
+
+/* v0.68: refined scanner introduction and compact reference hierarchy */
+.shot-import{padding:15px!important;border:1px solid #49665a!important;border-radius:22px!important;background:linear-gradient(165deg,#293c36 0%,#26342f 55%,#252f31 100%)!important;box-shadow:0 14px 38px rgba(0,0,0,.12)}
+.shot-import-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:3px 2px 13px;border-bottom:1px solid rgba(170,204,184,.16)}
+.shot-import-top h3{margin:3px 0 3px!important;font-size:20px!important;letter-spacing:-.45px}
+.shot-import-top p{margin:0!important;color:#aebeb6!important;font-size:12px!important;max-width:240px}
+.shot-eyebrow,.shot-step{font-size:10px;letter-spacing:1.7px;font-weight:750;color:#a5d3bc}
+.shot-upload-button{white-space:nowrap;flex-shrink:0;font-size:12px!important;padding:11px 13px!important;border-radius:12px!important;box-shadow:0 3px 12px rgba(0,0,0,.13)}
+.shot-review{margin-top:12px}
+.shot-selected-preview{margin:0 0 10px!important;padding:9px!important;border-radius:15px!important;background:#1e2d2a!important;border:1px solid #47675b!important}
+.shot-selected-head{margin:0 2px 8px!important}.shot-selected-head strong{font-size:12px!important}.shot-selected-head span{font-size:10px!important;color:#b6c9c0!important}
+.shot-local-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#9bd4b5;margin-right:3px;vertical-align:middle}
+.shot-selected-preview img{max-height:195px!important;border-radius:10px!important;box-shadow:0 2px 9px rgba(0,0,0,.15)}
+.shot-star-picker{margin:0 0 12px!important;padding:12px!important;border-radius:15px!important;background:rgba(20,39,34,.62)!important;border:1px solid #547768!important}
+.shot-star-heading{align-items:center!important;gap:10px!important;margin-bottom:11px}
+.shot-star-heading strong{display:block;font-size:17px!important;margin:3px 0 0;letter-spacing:-.2px}
+.shot-star-heading .hint{margin:4px 0 0!important;color:#b5c8be!important;font-size:11px!important}
+.shot-star-reference{width:66px!important;flex-basis:66px!important;gap:2px!important}
+.shot-star-reference canvas{width:66px!important;height:66px!important;border:2px solid #a1cdb7!important;box-shadow:0 0 0 3px rgba(149,204,173,.09)}
+.shot-star-reference small{font-size:9px!important}
+.star-options{gap:5px!important}.star-options span{height:49px!important;border-radius:10px!important;font-size:18px!important}
+.star-options small{font-size:12px!important}
+@media(max-width:390px){.shot-import-top{gap:7px}.shot-upload-button{padding:10px 8px!important;font-size:11px!important}.shot-import-top h3{font-size:18px!important}.shot-star-reference{width:60px!important;flex-basis:60px!important}.shot-star-reference canvas{width:60px!important;height:60px!important}}
+.progression-quick{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#263b35;border:1px solid #557467;border-radius:17px;padding:15px;margin:14px 0}.progression-quick strong{color:#e4f1e9;font-size:15px}.progression-quick p{color:#bacdc4;font-size:12px;line-height:1.5;margin:5px 0 0}.progression-quick button{white-space:nowrap}@media(max-width:480px){.progression-quick{align-items:stretch;flex-direction:column}.progression-quick button{width:100%}}
+</style></head><body><header><div><small>ANIIMO COMPANION · LOCAL PROTOTYPE v0.68</small><h1>My Collection</h1></div><span class="pill">Guest mode</span></header><nav class="tabs" id="tabs"><button data-tab="collection" class="active">◈ Collection</button><button data-tab="items">▣ Items</button><button data-tab="upgrades">⇄ Upgrades</button><button data-tab="settings">⚙ Settings</button></nav><main class="shell"><section id="collection"><div class="stats" id="stats"></div><div class="bar"><div id="progress"></div></div><div class="toolbar"><input class="input" id="search" placeholder="Search Prismana…"><select id="filter"><option value="all">All statuses</option><option value="complete">Complete</option><option value="progress">In progress</option><option value="none">Not caught</option></select></div><div class="grid" id="creatures"></div></section><section id="items" class="hide"><h2>Held-item inventory</h2><p class="muted">Total owned includes bound copies. Available = total − bound.</p><input id="itemsearch" class="input" style="width:100%" placeholder="Search held items…"><div id="itemlist"></div></section><section id="upgrades" class="hide"><h2>Build & upgrade review</h2><div class="panel"><h3>Keep your current builds</h3><p class="muted">Existing assignments are preserved. New items are listed for research, but the prototype does not claim they are upgrades without verified effects and build comparisons.</p></div><div class="panel"><h3>New items to evaluate</h3><div id="newitems"></div></div><div class="panel"><h3>Needs binding</h3><div id="needs"></div></div></section><section id="settings" class="hide"><h2>Settings</h2><div class="panel"><h3>Import & export</h3><p class="hint">Build-tab screenshot scanning uses on-device OCR for landscape Capability Awakening images. Review all detected values before saving; images are not uploaded to our server.</p><input id="screens" type="file" accept="image/*" multiple class="input" style="width:100%"><div id="shotlist"></div><div class="toolbar"><button class="btn" id="bulk">Bulk select caught Prismana</button><button class="btn" id="export">Export JSON backup</button><label class="btn" style="cursor:pointer">Import JSON backup<input id="restore" type="file" accept=".json,application/json" hidden></label></div></div><div class="panel"><h3>Storage & privacy</h3><p class="hint">Your edits auto-save in this browser using local storage. Clearing site data may erase them. Export a backup regularly. Accounts, cloud sync, and automated game-data updates are not available. OCR downloads its recognition engine on first use.</p><button class="btn" id="reset">Reset to sample collection</button></div><div class="panel"><h3>Artwork</h3><p class="hint">Choose each Prismana’s Sparkling color in its Appearance tab. Paste a direct image URL or select a saved image from your device. The appearance gallery supports built-in images through the art manifest, plus personal overrides. Scorchhowl includes 13 built-in appearances. Held-item artwork includes 27 screenshot-sourced icons; newly cataloged items start at zero owned until you update inventory. Other Prismana appearances are awaiting artwork.</p></div></section></main><div id="modal" class="modal hide"><div class="dialog" id="dialog"></div></div><script>
 const base=[
 ["Scorchhowl","Explosive Gauntlet",1],["Stellarys","Ferocious Fang",1],["Infergon","Ferocious Fang",1],["Hexxin","Spirited Feather",1],["Somniwing","Spirited Feather",1],["Glacy","Miraculous Fleece",1],["Sparkelf","Miraculous Fleece",1],["Blazen","Gargantuan Horn",1],["Magmarex","Gargantuan Horn",1],["Panpanta","Gargantuan Horn",1],["Inferlupa","Gargantuan Horn",1],["Fenmane","Fission Needle",1],["Fulmintis","Heartseeker Pendant",1],["Glynsera","Heartseeker Pendant",1],["Irisalis","Floral Rainbow Feather",1],["Sherro","Capacitous Battery",1],["Thornblade","Fission Needle",0],["Ignitis","Ferocious Fang",0],["Grizbo","Fission Needle",0],["Pawney","Capacitous Battery",0],["Melloblum","Auspicious Bell",0],["Turbo","Heritage Amulet",0],["Luminelle","Spirited Feather",0],["Coronet","Ferocious Fang",0],["Waleetle","Ferocious Fang",0],["Irisal","Ferocious Fang",0]];
 const additions=["Whirlbite","Gachapus","Jabster","Sugartini","Pouchwisp","Royalby","Jeburst","Glameep","Hypnyto","Ekrim"];
@@ -347,8 +371,9 @@ const opt=ready?optimizeBuild(b,b.optimizerMode||"optimal"):null;
 const preview=opt&&!opt.error?(()=>{const noChange=opt.moves.every(v=>v===0);const pct=points>0?Math.max(0,Math.min(100,100*opt.spent/points)):0;return `<div class="reco-result"><div class="reco-status"><span class="reco-status-icon">${noChange?"✓":"↗"}</span><div><strong>${noChange?"No changes recommended":"Suggested allocation"}</strong><div class="hint">${noChange?"Your current allocation already matches this modeled recommendation; remaining points do not reach another useful ×4 threshold.":"A provisional plan for your available Awakening points."}</div></div></div><div class="reco-budget"><div><strong>${opt.spent} / ${points}</strong><small>Points allocated</small></div><div class="reco-unspent"><strong>${opt.unused}</strong><small>Unspent</small></div></div><div class="reco-progress"><i style="width:${pct}%"></i></div><div class="reco-list-title"><strong>${noChange?"Current build":"Upgrades to make"}</strong><span>Current → Target</span></div><div class="reco-list">${attrs.map((attr,i)=>{const change=opt.moves[i],current=potential(b,i),target=current===null?null:current+change;if(change===0)return "";return `<div class="reco-line"><span>${esc(attr)}${rec.has(i)?" <em>👍</em>":""}</span><span class="reco-numbers">${current===null?"—":current} <span>→</span> ${target===null?"—":target} <b class="changed">+${change}</b></span></div>`}).join("")}${noChange?'<p class="reco-empty">All current capability thresholds are already covered by this plan.</p>':""}</div><details class="reco-all"><summary>Show all six capabilities</summary><div class="reco-list">${attrs.map((attr,i)=>{const change=opt.moves[i],current=potential(b,i),target=current===null?null:current+change;return `<div class="reco-line"><span>${esc(attr)}${rec.has(i)?" <em>👍</em>":""}</span><span class="reco-numbers">${current===null?"—":current} <span>→</span> ${target===null?"—":target} <b class="${change===0?"unchanged":"changed"}">${change===0?"✓":`+${change}`}</b></span></div>`}).join("")}</div></details><details class="reco-explain"><summary>How was this calculated?</summary><p class="hint">This provisional model prioritizes reachable multiples-of-four, giving higher weights to 👍 attributes. Innate plus acquired potential cannot exceed the modeled cap of 20; bonus potential is counted separately. Nonpreferred stats may still receive points. Unreachable thresholds can leave points unused. This is not verified combat-optimal guidance.</p></details></div>`})():"";
 return `<div class="row planner-head"><h2>${esc(name)} · Build</h2><button class="btn" onclick="closeDialog()">✕</button></div>
 <div class="planner-hero"><div><span class="mini-label">AWAKENING POINTS AVAILABLE</span><div class="points-number">${r===null?"—":r}<small> / ${points===null?"—":points}</small></div><div class="hint">${points===null?"Enter level and stars":used?used+" points spent":"No points allocated yet"}</div></div><span class="planner-rank">${b.level?"Lv. "+b.level:"Level ?"} · ${b.stars?b.stars+" ★":"Stars ?"}</span></div>
-<section class="shot-import"><h3>📷 Import build from screenshot</h3><p>Upload an Awakening screenshot, check the values, and save.</p><label class="btn primary">Choose screenshot<input type="file" id="buildShotFile" accept="image/*" style="display:none"></label><div id="shotReview" class="shot-review">
-<div class="shot-selected-preview" id="shotSelectedPreview" hidden><div class="shot-selected-head"><strong>Selected screenshot</strong><span>Visual reference · stays on your device</span></div><img id="shotSelectedImage" alt="Full selected Aniimo Awakening screenshot for cross-checking"></div><div class="shot-star-picker"><div class="shot-star-heading"><div><strong>Choose star rank <span style="color:#e7c879">★</span></strong><p class="hint">Tap the number of stars shown beside the Aniimo name.</p></div><div id="shotStarReference" class="shot-star-reference" hidden><canvas id="shotStarReferenceCanvas" aria-label="Star emblem cropped from your uploaded Aniimo screenshot"></canvas><small>Your screenshot</small></div></div><div class="star-options" role="radiogroup" aria-label="Star rank">${[1,2,3,4,5,6].map(n=>`<label><input type="radio" name="shotStarChoice" value="${n}" ${b.stars===n?'checked':''}><span>${n}<small>★</small></span></label>`).join('')}</div><select id="shotStars" class="input" aria-label="Selected star rank" style="display:none"><option value="">Choose stars…</option>${[1,2,3,4,5,6].map(n=>`<option value="${n}" ${b.stars===n?'selected':''}>${n}</option>`).join('')}</select></div>
+<div class="progression-quick"><div><strong>Keep your build up to date</strong><p>Leveled up, gained stars, or spent Awakening points? Update your saved build anytime—no new screenshot needed.</p></div><button type="button" class="btn primary" id="editProgression">Update progression ✎</button></div>
+<section class="shot-import"><div class="shot-import-top"><div><span class="shot-eyebrow">BUILD SCANNER</span><h3>Scan Awakening</h3><p>Import your screenshot, then review your build.</p></div><label class="btn primary shot-upload-button"><span>↥ &nbsp;Choose image</span><input type="file" id="buildShotFile" accept="image/*" style="display:none"></label></div><div id="shotReview" class="shot-review">
+<div class="shot-selected-preview" id="shotSelectedPreview" hidden><div class="shot-selected-head"><strong>Screenshot preview</strong><span><span class="shot-local-dot"></span> On-device</span></div><img id="shotSelectedImage" alt="Full selected Aniimo Awakening screenshot for cross-checking"></div><div class="shot-star-picker"><div class="shot-star-heading"><div><span class="shot-step">STAR RANK</span><strong>How many stars? <span style="color:#e7c879">★</span></strong><p class="hint">Match the emblem in your screenshot.</p></div><div id="shotStarReference" class="shot-star-reference" hidden><canvas id="shotStarReferenceCanvas" aria-label="Star emblem cropped from your uploaded Aniimo screenshot"></canvas><small>Reference</small></div></div><div class="star-options" role="radiogroup" aria-label="Star rank">${[1,2,3,4,5,6].map(n=>`<label><input type="radio" name="shotStarChoice" value="${n}" ${b.stars===n?'checked':''}><span>${n}<small>★</small></span></label>`).join('')}</div><select id="shotStars" class="input" aria-label="Selected star rank" style="display:none"><option value="">Choose stars…</option>${[1,2,3,4,5,6].map(n=>`<option value="${n}" ${b.stars===n?'selected':''}>${n}</option>`).join('')}</select></div>
 <div class="shot-meta"><label>Level<input id="shotLevel" class="input" type="number" min="1" max="70" placeholder="—"></label><label>Points spent<input id="shotSpent" class="input" type="number" min="0" placeholder="—"></label></div>
 <div class="shot-summary-heading"><strong>Capability totals</strong><span><span style="color:#f8f9fc">Base</span> · <span style="color:#59e2f7">+ Bonus</span> · <span style="color:#9dd8b9">Final</span></span></div>
 <div class="shot-compact-grid">${attrs.map((a,i)=>`<div class="shot-stat-card"><strong>${esc(a)}</strong><div class="shot-dial"><div class="shot-dial-core"><label class="shot-dial-bonus" aria-label="${esc(a)} bonus">+<input data-shotbonus="${i}" type="number" min="0" max="30" placeholder="?" inputmode="numeric"></label><label class="shot-dial-base" aria-label="${esc(a)} base"><input data-shotstat="${i}" type="number" min="0" max="99" placeholder="—" inputmode="numeric"></label></div></div><div class="shot-final-line"><span>Final total</span><output data-shot-total="${i}">?</output></div><label class="shot-inline-acquired">Gold · acquired <input class="input" data-shotacquired="${i}" type="number" min="0" max="24" inputmode="numeric" placeholder="?" aria-label="${esc(a)} acquired points"></label></div>`).join('')}</div>
@@ -361,7 +386,7 @@ return `<div class="row planner-head"><h2>${esc(name)} · Build</h2><button clas
 <div id="spentImport" class="spent-import" hidden><p class="hint">Enter the gold acquired points directly below each circle. White = base minus acquired; cyan = bonus. The scanner checks gold arcs against points spent. Confirm any uncertain values manually.</p><p id="spentCheck" class="hint">Check acquired points against the game.</p><label class="btn" style="display:none">Add detail screenshot (optional)<input id="detailShotFile" type="file" accept="image/*" hidden></label><img id="detailShotPreview" class="shot-preview" style="display:none" alt="Awakening attribute details"></div><div class="shot-actions"><button type="button" class="btn primary" id="applyScreenshot">Confirm &amp; save build</button><button type="button" class="btn" id="discardScreenshot">Cancel</button></div><p class="hint" style="margin-top:10px">White = innate · gold = acquired · cyan = bonus. Review before saving.</p></div></section>
 <div class="cap-heading"><strong>Your capabilities</strong><span class="hint">Effective totals · 👍 preferred</span></div><div class="cap-grid">${tiles}</div>
 <div class="planner-reco"><div class="mode-heading"><strong>Optimization mode</strong><span class="hint">Choose how to plan</span></div><div class="mode-switch"><button type="button" class="mode-option ${(b.optimizerMode||"optimal")==="optimal"?"active":""}" data-optmode="optimal">Optimize everything<small>May reset points</small></button><button type="button" class="mode-option ${b.optimizerMode==="preserve"?"active":""}" data-optmode="preserve">Keep current build<small>No reset</small></button></div><p class="hint">${!known?"Import a screenshot or enter six innate values manually.":points===null?"Import a screenshot or enter your level and stars.":!rec.size?"Select recommended 👍 capabilities.":unassignedSpent(b)>0?"Reconcile spent points first.":opt?.error?esc(opt.error):""}</p>${preview}</div>
-<details class="planner-advanced" id="buildEditor"><summary>✎ Manual adjustments (optional) <span>For bonuses, Capafruit or corrections</span></summary><div class="planner-editor"><div class="toolbar"><label style="flex:1">Stars<select id="bStars"><option value="">Unknown</option>${[1,2,3,4,5,6,7].map(n=>`<option value="${n}" ${String(b.stars)===String(n)?"selected":""}>${n} ★</option>`).join("")}</select></label><label style="flex:1">Level<input class="input" id="bLevel" type="number" min="1" max="999" value="${b.level??""}" placeholder="Level"></label></div>
+<details class="planner-advanced" id="buildEditor"><summary>✎ Update progression <span>Level · stars · innate · acquired · bonuses</span></summary><div class="planner-editor"><p class="hint">Your saved build is editable at any time. Increase your level or star rank, enter newly acquired points for each capability, and update bonuses or Capafruit. Save to recalculate your totals and available Awakening points.</p><div class="toolbar"><label style="flex:1">Stars<select id="bStars"><option value="">Unknown</option>${[1,2,3,4,5,6,7].map(n=>`<option value="${n}" ${String(b.stars)===String(n)?"selected":""}>${n} ★</option>`).join("")}</select></label><label style="flex:1">Level<input class="input" id="bLevel" type="number" min="1" max="999" value="${b.level??""}" placeholder="Level"></label></div>
 
 <label>Game-recommended 👍 capabilities</label><p class="hint">Select the attributes marked 👍 in your Aniimo’s Awakening screen. These are character-specific. <a href="https://aniimo.kr/en/potential" target="_blank" rel="noopener noreferrer">Check MOANIIMO recommendations ↗</a></p><div class="toolbar">${attrs.map((a,i)=>`<label style="display:flex;align-items:center;gap:5px;margin:2px 4px"><input type="checkbox" data-recommend="${i}" ${(b.recommended||[]).includes(i)?"checked":""} style="width:auto">${a}</label>`).join("")}</div>
 <label style="display:flex;gap:9px;align-items:center"><input id="bFruit" type="checkbox" ${b.capafruit?"checked":""} style="width:auto"> Capafruit used</label>
@@ -376,7 +401,7 @@ ${attrs.map((a,i)=>`<div class="row" style="margin:9px 0"><strong style="font-si
 ${optimizerHTML(b)}
 ${suggest.length?`<div class="notice">${suggest.slice(0,4).map(x=>`+${x.count} ${x.name} → ${x.target}`).join(" · ")}${suggest.length>4?" …":""}</div><p class="hint">${plan?.unallocated?plan.unallocated+" points remain without a safe Rule-of-4 step. ":""}Estimated additional materials: ${Object.entries(materialSummary(b,plan)||{}).map(([k,v])=>k+" ×"+v).join(" · ")}. No points are automatically spent.</p>`:""}</div>
 </details>
-<div class="toolbar planner-save"><button class="btn primary" id="bSave">Save manual changes</button><button class="btn" onclick="closeDialog()">Cancel</button></div>`}
+<div class="toolbar planner-save"><button class="btn primary" id="bSave">Save progression changes</button><button class="btn" onclick="closeDialog()">Cancel</button></div>`}
 
 // v0.31: OCR runs in the browser. Image data is never sent to our server.
 // Tesseract language/worker files are downloaded from a public CDN on first use.
@@ -698,52 +723,57 @@ function detectAwakeningArcs(img,baseValues,spent){
  const canvas=document.createElement('canvas');canvas.width=W;canvas.height=H;
  const ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.drawImage(img,0,0);
  const pixels=ctx.getImageData(0,0,W,H).data;
- function color(x,y){
+ function classify(x,y){
   x=Math.round(x);y=Math.round(y);if(x<0||y<0||x>=W||y>=H)return -1;
   const k=(y*W+x)*4,r=pixels[k],g=pixels[k+1],b=pixels[k+2];
-  // Distinguish warm yellow from pale white and cyan using both hue and saturation.
-  if(r>135&&g>108&&r>b*1.18&&g>b*1.12&&r>=g*.93)return 1;
-  if(b>125&&g>110&&b>r*1.12&&g>r*1.13)return 2;
-  if(Math.min(r,g,b)>145&&Math.max(r,g,b)-Math.min(r,g,b)<65)return 0;
+  const hi=Math.max(r,g,b),lo=Math.min(r,g,b);
+  // Yellow needs a warm red/green dominance, not merely a bright pixel.
+  if(r>145&&g>125&&b<Math.min(r,g)*.86&&r>=g*.92)return 1;
+  if(g>125&&b>140&&r<Math.min(g,b)*.82)return 2;
+  if(lo>155&&hi-lo<48)return 0;
   return -1;
  }
  return centers.map(([cx,cy],i)=>{
   const base=baseValues[i];if(base===null)return {value:null,confidence:0};
   const x=cx*W,y=cy*H;
-  // Scan candidate radii across the ring's full thickness. Select the track
-  // with the strongest continuous classified coverage, not the most yellow.
-  let best=null;
-  for(let radius=.023*W;radius<=.0351*W;radius+=.0015*W){
+  // Choose the most legible track across the *interior* of the colored band.
+  // Looking at a single radius can hit a dark separator or the silver rim.
+  const tracks=[];
+  for(let radius=.025*W;radius<=.033*W;radius+=.001*W){
    const bins=[];
-   for(let deg=0;deg<360;deg+=2){
-    const theta=(deg-90)*Math.PI/180;
-    const tally=[0,0,0,0];
-    for(const shift of [-2,0,2]){
-     const c=color(x+Math.cos(theta)*(radius+shift),y+Math.sin(theta)*(radius+shift));tally[c+1]++;
+   for(let degree=0;degree<360;degree+=1){
+    const theta=(degree-90)*Math.PI/180;
+    const votes=[0,0,0];
+    for(const delta of [-1.5,0,1.5]){
+     const v=classify(x+Math.cos(theta)*(radius+delta),y+Math.sin(theta)*(radius+delta));
+     if(v>=0)votes[v]++;
     }
-    let winner=-1,amount=0;
-    for(let j=0;j<3;j++)if(tally[j+1]>amount){winner=j;amount=tally[j+1];}
-    bins.push(amount>=2?winner:-1);
+    const best=Math.max(...votes),idx=votes.indexOf(best);
+    bins.push(best>=2?idx:-1);
    }
    const known=bins.filter(v=>v>=0).length;
-   const transitions=bins.reduce((n,v,j)=>n+(j>0&&v>=0&&bins[j-1]>=0&&v!==bins[j-1]?1:0),0);
-   const quality=known/bins.length-Math.max(0,transitions-12)*.008;
-   if(!best||quality>best.quality)best={bins,quality,known,radius};
+   const gold=bins.filter(v=>v===1).length;
+   const cyan=bins.filter(v=>v===2).length;
+   // Favor actual colored ring tracks rather than the pale outer rim.
+   const quality=known/360+Math.min(gold+cyan,140)/360*.3;
+   tracks.push({bins,known,gold,quality,radius});
   }
-  // Each of the 20 slots is four-point-segment / 4. Estimate the gold
-  // coverage by fractional angular occupancy, excluding tiny separator gaps.
-  let goldDegrees=0,classified=0;
-  for(let j=0;j<best.bins.length;j++){
-   const c=best.bins[j];if(c<0)continue;
-   classified+=2;if(c===1)goldDegrees+=2;
+  tracks.sort((a,b)=>b.quality-a.quality);
+  const best=tracks[0];
+  // Count angular coverage, excluding separator pixels. A complete ring has
+  // 20 points, so one point spans 18 degrees. Do not rescale by visible pixels.
+  let gold=0,known=0;
+  for(let deg=0;deg<360;deg++){
+   const votes=[0,0,0];
+   for(const track of tracks.slice(0,3))if(track.bins[deg]>=0)votes[track.bins[deg]]++;
+   const max=Math.max(...votes);
+   if(max>=2){known++;if(votes[1]===max)gold++;}
   }
-  const confidence=classified/360;
-  const raw=goldDegrees/18;
-  const candidate=Math.round(raw);
+  const raw=gold/18,candidate=Math.round(raw),confidence=known/360;
   const valid=candidate>=0&&candidate<=base&&candidate<=20;
-  // Do not invent a zero when the ring was not sufficiently classified.
-  const credible=valid&&confidence>=.75&&(candidate>0?goldDegrees>=12:confidence>=.9);
-  return {value:credible?candidate:null,confidence,goldFraction:goldDegrees/360,radius:best.radius,raw};
+  // A zero is only trustworthy if we can classify almost the entire ring.
+  const credible=valid&&confidence>=(candidate===0?.90:.72);
+  return {value:credible?candidate:null,confidence,raw,radius:best.radius};
  });
 }
 
@@ -785,11 +815,18 @@ async function scanAniimoScreenshot(img,progress){
   const pointsRaw=(await worker.recognize(aniimoCrop(img,.635,.175,.058,.048,145))).data.text||"";
   const pointsMatch=pointsRaw.replace(/\s/g,"").match(/(\d{1,3})\/(\d{1,3})/);
   const spent=pointsMatch&&Number(pointsMatch[1])<=Number(pointsMatch[2])?Number(pointsMatch[1]):null;
+  // 35 and 43 maximum points uniquely identify ranks 5 and 6 at level 60.
+  // For other budgets, require a strong visual emblem match instead of guessing.
+  const cap=pointsMatch?Number(pointsMatch[2]):null;
+  const budgetRank=level===60?(cap===35?5:cap===43?6:null):null;
+  const emblemMatch=recognizeBuiltInStar(img);
+  const stars=budgetRank??(emblemMatch?.rank??null);
+  const starSource=budgetRank?'Awakening point capacity':stars?'emblem match':null;
   progress("Checking for visible bonus numbers…");
   const bonus=await scanVisibleBonuses(img,worker);
   progress("Examining white and gold Awakening arcs…");
   const arcs=detectAwakeningArcs(img,values,spent);
-  return {values,bonus,level,spent,arcs,stars:null,preferred:detectAniimoThumbs(img),warning:"Check the enlarged capability previews for the cyan +N. Local pattern matching may miss tiny labels. Only strong matches are accepted; verify every detected bonus."};
+  return {values,bonus,level,spent,arcs,stars,starSource,preferred:detectAniimoThumbs(img),warning:"Check the enlarged capability previews for the cyan +N. Local pattern matching may miss tiny labels. Only strong matches are accepted; verify every detected bonus."};
  }finally{await worker.terminate()}
 }
 
@@ -810,7 +847,11 @@ function renderScreenshotEvidence(img,review){
   const result=document.createElement('div');result.className='zoom-result';result.dataset.zoomresult=i;card.appendChild(result);grid.appendChild(card);
  });
  const reference=review.querySelector('#shotStarReference');
- if(reference){reference.hidden=false;const c=review.querySelector('#shotStarReferenceCanvas');const W=img.naturalWidth,H=img.naturalHeight;const ctx=c.getContext('2d');c.width=140;c.height=140;ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.drawImage(img,.731*W,.185*H,.018*W,.052*H,0,0,140,140);}
+ if(reference){reference.hidden=false;const c=review.querySelector('#shotStarReferenceCanvas');const W=img.naturalWidth,H=img.naturalHeight;const ctx=c.getContext('2d');c.width=140;c.height=140;ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';// Preserve source aspect ratio; avoid stretching the tiny emblem into a square.
+ const sx=.7305*W,sy=.188*H,sw=.0182*W,sh=.047*H;
+ ctx.fillStyle='#e8edf7';ctx.fillRect(0,0,140,140);
+ const scale=Math.min(116/sw,116/sh),dw=sw*scale,dh=sh*scale;
+ ctx.drawImage(img,sx,sy,sw,sh,(140-dw)/2,(140-dh)/2,dw,dh);}
  const star=review.querySelector('#starVisualReview');star.hidden=false;
  // Emblem is immediately left of the name in the right-side character panel.
  makeCrop(review.querySelector('#starZoom'),.750,.246,.091,.14);
@@ -875,12 +916,13 @@ function setupBuildScreenshot(name){
    if(detected.level!==null)$("shotLevel").value=detected.level;
    if(detected.spent!==null){$("shotSpent").value=detected.spent;$("shotSpent").dispatchEvent(new Event("input"));}
    // Only use a verified emblem match; never count individual decorative points.
-   // Star rank is selected by the user, never guessed from the emblem.
+   // Auto-select only when a validated rank is available; manual choices remain editable.
+   if(detected.stars!==null){$('shotStars').value=String(detected.stars);syncStars();}
    if(detected.preferred){review.querySelectorAll("[data-shotfav]").forEach((el,i)=>el.checked=detected.preferred[i]);}
    const count=detected.values.filter(v=>v!==null).length;
    updateEffective();
    const bonusCount=(detected.bonus||[]).filter(v=>v!==null).length;
-   note.textContent=`Detected ${count}/6 base capabilities, ${bonusCount}/6 numeric bonuses${detected.level!==null?", level "+detected.level:""}${detected.spent!==null?", spent "+detected.spent:""}. Stars: choose manually (1–6). Preferred markers: ${detected.preferred?detected.preferred.filter(Boolean).length+" detected":"not certain (kept existing choices)"}. Verify before applying. ${detected.warning||""}`;
+   note.textContent=`Detected ${count}/6 base capabilities, ${bonusCount}/6 numeric bonuses${detected.level!==null?", level "+detected.level:""}${detected.spent!==null?", spent "+detected.spent:""}. Stars: ${detected.stars?detected.stars+"★ ("+detected.starSource+"; confirm)":"choose manually (1–6)"}. Preferred markers: ${detected.preferred?detected.preferred.filter(Boolean).length+" detected":"not certain (kept existing choices)"}. Verify before applying. ${detected.warning||""}`;
   }catch(e){updateEffective();note.textContent="Automatic scan unavailable: "+(e?.message||"unknown error")+". You can still enter the values manually.";}
 
  };
@@ -914,7 +956,7 @@ function setupBuildScreenshot(name){
      stops.push(`${slots[j]} ${a}deg ${z-gap}deg`);
      if(gap)stops.push(`#26363b ${z-gap}deg ${z}deg`);
    }
-   dial.style.background=`conic-gradient(from 90deg, ${stops.join(',')})`;
+   dial.style.background=`conic-gradient(from 180deg, ${stops.join(',')})`;
    dial.setAttribute('aria-label',`${attrs[i]}: ${b===null?'unknown base':b+' base'}, ${extra===null?'unknown bonus':extra+' bonus'}, ${acquiredKnown?acquired+' acquired points':'acquired points unconfirmed'}`);
  });
  const missing=bonus.filter(v=>v===null).length;
@@ -986,7 +1028,7 @@ function setupBuildScreenshot(name){
 
 }
 
-window.openBuild=name=>{$("dialog").innerHTML=buildHTML(name);setupBuildScreenshot(name);$("modal").classList.remove("hide");$("dialog").querySelectorAll("[data-optmode]").forEach(el=>el.onclick=()=>{const b=buildFor(name);b.optimizerMode=el.dataset.optmode;render();openBuild(name)});$("bSave").onclick=()=>{const b=buildFor(name);const get=id=>$(id).value;
+window.openBuild=name=>{$("dialog").innerHTML=buildHTML(name);setupBuildScreenshot(name);$("editProgression").onclick=()=>{const section=$("buildEditor");section.open=true;section.scrollIntoView({behavior:"smooth",block:"start"})};$("modal").classList.remove("hide");$("dialog").querySelectorAll("[data-optmode]").forEach(el=>el.onclick=()=>{const b=buildFor(name);b.optimizerMode=el.dataset.optmode;render();openBuild(name)});$("bSave").onclick=()=>{const b=buildFor(name);const get=id=>$(id).value;
 const innate=[...$("dialog").querySelectorAll("[data-innate]")].map(e=>e.value===""?null:Number(e.value));
 const spent=[...$("dialog").querySelectorAll("[data-spent]")].map(e=>Number(e.value));
 const bonuses=[...$("dialog").querySelectorAll("[data-bonus]")].map(e=>Number(e.value));
