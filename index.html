@@ -136,7 +136,20 @@
 .shot-star-reference{width:72px;flex:0 0 72px}.shot-star-reference canvas{width:72px;height:72px;object-fit:contain;background:#e5eaf4;border:2px solid #92b8ac;border-radius:50%;box-sizing:border-box}.shot-star-reference small{font-size:9px}
 @media(max-width:390px){.shot-star-reference{width:60px;flex-basis:60px}.shot-star-reference canvas{width:60px;height:60px}}
 .spent-import{padding:9px 11px;margin:9px 0}.spent-import p{margin:3px 0;font-size:11px}.shot-stat-card{gap:6px}
-</style></head><body><header><div><small>ANIIMO COMPANION · LOCAL PROTOTYPE v0.62</small><h1>My Collection</h1></div><span class="pill">Guest mode</span></header><nav class="tabs" id="tabs"><button data-tab="collection" class="active">◈ Collection</button><button data-tab="items">▣ Items</button><button data-tab="upgrades">⇄ Upgrades</button><button data-tab="settings">⚙ Settings</button></nav><main class="shell"><section id="collection"><div class="stats" id="stats"></div><div class="bar"><div id="progress"></div></div><div class="toolbar"><input class="input" id="search" placeholder="Search Prismana…"><select id="filter"><option value="all">All statuses</option><option value="complete">Complete</option><option value="progress">In progress</option><option value="none">Not caught</option></select></div><div class="grid" id="creatures"></div></section><section id="items" class="hide"><h2>Held-item inventory</h2><p class="muted">Total owned includes bound copies. Available = total − bound.</p><input id="itemsearch" class="input" style="width:100%" placeholder="Search held items…"><div id="itemlist"></div></section><section id="upgrades" class="hide"><h2>Build & upgrade review</h2><div class="panel"><h3>Keep your current builds</h3><p class="muted">Existing assignments are preserved. New items are listed for research, but the prototype does not claim they are upgrades without verified effects and build comparisons.</p></div><div class="panel"><h3>New items to evaluate</h3><div id="newitems"></div></div><div class="panel"><h3>Needs binding</h3><div id="needs"></div></div></section><section id="settings" class="hide"><h2>Settings</h2><div class="panel"><h3>Import & export</h3><p class="hint">Build-tab screenshot scanning uses on-device OCR for landscape Capability Awakening images. Review all detected values before saving; images are not uploaded to our server.</p><input id="screens" type="file" accept="image/*" multiple class="input" style="width:100%"><div id="shotlist"></div><div class="toolbar"><button class="btn" id="bulk">Bulk select caught Prismana</button><button class="btn" id="export">Export JSON backup</button><label class="btn" style="cursor:pointer">Import JSON backup<input id="restore" type="file" accept=".json,application/json" hidden></label></div></div><div class="panel"><h3>Storage & privacy</h3><p class="hint">Your edits auto-save in this browser using local storage. Clearing site data may erase them. Export a backup regularly. Accounts, cloud sync, and automated game-data updates are not available. OCR downloads its recognition engine on first use.</p><button class="btn" id="reset">Reset to sample collection</button></div><div class="panel"><h3>Artwork</h3><p class="hint">Choose each Prismana’s Sparkling color in its Appearance tab. Paste a direct image URL or select a saved image from your device. The appearance gallery supports built-in images through the art manifest, plus personal overrides. Scorchhowl includes 13 built-in appearances. Held-item artwork includes 27 screenshot-sourced icons; newly cataloged items start at zero owned until you update inventory. Other Prismana appearances are awaiting artwork.</p></div></section></main><div id="modal" class="modal hide"><div class="dialog" id="dialog"></div></div><script>
+
+/* v0.64: compact original-image reference and cleaner import header */
+.shot-import{padding:15px!important}
+.shot-import>h3{margin:0 0 5px;font-size:19px}
+.shot-import>p{margin:0 0 12px;color:#b9c9c3;font-size:13px;line-height:1.35}
+.shot-selected-preview{margin:14px 0 10px;padding:9px;border-radius:13px;border:1px solid #506a61;background:#1e2b2b}
+.shot-selected-preview[hidden]{display:none}
+.shot-selected-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:7px}
+.shot-selected-head strong{font-size:13px;color:#e6f0eb}
+.shot-selected-head span{font-size:10px;color:#a6bcb4;text-align:right}
+.shot-selected-preview img{display:block;width:100%;height:auto;max-height:210px;object-fit:contain;border-radius:8px;background:#141e21}
+.shot-star-picker{margin:10px 0 12px;padding:12px}
+.shot-star-heading .hint{font-size:12px;line-height:1.35}
+</style></head><body><header><div><small>ANIIMO COMPANION · LOCAL PROTOTYPE v0.64</small><h1>My Collection</h1></div><span class="pill">Guest mode</span></header><nav class="tabs" id="tabs"><button data-tab="collection" class="active">◈ Collection</button><button data-tab="items">▣ Items</button><button data-tab="upgrades">⇄ Upgrades</button><button data-tab="settings">⚙ Settings</button></nav><main class="shell"><section id="collection"><div class="stats" id="stats"></div><div class="bar"><div id="progress"></div></div><div class="toolbar"><input class="input" id="search" placeholder="Search Prismana…"><select id="filter"><option value="all">All statuses</option><option value="complete">Complete</option><option value="progress">In progress</option><option value="none">Not caught</option></select></div><div class="grid" id="creatures"></div></section><section id="items" class="hide"><h2>Held-item inventory</h2><p class="muted">Total owned includes bound copies. Available = total − bound.</p><input id="itemsearch" class="input" style="width:100%" placeholder="Search held items…"><div id="itemlist"></div></section><section id="upgrades" class="hide"><h2>Build & upgrade review</h2><div class="panel"><h3>Keep your current builds</h3><p class="muted">Existing assignments are preserved. New items are listed for research, but the prototype does not claim they are upgrades without verified effects and build comparisons.</p></div><div class="panel"><h3>New items to evaluate</h3><div id="newitems"></div></div><div class="panel"><h3>Needs binding</h3><div id="needs"></div></div></section><section id="settings" class="hide"><h2>Settings</h2><div class="panel"><h3>Import & export</h3><p class="hint">Build-tab screenshot scanning uses on-device OCR for landscape Capability Awakening images. Review all detected values before saving; images are not uploaded to our server.</p><input id="screens" type="file" accept="image/*" multiple class="input" style="width:100%"><div id="shotlist"></div><div class="toolbar"><button class="btn" id="bulk">Bulk select caught Prismana</button><button class="btn" id="export">Export JSON backup</button><label class="btn" style="cursor:pointer">Import JSON backup<input id="restore" type="file" accept=".json,application/json" hidden></label></div></div><div class="panel"><h3>Storage & privacy</h3><p class="hint">Your edits auto-save in this browser using local storage. Clearing site data may erase them. Export a backup regularly. Accounts, cloud sync, and automated game-data updates are not available. OCR downloads its recognition engine on first use.</p><button class="btn" id="reset">Reset to sample collection</button></div><div class="panel"><h3>Artwork</h3><p class="hint">Choose each Prismana’s Sparkling color in its Appearance tab. Paste a direct image URL or select a saved image from your device. The appearance gallery supports built-in images through the art manifest, plus personal overrides. Scorchhowl includes 13 built-in appearances. Held-item artwork includes 27 screenshot-sourced icons; newly cataloged items start at zero owned until you update inventory. Other Prismana appearances are awaiting artwork.</p></div></section></main><div id="modal" class="modal hide"><div class="dialog" id="dialog"></div></div><script>
 const base=[
 ["Scorchhowl","Explosive Gauntlet",1],["Stellarys","Ferocious Fang",1],["Infergon","Ferocious Fang",1],["Hexxin","Spirited Feather",1],["Somniwing","Spirited Feather",1],["Glacy","Miraculous Fleece",1],["Sparkelf","Miraculous Fleece",1],["Blazen","Gargantuan Horn",1],["Magmarex","Gargantuan Horn",1],["Panpanta","Gargantuan Horn",1],["Inferlupa","Gargantuan Horn",1],["Fenmane","Fission Needle",1],["Fulmintis","Heartseeker Pendant",1],["Glynsera","Heartseeker Pendant",1],["Irisalis","Floral Rainbow Feather",1],["Sherro","Capacitous Battery",1],["Thornblade","Fission Needle",0],["Ignitis","Ferocious Fang",0],["Grizbo","Fission Needle",0],["Pawney","Capacitous Battery",0],["Melloblum","Auspicious Bell",0],["Turbo","Heritage Amulet",0],["Luminelle","Spirited Feather",0],["Coronet","Ferocious Fang",0],["Waleetle","Ferocious Fang",0],["Irisal","Ferocious Fang",0]];
 const additions=["Whirlbite","Gachapus","Jabster","Sugartini","Pouchwisp","Royalby","Jeburst","Glameep","Hypnyto","Ekrim"];
@@ -335,7 +348,7 @@ const preview=opt&&!opt.error?(()=>{const noChange=opt.moves.every(v=>v===0);con
 return `<div class="row planner-head"><h2>${esc(name)} · Build</h2><button class="btn" onclick="closeDialog()">✕</button></div>
 <div class="planner-hero"><div><span class="mini-label">AWAKENING POINTS AVAILABLE</span><div class="points-number">${r===null?"—":r}<small> / ${points===null?"—":points}</small></div><div class="hint">${points===null?"Enter level and stars":used?used+" points spent":"No points allocated yet"}</div></div><span class="planner-rank">${b.level?"Lv. "+b.level:"Level ?"} · ${b.stars?b.stars+" ★":"Stars ?"}</span></div>
 <section class="shot-import"><h3>📷 Import build from screenshot</h3><p>Upload an Awakening screenshot, check the values, and save.</p><label class="btn primary">Choose screenshot<input type="file" id="buildShotFile" accept="image/*" style="display:none"></label><div id="shotReview" class="shot-review">
-<div class="shot-star-picker"><div class="shot-star-heading"><div><strong>Choose star rank <span style="color:#e7c879">★</span></strong><p class="hint">Tap the number of stars shown beside the Aniimo name.</p></div><div id="shotStarReference" class="shot-star-reference" hidden><canvas id="shotStarReferenceCanvas" aria-label="Star emblem cropped from your uploaded Aniimo screenshot"></canvas><small>Your screenshot</small></div></div><div class="star-options" role="radiogroup" aria-label="Star rank">${[1,2,3,4,5,6].map(n=>`<label><input type="radio" name="shotStarChoice" value="${n}" ${b.stars===n?'checked':''}><span>${n}<small>★</small></span></label>`).join('')}</div><select id="shotStars" class="input" aria-label="Selected star rank" style="display:none"><option value="">Choose stars…</option>${[1,2,3,4,5,6].map(n=>`<option value="${n}" ${b.stars===n?'selected':''}>${n}</option>`).join('')}</select></div>
+<div class="shot-selected-preview" id="shotSelectedPreview" hidden><div class="shot-selected-head"><strong>Selected screenshot</strong><span>Visual reference · stays on your device</span></div><img id="shotSelectedImage" alt="Full selected Aniimo Awakening screenshot for cross-checking"></div><div class="shot-star-picker"><div class="shot-star-heading"><div><strong>Choose star rank <span style="color:#e7c879">★</span></strong><p class="hint">Tap the number of stars shown beside the Aniimo name.</p></div><div id="shotStarReference" class="shot-star-reference" hidden><canvas id="shotStarReferenceCanvas" aria-label="Star emblem cropped from your uploaded Aniimo screenshot"></canvas><small>Your screenshot</small></div></div><div class="star-options" role="radiogroup" aria-label="Star rank">${[1,2,3,4,5,6].map(n=>`<label><input type="radio" name="shotStarChoice" value="${n}" ${b.stars===n?'checked':''}><span>${n}<small>★</small></span></label>`).join('')}</div><select id="shotStars" class="input" aria-label="Selected star rank" style="display:none"><option value="">Choose stars…</option>${[1,2,3,4,5,6].map(n=>`<option value="${n}" ${b.stars===n?'selected':''}>${n}</option>`).join('')}</select></div>
 <div class="shot-meta"><label>Level<input id="shotLevel" class="input" type="number" min="1" max="70" placeholder="—"></label><label>Points spent<input id="shotSpent" class="input" type="number" min="0" placeholder="—"></label></div>
 <div class="shot-summary-heading"><strong>Capability totals</strong><span><span style="color:#f8f9fc">Base</span> · <span style="color:#59e2f7">+ Bonus</span> · <span style="color:#9dd8b9">Final</span></span></div>
 <div class="shot-compact-grid">${attrs.map((a,i)=>`<div class="shot-stat-card"><strong>${esc(a)}</strong><div class="shot-dial"><div class="shot-dial-core"><label class="shot-dial-bonus" aria-label="${esc(a)} bonus">+<input data-shotbonus="${i}" type="number" min="0" max="30" placeholder="?" inputmode="numeric"></label><label class="shot-dial-base" aria-label="${esc(a)} base"><input data-shotstat="${i}" type="number" min="0" max="99" placeholder="—" inputmode="numeric"></label></div></div><div class="shot-final-line"><span>Final total</span><output data-shot-total="${i}">?</output></div><label class="shot-inline-acquired">Gold · acquired <input class="input" data-shotacquired="${i}" type="number" min="0" max="24" inputmode="numeric" placeholder="?" aria-label="${esc(a)} acquired points"></label></div>`).join('')}</div>
@@ -685,49 +698,52 @@ function detectAwakeningArcs(img,baseValues,spent){
  const canvas=document.createElement('canvas');canvas.width=W;canvas.height=H;
  const ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.drawImage(img,0,0);
  const pixels=ctx.getImageData(0,0,W,H).data;
- function classify(x,y){
-  x=Math.round(x);y=Math.round(y);if(x<0||y<0||x>=W||y>=H)return 'other';
+ function color(x,y){
+  x=Math.round(x);y=Math.round(y);if(x<0||y<0||x>=W||y>=H)return -1;
   const k=(y*W+x)*4,r=pixels[k],g=pixels[k+1],b=pixels[k+2];
-  const max=Math.max(r,g,b),min=Math.min(r,g,b);
-  if(r>155&&g>125&&r>b*1.22&&g>b*1.16&&r>=g*.92)return 'gold';
-  if(b>145&&g>120&&b>r*1.15&&g>r*1.13&&b>=g*.92)return 'cyan';
-  if(min>165&&max-min<52)return 'white';
-  return 'other';
+  // Distinguish warm yellow from pale white and cyan using both hue and saturation.
+  if(r>135&&g>108&&r>b*1.18&&g>b*1.12&&r>=g*.93)return 1;
+  if(b>125&&g>110&&b>r*1.12&&g>r*1.13)return 2;
+  if(Math.min(r,g,b)>145&&Math.max(r,g,b)-Math.min(r,g,b)<65)return 0;
+  return -1;
  }
  return centers.map(([cx,cy],i)=>{
   const base=baseValues[i];if(base===null)return {value:null,confidence:0};
   const x=cx*W,y=cy*H;
-  // The colored track is an annulus, not one thin circumference. Measure
-  // multiple radial offsets and select the radius with strongest ring signal.
-  const radii=[.021,.023,.025,.027,.029,.031,.033,.035].map(v=>v*W);
+  // Scan candidate radii across the ring's full thickness. Select the track
+  // with the strongest continuous classified coverage, not the most yellow.
   let best=null;
-  for(const radius of radii){
-   const colors=[];
-   for(let degree=0;degree<360;degree+=1){
-    const theta=(degree-90)*Math.PI/180;
-    const votes={gold:0,cyan:0,white:0,other:0};
-    for(const shift of [-2,-1,0,1,2]){
-     const c=classify(x+Math.cos(theta)*(radius+shift),y+Math.sin(theta)*(radius+shift));votes[c]++;
+  for(let radius=.023*W;radius<=.0351*W;radius+=.0015*W){
+   const bins=[];
+   for(let deg=0;deg<360;deg+=2){
+    const theta=(deg-90)*Math.PI/180;
+    const tally=[0,0,0,0];
+    for(const shift of [-2,0,2]){
+     const c=color(x+Math.cos(theta)*(radius+shift),y+Math.sin(theta)*(radius+shift));tally[c+1]++;
     }
-    const ranked=Object.entries(votes).sort((a,b)=>b[1]-a[1]);
-    colors.push(ranked[0][1]>=3?ranked[0][0]:'other');
+    let winner=-1,amount=0;
+    for(let j=0;j<3;j++)if(tally[j+1]>amount){winner=j;amount=tally[j+1];}
+    bins.push(amount>=2?winner:-1);
    }
-   const known=colors.filter(c=>c!=='other').length;
-   const gold=colors.filter(c=>c==='gold').length;
-   const cyan=colors.filter(c=>c==='cyan').length;
-   // Prefer a track with reliable colored pixels rather than character art
-   // or the empty inner dial. Penalize excessive unknown coverage.
-   const quality=known/360 + (gold+cyan)/720;
-   if(!best||quality>best.quality)best={colors,known,gold,cyan,quality,radius};
+   const known=bins.filter(v=>v>=0).length;
+   const transitions=bins.reduce((n,v,j)=>n+(j>0&&v>=0&&bins[j-1]>=0&&v!==bins[j-1]?1:0),0);
+   const quality=known/bins.length-Math.max(0,transitions-12)*.008;
+   if(!best||quality>best.quality)best={bins,quality,known,radius};
   }
-  const goldFraction=best.gold/360;
-  const candidate=Math.round(goldFraction*20);
-  const confidence=best.known/360;
+  // Each of the 20 slots is four-point-segment / 4. Estimate the gold
+  // coverage by fractional angular occupancy, excluding tiny separator gaps.
+  let goldDegrees=0,classified=0;
+  for(let j=0;j<best.bins.length;j++){
+   const c=best.bins[j];if(c<0)continue;
+   classified+=2;if(c===1)goldDegrees+=2;
+  }
+  const confidence=classified/360;
+  const raw=goldDegrees/18;
+  const candidate=Math.round(raw);
   const valid=candidate>=0&&candidate<=base&&candidate<=20;
-  // A full white ring is a valid zero-acquired reading, but do not trust
-  // zero if large portions of the ring were unclassified.
-  const credible=valid&&confidence>=.68&&(candidate===0?confidence>=.85:best.gold>=10);
-  return {value:credible?candidate:null,confidence,goldFraction,radius:best.radius};
+  // Do not invent a zero when the ring was not sufficiently classified.
+  const credible=valid&&confidence>=.75&&(candidate>0?goldDegrees>=12:confidence>=.9);
+  return {value:credible?candidate:null,confidence,goldFraction:goldDegrees/360,radius:best.radius,raw};
  });
 }
 
@@ -794,7 +810,7 @@ function renderScreenshotEvidence(img,review){
   const result=document.createElement('div');result.className='zoom-result';result.dataset.zoomresult=i;card.appendChild(result);grid.appendChild(card);
  });
  const reference=review.querySelector('#shotStarReference');
- if(reference){reference.hidden=false;const c=review.querySelector('#shotStarReferenceCanvas');const W=img.naturalWidth,H=img.naturalHeight;const ctx=c.getContext('2d');c.width=140;c.height=140;ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.drawImage(img,.728*W,.175*H,.025*W,.067*H,0,0,140,140);}
+ if(reference){reference.hidden=false;const c=review.querySelector('#shotStarReferenceCanvas');const W=img.naturalWidth,H=img.naturalHeight;const ctx=c.getContext('2d');c.width=140;c.height=140;ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.drawImage(img,.731*W,.185*H,.018*W,.052*H,0,0,140,140);}
  const star=review.querySelector('#starVisualReview');star.hidden=false;
  // Emblem is immediately left of the name in the right-side character panel.
  makeCrop(review.querySelector('#starZoom'),.750,.246,.091,.14);
@@ -813,14 +829,14 @@ function setupBuildScreenshot(name){
  const file=$("buildShotFile"),review=$("shotReview"),note=$("shotImportNote");
  if(!file)return;
  let objectUrl=null;
- const reset=()=>{review.classList.remove("show");file.value="";if(objectUrl){URL.revokeObjectURL(objectUrl);objectUrl=null;}};
+ const reset=()=>{const selected=review.querySelector("#shotSelectedPreview");if(selected)selected.hidden=true;review.classList.remove("show");file.value="";if(objectUrl){URL.revokeObjectURL(objectUrl);objectUrl=null;}};
  $("discardScreenshot").onclick=reset;
  file.onchange=async()=>{
   const f=file.files?.[0];if(!f)return;
   if(!f.type.startsWith("image/")){alert("Choose an image screenshot.");return;}
   if(f.size>20*1024*1024){alert("Please choose a screenshot smaller than 20 MB.");return;}
   if(objectUrl)URL.revokeObjectURL(objectUrl);
-  objectUrl=URL.createObjectURL(f);$("buildShotPreview").src=objectUrl;review.classList.add("show");
+  objectUrl=URL.createObjectURL(f);$("buildShotPreview").src=objectUrl;const selectedImage=review.querySelector("#shotSelectedImage"),selectedPreview=review.querySelector("#shotSelectedPreview");if(selectedImage)selectedImage.src=objectUrl;if(selectedPreview)selectedPreview.hidden=false;review.classList.add("show");
   note.textContent="Review and enter the values shown in your screenshot. No image is uploaded.";
   const b=buildFor(name);
   $("shotLevel").value=b.level??"";
@@ -898,7 +914,7 @@ function setupBuildScreenshot(name){
      stops.push(`${slots[j]} ${a}deg ${z-gap}deg`);
      if(gap)stops.push(`#26363b ${z-gap}deg ${z}deg`);
    }
-   dial.style.background=`conic-gradient(from -90deg, ${stops.join(',')})`;
+   dial.style.background=`conic-gradient(from 90deg, ${stops.join(',')})`;
    dial.setAttribute('aria-label',`${attrs[i]}: ${b===null?'unknown base':b+' base'}, ${extra===null?'unknown bonus':extra+' bonus'}, ${acquiredKnown?acquired+' acquired points':'acquired points unconfirmed'}`);
  });
  const missing=bonus.filter(v=>v===null).length;
