@@ -97,7 +97,7 @@
 .shot-zoom-tip{color:#f0d878;font-size:12px;margin:6px 0 12px}
 .shot-fields label{min-width:0}
 @media(max-width:380px){.shot-zoom-card canvas{height:90px}.shot-star-review canvas{width:90px}}
-</style></head><body><header><div><small>ANIIMO COMPANION · LOCAL PROTOTYPE v0.48</small><h1>My Collection</h1></div><span class="pill">Guest mode</span></header><nav class="tabs" id="tabs"><button data-tab="collection" class="active">◈ Collection</button><button data-tab="items">▣ Items</button><button data-tab="upgrades">⇄ Upgrades</button><button data-tab="settings">⚙ Settings</button></nav><main class="shell"><section id="collection"><div class="stats" id="stats"></div><div class="bar"><div id="progress"></div></div><div class="toolbar"><input class="input" id="search" placeholder="Search Prismana…"><select id="filter"><option value="all">All statuses</option><option value="complete">Complete</option><option value="progress">In progress</option><option value="none">Not caught</option></select></div><div class="grid" id="creatures"></div></section><section id="items" class="hide"><h2>Held-item inventory</h2><p class="muted">Total owned includes bound copies. Available = total − bound.</p><input id="itemsearch" class="input" style="width:100%" placeholder="Search held items…"><div id="itemlist"></div></section><section id="upgrades" class="hide"><h2>Build & upgrade review</h2><div class="panel"><h3>Keep your current builds</h3><p class="muted">Existing assignments are preserved. New items are listed for research, but the prototype does not claim they are upgrades without verified effects and build comparisons.</p></div><div class="panel"><h3>New items to evaluate</h3><div id="newitems"></div></div><div class="panel"><h3>Needs binding</h3><div id="needs"></div></div></section><section id="settings" class="hide"><h2>Settings</h2><div class="panel"><h3>Import & export</h3><p class="hint">Build-tab screenshot scanning uses on-device OCR for landscape Capability Awakening images. Review all detected values before saving; images are not uploaded to our server.</p><input id="screens" type="file" accept="image/*" multiple class="input" style="width:100%"><div id="shotlist"></div><div class="toolbar"><button class="btn" id="bulk">Bulk select caught Prismana</button><button class="btn" id="export">Export JSON backup</button><label class="btn" style="cursor:pointer">Import JSON backup<input id="restore" type="file" accept=".json,application/json" hidden></label></div></div><div class="panel"><h3>Storage & privacy</h3><p class="hint">Your edits auto-save in this browser using local storage. Clearing site data may erase them. Export a backup regularly. Accounts, cloud sync, and automated game-data updates are not available. OCR downloads its recognition engine on first use.</p><button class="btn" id="reset">Reset to sample collection</button></div><div class="panel"><h3>Artwork</h3><p class="hint">Choose each Prismana’s Sparkling color in its Appearance tab. Paste a direct image URL or select a saved image from your device. The appearance gallery supports built-in images through the art manifest, plus personal overrides. Scorchhowl includes 13 built-in appearances. Held-item artwork includes 27 screenshot-sourced icons; newly cataloged items start at zero owned until you update inventory. Other Prismana appearances are awaiting artwork.</p></div></section></main><div id="modal" class="modal hide"><div class="dialog" id="dialog"></div></div><script>
+</style></head><body><header><div><small>ANIIMO COMPANION · LOCAL PROTOTYPE v0.49</small><h1>My Collection</h1></div><span class="pill">Guest mode</span></header><nav class="tabs" id="tabs"><button data-tab="collection" class="active">◈ Collection</button><button data-tab="items">▣ Items</button><button data-tab="upgrades">⇄ Upgrades</button><button data-tab="settings">⚙ Settings</button></nav><main class="shell"><section id="collection"><div class="stats" id="stats"></div><div class="bar"><div id="progress"></div></div><div class="toolbar"><input class="input" id="search" placeholder="Search Prismana…"><select id="filter"><option value="all">All statuses</option><option value="complete">Complete</option><option value="progress">In progress</option><option value="none">Not caught</option></select></div><div class="grid" id="creatures"></div></section><section id="items" class="hide"><h2>Held-item inventory</h2><p class="muted">Total owned includes bound copies. Available = total − bound.</p><input id="itemsearch" class="input" style="width:100%" placeholder="Search held items…"><div id="itemlist"></div></section><section id="upgrades" class="hide"><h2>Build & upgrade review</h2><div class="panel"><h3>Keep your current builds</h3><p class="muted">Existing assignments are preserved. New items are listed for research, but the prototype does not claim they are upgrades without verified effects and build comparisons.</p></div><div class="panel"><h3>New items to evaluate</h3><div id="newitems"></div></div><div class="panel"><h3>Needs binding</h3><div id="needs"></div></div></section><section id="settings" class="hide"><h2>Settings</h2><div class="panel"><h3>Import & export</h3><p class="hint">Build-tab screenshot scanning uses on-device OCR for landscape Capability Awakening images. Review all detected values before saving; images are not uploaded to our server.</p><input id="screens" type="file" accept="image/*" multiple class="input" style="width:100%"><div id="shotlist"></div><div class="toolbar"><button class="btn" id="bulk">Bulk select caught Prismana</button><button class="btn" id="export">Export JSON backup</button><label class="btn" style="cursor:pointer">Import JSON backup<input id="restore" type="file" accept=".json,application/json" hidden></label></div></div><div class="panel"><h3>Storage & privacy</h3><p class="hint">Your edits auto-save in this browser using local storage. Clearing site data may erase them. Export a backup regularly. Accounts, cloud sync, and automated game-data updates are not available. OCR downloads its recognition engine on first use.</p><button class="btn" id="reset">Reset to sample collection</button></div><div class="panel"><h3>Artwork</h3><p class="hint">Choose each Prismana’s Sparkling color in its Appearance tab. Paste a direct image URL or select a saved image from your device. The appearance gallery supports built-in images through the art manifest, plus personal overrides. Scorchhowl includes 13 built-in appearances. Held-item artwork includes 27 screenshot-sourced icons; newly cataloged items start at zero owned until you update inventory. Other Prismana appearances are awaiting artwork.</p></div></section></main><div id="modal" class="modal hide"><div class="dialog" id="dialog"></div></div><script>
 const base=[
 ["Scorchhowl","Explosive Gauntlet",1],["Stellarys","Ferocious Fang",1],["Infergon","Ferocious Fang",1],["Hexxin","Spirited Feather",1],["Somniwing","Spirited Feather",1],["Glacy","Miraculous Fleece",1],["Sparkelf","Miraculous Fleece",1],["Blazen","Gargantuan Horn",1],["Magmarex","Gargantuan Horn",1],["Panpanta","Gargantuan Horn",1],["Inferlupa","Gargantuan Horn",1],["Fenmane","Fission Needle",1],["Fulmintis","Heartseeker Pendant",1],["Glynsera","Heartseeker Pendant",1],["Irisalis","Floral Rainbow Feather",1],["Sherro","Capacitous Battery",1],["Thornblade","Fission Needle",0],["Ignitis","Ferocious Fang",0],["Grizbo","Fission Needle",0],["Pawney","Capacitous Battery",0],["Melloblum","Auspicious Bell",0],["Turbo","Heritage Amulet",0],["Luminelle","Spirited Feather",0],["Coronet","Ferocious Fang",0],["Waleetle","Ferocious Fang",0],["Irisal","Ferocious Fang",0]];
 const additions=["Whirlbite","Gachapus","Jabster","Sugartini","Pouchwisp","Royalby","Jeburst","Glameep","Hypnyto","Ekrim"];
@@ -393,34 +393,41 @@ verifiedFiveStarEmblem.src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAA
 const BUILTIN_STAR_REFERENCES=[{rank:1,src:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUEBAUEAwUFBAUGBgUGCA4JCAcHCBEMDQoOFBEVFBMRExMWGB8bFhceFxMTGyUcHiAhIyMjFRomKSYiKR8iIyL/2wBDAQYGBggHCBAJCRAiFhMWIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6s70tQXU4toC5GSeAPeuO13xjDotxapeTPvuHxiMgeUv99h/dFdUYOWpmdziisux1FpJFSVg4b7rjml8QMw8L6sVJBFnKcjt8hpSi09QH6pGzQI46Kea8o8XeGRLq9rdWKP5t9KIpyOcHs3twD7V7OQCCDyD61TfTLd2zhl56A1pTqKKsxM57QtJg063trGwUrBEeAWJ75Jya3PEALeFtWCgkmzlwBz/AavQW0cAIiXGep71YC1nOd2CP/9k="},{rank:2,src:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUEBAUEAwUFBAUGBgUGCA4JCAcHCBEMDQoOFBEVFBMRExMWGB8bFhceFxMTGyUcHiAhIyMjFRomKSYiKR8iIyL/2wBDAQYGBggHCBAJCRAiFhMWIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6s78VXub61smgF3PHEbiQRxbzjc3oKddTi2gLHknhR6muOubnZe6hJq8YvFltm+yqXK7eRmIDoMnB3Dnj2rqjBvUxnLlVzuAKWsLQ7q6itorfUp/Pm7ynr9PfHTJ5NX9XuZLPQtQuYCBLBbSSISMjIUkfqKmUWnZlIbqsZaBHA4U81yOqSq0y7RE/2JftUwYZKICBn2PP6Gu+IBUgjI965+fSLmzupW0QRql+xFz5uD5Z4+dcjnjI29Oa0hU5VYid7aDLNPtFxF5RDKTuDDkY9a0fEP8AyKur9v8AQ5v/AEA1Y03S7bS7NbezQhBnljkn6mrU9tHdWs1vcLvhmQo6+qkYI/KonO7KR//Z"},{rank:3,src:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUEBAUEAwUFBAUGBgUGCA4JCAcHCBEMDQoOFBEVFBMRExMWGB8bFhceFxMTGyUcHiAhIyMjFRomKSYiKR8iIyL/2wBDAQYGBggHCBAJCRAiFhMWIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6s71Xub61smgF3PHEbiQRxbz95j2FOurgW0Bc8k8KPU1x1zc7L3UJNXjF4sts32VS5XbyMxgdBk4O4c8e1dUYN6mM5cqujuAPWlrC0O6uoraK31Kfz5u8p6/T3x0yeTVrxAzL4X1ZkJVls5SGHUfIaUotOzKRQ1uWS71m10+zvoLaVY2kl81Qw54RcEg8nPT0rnDDc6jI7rcxyxwEiKRoQoaQH7yjkgdRk9a72extLok3NrBKSMEvGCcemetVodFsreFYraLyYUGFRDwKunU5SOV817nKGa8Fh9vivoAltMFlt5YQspKsN653YPy5II68V1GuMtz4R1Rrc+YstlKUKc7gYzjH1qSPQNMSeWX7DA8sv33kXcTxjv0rUjjVFVUUKqjAAGABUTndhGLW7P/Z"},{rank:4,src:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUEBAUEAwUFBAUGBgUGCA4JCAcHCBEMDQoOFBEVFBMRExMWGB8bFhceFxMTGyUcHiAhIyMjFRomKSYiKR8iIyL/2wBDAQYGBggHCBAJCRAiFhMWIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6s71Wu9QtLBrdby4jga5lEUIdsb3PRR71W1jW7LQ4IHv50iNzIIoQ2fnY/wBPevJvHtvqdxrlrcT3b3EE77LWIfKIG44GPXrnrxXVCm5Gdz2wClrlNJ1k6VDp2neIdTWe+uG8uOeQbTK/px+Wa6DU74abpF7fOjOtpC8rIo5baCcfpUyi4vUDznxx4EvL7U11HT7qW5+0SbZorp9wt1PdP9n/AGawdTs7fw3Jp9rJf3E7TSZcu/8AqF6b0H8Jyev1r28gEENjB615x4p+G41PW4LzSG8oXU2L8SSZ2rj76A9+23pzmtqdXl0YmrnNX3gC/vdWtVsbo3kNwwWSe4OWhXru68j6d8V61p1hHonh4W13ez3UNvGxkuL1tzFcZOT6AZ/CpdH0a00TTYrLT0ZYYhgeY5Zj9Sa0GjWSNkkUMjghlYZBB7VnUqczBI//2Q=="},{rank:5,src:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUEBAUEAwUFBAUGBgUGCA4JCAcHCBEMDQoOFBEVFBMRExMWGB8bFhceFxMTGyUcHiAhIyMjFRomKSYiKR8iIyL/2wBDAQYGBggHCBAJCRAiFhMWIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6s71Xub61s2gF3PHEbiQRxbz95j2FUbvWtsl1b6baT3t7b8NGq7UBxkAueOnpmuXTVI7pr271FBepcWzfZkLlTGcrmHHQHODu+9x7V0xg5GEppbHfgUvTr0rktG1u7iSS3vUmv1tQBPdwruKMc4XHVsAcnryM1o6nfw6j4I1K8sJd8MllMUkAK9EYd+eopOLT1KUkyv4mSe3ltLyxknjnkb7K32dVLOG5AycAEEcE+tcdrGmXc13JJdTSR3KW/nyJJtdo13cElcAtw30A616PquntqVisCzmArKkm8IH+6c4wapSeGra4ed7q4u5pZ4fJd3kGduSeMAep/OtKdTkM5RfNdHOJbakr2umtPcR2d4wj3qqNDLGRuO0DDISoPPbvmus12L/ilNUigjA/0KVUjQf7BAAFRw6G8Oo2c4v55IrUMFimVWPK7cBgBgdDjB6VthaicrsdOLS1P//Z"},{rank:6,src:"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUEBAUEAwUFBAUGBgUGCA4JCAcHCBEMDQoOFBEVFBMRExMWGB8bFhceFxMTGyUcHiAhIyMjFRomKSYiKR8iIyL/2wBDAQYGBggHCBAJCRAiFhMWIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6sxzxVe5vrWyaAXc8cRuJBHFvONzdgKoXl3qCa4lnAbSK3mh3pNKGY5H3xgccAgjPWuSi1CaG41VPFKrdXSQOIgW8sbQRhVA4Abht454I7V0xg2c8qijotz0UCl4A56VxWm6hrtp4emvb25t5kjYiNbiJg7rwFII5OScAkc8Gt7WmmPg7UmnURz/YJC6o2QreWcgH2NJqxUZqWxl+JLaPWNZsdPW4to5YUaV/PUMPm4VSMjOeePauJ1CwF5cTm1lt5YrGJpHbytowHAJVcnaM9CeuCa9ZnsbS6JNzbQSkjBLxgnHpnrWH/YMmks0fhuOGG3uyVnSTBEX+2uevGRt6c5rSnU5SJxldtHLSabFcWKamk1q62s6l45Y8SsVYFl3bsNhfmGOvHFd1rjrc+EtTeAiRZbKUoU53AocYqOw8LaPp6MsFjE5fl3mG8sfXngfhW2kaogVFCqowABwB6VE53dyoRa3P/9k="}];
 const builtInStarImages=BUILTIN_STAR_REFERENCES.map(ref=>{const img=new Image();img.src=ref.src;return {...ref,img};});
 function recognizeBuiltInStar(img){
- if(builtInStarImages.some(r=>!r.img.complete||!r.img.naturalWidth))return null;
+ // Compare emblem *shape* after subtracting its background. Raw grayscale
+ // comparison failed because the source examples had different backgrounds.
+ const ready=builtInStarImages.filter(r=>r.img.complete&&r.img.naturalWidth);
+ if(ready.length!==BUILTIN_STAR_REFERENCES.length)return null;
  const W=img.naturalWidth,H=img.naturalHeight;
- const c=document.createElement('canvas');c.width=c.height=32;
+ const c=document.createElement('canvas');c.width=c.height=48;
  const ctx=c.getContext('2d',{willReadFrequently:true});
- const refPixels=builtInStarImages.map(ref=>{ctx.clearRect(0,0,32,32);ctx.drawImage(ref.img,0,0,32,32);return ctx.getImageData(0,0,32,32).data;});
- const scores=[];
- for(let i=0;i<refPixels.length;i++){
-  let best=Infinity;
-  for(const dx of [-.006,-.003,0,.003,.006])for(const dy of [-.008,-.004,0,.004,.008]){
-   ctx.clearRect(0,0,32,32);
-   ctx.drawImage(img,(.741+dx)*W-17.5/1536*W,(.205+dy)*H-19/707*H,35/1536*W,38/707*H,0,0,32,32);
-   const pixels=ctx.getImageData(0,0,32,32).data;
-   let error=0;
-   // Compare local contrast against reference, not just cyan pixel count:
-   // four-star dark emblem and cyan star emblems are both supported.
-   for(let p=0;p<4096;p+=4){
-    const a=pixels[p]*.299+pixels[p+1]*.587+pixels[p+2]*.114;
-    const b=refPixels[i][p]*.299+refPixels[i][p+1]*.587+refPixels[i][p+2]*.114;
-    error+=Math.abs(a-b);
-   }
-   best=Math.min(best,error/1024/255);
+ function signature(source,sx,sy,sw,sh){
+  ctx.clearRect(0,0,48,48);ctx.drawImage(source,sx,sy,sw,sh,0,0,48,48);
+  const d=ctx.getImageData(0,0,48,48).data;
+  const mask=[];
+  for(let y=0;y<48;y++)for(let x=0;x<48;x++){
+   const k=(y*48+x)*4,r=d[k],g=d[k+1],b=d[k+2];
+   // Dark outline or bright turquoise interior, restricted to emblem center.
+   const dark=Math.max(r,g,b)<155&&Math.max(r,g,b)-Math.min(r,g,b)<85;
+   const turquoise=g>135&&b>145&&g>r*1.05&&b>r*1.06;
+   mask.push((dark||turquoise)&&x>6&&x<42&&y>5&&y<43?1:0);
   }
-  scores.push({rank:BUILTIN_STAR_REFERENCES[i].rank,error:best});
+  return mask;
  }
- scores.sort((a,b)=>a.error-b.error);
- // Abstain if the icon differs too much from training examples or if ambiguous.
- if(scores[0].error>.20||scores[1].error-scores[0].error<.025)return null;
- return {rank:scores[0].rank,score:1-scores[0].error};
+ const refs=ready.map(r=>signature(r.img,0,0,r.img.naturalWidth,r.img.naturalHeight));
+ const scores=ready.map((ref,i)=>{
+  let best=0;
+  for(const dx of [-.006,-.003,0,.003,.006])for(const dy of [-.009,-.004,0,.004,.009]){
+   const obs=signature(img,(.739+dx-.013)*W,(.207+dy-.031)*H,.026*W,.062*H);
+   let intersection=0,a=0,b=0;
+   for(let k=0;k<obs.length;k++){a+=obs[k];b+=refs[i][k];intersection+=obs[k]&&refs[i][k]?1:0;}
+   if(a<35||b<35)continue;
+   best=Math.max(best,2*intersection/(a+b));
+  }
+  return {rank:ref.rank,score:best};
+ }).sort((a,b)=>b.score-a.score);
+ // A low-margin guess is worse than asking for manual confirmation.
+ if(scores[0].score<.64||scores[0].score-(scores[1]?.score||0)<.045)return null;
+ return scores[0];
 }
 
 const STAR_REF_KEY="aniimo_star_emblems_v1";
@@ -546,33 +553,31 @@ function cyanBonusCrop(img,x,y,w,h,variant=0){
 async function scanVisibleBonuses(img,worker){
  const centers=[[.209,.463],[.521,.694],[.557,.462],[.293,.601],[.629,.611],[.282,.374]];
  const output=[];
- // A cyan label is near the top of the circle, NOT above its outline.
- // Digit-only OCR is more reliable for a tiny "+1" than requiring OCR
- // to recognize the plus sign as well.
+ // The +N is inside the dial, above the large white number. OCR only the
+ // small top strip, avoiding the circle outline and the large base numeral.
  for(const [cx,cy] of centers){
-  const votes=[], evidence=[];
+  const votes=[];
   for(const [dx,dy,w,h,variant] of [
-   [-.015,-.048,.030,.030,0],
-   [-.014,-.045,.028,.028,1],
-   [-.017,-.051,.034,.035,2],
-   [-.012,-.044,.024,.026,0],
-   [-.014,-.047,.028,.023,2]
+   [-.012,-.042,.024,.025,0],[-.014,-.043,.028,.027,1],
+   [-.011,-.040,.022,.023,2],[-.013,-.046,.026,.029,0],
+   [-.010,-.040,.020,.024,1],[-.014,-.046,.028,.027,2]
   ]){
    const {canvas,colored}=cyanBonusCrop(img,cx+dx,cy+dy,w,h,variant);
-   if(colored<25)continue;
+   if(colored<18)continue;
    await worker.setParameters({tessedit_char_whitelist:"123456789",tessedit_pageseg_mode:"10"});
    const result=await worker.recognize(canvas);
-   const raw=(result.data.text||"").replace(/\s/g,"").replace(/[^0-9]/g,"");
-   if(/^[1-9]$/.test(raw)){votes.push(Number(raw));evidence.push(colored);}
+   const raw=(result.data.text||"").trim().replace(/[^0-9]/g,"");
+   if(/^[1-9]$/.test(raw))votes.push(Number(raw));
   }
   const counts=new Map();for(const v of votes)counts.set(v,(counts.get(v)||0)+1);
-  const best=[...counts].sort((a,b)=>b[1]-a[1])[0];
-  // Require two independent preprocessing passes agreeing on the digit.
-  // Never invent a +1 simply because a cyan glow exists.
-  output.push(best&&best[1]>=2?best[0]:null);
+  const ranked=[...counts].sort((a,b)=>b[1]-a[1]);
+  // Require agreement, but not unanimity: tiny glyph OCR is noisy.
+  const best=ranked[0];
+  output.push(best&&best[1]>=2&&best[1]>(ranked[1]?.[1]||0)?best[0]:null);
  }
  return output;
 }
+
 async function scanAniimoScreenshot(img,progress){
  const ratio=img.naturalWidth/img.naturalHeight;
  if(ratio<1.7||ratio>2.5)throw Error("Use a full landscape Capability Awakening screenshot (not a cropped portrait)");
