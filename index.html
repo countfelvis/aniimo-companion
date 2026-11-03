@@ -1314,7 +1314,7 @@ html[data-aniimo-theme="light"] #items .equipment-positive{color:#207b60}
 .shot-compact-grid .shot-stat{min-height:0!important}
 @media(prefers-reduced-motion:reduce){#collection .creature,#collection .portrait{transition:none!important}}
 
-/* DEV 2.17: collection-first visual system, shared rhythm and restrained controls */
+/* DEV 2.18: collection-first visual system, shared rhythm and restrained controls */
 #collection{--collection-gap:12px}
 #collection .collection-overview{padding:12px 15px 13px!important;margin:7px 0 12px!important;border-radius:17px!important;box-shadow:none!important;background:linear-gradient(115deg,#182c3a,#172436)!important}
 #collection .collection-overview-top{margin-bottom:8px!important}
@@ -1350,7 +1350,162 @@ html[data-aniimo-theme="light"] #items .equipment-positive{color:#207b60}
  #collection .collection-guide-link{font-size:10px!important}
  #collection .layout-segments button{min-width:48px!important}
 }
-</style></head><body><div id="localSaveStatus" role="status" aria-live="polite">Saving locally…</div><header class="app-header"><div class="app-brand"><div><small>ANIIMO COMPANION <span class="version-mark">DEV 2.17</span></small><h1 id="page-title">My Collection</h1></div></div><div class="header-actions"><button type="button" class="theme-switch" id="themeSwitch" onclick="cycleAniimoTheme()" aria-label="Change appearance theme" title="Change appearance theme">☾ <span>Dark</span></button><span class="pill session-pill"><span class="session-dot"></span> On device</span></div></header><nav class="tabs" id="tabs" aria-label="Main navigation"><button data-tab="collection" class="active"><span class="nav-symbol">◈</span><span>Collection</span></button><button data-tab="items"><span class="nav-symbol">▣</span><span>Items</span></button><button data-tab="upgrades"><span class="nav-symbol">◇</span><span>Upgrades</span></button><button data-tab="settings"><span class="nav-symbol">⚙</span><span>Settings</span></button></nav><main class="shell"><section id="collection"><div class="collection-overview"><div class="collection-overview-top"><div><span class="overview-eyebrow">MY PRISMANA · COLLECTION PROGRESS</span><strong id="collectionProgressLabel">0 / 0 configured</strong></div><span class="overview-percent" id="collectionProgressPercent">0%</span></div><div class="bar" role="progressbar" aria-label="Caught Prismana configured" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress"></div></div><div class="stats" id="stats"></div><div id="collectionDimensions" class="collection-dimensions" aria-live="polite"></div></div><div class="catch-onboarding inventory-onboarding" id="catchOnboarding"><div class="onboarding-copy"><strong>Make this collection yours</strong><span>Start with your Aniimo, then add held items. You can scan and refine builds later.</span></div><div class="onboarding-actions"><button class="btn primary" type="button" onclick="document.getElementById('bulk').click()">✓ Add my Aniimo</button><button class="btn" type="button" onclick="openBulkInventory()">▣ Add held items</button><button class="onboarding-skip" type="button" onclick="setOnboardingDone(true);render()">Skip for now</button></div></div><div class="collection-section-heading"><div><small>THE COLLECTION</small><h2>Discover your Prismana</h2></div><button class="btn collection-guide-link" type="button" onclick="openCollectionGuide()">✦ Explore &amp; learn</button></div><div class="toolbar"><input class="input" id="search" placeholder="Name or Aniilog nº…" aria-label="Search by name or Aniilog number"><button class="multi-filter-trigger input" id="collectionFilterTrigger" type="button" onclick="toggleMultiFilters('collection')" aria-expanded="false">☷ <span id="collectionFilterLabel">All statuses</span><span class="filter-chevron">⌄</span></button><div class="multi-filter-panel hide" id="collectionFilterPanel"></div></div><div class="collection-filters"><label class="region-filter"><span>Region</span><select id="regionFilter" aria-label="Filter companions by region" onchange="setCollectionRegion(this.value)"><option value="all">All regions</option><option value="Breezy Plains">Breezy Plains</option><option value="Whisperwake Isles">Whisperwake Isles</option><option value="Keepsakes">Keepsakes</option></select></label><button class="favorites-filter" id="favoritesOnly" type="button" aria-pressed="false" onclick="toggleFavoritesFilter()">☆ Favorites</button></div><div class="view-controls layout-toolbar"><span class="layout-title">View</span><div class="layout-segments" role="group" aria-label="Collection card layout"><button type="button" data-view="large" onclick="setCollectionLayout('large')" aria-label="One card per row" title="Showcase"><span class="layout-glyph">▤</span><span>1</span></button><button type="button" data-view="cards" onclick="setCollectionLayout('cards')" aria-label="Two cards per row" title="Grid"><span class="layout-glyph">▦</span><span>2</span></button><button type="button" data-view="compact" onclick="setCollectionLayout('compact')" aria-label="Four cards per row" title="Compact"><span class="layout-glyph">▦</span><span>4</span></button></div><select id="layoutChoice" aria-label="Collection view" onchange="setCollectionLayout(this.value)" hidden><option value="cards">2 cards per row</option><option value="large">1 per row</option><option value="compact">4 cards per row</option></select></div><div id="backupReminder" class="backup-reminder" hidden><span>Keep a copy of your collection.</span><button class="btn" id="reminderExport">Export backup</button><button class="btn" onclick="snoozeBackup()">In a week</button></div><div class="collection-meta"><span>Aniilog order <span aria-hidden="true">↑</span></span><span id="collectionCount" aria-live="polite"></span></div><div class="grid" id="creatures"></div></section><section id="items" class="hide"><div class="section-intro"><div><div class="section-eyebrow">YOUR EQUIPMENT</div><h2>Held-item inventory</h2><p class="muted">Owned, equipped and ready to bind.</p></div><span class="section-sparkle" aria-hidden="true">▣</span></div><button class="btn primary bulk-inventory-entry" type="button" onclick="openBulkInventory()">▣ Edit all inventory quantities</button><div class="equipment-dashboard"><div class="equipment-metrics" id="equipmentMetrics"></div><div class="equipment-controls"><input id="itemsearch" class="input" placeholder="Search held items…" aria-label="Search held items"><div class="equipment-view-switch"><button id="itemGridView" type="button" onclick="setItemLayout('grid')">▦ Grid</button><button id="itemListView" type="button" onclick="setItemLayout('list')">☷ List</button></div></div><div id="inventoryActionSummary" class="inventory-action-summary" role="status" aria-live="polite"></div><div class="inventory-sortbar"><label for="itemSort">Sort by</label><select id="itemSort" class="input" aria-label="Sort held items" onchange="setItemSort(this.value)"><option value="owned-first">Owned first (default)</option><option value="name-asc">Name A–Z</option><option value="name-desc">Name Z–A</option><option value="amount-desc">Most owned</option><option value="amount-asc">Fewest owned</option><option value="free-desc">Most available</option><option value="bound-desc">Most bound</option><option value="needed-desc">Most needed</option></select><button class="btn inventory-clear" type="button" onclick="clearItemBrowse()">Clear</button></div><div class="inventory-results" id="inventoryResults" role="status" aria-live="polite"></div><div class="equipment-filters" id="equipmentFilters"><button class="multi-filter-trigger input" type="button" id="inventoryFilterTrigger" onclick="toggleMultiFilters('inventory')" aria-expanded="false">☷ <span id="inventoryFilterLabel">All held items</span><span class="filter-chevron">⌄</span></button><div class="multi-filter-panel hide" id="inventoryFilterPanel"></div></div></div><div id="itemlist" class="equipment-grid"></div></section><section id="upgrades" class="hide"><div class="upgrade-hero upgrade-hero-refined"><div class="section-eyebrow">YOUR EQUIPMENT ROADMAP</div><h2>Next upgrades</h2><p>Bind what you own. Farm what you're missing.</p></div><div class="upgrade-metrics upgrade-metrics-refined"><div><strong id="readyMetric">0</strong><span>Ready to bind</span></div><div><strong id="missingMetric">0</strong><span>Copies to obtain</span></div></div><div class="upgrade-section"><div class="upgrade-section-title"><div><h3><span class="upgrade-section-glyph">✓</span> Ready to bind</h3><p class="upgrade-section-description">You already have the item. Assign it to finish the upgrade.</p></div><span id="bindCount" class="upgrade-count-pill"></span></div><div id="needs" class="upgrade-action-stack"></div></div><div class="upgrade-section"><div class="upgrade-section-title"><div><h3><span class="upgrade-section-glyph farm">✦</span> Obtain missing items</h3><p class="upgrade-section-description">See the copies you need and where to obtain them.</p></div></div><label class="upgrade-future"><input type="checkbox" id="includeFutureItems"> Include uncaught Prismana in farming plans</label><div id="shortages" class="upgrade-action-stack"></div><p id="bindingSummary" class="upgrade-footnote" aria-live="polite"></p></div><details class="upgrade-research"><summary>Unverified new items <span>3</span></summary><div id="newitems"></div></details></section><section id="settings" class="hide"><div class="panel profile-settings-panel"><div><h3>My profile</h3><p class="hint">Choose a display name for this device. No account or password needed.</p></div><button class="btn" type="button" onclick="openLocalProfile()">Edit local profile</button></div><div class="panel recovery-settings-panel"><div><h3>Save recovery</h3><p class="hint">Review previous local snapshots and restore a saved collection.</p></div><button class="btn" type="button" onclick="openRecoveryManager()">Manage recovery saves</button></div><div class="theme-settings"><div><strong>Appearance</strong><p>Choose the look that suits you. Your choice is remembered on this device.</p></div><div class="theme-choice" role="group" aria-label="Appearance"><button type="button" data-aniimo-theme="dark" onclick="setAniimoTheme('dark')">☾ Dark</button><button type="button" data-aniimo-theme="light" onclick="setAniimoTheme('light')">☀ Light</button><button type="button" data-aniimo-theme="system" onclick="setAniimoTheme('system')">◐ Auto</button></div></div><div class="beta-report-panel"><strong>Beta feedback</strong><p>Copy a privacy-conscious diagnostic summary to include with a bug report. No collection names, values, screenshots or identifiers are included.</p><button type="button" class="btn" id="copyBetaDiagnostic">Copy diagnostic report</button><span id="betaDiagnosticStatus" role="status"></span></div><div class="section-intro"><div><div class="section-eyebrow">PREFERENCES & DATA</div><h2>Settings</h2><p class="muted">Your collection stays in your browser.</p></div><span class="section-sparkle" aria-hidden="true">⚙</span></div><div class="panel"><h3>Collection integrity check</h3><p class="hint">Check inventory quantities, duplicate bindings, and assignment consistency before a beta release. This check never changes your collection.</p><button class="btn" type="button" onclick="runCollectionAudit()">Run integrity check</button><div id="integrityAuditResults" class="hint" role="status" aria-live="polite" style="margin-top:12px"></div></div><div class="panel"><h3>Backup health</h3><p id="backupStatus" class="hint"></p><button id="undoImport" class="btn" onclick="previewPreviousImport()" hidden>Recover pre-import collection</button><p class="hint">Imports show changes before applying and keep one recovery copy on this device. Older backups preserve companions, items and builds that they do not contain. Weekly reminders appear here in the app.</p></div><div class="panel"><h3>Import & export</h3><p class="hint">Build-tab screenshot scanning uses on-device OCR for landscape Capability Awakening images. Review all detected values before saving; images are not uploaded to our server.</p><input id="screens" type="file" accept="image/*" multiple class="input" style="width:100%"><div id="shotlist"></div><div class="toolbar"><button class="btn" id="bulk">Bulk select caught Prismana</button><button class="btn" id="export">Export JSON backup</button><label class="btn" style="cursor:pointer">Import JSON backup<input id="restore" type="file" accept=".json,application/json" hidden></label></div></div><div class="panel"><h3>Storage & privacy</h3><p class="hint">Your edits auto-save in this browser using local storage. Clearing site data may erase them. Export a backup regularly. Accounts, cloud sync, and automated game-data updates are not available. OCR downloads its recognition engine on first use.</p><button class="btn" id="reset">Reset collection</button></div><div class="panel"><h3>Artwork</h3><p class="hint">Choose each Prismana’s Sparkling color in its Appearance tab. Paste a direct image URL or select a saved image from your device. The appearance gallery supports built-in images through the art manifest, plus personal overrides. Uploaded appearance galleries are preserved. Built-in portraits use your supplied screenshot galleries throughout; all five recovered galleries retain their original 13 appearances. Irisalis still needs matching artwork. Held-item artwork includes 27 screenshot-sourced icons; newly cataloged items start at zero owned until you update inventory. Aniilog numbers use region-specific numbering. Cornet keeps the legacy Coronet record so saved builds stay linked.</p></div></section></main><div id="modal" class="modal hide"><div class="dialog" id="dialog"></div></div><script>
+</style><style id="dev218-premium-card">
+/* DEV 2.18 — refined showcase, less chrome, consistent information hierarchy */
+#collection #creatures.grid[data-layout="large"]{gap:13px!important}
+#collection #creatures.grid[data-layout="large"] .creature{position:relative!important;overflow:hidden!important;border:1px solid rgba(111,174,174,.34)!important;border-radius:20px!important;background:linear-gradient(140deg,#1b3040 0%,#142234 53%,#111d2d 100%)!important;box-shadow:0 10px 26px rgba(0,0,0,.16),inset 0 1px rgba(206,244,237,.08)!important;grid-template-columns:minmax(112px,36%) minmax(0,1fr)!important;gap:0!important}
+#collection #creatures.grid[data-layout="large"] .creature:before{content:"";position:absolute;inset:0 0 auto;height:2px;background:linear-gradient(90deg,transparent,rgba(101,205,178,.55),transparent);pointer-events:none}
+#collection #creatures.grid[data-layout="large"] .card-topline{background:rgba(255,255,255,.025)!important;border-bottom:1px solid rgba(146,195,202,.11)!important;padding:7px 13px!important;min-height:35px!important}
+#collection #creatures.grid[data-layout="large"] .portrait{margin:9px 0 9px 9px!important;border-radius:13px!important;overflow:hidden!important;align-self:stretch!important;background:#0c1726!important;aspect-ratio:auto!important;min-height:174px!important;max-height:260px!important}
+#collection #creatures.grid[data-layout="large"] .portrait img{object-fit:contain!important;width:100%!important;height:100%!important;max-height:260px!important}
+#collection #creatures.grid[data-layout="large"] .body{padding:12px 13px!important;gap:6px!important;justify-content:center!important}
+#collection #creatures.grid[data-layout="large"] .name{font-size:clamp(19px,4.8vw,25px)!important;font-weight:760!important;letter-spacing:-.035em!important;line-height:1.13!important}
+#collection #creatures.grid[data-layout="large"] .card-origin{color:#a0b8c6!important;line-height:1.45!important;font-size:10px!important}
+#collection #creatures.grid[data-layout="large"] .held-chip{border-top:1px solid rgba(162,199,208,.13)!important;border-bottom:1px solid rgba(162,199,208,.13)!important;border-left:0!important;border-right:0!important;border-radius:0!important;background:transparent!important;padding:7px 0!important;min-height:0!important}
+#collection #creatures.grid[data-layout="large"] .acquisition-card-link{border:0!important;background:transparent!important;padding:3px 0!important;min-height:26px!important;justify-content:flex-start!important}
+#collection #creatures.grid[data-layout="large"] .manage-btn{min-height:37px!important;border-radius:11px!important;background:linear-gradient(120deg,#286c63,#257c71)!important;border:1px solid rgba(138,231,207,.45)!important;box-shadow:inset 0 1px rgba(255,255,255,.11)!important;font-size:12px!important;font-weight:750!important}
+@media(max-width:390px){#collection #creatures.grid[data-layout="large"] .creature{grid-template-columns:minmax(104px,35%) minmax(0,1fr)!important}#collection #creatures.grid[data-layout="large"] .body{padding:9px!important;gap:5px!important}#collection #creatures.grid[data-layout="large"] .portrait{margin:8px 0 8px 8px!important}}
+</style><style id="dev219-showcase-layout">
+/* DEV 2.19: compact editorial cards. No stretched body or empty grid tracks. */
+#collection #creatures.grid[data-layout="large"] .creature{
+ display:grid!important;grid-template-columns:minmax(0,36%) minmax(0,64%)!important;
+ grid-template-rows:38px auto!important;align-items:start!important;align-content:start!important;
+ min-height:0!important;height:auto!important;gap:0!important;
+ border-radius:17px!important;background:linear-gradient(135deg,#1b2b3b,#121f30)!important;
+ box-shadow:0 5px 18px rgba(0,0,0,.14)!important;
+}
+#collection #creatures.grid[data-layout="large"] .card-topline{grid-column:1/-1!important;grid-row:1!important;min-height:38px!important;height:38px!important;padding:5px 12px!important;align-self:stretch!important}
+#collection #creatures.grid[data-layout="large"] .portrait{
+ grid-column:1!important;grid-row:2!important;align-self:start!important;
+ height:205px!important;min-height:0!important;max-height:205px!important;
+ margin:10px 0 10px 10px!important;padding:0!important;
+ border-radius:11px!important;background:#0d1828!important;
+}
+#collection #creatures.grid[data-layout="large"] .portrait img{height:100%!important;width:100%!important;max-height:205px!important;object-fit:contain!important}
+#collection #creatures.grid[data-layout="large"] .body{
+ grid-column:2!important;grid-row:2!important;display:flex!important;flex-direction:column!important;
+ justify-content:flex-start!important;align-self:start!important;min-height:0!important;height:auto!important;
+ padding:12px 13px 11px!important;gap:7px!important;
+}
+#collection #creatures.grid[data-layout="large"] .name{font-size:clamp(19px,4.6vw,25px)!important;line-height:1.12!important;margin:0!important}
+#collection #creatures.grid[data-layout="large"] .card-origin{font-size:11px!important;line-height:1.35!important;margin:0!important}
+#collection #creatures.grid[data-layout="large"] .personality-chip{align-self:flex-start!important;margin:0!important}
+#collection #creatures.grid[data-layout="large"] .held-chip{margin:1px 0 0!important;padding:7px 0!important;width:100%!important;min-width:0!important}
+#collection #creatures.grid[data-layout="large"] .acquisition-card-link{margin:0!important;padding:0!important;align-self:flex-start!important;min-height:27px!important}
+#collection #creatures.grid[data-layout="large"] .cardactions{margin:3px 0 0!important;padding:0!important;width:100%!important}
+#collection #creatures.grid[data-layout="large"] .manage-btn{width:100%!important;min-height:36px!important;padding:7px 12px!important;border-radius:10px!important}
+#collection #creatures.grid[data-layout="large"] .creature[data-state="complete"]{border-color:rgba(96,186,165,.35)!important}
+#collection #creatures.grid[data-layout="large"] .creature[data-state="complete"] .card-topline:before{content:"✓ Collected";font-size:11px;color:#87d7bd;font-weight:700;letter-spacing:.025em;margin-right:auto}
+#collection #creatures.grid[data-layout="large"] .creature[data-state="complete"] .body{justify-content:flex-start!important}
+@media(max-width:420px){
+ #collection #creatures.grid[data-layout="large"] .creature{grid-template-columns:minmax(0,34%) minmax(0,66%)!important}
+ #collection #creatures.grid[data-layout="large"] .portrait{height:184px!important;max-height:184px!important;margin:9px 0 9px 9px!important}
+ #collection #creatures.grid[data-layout="large"] .portrait img{max-height:184px!important}
+ #collection #creatures.grid[data-layout="large"] .body{padding:10px!important;gap:6px!important}
+ #collection #creatures.grid[data-layout="large"] .held-chip img{height:29px!important;width:29px!important}
+}
+</style><style id="dev220-two-column-polish">
+/* DEV 2.22: standard two-up cards use the same restrained visual language as showcase. */
+#collection #creatures.grid[data-layout="cards"]{gap:12px!important;align-items:start!important}
+#collection #creatures.grid[data-layout="cards"] .creature{
+ align-self:start!important;min-height:0!important;height:auto!important;
+ display:flex!important;flex-direction:column!important;gap:0!important;
+ border-radius:17px!important;overflow:hidden!important;
+ background:linear-gradient(155deg,#1b2b3b,#121e30)!important;
+ border:1px solid rgba(134,174,195,.24)!important;
+ box-shadow:0 5px 18px rgba(0,0,0,.13)!important;
+}
+#collection #creatures.grid[data-layout="cards"] .creature[data-state="complete"]{border-color:rgba(96,186,165,.38)!important}
+#collection #creatures.grid[data-layout="cards"] .card-topline{
+ width:100%!important;box-sizing:border-box!important;min-height:37px!important;height:37px!important;
+ padding:4px 9px!important;gap:5px!important;flex:none!important;
+}
+#collection #creatures.grid[data-layout="cards"] .portrait{
+ width:100%!important;min-height:0!important;height:auto!important;max-height:none!important;
+ aspect-ratio:1.18/1!important;margin:0!important;padding:5px 7px!important;
+ box-sizing:border-box!important;background:linear-gradient(180deg,#111c2b,#132136)!important;
+ flex:none!important;
+}
+#collection #creatures.grid[data-layout="cards"] .portrait .art-window{inset:5px 7px!important}
+#collection #creatures.grid[data-layout="cards"] .portrait img{max-width:100%!important;max-height:100%!important;object-fit:contain!important}
+#collection #creatures.grid[data-layout="cards"] .body{
+ display:flex!important;flex-direction:column!important;justify-content:flex-start!important;
+ min-height:0!important;height:auto!important;flex:none!important;
+ padding:11px 12px 12px!important;gap:7px!important;
+}
+#collection #creatures.grid[data-layout="cards"] .name{
+ font-size:clamp(17px,3.6vw,22px)!important;line-height:1.12!important;
+ margin:0!important;letter-spacing:-.025em!important;overflow-wrap:anywhere!important;
+}
+#collection #creatures.grid[data-layout="cards"] .card-origin{
+ font-size:10px!important;line-height:1.4!important;margin:0!important;
+ overflow-wrap:anywhere!important;
+}
+#collection #creatures.grid[data-layout="cards"] .personality-chip{margin:0!important;align-self:flex-start!important}
+#collection #creatures.grid[data-layout="cards"] .held-chip{
+ width:100%!important;min-width:0!important;margin:1px 0 0!important;
+ padding:8px 0!important;gap:7px!important;border-radius:0!important;
+ background:transparent!important;border:0!important;
+ border-top:1px solid rgba(153,181,198,.13)!important;
+ border-bottom:1px solid rgba(153,181,198,.13)!important;
+}
+#collection #creatures.grid[data-layout="cards"] .held-thumb{width:36px!important;height:36px!important;flex:none!important}
+#collection #creatures.grid[data-layout="cards"] .held-chip .held-name{overflow-wrap:anywhere!important}
+#collection #creatures.grid[data-layout="cards"] .acquisition-card-link{
+ width:max-content!important;max-width:100%!important;min-height:26px!important;
+ margin:0!important;padding:0!important;align-self:flex-start!important;
+}
+#collection #creatures.grid[data-layout="cards"] .cardactions{
+ width:100%!important;margin:2px 0 0!important;padding:0!important;flex:none!important;
+}
+#collection #creatures.grid[data-layout="cards"] .manage-btn{
+ width:100%!important;min-height:38px!important;padding:8px 11px!important;
+ border-radius:10px!important;font-size:13px!important;
+}
+@media(max-width:410px){
+ #collection #creatures.grid[data-layout="cards"]{gap:9px!important}
+ #collection #creatures.grid[data-layout="cards"] .body{padding:9px!important;gap:6px!important}
+ #collection #creatures.grid[data-layout="cards"] .portrait{aspect-ratio:1.08/1!important;padding:4px!important}
+ #collection #creatures.grid[data-layout="cards"] .card-topline{padding:3px 6px!important}
+ #collection #creatures.grid[data-layout="cards"] .held-thumb{width:31px!important;height:31px!important}
+}
+
+/* DEV 2.22 — compact view is a portrait index, not a miniature detailed card. */
+#collection #creatures.grid[data-layout="compact"]{gap:8px!important;align-items:start!important}
+#collection #creatures.grid[data-layout="compact"] .creature{display:flex!important;flex-direction:column!important;min-width:0!important;height:auto!important;min-height:0!important;background:linear-gradient(160deg,#1c3040,#121f31)!important;border:1px solid rgba(135,174,190,.22)!important;border-radius:13px!important;box-shadow:0 3px 12px rgba(0,0,0,.12)!important;overflow:hidden!important;transition:border-color .16s,transform .16s!important}
+#collection #creatures.grid[data-layout="compact"] .creature[data-state="complete"]{border-color:rgba(99,205,170,.55)!important;box-shadow:inset 0 0 0 1px rgba(99,205,170,.08)!important}
+#collection #creatures.grid[data-layout="compact"] .card-topline{display:flex!important;align-items:center!important;justify-content:space-between!important;min-height:23px!important;height:23px!important;padding:2px 4px!important;background:rgba(17,31,44,.7)!important;border-bottom:1px solid rgba(144,173,189,.12)!important}
+#collection #creatures.grid[data-layout="compact"] .card-topline .card-index{font-size:8px!important;letter-spacing:.04em!important;white-space:nowrap!important}
+#collection #creatures.grid[data-layout="compact"] .card-topline .favorite-toggle{font-size:15px!important;width:17px!important;min-width:17px!important;height:19px!important;min-height:19px!important}
+#collection #creatures.grid[data-layout="compact"] .quick-caught{padding:0!important;min-width:17px!important;min-height:17px!important;background:transparent!important;border:0!important}
+#collection #creatures.grid[data-layout="compact"] .quick-caught input{width:14px!important;height:14px!important;accent-color:#65c8aa!important}
+#collection #creatures.grid[data-layout="compact"] .portrait{display:block!important;position:relative!important;width:100%!important;aspect-ratio:1/1.14!important;height:auto!important;min-height:0!important;margin:0!important;padding:0!important;background:#0b1423!important;overflow:hidden!important}
+#collection #creatures.grid[data-layout="compact"] .portrait .art-window{width:100%!important;height:100%!important;aspect-ratio:auto!important;min-height:0!important;display:flex!important;align-items:center!important;justify-content:center!important}
+#collection #creatures.grid[data-layout="compact"] .portrait img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important}
+#collection #creatures.grid[data-layout="compact"] .body{display:flex!important;flex:0 0 auto!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;min-height:34px!important;height:auto!important;padding:7px 3px 8px!important;margin:0!important;background:rgba(24,40,56,.92)!important;text-align:center!important}
+#collection #creatures.grid[data-layout="compact"] .body .name{display:block!important;font-size:clamp(9px,2.45vw,12px)!important;font-weight:650!important;line-height:1.2!important;letter-spacing:-.025em!important;overflow-wrap:anywhere!important;margin:0!important;max-width:100%!important}
+#collection #creatures.grid[data-layout="compact"] .body>:not(.name){display:none!important}
+#collection #creatures.grid[data-layout="compact"] .acquisition-mini,#collection #creatures.grid[data-layout="compact"] .acquisition-chip,#collection #creatures.grid[data-layout="compact"] .acquisition-badge{display:none!important}
+/* All thirteen Iris portraits: provide breathing room, avoiding the previous edge-to-edge zoom. */
+#collection .creature img[data-creature="Iris"],.appearance-gallery img[data-creature="Iris"],.profile-avatar-art[data-creature="Iris"]{box-sizing:border-box!important;object-fit:contain!important;object-position:center!important;padding:9%!important;background:#101a2a!important}
+.appearance-gallery img[data-creature="Iris"]{padding:12%!important}
+@media(max-width:390px){#collection #creatures.grid[data-layout="compact"]{gap:6px!important}#collection #creatures.grid[data-layout="compact"] .body{padding:6px 2px 7px!important}}
+@media(hover:hover){#collection #creatures.grid[data-layout="compact"] .creature:hover{transform:translateY(-2px)!important;border-color:rgba(104,202,178,.6)!important}}
+@media(prefers-reduced-motion:reduce){#collection #creatures.grid[data-layout="compact"] .creature{transition:none!important}}
+</style><style id="dev222-visual-consistency">
+/* DEV 2.22: consistent understated collection completion and appearance states */
+#collection #creatures .creature{transition:border-color .18s ease,background-color .18s ease,box-shadow .18s ease}
+#collection #creatures .creature.is-complete,
+#collection #creatures .creature.complete{border-color:rgba(96,193,166,.55)!important;box-shadow:inset 0 1px 0 rgba(142,227,202,.09)!important}
+#collection #creatures .card-complete-indicator{min-width:0!important;width:25px!important;height:25px!important;padding:0!important;border-radius:50%!important;background:rgba(66,160,133,.14)!important;border:1px solid rgba(102,200,169,.38)!important;color:#9ce6cc!important;font-size:13px!important}
+.appearance-gallery{gap:9px!important;align-items:start}
+.appearance-tile{position:relative;overflow:hidden;border:1px solid rgba(121,155,173,.23)!important;border-radius:13px!important;background:rgba(21,35,52,.86)!important;transition:border-color .15s ease,background-color .15s ease,transform .15s ease}
+.appearance-tile.selected{border-color:#79d6bc!important;background:rgba(40,106,94,.24)!important;box-shadow:inset 0 0 0 1px rgba(121,214,188,.28)!important}
+.appearance-tile.selected:after{content:'✓';position:absolute;right:7px;top:7px;display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#377c69;color:#eafff8;font-size:12px;font-weight:800;pointer-events:none}
+.appearance-tile img{object-fit:contain!important;max-width:100%;border-radius:8px}
+@media(hover:hover){.appearance-tile:hover{border-color:rgba(126,206,185,.65)!important;transform:translateY(-1px)}}
+@media(prefers-reduced-motion:reduce){.appearance-tile,#collection #creatures .creature{transition:none!important}}
+</style></head><body><div id="localSaveStatus" role="status" aria-live="polite">Saving locally…</div><header class="app-header"><div class="app-brand"><div><small>ANIIMO COMPANION <span class="version-mark">DEV 2.22</span></small><h1 id="page-title">My Collection</h1></div></div><div class="header-actions"><button type="button" class="theme-switch" id="themeSwitch" onclick="cycleAniimoTheme()" aria-label="Change appearance theme" title="Change appearance theme">☾ <span>Dark</span></button><span class="pill session-pill"><span class="session-dot"></span> On device</span></div></header><nav class="tabs" id="tabs" aria-label="Main navigation"><button data-tab="collection" class="active"><span class="nav-symbol">◈</span><span>Collection</span></button><button data-tab="items"><span class="nav-symbol">▣</span><span>Items</span></button><button data-tab="upgrades"><span class="nav-symbol">◇</span><span>Upgrades</span></button><button data-tab="settings"><span class="nav-symbol">⚙</span><span>Settings</span></button></nav><main class="shell"><section id="collection"><div class="collection-overview"><div class="collection-overview-top"><div><span class="overview-eyebrow">MY PRISMANA · COLLECTION PROGRESS</span><strong id="collectionProgressLabel">0 / 0 configured</strong></div><span class="overview-percent" id="collectionProgressPercent">0%</span></div><div class="bar" role="progressbar" aria-label="Caught Prismana configured" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress"></div></div><div class="stats" id="stats"></div><div id="collectionDimensions" class="collection-dimensions" aria-live="polite"></div></div><div class="catch-onboarding inventory-onboarding" id="catchOnboarding"><div class="onboarding-copy"><strong>Make this collection yours</strong><span>Start with your Aniimo, then add held items. You can scan and refine builds later.</span></div><div class="onboarding-actions"><button class="btn primary" type="button" onclick="document.getElementById('bulk').click()">✓ Add my Aniimo</button><button class="btn" type="button" onclick="openBulkInventory()">▣ Add held items</button><button class="onboarding-skip" type="button" onclick="setOnboardingDone(true);render()">Skip for now</button></div></div><div class="collection-section-heading"><div><small>THE COLLECTION</small><h2>Discover your Prismana</h2></div><button class="btn collection-guide-link" type="button" onclick="openCollectionGuide()">✦ Explore &amp; learn</button></div><div class="toolbar"><input class="input" id="search" placeholder="Name or Aniilog nº…" aria-label="Search by name or Aniilog number"><button class="multi-filter-trigger input" id="collectionFilterTrigger" type="button" onclick="toggleMultiFilters('collection')" aria-expanded="false">☷ <span id="collectionFilterLabel">All statuses</span><span class="filter-chevron">⌄</span></button><div class="multi-filter-panel hide" id="collectionFilterPanel"></div></div><div class="collection-filters"><label class="region-filter"><span>Region</span><select id="regionFilter" aria-label="Filter companions by region" onchange="setCollectionRegion(this.value)"><option value="all">All regions</option><option value="Breezy Plains">Breezy Plains</option><option value="Whisperwake Isles">Whisperwake Isles</option><option value="Keepsakes">Keepsakes</option></select></label><button class="favorites-filter" id="favoritesOnly" type="button" aria-pressed="false" onclick="toggleFavoritesFilter()">☆ Favorites</button></div><div class="view-controls layout-toolbar"><span class="layout-title">View</span><div class="layout-segments" role="group" aria-label="Collection card layout"><button type="button" data-view="large" onclick="setCollectionLayout('large')" aria-label="One card per row" title="Showcase"><span class="layout-glyph">▤</span><span>1</span></button><button type="button" data-view="cards" onclick="setCollectionLayout('cards')" aria-label="Two cards per row" title="Grid"><span class="layout-glyph">▦</span><span>2</span></button><button type="button" data-view="compact" onclick="setCollectionLayout('compact')" aria-label="Four cards per row" title="Compact"><span class="layout-glyph">▦</span><span>4</span></button></div><select id="layoutChoice" aria-label="Collection view" onchange="setCollectionLayout(this.value)" hidden><option value="cards">2 cards per row</option><option value="large">1 per row</option><option value="compact">4 cards per row</option></select></div><div id="backupReminder" class="backup-reminder" hidden><span>Keep a copy of your collection.</span><button class="btn" id="reminderExport">Export backup</button><button class="btn" onclick="snoozeBackup()">In a week</button></div><div class="collection-meta"><span>Aniilog order <span aria-hidden="true">↑</span></span><span id="collectionCount" aria-live="polite"></span></div><div class="grid" id="creatures"></div></section><section id="items" class="hide"><div class="section-intro"><div><div class="section-eyebrow">YOUR EQUIPMENT</div><h2>Held-item inventory</h2><p class="muted">Owned, equipped and ready to bind.</p></div><span class="section-sparkle" aria-hidden="true">▣</span></div><button class="btn primary bulk-inventory-entry" type="button" onclick="openBulkInventory()">▣ Edit all inventory quantities</button><div class="equipment-dashboard"><div class="equipment-metrics" id="equipmentMetrics"></div><div class="equipment-controls"><input id="itemsearch" class="input" placeholder="Search held items…" aria-label="Search held items"><div class="equipment-view-switch"><button id="itemGridView" type="button" onclick="setItemLayout('grid')">▦ Grid</button><button id="itemListView" type="button" onclick="setItemLayout('list')">☷ List</button></div></div><div id="inventoryActionSummary" class="inventory-action-summary" role="status" aria-live="polite"></div><div class="inventory-sortbar"><label for="itemSort">Sort by</label><select id="itemSort" class="input" aria-label="Sort held items" onchange="setItemSort(this.value)"><option value="owned-first">Owned first (default)</option><option value="name-asc">Name A–Z</option><option value="name-desc">Name Z–A</option><option value="amount-desc">Most owned</option><option value="amount-asc">Fewest owned</option><option value="free-desc">Most available</option><option value="bound-desc">Most bound</option><option value="needed-desc">Most needed</option></select><button class="btn inventory-clear" type="button" onclick="clearItemBrowse()">Clear</button></div><div class="inventory-results" id="inventoryResults" role="status" aria-live="polite"></div><div class="equipment-filters" id="equipmentFilters"><button class="multi-filter-trigger input" type="button" id="inventoryFilterTrigger" onclick="toggleMultiFilters('inventory')" aria-expanded="false">☷ <span id="inventoryFilterLabel">All held items</span><span class="filter-chevron">⌄</span></button><div class="multi-filter-panel hide" id="inventoryFilterPanel"></div></div></div><div id="itemlist" class="equipment-grid"></div></section><section id="upgrades" class="hide"><div class="upgrade-hero upgrade-hero-refined"><div class="section-eyebrow">YOUR EQUIPMENT ROADMAP</div><h2>Next upgrades</h2><p>Bind what you own. Farm what you're missing.</p></div><div class="upgrade-metrics upgrade-metrics-refined"><div><strong id="readyMetric">0</strong><span>Ready to bind</span></div><div><strong id="missingMetric">0</strong><span>Copies to obtain</span></div></div><div class="upgrade-section"><div class="upgrade-section-title"><div><h3><span class="upgrade-section-glyph">✓</span> Ready to bind</h3><p class="upgrade-section-description">You already have the item. Assign it to finish the upgrade.</p></div><span id="bindCount" class="upgrade-count-pill"></span></div><div id="needs" class="upgrade-action-stack"></div></div><div class="upgrade-section"><div class="upgrade-section-title"><div><h3><span class="upgrade-section-glyph farm">✦</span> Obtain missing items</h3><p class="upgrade-section-description">See the copies you need and where to obtain them.</p></div></div><label class="upgrade-future"><input type="checkbox" id="includeFutureItems"> Include uncaught Prismana in farming plans</label><div id="shortages" class="upgrade-action-stack"></div><p id="bindingSummary" class="upgrade-footnote" aria-live="polite"></p></div><details class="upgrade-research"><summary>Unverified new items <span>3</span></summary><div id="newitems"></div></details></section><section id="settings" class="hide"><div class="panel profile-settings-panel"><div><h3>My profile</h3><p class="hint">Choose a display name for this device. No account or password needed.</p></div><button class="btn" type="button" onclick="openLocalProfile()">Edit local profile</button></div><div class="panel recovery-settings-panel"><div><h3>Save recovery</h3><p class="hint">Review previous local snapshots and restore a saved collection.</p></div><button class="btn" type="button" onclick="openRecoveryManager()">Manage recovery saves</button></div><div class="theme-settings"><div><strong>Appearance</strong><p>Choose the look that suits you. Your choice is remembered on this device.</p></div><div class="theme-choice" role="group" aria-label="Appearance"><button type="button" data-aniimo-theme="dark" onclick="setAniimoTheme('dark')">☾ Dark</button><button type="button" data-aniimo-theme="light" onclick="setAniimoTheme('light')">☀ Light</button><button type="button" data-aniimo-theme="system" onclick="setAniimoTheme('system')">◐ Auto</button></div></div><div class="beta-report-panel"><strong>Beta feedback</strong><p>Copy a privacy-conscious diagnostic summary to include with a bug report. No collection names, values, screenshots or identifiers are included.</p><button type="button" class="btn" id="copyBetaDiagnostic">Copy diagnostic report</button><span id="betaDiagnosticStatus" role="status"></span></div><div class="section-intro"><div><div class="section-eyebrow">PREFERENCES & DATA</div><h2>Settings</h2><p class="muted">Your collection stays in your browser.</p></div><span class="section-sparkle" aria-hidden="true">⚙</span></div><div class="panel"><h3>Collection integrity check</h3><p class="hint">Check inventory quantities, duplicate bindings, and assignment consistency before a beta release. This check never changes your collection.</p><button class="btn" type="button" onclick="runCollectionAudit()">Run integrity check</button><div id="integrityAuditResults" class="hint" role="status" aria-live="polite" style="margin-top:12px"></div></div><div class="panel"><h3>Backup health</h3><p id="backupStatus" class="hint"></p><button id="undoImport" class="btn" onclick="previewPreviousImport()" hidden>Recover pre-import collection</button><p class="hint">Imports show changes before applying and keep one recovery copy on this device. Older backups preserve companions, items and builds that they do not contain. Weekly reminders appear here in the app.</p></div><div class="panel"><h3>Import & export</h3><p class="hint">Build-tab screenshot scanning uses on-device OCR for landscape Capability Awakening images. Review all detected values before saving; images are not uploaded to our server.</p><input id="screens" type="file" accept="image/*" multiple class="input" style="width:100%"><div id="shotlist"></div><div class="toolbar"><button class="btn" id="bulk">Bulk select caught Prismana</button><button class="btn" id="export">Export JSON backup</button><label class="btn" style="cursor:pointer">Import JSON backup<input id="restore" type="file" accept=".json,application/json" hidden></label></div></div><div class="panel"><h3>Storage & privacy</h3><p class="hint">Your edits auto-save in this browser using local storage. Clearing site data may erase them. Export a backup regularly. Accounts, cloud sync, and automated game-data updates are not available. OCR downloads its recognition engine on first use.</p><button class="btn" id="reset">Reset collection</button></div><div class="panel"><h3>Artwork</h3><p class="hint">Choose each Prismana’s Sparkling color in its Appearance tab. Paste a direct image URL or select a saved image from your device. The appearance gallery supports built-in images through the art manifest, plus personal overrides. Uploaded appearance galleries are preserved. Built-in portraits use your supplied screenshot galleries throughout; all five recovered galleries retain their original 13 appearances. Irisalis still needs matching artwork. Held-item artwork includes 27 screenshot-sourced icons; newly cataloged items start at zero owned until you update inventory. Aniilog numbers use region-specific numbering. Cornet keeps the legacy Coronet record so saved builds stay linked.</p></div></section></main><div id="modal" class="modal hide"><div class="dialog" id="dialog"></div></div><script>
 const STAR_REF_KEY = "dev-v123-star-reference";
 const base=[
 ["Scorchhowl","Explosive Gauntlet",1],["Stellarys","Ferocious Fang",1],["Infergon","Ferocious Fang",1],["Hexxin","Spirited Feather",1],["Somniwing","Spirited Feather",1],["Glacy","Miraculous Fleece",1],["Sparkelf","Miraculous Fleece",1],["Blazen","Gargantuan Horn",1],["Magmarex","Gargantuan Horn",1],["Panpanta","Gargantuan Horn",1],["Inferlupa","Gargantuan Horn",1],["Fenmane","Fission Needle",1],["Fulmintis","Heartseeker Pendant",1],["Glynsera","Heartseeker Pendant",1],["Irisalis","Floral Rainbow Feather",1],["Sherro","Capacitous Battery",1],["Thornblade","Fission Needle",0],["Ignitis","Ferocious Fang",0],["Grizbo","Fission Needle",0],["Pawney","Capacitous Battery",0],["Melloblum","Auspicious Bell",0],["Turbo","Heritage Amulet",0],["Luminelle","Spirited Feather",0],["Coronet","Ferocious Fang",0],["Waleetle","Ferocious Fang",0],["Irisal","Ferocious Fang",0]];
@@ -1358,7 +1513,7 @@ const additions=["Iris","Whirlbite","Gachapus","Jabster","Sugartini","Pouchwisp"
 const initialItems={"Gargantuan Horn":4,"Ferocious Fang":11,"Spirited Feather":5,"Heartseeker Pendant":2,"Floral Rainbow Feather":1,"Miraculous Fleece":13,"Fission Needle":3,"Explosive Gauntlet":2,"Capacitous Battery":2,"Lightning Needle":19,"Echoing Grimoire":4,"Marching Flask":1,"Heritage Amulet":1,"Giant Tortoise Shell":1,"Auspicious Bell":1,"Avenging Gear":1,"Breathbinder Sash":0,"Riftbreaker Goggles":0,"Omenbone Flute":0,"Ambusher's Cloak":0,"Destiny's Dice":0,"Finisher Bell":0,"Nature's Breath":0,"Rekindling Feather":0,"Supreme Elixir":0,"Vanguard's Whistle":0,"Seeds of Spring":0};
 const all=base.map(([name,ideal,bound])=>({name,ideal,caught:true,bound:bound?ideal:null})).concat(additions.map(name=>({name,ideal:null,caught:false,bound:null})));
 const fresh=()=>({version:1,creatures:all.map(c=>({...c,caught:false,bound:null,alpha:false})),items:Object.fromEntries(Object.keys(initialItems).map(k=>[k,0])),builds:{}});
-let data;try{const stored=JSON.parse(localStorage.getItem("aniimo-companion-dev-v155-data"));if(stored?.items&&stored.version===1){for(const [k,v] of Object.entries(initialItems))if(stored.items[k]===undefined)stored.items[k]=0;}if(stored?.version===1&&Array.isArray(stored.creatures)&&stored.creatures.length===all.length-1&&all.every(c=>c.name==='Iris'||stored.creatures.some(x=>x.name===c.name))){stored.creatures=all.map(c=>stored.creatures.find(x=>x.name===c.name)||{...c,caught:false,bound:null,alpha:false});}data=valid(stored)?stored:fresh()}catch{data=fresh()}
+let data;try{const stored=JSON.parse(localStorage.getItem("aniimo-dev-v222::aniimo-companion-dev-v155-data"));if(stored?.items&&stored.version===1){for(const [k,v] of Object.entries(initialItems))if(stored.items[k]===undefined)stored.items[k]=0;}if(stored?.version===1&&Array.isArray(stored.creatures)&&stored.creatures.length===all.length-1&&all.every(c=>c.name==='Iris'||stored.creatures.some(x=>x.name===c.name))){stored.creatures=all.map(c=>stored.creatures.find(x=>x.name===c.name)||{...c,caught:false,bound:null,alpha:false});}data=valid(stored)?stored:fresh()}catch{data=fresh()}
 function valid(v){return v&&v.version===1&&Array.isArray(v.creatures)&&v.creatures.length===all.length&&v.creatures.every((x,i)=>x.name===all[i].name&&(x.alpha===undefined||typeof x.alpha==="boolean")&&typeof x.caught==="boolean"&&(x.bound===null||typeof x.bound==="string"))&&v.items&&Object.keys(initialItems).every(k=>Number.isInteger(v.items[k])&&v.items[k]>=0)}
 data.builds ||= {};
 // User-provided screenshots. Current innate values already include Capafruit.
@@ -1366,8 +1521,8 @@ data.builds ||= {};
 // Development builds start empty; reference examples are not imported into user data.
 const $=id=>document.getElementById(id);
 let lastSavedSnapshot="";
-const SAVE_KEY="aniimo-companion-dev-v155-data";
-const RECOVERY_KEY="aniimo-companion-recovery-v1";
+const SAVE_KEY="aniimo-dev-v222::aniimo-companion-dev-v155-data";
+const RECOVERY_KEY="aniimo-dev-v222::aniimo-companion-recovery-v1";
 const RECOVERY_LIMIT=5;
 function saveHistory(){
  try{const v=JSON.parse(localStorage.getItem(RECOVERY_KEY)||"[]");return Array.isArray(v)?v.filter(x=>x&&typeof x.snapshot==="string").slice(-RECOVERY_LIMIT):[]}catch{return []}
@@ -1395,7 +1550,7 @@ const save=()=>{try{
  lastSavedSnapshot=snapshot;
  const el=$("localSaveStatus");if(el){el.textContent="✓ Saved locally";el.classList.remove("save-error")}
 }catch(e){const el=$("localSaveStatus");if(el){el.textContent="⚠ Not saved — export backup";el.classList.add("save-error")}}};
-const LOCAL_PROFILE_KEY="aniimo-companion-local-profile";
+const LOCAL_PROFILE_KEY="aniimo-dev-v222::aniimo-companion-local-profile";
 window.openLocalProfile=()=>{
  let current="Guest";try{current=localStorage.getItem(LOCAL_PROFILE_KEY)||"Guest"}catch{}
  $("dialog").innerHTML=`<div class="row"><h2>Local profile</h2><button class="btn" onclick="closeDialog()">✕</button></div><p class="hint">A display name for this browser only. This does not create a cloud account or sync across devices.</p><label>Display name <input id="localProfileName" maxlength="24" value="${esc(current==='Guest'?'':current)}" placeholder="Your username"></label><div class="toolbar"><button class="btn primary" onclick="saveLocalProfile()">Save name</button><button class="btn" onclick="closeDialog()">Cancel</button></div><p class="hint">Your collection remains stored locally. Export a backup to transfer it to another device.</p>`;
@@ -1509,7 +1664,7 @@ function collectionPreferences(){
  if(!collectionRegions.includes(data.collectionView.region))data.collectionView.region='all';
  data.collectionView.favoritesOnly=data.collectionView.favoritesOnly===true;
  // Keep the display preference separate from collection records so it survives refreshes and development data resets.
- try{const savedLayout=localStorage.getItem('aniimo-companion-collection-layout');
+ try{const savedLayout=localStorage.getItem('aniimo-dev-v222::aniimo-companion-collection-layout');
  if(['cards','large','compact'].includes(savedLayout))data.collectionView.layout=savedLayout;}catch(e){}
  if(!['cards','large','compact'].includes(data.collectionView.layout))data.collectionView.layout='cards';
  return data.collectionView;
@@ -1639,14 +1794,14 @@ function heldItemChip(c){
 }
 const expandedHeldItems=new Set();
 window.toggleHeldItem=code=>{const name=decodeURIComponent(code);if(expandedHeldItems.has(name))expandedHeldItems.delete(name);else expandedHeldItems.add(name);render();};
-const ONBOARDING_KEY='aniimo-companion-dev-v155-caught-onboarding-done';
+const ONBOARDING_KEY='aniimo-dev-v222::aniimo-companion-dev-v155-caught-onboarding-done';
 let onboardingDone=false;
 try{onboardingDone=localStorage.getItem(ONBOARDING_KEY)==='1'}catch{}
 function setOnboardingDone(done){onboardingDone=done;try{if(done)localStorage.setItem(ONBOARDING_KEY,'1');else localStorage.removeItem(ONBOARDING_KEY)}catch{}}
 
 // Acquisition-source registry: separate shared reference facts from personal collection state.
 // Unknown entries are deliberately not represented as permanent or currently available.
-const ACQUISITION_KEY="aniimo-acquisition-notes-v1";
+const ACQUISITION_KEY="aniimo-dev-v222::aniimo-acquisition-notes-v1";
 const acquisitionKinds={
  "permanent-bloom":"Permanent Bloom",
  "event-bloom":"Limited-time Bloom",
@@ -1674,7 +1829,7 @@ const acquisitionSafe=v=>esc(String(v??""));
 function compactSeasonLabel(value){
  return String(value||"").replace(/Season\s+(\d+)\s*(?:·\s*)?Part\s+(\d+)/gi,(_,season,part)=>`S${season}P${part}`);
 }
-const ACQ_REGION_KEY="aniimo-acquisition-region";
+const ACQ_REGION_KEY="aniimo-dev-v222::aniimo-acquisition-region";
 const acqRegions={americas:"America/Los_Angeles",europe:"Europe/London",asia:"Asia/Singapore"};
 const acqRegion=()=>{try{return localStorage.getItem(ACQ_REGION_KEY)||"americas"}catch{return "americas"}};
 window.setAcqRegion=v=>{if(!acqRegions[v])return;try{localStorage.setItem(ACQ_REGION_KEY,v)}catch{}render()};
@@ -1733,13 +1888,13 @@ window.saveAcquisitionNote=name=>{
 };
 window.openCollectionGuide=()=>{
  const count=data.creatures.filter(c=>c.caught).length;
- let profile="";try{profile=localStorage.getItem("aniimo-companion-local-profile")||""}catch{}
+ let profile="";try{profile=localStorage.getItem("aniimo-dev-v222::aniimo-companion-local-profile")||""}catch{}
  const title=profile?`Welcome back, ${profile}!`:count?"Your collection is growing.":"Organize and get to know your Aniimo.";
  const description=count?`You've collected ${count} Prismana. Keep exploring and make every companion your own.`:"Organize your collection, explore each Aniimo’s strengths, and learn how to make the most of your companions.";
  $("dialog").innerHTML=`<div class="row"><h2>Explore Aniimo Companion</h2><button class="btn" onclick="closeDialog()">✕</button></div><div class="collection-guide-content"><h3>${esc(title)}</h3><p>${esc(description)}</p><button class="welcome-discover" type="button" onclick="openAcquisitionPlanner()"><span class="welcome-discover-icon">✦</span><span><strong>Explore missing Prismana</strong><small>See what's available and coming next</small></span><span class="welcome-arrow">›</span></button><p class="hint">Track your collection, manage held items, and open any Aniimo to explore its builds and appearances.</p></div>`;
  $("modal").classList.remove("hide");
 };
-const MULTI_FILTER_KEY="aniimo-multi-filters-v1";
+const MULTI_FILTER_KEY="aniimo-dev-v222::aniimo-multi-filters-v1";
 const FILTER_GROUPS={collection:[
  {title:"Collection progress",items:[["complete","Complete"],["progress","In progress"],["none","Not caught"],["ready","Ready to bind"],["shortage","Needs an item"]]},
  {title:"Evolution",items:[["baby","Pre-evolutions"]]},
@@ -1749,7 +1904,7 @@ const FILTER_GROUPS={collection:[
 let multiFilters={collection:[],inventory:[]};
 try{const old=JSON.parse(localStorage.getItem(MULTI_FILTER_KEY)||"{}");for(const type of Object.keys(multiFilters)){const allowed=FILTER_GROUPS[type].flatMap(g=>g.items.map(i=>i[0]));if(Array.isArray(old[type]))multiFilters[type]=old[type].filter(v=>allowed.includes(v))}}catch{}
 // Keep older single-choice preferences when upgrading.
-try{if(!multiFilters.inventory.length){const old=localStorage.getItem("aniimo-item-filter");if(["owned","available","bound","needed"].includes(old))multiFilters.inventory=[old]}}catch{}
+try{if(!multiFilters.inventory.length){const old=localStorage.getItem("aniimo-dev-v222::aniimo-item-filter");if(["owned","available","bound","needed"].includes(old))multiFilters.inventory=[old]}}catch{}
 function multiFilterMatches(type,record){const selected=multiFilters[type];if(!selected.length)return true;
  // OR within each category, AND between categories.
  return FILTER_GROUPS[type].every(group=>{const active=group.items.map(i=>i[0]).filter(id=>selected.includes(id));if(!active.length)return true;return active.some(id=>type==="collection"?matchesCollectionStatus(record,id):inventoryMatches(record,id))});
@@ -1779,7 +1934,7 @@ if(artworkVisibilityObserver)artworkVisibilityObserver.disconnect();$("creatures
 const itemEntries=Object.entries(data.items);
 const itemNeeded=name=>data.creatures.filter(c=>c.caught&&!c.alpha&&c.ideal===name&&!hasBinding(c,name)).length;
 const itemLayout=window.equipmentLayout||'grid';updateMultiFilterUI("inventory");
-const itemSort=window.equipmentSort||(localStorage.getItem('aniimo-item-sort')||'owned-first');const sortControl=$('itemSort');if(sortControl&&sortControl.value!==itemSort)sortControl.value=itemSort;
+const itemSort=window.equipmentSort||(localStorage.getItem('aniimo-dev-v222::aniimo-item-sort')||'owned-first');const sortControl=$('itemSort');if(sortControl&&sortControl.value!==itemSort)sortControl.value=itemSort;
 const ownedTypes=itemEntries.filter(([k,n])=>Number(n)>0).length;
 const freeCopies=itemEntries.reduce((sum,[k])=>sum+Math.max(0,available(k)),0);
 const missingCopies=itemEntries.reduce((sum,[k])=>sum+Math.max(0,itemNeeded(k)-Math.max(0,available(k))),0);
@@ -1983,7 +2138,7 @@ window.openAppearance=name=>{
  $("appearanceClear").onclick=()=>{c.appearance||={};c.appearance.images||={};delete c.appearance.images[variantEl.value];c.appearance.variant=variantEl.value;render();managePrismana(name,"appearance")};
 };
 window.equipmentFilter='all';window.equipmentLayout='grid';
-window.setItemSort=value=>{window.equipmentSort=value;try{localStorage.setItem('aniimo-item-sort',value)}catch(e){}render()};
+window.setItemSort=value=>{window.equipmentSort=value;try{localStorage.setItem('aniimo-dev-v222::aniimo-item-sort',value)}catch(e){}render()};
 window.clearItemBrowse=()=>{window.equipmentSort='owned-first';window.equipmentFilter='all';$('itemsearch').value='';render()};
 window.setItemFilter=value=>{multiFilters.inventory=value==="all"?[]:[value];render()};
 window.setItemLayout=value=>{window.equipmentLayout=value;render()};
@@ -3076,7 +3231,7 @@ function needsBinding(c){return c.caught&&!c.alpha&&!c.bound;}
 function readyToBind(c){return needsBinding(c)&&!!c.ideal&&available(c.ideal)>0;}
 function matchesCollectionStatus(c,f){if(['source-active','source-upcoming','source-ended'].includes(f))return acquisitionFor(c.name).some(r=>acquisitionLiveStatus(r)===f.slice(7));if(f==='source-known')return acquisitionFor(c.name).length>0;if(f==='source-unknown')return acquisitionFor(c.name).length===0;if(f.startsWith('source-')&&f!=='source-known'&&f!=='source-unknown')return acquisitionFor(c.name).some(r=>r.kind===f.slice(7));if(f==='baby')return speciesRules(c).stage==='pre-evolution';if(f==='evolved')return speciesRules(c).stage==='evolved';if(f==='buildable')return speciesRules(c).buildEligible!==false;if(f==='appearance-missing')return c.caught&&appearanceProgress(c).unlocked<appearanceProgress(c).total;return f==='all'||(f==='ready'?readyToBind(c):f==='shortage'?needsBinding(c)&&(!c.ideal||available(c.ideal)<1):status(c)===f);}
 window.setCollectionLayout=layout=>{data.collectionView.layout=['cards','large','compact'].includes(layout)?layout:'cards';
- try{localStorage.setItem('aniimo-companion-collection-layout',data.collectionView.layout)}catch(e){}const grid=document.getElementById('creatures');if(grid)grid.dataset.layout=data.collectionView.layout;const picker=document.getElementById('layoutChoice');if(picker)picker.value=data.collectionView.layout;document.querySelectorAll('.layout-segments button').forEach(b=>{const on=b.dataset.view===data.collectionView.layout;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});save();render();};
+ try{localStorage.setItem('aniimo-dev-v222::aniimo-companion-collection-layout',data.collectionView.layout)}catch(e){}const grid=document.getElementById('creatures');if(grid)grid.dataset.layout=data.collectionView.layout;const picker=document.getElementById('layoutChoice');if(picker)picker.value=data.collectionView.layout;document.querySelectorAll('.layout-segments button').forEach(b=>{const on=b.dataset.view===data.collectionView.layout;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});save();render();};
 function recommendationLabel(c){return !c.bound&&newPrismanaInfo[c.name]&&c.ideal===newPrismanaInfo[c.name].item?'Sourced baseline':'Your choice';}
 function bindingRequirements(includeFuture=false){
  const groups=new Map();
@@ -3097,7 +3252,7 @@ function renderPlanningExtras(){
  $('backupStatus').innerHTML=backupStatusHTML();
  const overdue=!data.backup?.lastExportAt||Date.now()-Date.parse(data.backup.lastExportAt)>7*864e5;
  $('backupReminder').hidden=!overdue||Date.now()<(Number(data.backup?.snoozeUntil)||0);
- $('undoImport').hidden=!localStorage.getItem('aniimo-companion-dev-v155-pre-import');
+ $('undoImport').hidden=!localStorage.getItem('aniimo-dev-v222::aniimo-companion-dev-v155-pre-import');
 }
 function stableJSON(v){return JSON.stringify(v,(_,x)=>x&&typeof x==='object'&&!Array.isArray(x)?Object.fromEntries(Object.entries(x).sort(([a],[b])=>a.localeCompare(b))):x);}
 function collectionFingerprint(v){const s=stableJSON({creatures:v.creatures,items:v.items,builds:v.builds});let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return (h>>>0).toString(16);}
@@ -3141,9 +3296,9 @@ function previewBackup(v,label='Backup import'){
  for(const [item,n] of Object.entries(next.items))if(n!==data.items[item])changes.push(`${item}: ${data.items[item]} → ${n} owned`);
  for(const [name,b] of Object.entries(next.builds))if(stableJSON(b)!==stableJSON(data.builds[name]))changes.push(displayName({name})+': build updated');
  $('dialog').innerHTML=`<div class="row"><h2>${esc(label)}</h2><button class="btn" onclick="closeDialog()" aria-label="Cancel import">✕</button></div><p>${changes.length} collection, inventory or build changes. ${next.creatures.filter(c=>c.caught).length} caught · ${next.creatures.filter(c=>c.bound).length} bound after import.</p><p class="hint">View preferences from the backup will also be restored. Nothing changes until you apply. A recovery copy of your current collection will be saved on this device.</p>${notes.map(n=>`<p class="hint">${esc(n)}</p>`).join('')}<ul class="import-changes">${changes.map(s=>`<li>${esc(s)}</li>`).join('')||'<li>No collection changes.</li>'}</ul><div class="toolbar"><button class="btn primary" id="applyBackup">Apply import</button><button class="btn" onclick="closeDialog()">Cancel</button></div>`;$('modal').classList.remove('hide');
- $('applyBackup').onclick=()=>{const before=JSON.stringify(data),after=JSON.stringify(next);try{localStorage.setItem('aniimo-companion-dev-v155-pre-import',before);localStorage.setItem(SAVE_KEY,after);}catch{alert('Not enough local storage to safely import. Your current collection has been kept.');return;}createRecoveryPoint(before,'Before backup import');data=next;lastSavedSnapshot=after;render();close();};
+ $('applyBackup').onclick=()=>{const before=JSON.stringify(data),after=JSON.stringify(next);try{localStorage.setItem('aniimo-dev-v222::aniimo-companion-dev-v155-pre-import',before);localStorage.setItem(SAVE_KEY,after);}catch{alert('Not enough local storage to safely import. Your current collection has been kept.');return;}createRecoveryPoint(before,'Before backup import');data=next;lastSavedSnapshot=after;render();close();};
 }
-window.previewPreviousImport=()=>{try{const raw=localStorage.getItem('aniimo-companion-dev-v155-pre-import');if(raw)previewBackup(JSON.parse(raw),'Recover previous collection');}catch(e){alert(e.message);}};
+window.previewPreviousImport=()=>{try{const raw=localStorage.getItem('aniimo-dev-v222::aniimo-companion-dev-v155-pre-import');if(raw)previewBackup(JSON.parse(raw),'Recover previous collection');}catch(e){alert(e.message);}};
 function plannerInputError(b){
  const good=(a,max,nullable=false)=>Array.isArray(a)&&a.length===6&&a.every(n=>nullable&&n===null||typeof n==='number'&&Number.isInteger(n)&&n>=0&&n<=max);
  if(!b||!good(b.innate,10)||!good(b.spent,20)||!good(b.bonuses||Array(6).fill(0),99))return 'Enter six whole-number innate, acquired and bonus values. Unknown values need review.';
@@ -3212,13 +3367,13 @@ try{
  let migrated=false;
  for(const c of data.creatures){
   if(!c.personality){
-   const old=localStorage.getItem('aniimo-personality-dev-v163-'+c.name);
+   const old=localStorage.getItem('aniimo-dev-v222::aniimo-personality-dev-v163-'+c.name);
    if(old&&personalityTypes.includes(old)){c.personality=old;migrated=true}
   }
  }
  if(migrated)save();
 }catch(e){}
-function personalityKey(name){return 'aniimo-personality-dev-v163-'+name}
+function personalityKey(name){return 'aniimo-dev-v222::aniimo-personality-dev-v163-'+name}
 function personalityGet(name){
  const c=data.creatures.find(x=>x.name===name);
  if(c&&typeof c.personality==='string'&&personalityTypes.includes(c.personality))return c.personality;
@@ -3282,7 +3437,7 @@ function personalitySave(name){
  const q=(sel,root=document)=>root.querySelector(sel);
  const qa=(sel,root=document)=>Array.from(root.querySelectorAll(sel));
  const editor=()=>q('.shot-compact-grid');
- const draftKey='aniimo-build-edit-draft-v166';
+ const draftKey='aniimo-dev-v222::aniimo-build-edit-draft-v166';
  let mode='quick',undo=null,prior=null,restoring=false,editorIdentity=null;
  const fields=()=>qa('[data-shotinnate],[data-shotacquired],[data-shotbonus],[data-shotstat],#shotSpent,#shotLevel,#shotStars');
  const snapshot=()=>Object.fromEntries(fields().map(e=>[e.id||e.getAttributeNames().find(x=>x.startsWith('data-shot'))+':'+(e.getAttribute('data-shotinnate')||e.getAttribute('data-shotacquired')||e.getAttribute('data-shotbonus')||e.getAttribute('data-shotstat')||''),e.value]));
@@ -3346,7 +3501,7 @@ function personalitySave(name){
 </script>
 <script id="aniimo-v168-theme">
 (function(){
- const KEY='aniimo-companion-theme';
+ const KEY='aniimo-dev-v222::aniimo-companion-theme';
  const choices=['dark','light','system'];
  function preference(){try{const v=localStorage.getItem(KEY);return choices.includes(v)?v:'dark'}catch{return 'dark'}}
  function apply(){
@@ -3377,5 +3532,23 @@ function personalitySave(name){
  top.addEventListener('click',()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));
  const update=()=>top.classList.toggle('visible',window.scrollY>680);
  window.addEventListener('scroll',update,{passive:true});update();
+})();
+</script><script id="dev218-layout-initialization">
+/* Ensure persisted view is applied after the first paint as well as after grid regeneration. */
+(function(){
+ function apply(){
+  const grid=document.getElementById('creatures');if(!grid)return;
+  let choice='cards';
+  try{const saved=localStorage.getItem('aniimo-dev-v222::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(saved))choice=saved;else if(typeof data!=='undefined'&&data.collectionView&&['large','cards','compact'].includes(data.collectionView.layout))choice=data.collectionView.layout;}catch(e){if(typeof data!=='undefined'&&data.collectionView)choice=data.collectionView.layout||'cards'}
+  if(typeof data!=='undefined'&&data.collectionView)data.collectionView.layout=choice;
+  if(grid.dataset.layout!==choice)grid.dataset.layout=choice;
+  const picker=document.getElementById('layoutChoice');if(picker&&picker.value!==choice)picker.value=choice;
+  document.querySelectorAll('#collection .layout-segments button').forEach(button=>{const active=button.dataset.view===choice;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
+ }
+ function init(){apply();requestAnimationFrame(()=>{apply();requestAnimationFrame(apply)});
+  const grid=document.getElementById('creatures');if(grid){const observer=new MutationObserver(()=>{if(grid.dataset.layout!==getChoice())apply()});observer.observe(grid,{attributes:true,attributeFilter:['data-layout']});}
+ }
+ function getChoice(){try{const v=localStorage.getItem('aniimo-dev-v222::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(v))return v}catch(e){}return typeof data!=='undefined'&&data.collectionView?data.collectionView.layout:'cards'}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
 </script></body></html>
