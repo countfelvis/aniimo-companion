@@ -3359,7 +3359,7 @@ html[data-aniimo-theme="light"] #collection #creatures.grid:is([data-layout="lar
 <script id="dev329-blank-slate">
 /* Development releases are isolated: clear only this release's test namespace once.
    Do not touch beta or production localStorage. Refreshes within a release still save. */
-(function(){try{const marker='aniimo-dev-v402-initialized';if(localStorage.getItem(marker)!=='yes'){for(let i=localStorage.length-1;i>=0;i--){const k=localStorage.key(i);if(k&&k.startsWith('aniimo-dev-v402::'))localStorage.removeItem(k)}localStorage.setItem(marker,'yes')}}catch(e){}})();
+(function(){try{const marker='aniimo-dev-v403-initialized';if(localStorage.getItem(marker)!=='yes'){for(let i=localStorage.length-1;i>=0;i--){const k=localStorage.key(i);if(k&&k.startsWith('aniimo-dev-v403::'))localStorage.removeItem(k)}localStorage.setItem(marker,'yes')}}catch(e){}})();
 </script>
 <style id="dev343-personality-badge-edit">
 #collection .card-personality{cursor:pointer!important;min-height:36px!important;touch-action:manipulation}
@@ -3436,7 +3436,7 @@ button.quick-uncatch:focus-visible{outline:2px solid currentColor;outline-offset
 .item-wizard-bindings label{display:flex;align-items:center;gap:10px;padding:9px;border:1px solid var(--line);border-radius:10px;cursor:pointer;}
 .item-wizard-bindings input{width:auto;flex:none;}
 #itemWizardError{color:var(--amber);}
-</style><meta name="aniimo-build" content="DEV 4.02 · ebbe8b1a"></head><body><header class="app-header"><div class="app-brand"><div><small>ANIIMO COMPANION <span class="version-mark">DEV 4.02</span></small><h1 id="page-title">My Collection</h1></div></div><div class="header-actions"><div id="localSaveStatus" role="status" aria-live="polite">Saving locally…</div><label class="theme-dropdown-wrap" aria-label="Appearance theme"><select id="themeSwitch" class="theme-dropdown" aria-label="Appearance theme" onchange="setAniimoTheme(this.value)"><option value="dark">☾ Dark</option><option value="light">☀ Light</option><option value="rainbow">🌈 Rainbow</option><option value="system">◐ Auto</option></select><span class="theme-dropdown-chevron" aria-hidden="true">⌄</span></label><span class="pill session-pill"><span class="session-dot"></span> On device</span></div></header><nav class="tabs" id="tabs" aria-label="Main navigation"><button data-tab="collection" class="active"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="m8 12 3 3 5-6"/></svg></span><span>Collection</span></button><button data-tab="items"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M9 10v10"/></svg></span><span>Items</span></button><button data-tab="upgrades"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8z"/></svg></span><span>Upgrades</span></button><button data-tab="settings"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.85 2.85-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1.2 1.55V21h-4v-.05A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.85-2.85.06-.06A1.7 1.7 0 0 0 4.2 15a1.7 1.7 0 0 0-1.55-1.2H2.6v-4h.05A1.7 1.7 0 0 0 4.2 8.6a1.7 1.7 0 0 0-.34-1.88L3.8 6.66 6.65 3.8l.06.06A1.7 1.7 0 0 0 8.6 4.2a1.7 1.7 0 0 0 1.2-1.55V2.6h4v.05A1.7 1.7 0 0 0 15 4.2a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.85 2.85-.06.06A1.7 1.7 0 0 0 19.4 8.6a1.7 1.7 0 0 0 1.55 1.2H21v4h-.05A1.7 1.7 0 0 0 19.4 15Z"/></svg></span><span>Settings</span></button></nav><main class="shell"><section id="collection"><div class="collection-overview"><div class="collection-overview-top"><div><span class="overview-eyebrow">MY PRISMANA · COLLECTION PROGRESS</span><strong id="collectionProgressLabel">0 / 0 configured</strong></div><span class="overview-percent" id="collectionProgressPercent">0%</span></div><div class="bar" role="progressbar" aria-label="Caught Prismana configured" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress"></div></div><div class="stats" id="stats"></div><div id="collectionDimensions" class="collection-dimensions" aria-live="polite"></div></div><div class="catch-onboarding inventory-onboarding setup-reminder" id="catchOnboarding" hidden>
+</style><meta name="aniimo-build" content="DEV 4.03 · 81d1438b"></head><body><header class="app-header"><div class="app-brand"><div><small>ANIIMO COMPANION <span class="version-mark">DEV 4.03</span></small><h1 id="page-title">My Collection</h1></div></div><div class="header-actions"><div id="localSaveStatus" role="status" aria-live="polite">Saving locally…</div><label class="theme-dropdown-wrap" aria-label="Appearance theme"><select id="themeSwitch" class="theme-dropdown" aria-label="Appearance theme" onchange="setAniimoTheme(this.value)"><option value="dark">☾ Dark</option><option value="light">☀ Light</option><option value="rainbow">🌈 Rainbow</option><option value="system">◐ Auto</option></select><span class="theme-dropdown-chevron" aria-hidden="true">⌄</span></label><span class="pill session-pill"><span class="session-dot"></span> On device</span></div></header><nav class="tabs" id="tabs" aria-label="Main navigation"><button data-tab="collection" class="active"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="m8 12 3 3 5-6"/></svg></span><span>Collection</span></button><button data-tab="items"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M9 10v10"/></svg></span><span>Items</span></button><button data-tab="upgrades"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8z"/></svg></span><span>Upgrades</span></button><button data-tab="settings"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.85 2.85-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1.2 1.55V21h-4v-.05A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.85-2.85.06-.06A1.7 1.7 0 0 0 4.2 15a1.7 1.7 0 0 0-1.55-1.2H2.6v-4h.05A1.7 1.7 0 0 0 4.2 8.6a1.7 1.7 0 0 0-.34-1.88L3.8 6.66 6.65 3.8l.06.06A1.7 1.7 0 0 0 8.6 4.2a1.7 1.7 0 0 0 1.2-1.55V2.6h4v.05A1.7 1.7 0 0 0 15 4.2a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.85 2.85-.06.06A1.7 1.7 0 0 0 19.4 8.6a1.7 1.7 0 0 0 1.55 1.2H21v4h-.05A1.7 1.7 0 0 0 19.4 15Z"/></svg></span><span>Settings</span></button></nav><main class="shell"><section id="collection"><div class="collection-overview"><div class="collection-overview-top"><div><span class="overview-eyebrow">MY PRISMANA · COLLECTION PROGRESS</span><strong id="collectionProgressLabel">0 / 0 configured</strong></div><span class="overview-percent" id="collectionProgressPercent">0%</span></div><div class="bar" role="progressbar" aria-label="Caught Prismana configured" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress"></div></div><div class="stats" id="stats"></div><div id="collectionDimensions" class="collection-dimensions" aria-live="polite"></div></div><div class="catch-onboarding inventory-onboarding setup-reminder" id="catchOnboarding" hidden>
   <div class="onboarding-copy"><strong>Ready to set up your collection?</strong><span>Add your Aniimo and held items whenever you're ready.</span></div>
   <div class="onboarding-actions"><button class="btn primary" type="button" onclick="openFirstCollectionSetup()">Set up collection</button><button class="onboarding-skip" type="button" onclick="dismissCollectionSetupForever()">No thanks</button></div>
 </div><div class="collection-section-heading"><div><small>THE COLLECTION</small><h2>Discover your Aniimo</h2></div><button class="btn collection-guide-link" type="button" onclick="openCollectionGuide()">✦ Explore &amp; learn</button></div><div class="toolbar"><input class="input" id="search" placeholder="Name or Aniilog nº…" aria-label="Search by name or Aniilog number"><button class="multi-filter-trigger input" id="collectionFilterTrigger" type="button" onclick="toggleMultiFilters('collection')" aria-expanded="false">☷ <span id="collectionFilterLabel">All statuses</span><span class="filter-chevron">⌄</span></button><div class="multi-filter-panel hide" id="collectionFilterPanel"></div></div><div class="collection-filters"><label class="region-filter"><span>Region</span><select id="regionFilter" aria-label="Filter companions by region" onchange="setCollectionRegion(this.value)"><option value="all">All regions</option><option value="Breezy Plains">Breezy Plains</option><option value="Whisperwake Isles">Whisperwake Isles</option><option value="Keepsakes">Keepsakes</option><option value="Starter Choice">Starters</option></select></label><button class="favorites-filter" id="favoritesOnly" type="button" aria-pressed="false" onclick="toggleFavoritesFilter()">☆ Favorites</button></div><div class="view-controls layout-toolbar"><span class="layout-title">View</span><div class="layout-segments" role="group" aria-label="Collection card layout"><button type="button" data-view="large" onclick="setCollectionLayout('large')" aria-label="One card per row" title="Showcase"><span class="layout-glyph">▤</span><span>1</span></button><button type="button" data-view="cards" onclick="setCollectionLayout('cards')" aria-label="Two cards per row" title="Grid"><span class="layout-glyph">▦</span><span>2</span></button><button type="button" data-view="compact" onclick="setCollectionLayout('compact')" aria-label="Four cards per row" title="Compact"><span class="layout-glyph">▦</span><span>4</span></button></div><select id="layoutChoice" aria-label="Collection view" onchange="setCollectionLayout(this.value)" hidden><option value="cards">2 cards per row</option><option value="large">1 per row</option><option value="compact">4 cards per row</option></select></div><div id="backupReminder" class="backup-reminder" hidden><span>Keep a copy of your collection.</span><button class="btn" id="reminderExport">Export backup</button><button class="btn" onclick="snoozeBackup()">In a week</button></div><div class="collection-explore-heading"><span class="explore-heading-label">YOUR ANIIMO</span><span class="explore-heading-hint">✧ Tap an Aniimo to Explore</span></div><div class="collection-meta"><span>Aniilog order <span aria-hidden="true">↑</span></span><span id="collectionCount" aria-live="polite"></span></div><div class="grid" id="creatures"></div><details id="hiddenStarters" class="panel" hidden><summary>Hidden Aniimo</summary><p class="hint">The unchosen starter is hidden by default. You can show it as a regular collection card.</p><label class="hidden-aniimo-toggle"><input id="showHiddenAniimo" type="checkbox" onchange="setShowHiddenAniimo(this.checked)"> Show hidden Aniimo in Collection</label><div id="hiddenStarterList"></div></details></section><section id="items" class="hide"><div class="section-intro"><div><div class="section-eyebrow">YOUR EQUIPMENT</div><h2>Held-item inventory</h2><p class="muted">Owned, equipped and ready to bind.</p></div><span class="section-sparkle" aria-hidden="true">▣</span></div><button class="btn primary bulk-inventory-entry" type="button" onclick="openBulkInventory()">▣ Edit inventory</button><div class="equipment-dashboard"><div class="equipment-metrics" id="equipmentMetrics"></div><div class="equipment-controls"><input id="itemsearch" class="input" placeholder="Search held items…" aria-label="Search held items"><div class="equipment-view-switch"><button id="itemGridView" type="button" onclick="setItemLayout('grid')">▦ Grid</button><button id="itemListView" type="button" onclick="setItemLayout('list')">☷ List</button></div></div><div class="inventory-sortbar"><label for="itemSort">Sort by</label><select id="itemSort" class="input" aria-label="Sort held items" onchange="setItemSort(this.value)"><option value="owned-first">Owned first (default)</option><option value="name-asc">Name A–Z</option><option value="name-desc">Name Z–A</option><option value="amount-desc">Most owned</option><option value="amount-asc">Fewest owned</option><option value="free-desc">Most available</option><option value="bound-desc">Most bound</option><option value="needed-desc">Most needed</option></select><button class="btn inventory-clear" type="button" onclick="clearItemBrowse()">Clear</button></div><div class="inventory-results" id="inventoryResults" role="status" aria-live="polite"></div><div class="equipment-filters" id="equipmentFilters"><button class="multi-filter-trigger input" type="button" id="inventoryFilterTrigger" onclick="toggleMultiFilters('inventory')" aria-expanded="false">☷ <span id="inventoryFilterLabel">All held items</span><span class="filter-chevron">⌄</span></button><div class="multi-filter-panel hide" id="inventoryFilterPanel"></div></div></div><div id="itemlist" class="equipment-grid"></div></section><section id="upgrades" class="hide"><div class="upgrade-hero upgrade-hero-refined"><div class="section-eyebrow">YOUR EQUIPMENT ROADMAP</div><h2>Next upgrades</h2><p>Bind what you own. Farm what you're missing.</p></div><div class="upgrade-metrics upgrade-metrics-refined"><div><strong id="readyMetric">0</strong><span>Ready to bind</span></div><div><strong id="missingMetric">0</strong><span>Copies to obtain</span></div></div><div class="upgrade-section"><div class="upgrade-section-title"><div><h3><span class="upgrade-section-glyph">✓</span> Ready to bind</h3><p class="upgrade-section-description">You already have the item. Assign it to finish the upgrade.</p></div><span id="bindCount" class="upgrade-count-pill"></span></div><div id="needs" class="upgrade-action-stack"></div></div><div class="upgrade-section"><div class="upgrade-section-title"><div><h3><span class="upgrade-section-glyph farm">✦</span> Obtain missing items</h3><p class="upgrade-section-description">See the copies you need and where to obtain them.</p></div></div><label class="upgrade-future"><input type="checkbox" id="includeFutureItems"> Include uncaught Prismana in farming plans</label><div id="shortages" class="upgrade-action-stack"></div><p id="bindingSummary" class="upgrade-footnote" aria-live="polite"></p></div></section><section id="settings" class="hide compact-settings" aria-label="Settings"><div class="settings-card beta-feedback-card"><div><strong>Beta feedback</strong><small>Copy a report with app version and screen details</small></div><button class="btn" type="button" onclick="window.aniimoReportIssue()">Report issue ›</button></div>
@@ -3446,9 +3446,9 @@ button.quick-uncatch:focus-visible{outline:2px solid currentColor;outline-offset
 <div class="settings-card"><div class="settings-card-heading"><strong>Backup & recovery</strong><button class="settings-text-action" type="button" onclick="openRecoveryManager()">Recovery ›</button></div><p id="backupStatus" role="status"></p><div class="settings-button-grid"><button class="btn" id="export" type="button">Export backup</button><label class="btn settings-import">Import backup<input id="restore" type="file" accept=".json,application/json" hidden></label></div><button id="undoImport" class="settings-text-action" onclick="previewPreviousImport()" hidden>Undo last import ›</button></div>
 <div class="settings-footer"><button class="btn" type="button" onclick="openSettingsTools()">Tools & feedback</button><button class="btn" type="button" onclick="openSettingsPrivacy()">Storage & privacy</button></div>
 <div class="settings-support"><div><strong>Support Aniimo Companion</strong><span>Enjoying the app? Optional donations help support development.</span></div><a class="settings-support-link" href="https://ko-fi.com/countfelvis" target="_blank" rel="noopener noreferrer" aria-label="Support on Ko-fi (opens in a new tab)"><img class="kofi-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR0AAADlCAMAAABZAtOJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD8UExURQAAAP/////////////////////////////////////////////////////////////////////////////////////////18f/18PHx8f/r4v/q4v/h1P/g0//f0+Pj4//Wxf/Vxf/Mtv/Lt//LttXV1f/CqP/BqP/Bp//Ap/+3mv+3mf+3mP+2mcfHx/+ti/+tiv+si/+siv+jfP+ifLm5uf+Ybv+Ybf+Xbaurq/+OX/+OXv+NX/+DUf+DUJ2dnf95Qv95Qf9vM/9uM5CQkI+Pj/9lJP9kJf9aFoKCgoGBgXR0dHNzc2ZmZmVlZVhYWEpKSjw8PC4uLiAgILWDVz0AAAAWdFJOUwAQIDBAUF9gb3B/gI+Qn6CvsL/P3++NaW4cAAAN50lEQVR42uzYwa6jIBSAYaV2HNvGGAonccXKLTsXrNxcF8QYBN7/Xcb23kzuZKjSWm/V9HuEP+cIEswrRL2ot48/Hf+T/uPoFH+JLnYIoTBYH7SL4jg5ntIUY0IIhVkRcsY463smfTW02CT7+JhmZ0LhtcglVR8qXEaWfZJmhMLi0HN22kfBy4RRklFYuHOWvCARSjCFtcDHnywUHQisDM1i9CMLdcCwTnj2QFFGYcVwPGcbDGtHU/RuMwTH7zZDyJP7IAy9dx+nAwWAdx+niMAWERQ8wQm2KkXvL86M67WncPEeH5cDTJYzxgreE1dV/ZdsRsn6O3FV8gvGWP7a8QlTuBtjXIi6bppWdVobOy+jtVJtH7EqecHgIafwsThn/yZcVLJR2tiXMp1qZR+KzX94IQIeCiFbbRena+uyAE90P0cc/qGMXTCjag5eDs+Ow6Wxa6Aq5pPnmXHyD2PXo5MFjEkDf+FgHK7s2nSCwTAcBr7wqtu4NRwGnX3znNbexk2JkTwTb8i5tKumxeRvzw5u4dquneZw22nCcZVLuwUNm3Kwp+DGtN2ID7jpVzDsN7iVxm6GZnAD3QVDEAWn2m5KBTeQ8IG9qu3GNDm4ZcFt8Vic7W9Xcu8fRG03SBfgRNF998DabpMAJxy4IXCp7GRG99RV23xXu7ifndUXfTFrnuSOT3LxQIvPt15RXl/HYR759TW/FFXf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" alt="" aria-hidden="true"> Support on Ko-fi <span aria-hidden="true">↗</span></a></div>
-<details class="settings-card build-about"><summary>About</summary><p>Build <strong>DEV 4.02</strong> · <code>ebbe8b1a</code></p><button class="btn" type="button" id="checkPublishedBuild">Check hosted build</button><p class="muted" id="publishedBuildStatus" role="status"></p></details><div class="settings-bottom"><span>✓ Saved on this device</span><button class="settings-reset" id="reset" type="button">Reset collection</button></div>
+<details class="settings-card build-about"><summary>About</summary><p>Build <strong>DEV 4.03</strong> · <code>81d1438b</code></p><button class="btn" type="button" id="checkPublishedBuild">Check hosted build</button><p class="muted" id="publishedBuildStatus" role="status"></p></details><div class="settings-bottom"><span>✓ Saved on this device</span><button class="settings-reset" id="reset" type="button">Reset collection</button></div>
 </section></main><div id="modal" class="modal hide"><div class="dialog" id="dialog"></div></div><script>
-const STAR_REF_KEY = "aniimo-dev-v402::star-reference";
+const STAR_REF_KEY = "aniimo-dev-v403::star-reference";
 const base=[
 ["Scorchhowl","Explosive Gauntlet",1],["Stellarys","Fission Needle",1],["Infergon","Omenbone Flute",1],["Hexxin","Heartseeker Pendant",1],["Somniwing","Spirited Feather",1],["Glacy","Miraculous Fleece",1],["Sparkelf","Miraculous Fleece",1],["Blazen","Gargantuan Horn",1],["Magmarex","Gargantuan Horn",1],["Panpanta","Gargantuan Horn",1],["Inferlupa","Gargantuan Horn",1],["Fenmane","Fission Needle",1],["Fulmintis","Heartseeker Pendant",1],["Glynsera","Heartseeker Pendant",1],["Irisalis","Floral Rainbow Feather",1],["Sherro","Capacitous Battery",1],["Thornblade","Fission Needle",0],["Ignitis","Ferocious Fang",0],["Grizbo","Fission Needle",0],["Pawney","Capacitous Battery",0],["Melloblum","Auspicious Bell",0],["Turbo","Heritage Amulet",0],["Luminelle","Spirited Feather",0],["Coronet","Ferocious Fang",0],["Waleetle","Ferocious Fang",0],["Irisal","Ferocious Fang",0]];
 const starterNames=["Helion","Lunara"];
@@ -3505,7 +3505,7 @@ const additions=["Iris","Whirlbite","Gachapus","Jabster","Sugartini","Pouchwisp"
 const initialItems={"Gargantuan Horn":4,"Ferocious Fang":11,"Spirited Feather":5,"Heartseeker Pendant":2,"Floral Rainbow Feather":1,"Miraculous Fleece":13,"Fission Needle":3,"Explosive Gauntlet":2,"Capacitous Battery":2,"Lightning Needle":19,"Echoing Grimoire":4,"Marching Flask":1,"Heritage Amulet":1,"Giant Tortoise Shell":1,"Auspicious Bell":1,"Avenging Gear":1,"Breathbinder Sash":0,"Riftbreaker Goggles":0,"Omenbone Flute":0,"Ambusher's Cloak":0,"Destiny's Dice":0,"Finisher Bell":0,"Nature's Breath":0,"Rekindling Feather":0,"Supreme Elixir":0,"Vanguard's Whistle":0,"Seeds of Spring":0};
 const all=base.map(([name,ideal,bound])=>({name,ideal,caught:true,bound:bound?ideal:null})).concat(additions.map(name=>({name,ideal:({"Whirlbite":"Ferocious Fang","Gachapus":"Ferocious Fang","Jabster":"Gargantuan Horn","Sugartini":"Heritage Amulet","Pouchwisp":"Spirited Feather","Royalby":"Spirited Feather","Jeburst":"Gargantuan Horn","Glameep":"Miraculous Fleece","Hypnyto":"Heartseeker Pendant","Ekrim":"Riftbreaker Goggles"})[name]||null,caught:false,bound:null})),starterNames.map(name=>({name,ideal:starterFang,caught:false,bound:null})));
 const fresh=()=>({version:1,creatures:all.map(c=>({...c,caught:false,bound:null,alpha:false})),items:Object.fromEntries(Object.keys(initialItems).map(k=>[k,0])),builds:{}});
-let data;try{const stored=JSON.parse(localStorage.getItem("aniimo-dev-v402::aniimo-companion-dev-v155-data"));if(stored?.items&&stored.version===1){for(const [k,v] of Object.entries(initialItems))if(stored.items[k]===undefined)stored.items[k]=0;}if(stored?.version===1&&Array.isArray(stored.creatures)&&stored.creatures.length===all.length-1&&all.every(c=>c.name==='Iris'||stored.creatures.some(x=>x.name===c.name))){stored.creatures=all.map(c=>stored.creatures.find(x=>x.name===c.name)||{...c,caught:false,bound:null,alpha:false});}data=valid(stored)?stored:fresh()}catch{data=fresh()}
+let data;try{const stored=JSON.parse(localStorage.getItem("aniimo-dev-v403::aniimo-companion-dev-v155-data"));if(stored?.items&&stored.version===1){for(const [k,v] of Object.entries(initialItems))if(stored.items[k]===undefined)stored.items[k]=0;}if(stored?.version===1&&Array.isArray(stored.creatures)&&stored.creatures.length===all.length-1&&all.every(c=>c.name==='Iris'||stored.creatures.some(x=>x.name===c.name))){stored.creatures=all.map(c=>stored.creatures.find(x=>x.name===c.name)||{...c,caught:false,bound:null,alpha:false});}data=valid(stored)?stored:fresh()}catch{data=fresh()}
 function valid(v){return v&&v.version===1&&Array.isArray(v.creatures)&&v.creatures.length===all.length&&v.creatures.every((x,i)=>x.name===all[i].name&&(x.alpha===undefined||typeof x.alpha==="boolean")&&typeof x.caught==="boolean"&&(x.bound===null||typeof x.bound==="string"))&&v.items&&Object.keys(initialItems).every(k=>Number.isInteger(v.items[k])&&v.items[k]>=0)}
 data.builds ||= {};
 // User-provided screenshots. Current innate values already include Capafruit.
@@ -3513,8 +3513,8 @@ data.builds ||= {};
 // Development builds start empty; reference examples are not imported into user data.
 const $=id=>document.getElementById(id);
 let lastSavedSnapshot="";
-const SAVE_KEY="aniimo-dev-v402::aniimo-companion-dev-v155-data";
-const RECOVERY_KEY="aniimo-dev-v402::aniimo-companion-recovery-v1";
+const SAVE_KEY="aniimo-dev-v403::aniimo-companion-dev-v155-data";
+const RECOVERY_KEY="aniimo-dev-v403::aniimo-companion-recovery-v1";
 const RECOVERY_LIMIT=5;
 function saveHistory(){
  try{const v=JSON.parse(localStorage.getItem(RECOVERY_KEY)||"[]");return Array.isArray(v)?v.filter(x=>x&&typeof x.snapshot==="string").slice(-RECOVERY_LIMIT):[]}catch{return []}
@@ -3542,7 +3542,7 @@ const save=()=>{try{
  lastSavedSnapshot=snapshot;
  const el=$("localSaveStatus");if(el){el.textContent="Saved locally";el.classList.remove("save-error")}
 }catch(e){const el=$("localSaveStatus");if(el){el.textContent="⚠ Not saved — export backup";el.classList.add("save-error")}}};
-const LOCAL_PROFILE_KEY="aniimo-dev-v402::aniimo-companion-local-profile";
+const LOCAL_PROFILE_KEY="aniimo-dev-v403::aniimo-companion-local-profile";
 window.renameCompanion=(name,finish=()=>closeDialog())=>{
  const c=data.creatures.find(x=>x.name===name);if(!c)return;
  const original=displayName(c);
@@ -3692,7 +3692,7 @@ function collectionPreferences(){
  if(!collectionRegions.includes(data.collectionView.region))data.collectionView.region='all';
  data.collectionView.favoritesOnly=data.collectionView.favoritesOnly===true;
  // Keep the display preference separate from collection records so it survives refreshes and development data resets.
- try{const savedLayout=localStorage.getItem('aniimo-dev-v402::aniimo-companion-collection-layout');
+ try{const savedLayout=localStorage.getItem('aniimo-dev-v403::aniimo-companion-collection-layout');
  if(['cards','large','compact'].includes(savedLayout))data.collectionView.layout=savedLayout;}catch(e){}
  if(!['cards','large','compact'].includes(data.collectionView.layout))data.collectionView.layout='compact';
  return data.collectionView;
@@ -3848,14 +3848,14 @@ function heldItemChip(c){
 }
 const expandedHeldItems=new Set();
 window.toggleHeldItem=code=>{const name=decodeURIComponent(code);if(expandedHeldItems.has(name))expandedHeldItems.delete(name);else expandedHeldItems.add(name);render();};
-const ONBOARDING_KEY='aniimo-dev-v402::aniimo-companion-dev-v155-caught-onboarding-done';
+const ONBOARDING_KEY='aniimo-dev-v403::aniimo-companion-dev-v155-caught-onboarding-done';
 let onboardingDone=false;
 try{onboardingDone=localStorage.getItem(ONBOARDING_KEY)==='1'}catch{}
 function setOnboardingDone(done){onboardingDone=done;try{if(done)localStorage.setItem(ONBOARDING_KEY,'1');else localStorage.removeItem(ONBOARDING_KEY)}catch{}}
 
 // Acquisition-source registry: separate shared reference facts from personal collection state.
 // Unknown entries are deliberately not represented as permanent or currently available.
-const ACQUISITION_KEY="aniimo-dev-v402::aniimo-acquisition-notes-v1";
+const ACQUISITION_KEY="aniimo-dev-v403::aniimo-acquisition-notes-v1";
 const acquisitionKinds={
  "starter":"Starter Choice",
  "permanent-bloom":"Permanent Bloom",
@@ -3886,7 +3886,7 @@ const acquisitionSafe=v=>esc(String(v??""));
 function compactSeasonLabel(value){
  return String(value||"").replace(/Season\s+(\d+)\s*(?:·\s*)?Part\s+(\d+)/gi,(_,season,part)=>`S${season}P${part}`);
 }
-const ACQ_REGION_KEY="aniimo-dev-v402::aniimo-acquisition-region";
+const ACQ_REGION_KEY="aniimo-dev-v403::aniimo-acquisition-region";
 const acqRegions={americas:"America/Los_Angeles",europe:"Europe/London",asia:"Asia/Singapore"};
 const acqRegion=()=>{try{return localStorage.getItem(ACQ_REGION_KEY)||"americas"}catch{return "americas"}};
 window.setAcqRegion=v=>{if(!acqRegions[v])return;try{localStorage.setItem(ACQ_REGION_KEY,v)}catch{}render()};
@@ -3906,7 +3906,7 @@ const dualBloomLocations={
  Jeburst:{whisperwake:'Cloudreach Falls',breezy:'Russet Highlands'},
  Glameep:{whisperwake:'Crescent Bay',breezy:'Echoback Landing'}
 };
-const dualBloomStorageKey='aniimo-dev-v402::bloom-region-selections';
+const dualBloomStorageKey='aniimo-dev-v403::bloom-region-selections';
 let dualBloomChoices={};
 try{const saved=JSON.parse(localStorage.getItem(dualBloomStorageKey)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))dualBloomChoices=saved;}catch{}
 function selectedBloomRegion(name){return dualBloomChoices[name]==='breezy'?'breezy':'whisperwake'}
@@ -4012,13 +4012,13 @@ window.saveAcquisitionNote=name=>{
 };
 window.openCollectionGuide=()=>{
  const count=data.creatures.filter(c=>c.caught).length;
- let profile="";try{profile=localStorage.getItem("aniimo-dev-v402::aniimo-companion-local-profile")||""}catch{}
+ let profile="";try{profile=localStorage.getItem("aniimo-dev-v403::aniimo-companion-local-profile")||""}catch{}
  const title=profile?`Welcome back, ${profile}!`:count?"Your collection is growing.":"Organize and get to know your Aniimo.";
  const description=count?`You've collected ${count} Prismana. Keep exploring and make every companion your own.`:"Organize your collection, explore each Aniimo’s strengths, and learn how to make the most of your companions.";
  $("dialog").innerHTML=`<div class="row"><h2>Explore Aniimo Companion</h2><button class="btn" onclick="closeDialog()">✕</button></div><div class="collection-guide-content"><h3>${esc(title)}</h3><p>${esc(description)}</p><button class="welcome-discover" type="button" onclick="openAcquisitionPlanner()"><span class="welcome-discover-icon">✦</span><span><strong>Explore missing Prismana</strong><small>See what's available and coming next</small></span><span class="welcome-arrow">›</span></button><p class="hint">Track your collection, manage held items, and open any Aniimo to explore its builds and appearances.</p></div>`;
  $("modal").classList.remove("hide");
 };
-const MULTI_FILTER_KEY="aniimo-dev-v402::aniimo-multi-filters-v1";
+const MULTI_FILTER_KEY="aniimo-dev-v403::aniimo-multi-filters-v1";
 const FILTER_GROUPS={collection:[
  {title:"Collection progress",items:[["complete","Complete"],["progress","In progress"],["none","Not caught"],["ready","Ready to bind"],["shortage","Needs an item"]]},
  {title:"Evolution",items:[["baby","Pre-evolutions"]]},
@@ -4028,7 +4028,7 @@ const FILTER_GROUPS={collection:[
 let multiFilters={collection:[],inventory:[]};
 try{const old=JSON.parse(localStorage.getItem(MULTI_FILTER_KEY)||"{}");for(const type of Object.keys(multiFilters)){const allowed=FILTER_GROUPS[type].flatMap(g=>g.items.map(i=>i[0]));if(Array.isArray(old[type]))multiFilters[type]=old[type].filter(v=>allowed.includes(v))}}catch{}
 // Keep older single-choice preferences when upgrading.
-try{if(!multiFilters.inventory.length){const old=localStorage.getItem("aniimo-dev-v402::aniimo-item-filter");if(["owned","available","bound","needed"].includes(old))multiFilters.inventory=[old]}}catch{}
+try{if(!multiFilters.inventory.length){const old=localStorage.getItem("aniimo-dev-v403::aniimo-item-filter");if(["owned","available","bound","needed"].includes(old))multiFilters.inventory=[old]}}catch{}
 function multiFilterMatches(type,record){const selected=multiFilters[type];if(!selected.length)return true;
  // OR within each category, AND between categories.
  return FILTER_GROUPS[type].every(group=>{const active=group.items.map(i=>i[0]).filter(id=>selected.includes(id));if(!active.length)return true;return active.some(id=>type==="collection"?matchesCollectionStatus(record,id):inventoryMatches(record,id))});
@@ -4048,7 +4048,7 @@ function updateCollectionHeading(){
  const activeTab=document.querySelector('#tabs [data-tab].active')?.dataset.tab;
  if(activeTab&&activeTab!=='collection'){title.textContent=({items:'Held Items',upgrades:'Upgrades',settings:'Settings'})[activeTab]||'My Collection';return;}
  let name='';
- try{name=(localStorage.getItem('aniimo-dev-v402::aniimo-companion-local-profile')||'').trim()}catch{}
+ try{name=(localStorage.getItem('aniimo-dev-v403::aniimo-companion-local-profile')||'').trim()}catch{}
  title.textContent=name&&name!=='Guest'?`${name}${/s$/i.test(name)?"’":"’s"} Collection`:'My Collection';
 }
 const showHiddenAniimo=()=>data.collectionView.showHiddenAniimo===true;
@@ -4060,6 +4060,86 @@ function renderHiddenStarters(hidden){
  $("hiddenStarterList").hidden=showHiddenAniimo();
  $("hiddenStarterList").innerHTML=hidden.map(c=>`<button type="button" class="btn" onclick="managePrismana('${esc(c.name)}','details')">${esc(c.name)} · View profile ›</button>`).join("");
 }
+/* Approved collection cards. Shared content and actions across mobile and desktop. */
+function premiumActionButton(c,action,text,cls='',tab=''){
+ return `<button type="button" class="${cls}" data-premium-action="${action}" data-name="${esc(c.name)}"${tab?` data-tab="${tab}"`:''}>${text}</button>`;
+}
+function premiumHint(label,value){
+ return `<details class="premium-hint"><summary aria-label="${esc(label)}: ${esc(value)}"><span aria-hidden="true">ⓘ</span></summary><div class="premium-hint-popover"><span>${esc(label)}</span><strong>${esc(value)}</strong></div></details>`;
+}
+function premiumMetadata(c){
+ const role=personalityRole(c.name),personality=c.caught?personalityGet(c.name):'',ideal=personalityRecommend(c.name);
+ const letters=String(personality).split('').map(letter=>`<span class="${'INFP'.includes(letter)?'personality-pink':'personality-blue'}">${esc(letter)}</span>`).join('');
+ return `<div class="premium-meta"><span class="premium-index" aria-label="Aniilog number ${esc(numberFor(c))}">#${esc(numberFor(c))}${isAlpha(c)?' · α':''}</span>${role?`<span class="premium-separator" aria-hidden="true"></span><span class="premium-role premium-${role.toLowerCase()}">${esc(role)}</span>`:''}${personality?`<span class="premium-separator" aria-hidden="true"></span><span class="premium-personality-group">${premiumActionButton(c,'personality',letters,'premium-personality')}${ideal&&personality!==ideal?premiumHint('Recommended personality',ideal):''}</span>`:''}</div>`;
+}
+function premiumNext(c){
+ if(!c.caught)return {label:'Mark caught',action:'caught'};
+ if(profileFullyDone(c))return {label:'View profile',action:'edit',tab:'overview'};
+ const next=profileChecklist(c).find(t=>!t.done);
+ if(!next)return {label:'View profile',action:'edit',tab:'overview'};
+ return {label:({appearance:'Set appearance',personality:'Set personality',item:'Assign held item',build:'Confirm stats'})[next.tab]||'Continue setup',action:next.tab==='personality'?'personality':'edit',tab:next.tab};
+}
+function premiumMenu(c){
+ const next=premiumNext(c);
+ return `<details class="premium-menu"><summary aria-label="Actions for ${esc(displayName(c))}"><span aria-hidden="true">⋯</span></summary><div class="premium-menu-panel">${c.caught&&!profileFullyDone(c)?premiumActionButton(c,next.action,esc(next.label),'premium-menu-next',next.tab):''}${premiumActionButton(c,'edit','Edit profile')}${c.caught?premiumActionButton(c,'rename','Rename'):''}${premiumActionButton(c,'favorite',c.favorite?'★ Remove favorite':'☆ Add favorite')}${!c.caught?premiumActionButton(c,'caught','Mark caught'):canQuickUncatch(c)?premiumActionButton(c,'uncatch','Mark not caught'):''}</div></details>`;
+}
+function premiumStatus(c,interactive=true){
+ const state=collectionCardState(c),label=state==='complete'?'✓ Complete':state==='progress'?'In progress':'○ Not caught';
+ return interactive?premiumActionButton(c,c.caught?'checklist':'caught',label,'premium-status premium-status-'+state):`<span class="premium-status premium-status-${state}">${label}</span>`;
+}
+function premiumPortrait(c,withStatus=true){
+ return `<div class="premium-art">${portraitFor(c)}${premiumActionButton(c,'edit','<span class="premium-sr">Open '+esc(displayName(c))+'</span>','premium-art-action',c.caught&&c.appearanceConfirmed&&!isStarter(c)?'appearance':'overview')}${withStatus?premiumStatus(c):''}</div>`;
+}
+function premiumLocation(c){
+ return `<div class="premium-location">${premiumActionButton(c,'acquisition',acquisitionCompactChip(c.name),'premium-acquisition')}${cardBloomLocation(c)}</div>`;
+}
+function premiumEquipment(c){
+ if(speciesRules(c).stage==='pre-evolution')return '';
+ const binding=c.caught?displayBinding(c):null,item=binding||c.ideal;
+ const state=binding?'bound':!c.caught?'suggested':isAlpha(c)?'optional':c.ideal&&available(c.ideal)>0?'ready':'missing';
+ const label={bound:'✓ Bound',suggested:'Suggested',optional:'Binding optional',ready:'Ready to bind',missing:'Not available'}[state];
+ return `<div class="premium-equipment">${premiumActionButton(c,'edit',`<span class="premium-held-icon">${item?heldThumb(item):heldItemGlyph}</span><span class="premium-item-copy"><strong>${esc(item||'Held item')}</strong><span class="premium-item-state premium-item-${state}">${item?label:'Recommendation pending'}</span></span>`,'premium-item-button','item')}${binding&&c.ideal&&binding!==c.ideal?premiumHint('Recommended held item',c.ideal):''}</div>`;
+}
+function premiumCard(c,mode){
+ const name=c.customName||profileFullyDone(c)?personalizedName(c):displayName(c);
+ const title=`<header class="premium-header"><h3>${esc(name)}</h3>${premiumMenu(c)}</header>`;
+ const metadata=premiumMetadata(c),location=premiumLocation(c),equipment=premiumEquipment(c);
+ let content='';
+ if(mode==='desktop'){
+  const next=premiumNext(c);
+  content=`<div class="premium-desktop-head">${premiumPortrait(c,false)}<div class="premium-identity">${title}${metadata}</div></div><div class="premium-info">${location}${equipment}</div><footer class="premium-footer">${premiumStatus(c,false)}${premiumActionButton(c,next.action,esc(next.label),'premium-primary',next.tab)}</footer>`;
+ }else if(mode==='large'){
+  content=`${title}<div class="premium-body">${premiumPortrait(c)}<div class="premium-info">${metadata}${location}${equipment}</div></div>`;
+ }else{
+  content=`${title}${premiumPortrait(c)}${metadata}<div class="premium-info">${location}${equipment}</div>`;
+ }
+ return `<article class="creature premium-card premium-${mode}" data-species="${esc(c.name)}" data-state="${collectionCardState(c)}" aria-label="${esc(name)}">${content}</article>`;
+}
+// Delegation keeps card controls working after filtering, sorting, and saved-state renders.
+document.addEventListener('click',event=>{
+ const button=event.target.closest('[data-premium-action]');if(!button)return;
+ event.stopPropagation();const c=data.creatures.find(c=>c.name===button.dataset.name);if(!c)return;
+ const menu=button.closest('.premium-menu');if(menu)menu.open=false;
+ const desktop=matchMedia('(min-width:1024px)').matches;
+ switch(button.dataset.premiumAction){
+  case 'caught':toggleCaught(c.name);break;
+  case 'uncatch':quickUncatch(c.name);break;
+  case 'favorite':toggleFavorite(c.name);break;
+  case 'personality':openPersonalityFromCard(c.name);break;
+  case 'acquisition':openAcquisition(c.name);break;
+  case 'rename':if(desktop&&window.desktopRenameCompanion)desktopRenameCompanion(c.name);else renameCompanion(c.name);break;
+  case 'checklist':showCompletionChecklist(c.name);break;
+  case 'edit':if(desktop&&window.desktopOpen)desktopOpen(c.name,button.dataset.tab||'overview');else managePrismana(c.name,button.dataset.tab==='overview'||!button.dataset.tab?'build':button.dataset.tab);break;
+ }
+});
+document.addEventListener('click',event=>{
+ for(const detail of document.querySelectorAll('.premium-menu[open],.premium-hint[open]'))if(!detail.contains(event.target))detail.open=false;
+});
+document.addEventListener('keydown',event=>{
+ if(event.key!=='Escape')return;
+ for(const detail of document.querySelectorAll('.premium-menu[open],.premium-hint[open]')){detail.open=false;detail.querySelector('summary')?.focus();}
+});
+
 function render(){const backupLabel=document.getElementById('backupStatus');if(backupLabel)backupLabel.innerHTML=backupStatusHTML();updateCollectionHeading();applyResearchDefaults();collectionPreferences();const collectionGrid=document.getElementById("creatures");if(collectionGrid)collectionGrid.dataset.layout=data.collectionView.layout;const layoutPicker=document.getElementById("layoutChoice");if(layoutPicker)layoutPicker.value=data.collectionView.layout;document.querySelectorAll('.layout-segments button').forEach(b=>{const on=b.dataset.view===data.collectionView.layout;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});const onboarding=document.getElementById("catchOnboarding");if(onboarding)onboarding.hidden=onboardingDone||data.creatures.some(c=>c.caught)||Object.values(data.items||{}).some(q=>Number(q)>0)||!window.collectionSetupReminderDue?.();const prismana=data.creatures.filter(c=>!isStarter(c));const caught=prismana.filter(c=>c.caught).length,done=prismana.filter(c=>c.caught&&(speciesRules(c).buildEligible===false||profileChecklist(c).every(t=>t.done))).length,needs=caught-done;$("stats").innerHTML=`<button class="stat stat-action" type="button" onclick="clearMultiFilters('collection')" aria-label="Show all Prismana"><b>${caught}</b><span>Caught</span></button><button class="stat stat-action" type="button" onclick="multiFilters.collection=['complete'];render()" aria-label="Show configured Prismana"><b style="color:var(--green)">${done}</b><span>Configured</span></button><button class="stat stat-action" type="button" onclick="multiFilters.collection=['progress'];render()" aria-label="Show Prismana needing details"><b style="color:var(--yellow)">${needs}</b><span>Needs details</span></button>`;const completionPercent=caught?Math.round(100*done/caught):0;$("progress").style.width=completionPercent+"%";$("collectionProgressLabel").textContent=`${done} / ${caught} caught configured`;$("collectionProgressPercent").textContent=completionPercent+"%";$("progress").parentElement.setAttribute("aria-valuenow",String(completionPercent));
 const allCaught=prismana.filter(collectionAcquired).length;
 const eligibleCaught=prismana.filter(c=>c.caught&&speciesRules(c).buildEligible!==false);
@@ -4073,6 +4153,7 @@ const hidden=data.creatures.filter(hiddenStarter);renderHiddenStarters(hidden);
 const visible=data.creatures.filter(c=>(showHiddenAniimo()||!hiddenStarter(c))&&(data.collectionView.region==='all'||catalogFor(c)[1]===data.collectionView.region)&&(!data.collectionView.favoritesOnly||c.favorite===true)&&(displayName(c).toLowerCase().includes(q)||c.name.toLowerCase().includes(q)||numberFor(c).includes(q.replace(/^#/,''))||acquisitionSummary(c.name).toLowerCase().includes(q)||acquisitionFor(c.name).some(r=>(r.location+' '+r.event+' '+r.detail).toLowerCase().includes(q)))&&multiFilterMatches("collection",c)).sort(aniilogOrder);
 $("collectionCount").textContent=`${visible.length} / ${collectionCardCount()} companions`;
 if(artworkVisibilityObserver)artworkVisibilityObserver.disconnect();$("creatures").innerHTML=visible.map(c=>{
+if(!matchMedia('(min-width:1024px)').matches&&['large','cards'].includes(data.collectionView.layout))return premiumCard(c,data.collectionView.layout);
  const large=data.collectionView.layout==="large";
  const location=`<div class="card-badges"><button type="button" class="acquisition-card-link acquisition-top" onclick="event.stopPropagation();openAcquisition('${esc(c.name)}')" title="View acquisition details" aria-label="Acquisition details for ${esc(displayName(c))}">${acquisitionCompactChip(c.name)}</button>${data.collectionView.layout==='compact'?combatRoleCard(c):''}</div><div class="card-origin">${cardBloomLocation(c)}</div>`;
  const twoCards=data.collectionView.layout==="cards";
@@ -4091,7 +4172,7 @@ if(artworkVisibilityObserver)artworkVisibilityObserver.disconnect();$("creatures
 const itemEntries=Object.entries(data.items);
 const itemNeeded=name=>data.creatures.filter(c=>c.caught&&!isAlpha(c)&&c.ideal===name&&!hasBinding(c,name)).length;
 const itemLayout=window.equipmentLayout||'grid';updateMultiFilterUI("inventory");
-const itemSort=window.equipmentSort||(localStorage.getItem('aniimo-dev-v402::aniimo-item-sort')||'owned-first');const sortControl=$('itemSort');if(sortControl&&sortControl.value!==itemSort)sortControl.value=itemSort;
+const itemSort=window.equipmentSort||(localStorage.getItem('aniimo-dev-v403::aniimo-item-sort')||'owned-first');const sortControl=$('itemSort');if(sortControl&&sortControl.value!==itemSort)sortControl.value=itemSort;
 const ownedTypes=itemEntries.filter(([k,n])=>Number(n)>0).length;
 const freeCopies=itemEntries.reduce((sum,[k])=>sum+Math.max(0,available(k)),0);
 const missingCopies=itemEntries.reduce((sum,[k])=>sum+Math.max(0,itemNeeded(k)-Math.max(0,available(k))),0);
@@ -4314,7 +4395,7 @@ window.openAppearance=name=>{
  $("appearanceClear").onclick=()=>{c.appearance||={};c.appearance.images||={};delete c.appearance.images[variantEl.value];c.appearance.variant=variantEl.value;render();managePrismana(name,"appearance")};
 };
 window.equipmentFilter='all';window.equipmentLayout='grid';
-window.setItemSort=value=>{window.equipmentSort=value;try{localStorage.setItem('aniimo-dev-v402::aniimo-item-sort',value)}catch(e){}render()};
+window.setItemSort=value=>{window.equipmentSort=value;try{localStorage.setItem('aniimo-dev-v403::aniimo-item-sort',value)}catch(e){}render()};
 window.clearItemBrowse=()=>{window.equipmentSort='owned-first';window.equipmentFilter='all';$('itemsearch').value='';render()};
 window.setItemFilter=value=>{multiFilters.inventory=value==="all"?[]:[value];render()};
 window.setItemLayout=value=>{window.equipmentLayout=value;render()};
@@ -5606,7 +5687,7 @@ window.openCompactCompanion=name=>{
  requestAnimationFrame(()=>requestAnimationFrame(focus));
 };
 window.setCollectionLayout=layout=>{data.collectionView.layout=['cards','large','compact'].includes(layout)?layout:'cards';
- try{localStorage.setItem('aniimo-dev-v402::aniimo-companion-collection-layout',data.collectionView.layout)}catch(e){}const grid=document.getElementById('creatures');if(grid)grid.dataset.layout=data.collectionView.layout;const picker=document.getElementById('layoutChoice');if(picker)picker.value=data.collectionView.layout;document.querySelectorAll('.layout-segments button').forEach(b=>{const on=b.dataset.view===data.collectionView.layout;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});save();render();};
+ try{localStorage.setItem('aniimo-dev-v403::aniimo-companion-collection-layout',data.collectionView.layout)}catch(e){}const grid=document.getElementById('creatures');if(grid)grid.dataset.layout=data.collectionView.layout;const picker=document.getElementById('layoutChoice');if(picker)picker.value=data.collectionView.layout;document.querySelectorAll('.layout-segments button').forEach(b=>{const on=b.dataset.view===data.collectionView.layout;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});save();render();};
 function recommendationLabel(c){return !c.bound&&newPrismanaInfo[c.name]&&c.ideal===newPrismanaInfo[c.name].item?'Sourced baseline':'Your choice';}
 function bindingRequirements(includeFuture=false){
  const groups=new Map();
@@ -5635,7 +5716,7 @@ function renderPlanningExtras(){
  $('backupStatus').innerHTML=backupStatusHTML();
  const overdue=!data.backup?.lastExportAt||Date.now()-Date.parse(data.backup.lastExportAt)>7*864e5;
  $('backupReminder').hidden=!overdue||Date.now()<(Number(data.backup?.snoozeUntil)||0);
- $('undoImport').hidden=!localStorage.getItem('aniimo-dev-v402::aniimo-companion-dev-v155-pre-import');
+ $('undoImport').hidden=!localStorage.getItem('aniimo-dev-v403::aniimo-companion-dev-v155-pre-import');
 }
 function stableJSON(v){return JSON.stringify(v,(_,x)=>x&&typeof x==='object'&&!Array.isArray(x)?Object.fromEntries(Object.entries(x).sort(([a],[b])=>a.localeCompare(b))):x);}
 function collectionFingerprint(v){const s=stableJSON({creatures:v.creatures,items:v.items,builds:v.builds});let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return (h>>>0).toString(16);}
@@ -5684,9 +5765,9 @@ function previewBackup(v,label='Backup import'){
  for(const [item,n] of Object.entries(next.items))if(n!==data.items[item])changes.push(`${item}: ${data.items[item]} → ${n} owned`);
  for(const [name,b] of Object.entries(next.builds))if(stableJSON(b)!==stableJSON(data.builds[name]))changes.push(displayName({name})+': build updated');
  $('dialog').innerHTML=`<div class="row"><h2>${esc(label)}</h2><button class="btn" onclick="closeDialog()" aria-label="Cancel import">✕</button></div><p>${changes.length} collection, inventory or build changes. ${next.creatures.filter(c=>c.caught).length} caught · ${next.creatures.filter(c=>c.bound).length} bound after import.</p><p class="hint">View preferences from the backup will also be restored. Nothing changes until you apply. A recovery copy of your current collection will be saved on this device.</p>${notes.map(n=>`<p class="hint">${esc(n)}</p>`).join('')}<ul class="import-changes">${changes.map(s=>`<li>${esc(s)}</li>`).join('')||'<li>No collection changes.</li>'}</ul><div class="toolbar"><button class="btn primary" id="applyBackup">Apply import</button><button class="btn" onclick="closeDialog()">Cancel</button></div>`;$('modal').classList.remove('hide');
- $('applyBackup').onclick=()=>{const before=JSON.stringify(data),after=JSON.stringify(next);try{localStorage.setItem('aniimo-dev-v402::aniimo-companion-dev-v155-pre-import',before);localStorage.setItem(SAVE_KEY,after);}catch{alert('Not enough local storage to safely import. Your current collection has been kept.');return;}createRecoveryPoint(before,'Before backup import');data=next;lastSavedSnapshot=after;render();close();};
+ $('applyBackup').onclick=()=>{const before=JSON.stringify(data),after=JSON.stringify(next);try{localStorage.setItem('aniimo-dev-v403::aniimo-companion-dev-v155-pre-import',before);localStorage.setItem(SAVE_KEY,after);}catch{alert('Not enough local storage to safely import. Your current collection has been kept.');return;}createRecoveryPoint(before,'Before backup import');data=next;lastSavedSnapshot=after;render();close();};
 }
-window.previewPreviousImport=()=>{try{const raw=localStorage.getItem('aniimo-dev-v402::aniimo-companion-dev-v155-pre-import');if(raw)previewBackup(JSON.parse(raw),'Recover previous collection');}catch(e){alert(e.message);}};
+window.previewPreviousImport=()=>{try{const raw=localStorage.getItem('aniimo-dev-v403::aniimo-companion-dev-v155-pre-import');if(raw)previewBackup(JSON.parse(raw),'Recover previous collection');}catch(e){alert(e.message);}};
 function plannerInputError(b){
  const good=(a,max,nullable=false)=>Array.isArray(a)&&a.length===6&&a.every(n=>nullable&&n===null||typeof n==='number'&&Number.isInteger(n)&&n>=0&&n<=max);
  if(!b||!good(b.innate,10)||!good(b.spent,20)||!good(b.bonuses||Array(6).fill(0),99))return 'Enter six whole-number innate, acquired and bonus values. Unknown values need review.';
@@ -5797,13 +5878,13 @@ try{
  let migrated=false;
  for(const c of data.creatures){
   if(!c.personality){
-   const old=localStorage.getItem('aniimo-dev-v402::aniimo-personality-dev-v163-'+c.name);
+   const old=localStorage.getItem('aniimo-dev-v403::aniimo-personality-dev-v163-'+c.name);
    if(old&&personalityTypes.includes(old)){c.personality=old;migrated=true}
   }
  }
  if(migrated)save();
 }catch(e){}
-function personalityKey(name){return 'aniimo-dev-v402::aniimo-personality-dev-v163-'+name}
+function personalityKey(name){return 'aniimo-dev-v403::aniimo-personality-dev-v163-'+name}
 function personalityGet(name){
  if(starterNames.includes(name))return "";
  const c=data.creatures.find(x=>x.name===name);
@@ -5918,7 +5999,7 @@ function personalitySave(name){
  const q=(sel,root=document)=>root.querySelector(sel);
  const qa=(sel,root=document)=>Array.from(root.querySelectorAll(sel));
  const editor=()=>q('.shot-compact-grid');
- const draftKey='aniimo-dev-v402::aniimo-build-edit-draft-v166';
+ const draftKey='aniimo-dev-v403::aniimo-build-edit-draft-v166';
  let mode='quick',undo=null,prior=null,restoring=false,editorIdentity=null;
  const fields=()=>qa('[data-shotinnate],[data-shotacquired],[data-shotbonus],[data-shotstat],#shotSpent,#shotLevel,#shotStars');
  const snapshot=()=>Object.fromEntries(fields().map(e=>[e.id||e.getAttributeNames().find(x=>x.startsWith('data-shot'))+':'+(e.getAttribute('data-shotinnate')||e.getAttribute('data-shotacquired')||e.getAttribute('data-shotbonus')||e.getAttribute('data-shotstat')||''),e.value]));
@@ -5961,7 +6042,7 @@ function personalitySave(name){
   if(e.target.closest('#applyScreenshot')){ /* Retain draft until confirmed save succeeds. */ }
   if(e.target.closest('#discardScreenshot')){try{localStorage.removeItem(draftKey)}catch{}}
   if(e.target.closest('#copyBetaDiagnostic')){
-   const report=`Aniimo Companion DEV 4.02\nDate: ${new Date().toISOString()}\nBrowser: ${navigator.userAgent}\nViewport: ${innerWidth}x${innerHeight}\nStorage available: ${(()=>{try{return !!localStorage}catch{return false}})()}\nNo collection, build, or screenshot data included.`;
+   const report=`Aniimo Companion DEV 4.03\nDate: ${new Date().toISOString()}\nBrowser: ${navigator.userAgent}\nViewport: ${innerWidth}x${innerHeight}\nStorage available: ${(()=>{try{return !!localStorage}catch{return false}})()}\nNo collection, build, or screenshot data included.`;
    const done=()=>{const status=q('#betaDiagnosticStatus');if(status)status.textContent=' Copied';};
    if(navigator.clipboard?.writeText)navigator.clipboard.writeText(report).then(done).catch(()=>{const status=q('#betaDiagnosticStatus');if(status)status.textContent=' Copy unavailable'});
    else{const status=q('#betaDiagnosticStatus');if(status)status.textContent=' Clipboard unavailable';}
@@ -5982,7 +6063,7 @@ function personalitySave(name){
 </script>
 <script id="aniimo-v168-theme">
 (function(){
- const KEY='aniimo-dev-v402::aniimo-companion-theme';
+ const KEY='aniimo-dev-v403::aniimo-companion-theme';
  const choices=['dark','light','rainbow','system'];
  function preference(){try{const v=localStorage.getItem(KEY);return choices.includes(v)?v:'dark'}catch{return 'dark'}}
  function apply(){
@@ -6024,7 +6105,7 @@ function personalitySave(name){
  function apply(){
   const grid=document.getElementById('creatures');if(!grid)return;
   let choice='cards';
-  try{const saved=localStorage.getItem('aniimo-dev-v402::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(saved))choice=saved;else if(typeof data!=='undefined'&&data.collectionView&&['large','cards','compact'].includes(data.collectionView.layout))choice=data.collectionView.layout;}catch(e){if(typeof data!=='undefined'&&data.collectionView)choice=data.collectionView.layout||'compact'}
+  try{const saved=localStorage.getItem('aniimo-dev-v403::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(saved))choice=saved;else if(typeof data!=='undefined'&&data.collectionView&&['large','cards','compact'].includes(data.collectionView.layout))choice=data.collectionView.layout;}catch(e){if(typeof data!=='undefined'&&data.collectionView)choice=data.collectionView.layout||'compact'}
   if(typeof data!=='undefined'&&data.collectionView)data.collectionView.layout=choice;
   if(grid.dataset.layout!==choice)grid.dataset.layout=choice;
   const picker=document.getElementById('layoutChoice');if(picker&&picker.value!==choice)picker.value=choice;
@@ -6033,7 +6114,7 @@ function personalitySave(name){
  function init(){apply();requestAnimationFrame(()=>{apply();requestAnimationFrame(apply)});
   const grid=document.getElementById('creatures');if(grid){const observer=new MutationObserver(()=>{if(grid.dataset.layout!==getChoice())apply()});observer.observe(grid,{attributes:true,attributeFilter:['data-layout']});}
  }
- function getChoice(){try{const v=localStorage.getItem('aniimo-dev-v402::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(v))return v}catch(e){}return typeof data!=='undefined'&&data.collectionView?data.collectionView.layout:'cards'}
+ function getChoice(){try{const v=localStorage.getItem('aniimo-dev-v403::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(v))return v}catch(e){}return typeof data!=='undefined'&&data.collectionView?data.collectionView.layout:'cards'}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
 </script><script id="dev223-first-render-recovery">
@@ -6063,8 +6144,8 @@ function personalitySave(name){
 
 <script id="dev235-first-visit-username">
 (()=>{
-  const seenKey='aniimo-dev-v402::username-prompt-seen';
-  const nameKey='aniimo-dev-v402::aniimo-companion-local-profile';
+  const seenKey='aniimo-dev-v403::username-prompt-seen';
+  const nameKey='aniimo-dev-v403::aniimo-companion-local-profile';
   const escapeText=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function dismiss(){
     try{localStorage.setItem(seenKey,'1')}catch{}
@@ -6146,9 +6227,9 @@ function personalitySave(name){
 </style>
 <script id="dev240-collection-setup">
 (()=>{
- const stateKey='aniimo-dev-v402::collection-setup-choice';
- const seenKey='aniimo-dev-v402::username-prompt-seen';
- const usernameKey='aniimo-dev-v402::aniimo-companion-local-profile';
+ const stateKey='aniimo-dev-v403::collection-setup-choice';
+ const seenKey='aniimo-dev-v403::username-prompt-seen';
+ const usernameKey='aniimo-dev-v403::aniimo-companion-local-profile';
  const read=()=>{try{return localStorage.getItem(stateKey)||''}catch{return ''}};
  const write=v=>{try{localStorage.setItem(stateKey,v)}catch{}};
  const hasProgress=()=>{
@@ -6267,7 +6348,7 @@ window.toggleScanTableEditing=button=>{
 </style>
 <script id="aniimo-release-safety">
 (function(){
-  const release='DEV 4.02';
+  const release='DEV 4.03';
   window.aniimoCopyIssue=function(){const e=document.getElementById('aniimoIssueText');navigator.clipboard?.writeText(e.value).then(()=>alert('Report copied')).catch(()=>e.select());};
   window.aniimoReportIssue=function(){
     const section=[...document.querySelectorAll('main > section')].find(x=>!x.classList.contains('hide'))?.id||'unknown';
@@ -8003,38 +8084,9 @@ html[data-aniimo-theme="light"] #collection #creatures.grid[data-layout="cards"]
   return root;
  }
  function card(article,c){
-  article.classList.add('pc-info-card');article.removeAttribute('onclick');article.setAttribute('aria-label',displayName(c)+' · Open details');article.tabIndex=0;
-  article.onclick=e=>{if(!e.target.closest('button,input,a,select'))desktopOpen(c.name)};
-  article.onkeydown=e=>{if(e.target===article&&(e.key==='Enter'||e.key===' ')){e.preventDefault();desktopOpen(c.name)}};
-  const all=profileChecklist(c),steps=speciesRules(c).buildEligible===false?all.filter(t=>t.tab==='collection'||t.tab==='appearance'):all;
-  const done=profileFullyDone(c),head=el('div','pc-head');
-  const appearanceShortcut=canChangeAppearanceFromPortrait(c);
-  const avatar=btn('',()=>desktopOpen(c.name,appearanceShortcut?'appearance':'overview'),'pc-avatar');
-  avatar.setAttribute('aria-label',appearanceShortcut?'Change active appearance for '+displayName(c):'Open '+displayName(c)+' details');avatar.append(html('pc-avatar-window',portraitFor(c)));head.append(avatar);
-  const identity=el('div','pc-identity');identity.append(el('span','pc-index','ANIILOG '+numberFor(c)+(isAlpha(c)?' · ALPHA':'')));
-  const title=btn(c.caught&&(c.customName||done)?personalizedName(c):displayName(c),()=>desktopOpen(c.name),'pc-title');
-  title.title=title.textContent;
-  identity.append(title);
-  if(c.caught){
-   const edit=btn('Edit nickname',()=>desktopRenameCompanion(c.name),'nickname-edit');
-   edit.setAttribute('aria-label','Edit nickname for '+displayName(c));
-   identity.append(edit);
-  }
-  identity.append(html('pc-role',combatRoleCard(c)));const acquisition=btn('',()=>openAcquisition(c.name),'pc-acquisition-badge');acquisition.innerHTML=acquisitionCompactChip(c.name);acquisition.setAttribute('aria-label','View acquisition details for '+displayName(c));identity.append(acquisition);head.append(identity);
-  const fav=btn(c.favorite?'★':'☆',()=>toggleFavorite(c.name),'pc-favorite');fav.setAttribute('aria-label',(c.favorite?'Remove ':'Add ')+displayName(c)+(c.favorite?' from favorites':' to favorites'));fav.setAttribute('aria-pressed',String(!!c.favorite));head.append(fav);
-  const content=el('div','pc-content'),profile=el('div','pc-profile-group');
-  const state=el('div','pc-state '+(!c.caught?'uncaught':done?'complete':'progress'),!c.caught?'Not caught':done?'✓ Configured':'In progress');if(canQuickUncatch(c)){
-   const undo=btn('In progress',()=>quickUncatch(c.name),'pc-state progress quick-uncatch');
-   undo.setAttribute('aria-label','Mark '+displayName(c)+' as not caught');
-   undo.title='Mark as not caught';
-   profile.append(undo);
-  }else profile.append(state);
-  if(c.caught){profile.append(progress(c,steps));const facts=el('div','pc-facts'),personality=personalityGet(c.name),b=data.builds?.[c.name];if(!isStarter(c))facts.append(el('span',personality?'':'unknown',personality||'Personality not set'));if(speciesRules(c).buildEligible!==false)facts.append(el('span',Number.isInteger(b?.stars)?'':'unknown',Number.isInteger(b?.stars)?'★ '+b.stars+' stars':'Stars not recorded'));profile.append(facts);
-   const list=el('div','pc-checklist');for(const t of steps){list.append(btn((t.done?'✓ ':'○ ')+t.label,()=>taskAction(c,t),'pc-check-task'+(t.done?' done':'')))}profile.append(list);
-  }else{profile.append(el('p','pc-uncaught-note','Not yet in your collection.'));}
-  head.append(profile);content.append(equipment(c),capabilities(c));
-  const footer=el('div','pc-footer'),next=nextAction(c,steps),hint=el('div','pc-next-copy');hint.append(el('span','pc-label',done?'PROFILE READY':'NEXT ACTION'),el('span','',next.hint));footer.append(hint,btn(next.label+' ›',next.run,'pc-primary-action'));
-  article.replaceChildren(head,content,footer);
+  const template=document.createElement('template');template.innerHTML=premiumCard(c,'desktop');const replacement=template.content.firstElementChild;
+  article.className=replacement.className;article.innerHTML=replacement.innerHTML;article.dataset.state=replacement.dataset.state;
+  article.setAttribute('aria-label',replacement.getAttribute('aria-label'));article.setAttribute('role','group');article.removeAttribute('tabindex');article.removeAttribute('onclick');article.onclick=null;article.onkeydown=null;
  }
  function toolbar(){
   if($('pcStickyTools'))return;
@@ -8560,7 +8612,7 @@ html[data-aniimo-theme="rainbow"] body #settings .settings-support-link{color:#7
   emptyState(grid,'releaseCollectionEmpty','No Aniimo match your filters','Try a different name, Aniilog number, or clear your filters.','Clear filters',clearCollection);
   emptyState($('itemlist'),'releaseInventoryEmpty','No held items match your filters','Try another item name or clear the current filters.','Clear filters',()=>{$('itemsearch').value='';multiFilters.inventory=[];render();$('itemsearch').focus({preventScroll:true})});
   for(const root of [$('needs'),$('shortages')]){const empty=root?.querySelector('.upgrade-empty-refined');if(empty&&!empty.querySelector('.release-empty-actions')){const actions=el('div','release-empty-actions');actions.append(button('View collection',()=>nav('collection')),button('View inventory',()=>nav('items')));if(root.id==='shortages'&&!$('includeFutureItems').checked&&data.creatures.some(c=>!c.caught&&c.name!=='Iris'&&c.ideal))actions.append(button('Include uncaught Aniimo',()=>{$('includeFutureItems').checked=true;$('includeFutureItems').dispatchEvent(new Event('change',{bubbles:true}));render()}));empty.append(actions)}}
-  for(const card of grid.querySelectorAll('article')){if(card.classList.contains('pc-info-card')){card.setAttribute('role','group');continue}if(data.collectionView.layout==='compact'){card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','Open '+(card.dataset.species||'Aniimo')+' details');card.onkeydown=e=>{if(e.target===card&&(e.key==='Enter'||e.key===' ')){e.preventDefault();card.click()}}}}
+  for(const card of grid.querySelectorAll('article')){if(card.classList.contains('pc-info-card')||card.classList.contains('premium-card')){card.setAttribute('role','group');continue}if(data.collectionView.layout==='compact'){card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','Open '+(card.dataset.species||'Aniimo')+' details');card.onkeydown=e=>{if(e.target===card&&(e.key==='Enter'||e.key===' ')){e.preventDefault();card.click()}}}}
   for(const img of document.querySelectorAll('.art-window img.creature-art'))fallback(img);
   document.querySelectorAll('#dialog button').forEach(b=>{if(!b.hasAttribute('aria-label')&&['✕','×'].includes(b.textContent.trim()))b.setAttribute('aria-label','Close dialog')});
  }
@@ -9111,4 +9163,174 @@ body #collection#collection #creatures.grid[data-layout="cards"] article.creatur
  }
  body #collection#collection #creatures.grid[data-layout="large"] article.creature.has-next-step>.card-topline>.quick-caught>span{display:none!important;}
 }
-</style></body></html>
+</style><style id="premium-collection-styles">/* New component names deliberately isolate the approved layouts from legacy card children. */
+body #collection#collection #creatures.grid article.creature.premium-card{
+ --premium-line:var(--line);--premium-text:var(--text);--premium-muted:var(--muted);
+ --premium-blue:#91caff;--premium-pink:#f6a9d1;
+ display:flex!important;flex-direction:column!important;grid-template-columns:none!important;grid-template-rows:none!important;
+ position:relative!important;min-width:0!important;width:auto!important;max-width:none!important;min-height:0!important;height:auto!important;max-height:none!important;
+ margin:0!important;padding:0!important;gap:0!important;overflow:visible!important;
+ border:1px solid var(--premium-line)!important;border-radius:14px!important;
+ background:var(--panel)!important;color:var(--premium-text)!important;box-shadow:0 3px 12px #00000012!important;transform:none!important;
+}
+body #collection#collection #creatures.grid article.creature.premium-card::before,
+body #collection#collection #creatures.grid article.creature.premium-card::after{display:none!important}
+body #collection#collection #creatures.grid article.creature.premium-card[data-state=complete]{border-color:color-mix(in srgb,var(--green) 60%,var(--line))!important}
+body #collection#collection #creatures.grid article.creature.premium-card[data-state=progress]{border-top-color:color-mix(in srgb,var(--yellow) 65%,var(--line))!important}
+body #collection#collection #creatures.grid article.creature.premium-card[hidden]{display:none!important}
+#creatures .premium-card *{box-sizing:border-box}
+#creatures .premium-card button{font-family:inherit;cursor:pointer}
+#creatures .premium-card .premium-header{display:flex;align-items:center;justify-content:space-between;gap:4px;min-height:44px;padding:3px 5px 3px 11px;border-bottom:1px solid var(--premium-line);border-radius:14px 14px 0 0;background:var(--surface-low,var(--panel));margin:0}
+#creatures .premium-card .premium-header h3{font-size:15px;line-height:1.2;font-weight:700;letter-spacing:-.025em;min-width:0;overflow-wrap:anywhere;margin:0;color:var(--premium-text)}
+#creatures .premium-menu{position:relative;flex:none;align-self:center}
+#creatures .premium-menu summary{list-style:none;display:grid;place-items:center;width:34px;height:36px;color:var(--premium-muted);font-size:23px;line-height:1;cursor:pointer;border-radius:7px}
+#creatures .premium-menu summary::-webkit-details-marker,#creatures .premium-hint summary::-webkit-details-marker{display:none}
+#creatures .premium-menu[open]{z-index:30}
+#creatures .premium-menu[open] summary,#creatures .premium-menu summary:hover{background:var(--panel2)}
+#creatures .premium-menu-panel{position:absolute;right:0;top:100%;z-index:31;width:174px;padding:5px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);box-shadow:0 10px 24px #0005}
+#creatures .premium-menu-panel button{display:block;width:100%;min-height:40px;text-align:left;border:0;border-radius:5px;background:transparent;color:var(--text);font-size:12px;padding:9px}
+#creatures .premium-menu-panel button:hover{background:color-mix(in srgb,var(--text) 8%,transparent)}
+#creatures .premium-menu-panel .premium-menu-next{color:var(--yellow)}
+#creatures .premium-art{position:relative;min-width:0;min-height:0;background:var(--surface-low,var(--panel2));overflow:hidden;border-radius:0;aspect-ratio:1/1.12}
+body #collection#collection #creatures .premium-card .premium-art .art-window{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-height:none!important;min-height:0!important;aspect-ratio:auto!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:0!important;padding:0!important;transform:none!important;background:transparent!important;border:0!important;border-radius:0!important}
+body #collection#collection #creatures .premium-card .premium-art img.creature-art{display:block!important;position:static!important;width:100%!important;height:100%!important;min-width:0!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;margin:0!important;border:0!important;transform:none!important;border-radius:0!important}
+#creatures .premium-art .art-caption{display:none!important}
+#creatures .premium-art .portrait-empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:11px;color:var(--premium-muted)}
+#creatures .premium-art .portrait-empty svg{width:50px;height:50px}
+#creatures .premium-art-action{position:absolute;inset:0;z-index:1;border:0;background:transparent;padding:0;border-radius:inherit}
+#creatures .premium-art .premium-status{position:absolute;right:6px;bottom:6px;z-index:2}
+#creatures .premium-status{display:inline-flex;align-items:center;white-space:nowrap;min-height:22px;padding:2px 6px;margin:0;border:0;border-radius:20px;background:var(--panel2);color:var(--premium-muted);font-size:10px;line-height:1.2;font-weight:600}
+#creatures .premium-status-complete{color:var(--green);background:color-mix(in srgb,var(--green) 15%,var(--panel))}
+#creatures .premium-status-progress{color:var(--yellow);background:color-mix(in srgb,var(--yellow) 13%,var(--panel))}
+#creatures .premium-meta{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:4px 7px;padding:9px 10px;min-height:37px;font-size:11px;line-height:1.2;font-weight:650;color:var(--premium-muted)}
+#creatures .premium-separator{width:1px;height:10px;flex:0 0 1px;background:var(--premium-line)}
+#creatures .premium-index{white-space:nowrap;letter-spacing:.04em}
+#creatures .premium-dps{color:#edb39b}#creatures .premium-break{color:#d3b6ee}#creatures .premium-regen{color:#96d7cb}
+#creatures .premium-personality-group{display:inline-flex;align-items:center;gap:0}
+#creatures .premium-personality{padding:0;border:0;background:transparent;display:inline-flex;min-height:24px;align-items:center;letter-spacing:.06em;font-size:11px;font-weight:750;line-height:1}
+#creatures .personality-blue{color:var(--premium-blue)}#creatures .personality-pink{color:var(--premium-pink)}
+#creatures .premium-hint{position:relative;flex:none}
+#creatures .premium-hint summary{list-style:none;display:grid;place-items:center;width:22px;height:24px;border-radius:5px;font-size:11px;color:var(--yellow);cursor:pointer}
+#creatures .premium-hint[open]{z-index:32}
+#creatures .premium-hint-popover{position:absolute;right:0;top:100%;width:166px;padding:10px;z-index:33;background:var(--panel2);border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 20px #0004;color:var(--premium-muted);font-size:11px;line-height:1.4;letter-spacing:normal;font-weight:400}
+#creatures .premium-hint-popover strong{display:block;margin-top:4px;color:var(--premium-text);font-weight:650}
+#creatures .premium-info{min-width:0;border:1px solid var(--premium-line);border-radius:11px;background:var(--panel2);margin:0 9px 10px;padding:0 9px;display:flex;flex-direction:column;flex:1}
+#creatures .premium-location{min-width:0;padding:10px 0;display:flex;flex-direction:column;align-items:flex-start;gap:5px}
+#creatures .premium-acquisition{display:block;text-align:left;border:0;background:transparent;padding:0;margin:0;max-width:100%;color:var(--premium-muted);font-size:11px;font-weight:600}
+body #collection#collection #creatures .premium-card .premium-acquisition .acq-mini{padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;font:inherit!important;color:inherit!important;white-space:normal!important}
+#creatures .premium-acquisition:has(.acq-permanent),#creatures .premium-acquisition:has(.acq-active){color:var(--green)}
+body #collection#collection #creatures .premium-card .premium-location :is(.bloom-acquisition-link,.bloom-world-trigger,.bloom-acquisition-sublink){display:block!important;width:100%!important;min-width:0!important;height:auto!important;min-height:0!important;padding:0!important;margin:0!important;background:transparent!important;border:0!important;border-radius:0!important;text-align:left!important;color:var(--premium-muted)!important;font-size:12px!important;line-height:1.45!important}
+body #collection#collection #creatures .premium-card .premium-location .origin-world{display:flex!important;align-items:baseline!important;gap:5px!important;color:var(--premium-muted)!important;font-size:12px!important;font-weight:650!important;line-height:1.45!important}
+body #collection#collection #creatures .premium-card .premium-location .origin-bloom{display:block!important;width:auto!important;padding:2px 0 0 15px!important;margin:0!important;font-size:11px!important;line-height:1.5!important;color:var(--premium-muted)!important;text-align:left!important;white-space:normal!important}
+#creatures .premium-location .bloom-world-picker{position:relative;width:100%;z-index:3}
+#creatures .premium-location .bloom-world-menu{min-width:165px;z-index:35;background:var(--panel2)}
+body #collection#collection #creatures .premium-card .premium-location .bloom-world-trigger{display:flex!important;align-items:baseline!important;gap:5px!important;font-weight:650!important}
+#creatures .premium-location .bloom-info-chevron,#creatures .premium-location .bloom-world-arrow{display:none!important}
+#creatures .premium-equipment{position:relative;min-width:0;padding:9px 0;border-top:1px solid var(--premium-line);margin-top:auto}
+#creatures .premium-item-button{display:flex;gap:8px;align-items:center;width:100%;padding:0;border:0;background:transparent;text-align:left;color:var(--premium-text);min-height:48px}
+#creatures .premium-held-icon{display:block;width:32px;height:34px;min-width:32px;overflow:hidden;border-radius:7px;flex:0 0 32px}
+body #collection#collection #creatures .premium-card .premium-held-icon .held-item-art{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;transform:none!important;border:0!important;border-radius:6px!important;margin:0!important}
+#creatures .premium-held-icon svg{width:100%;height:100%}
+#creatures .premium-item-copy{display:grid;gap:4px;min-width:0;flex:1}
+#creatures .premium-item-copy strong{font-size:12px;font-weight:650;line-height:1.3;overflow-wrap:anywhere}
+#creatures .premium-item-state{font-size:11px;line-height:1.2;color:var(--premium-muted);font-weight:550}
+#creatures .premium-item-bound{color:var(--green)}#creatures .premium-item-ready{color:var(--yellow)}
+#creatures .premium-equipment>.premium-hint{position:absolute;right:0;bottom:8px}
+#creatures .premium-equipment:has(>.premium-hint) .premium-item-state{padding-right:22px}
+#creatures .premium-equipment .premium-hint-popover{top:auto;bottom:100%}
+#creatures .premium-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+html[data-aniimo-theme=light] #creatures .premium-card{--premium-blue:#2464a3;--premium-pink:#a13c75}
+html[data-aniimo-theme=light] #creatures .premium-dps{color:#9a4729}html[data-aniimo-theme=light] #creatures .premium-break{color:#715399}html[data-aniimo-theme=light] #creatures .premium-regen{color:#256c62}
+@media(max-width:1023px){
+ body #collection#collection #creatures.grid[data-layout=cards]{gap:10px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:stretch!important}
+ body #collection#collection #creatures.grid[data-layout=cards] article.creature.premium-card{display:grid!important;grid-row:span 4;grid-template-rows:subgrid!important;row-gap:0!important}
+ body #collection#collection #creatures.grid[data-layout=cards] .premium-info{display:grid;grid-template-rows:auto 1fr;align-self:stretch}
+ body #collection#collection #creatures.grid[data-layout=cards] .premium-equipment{align-self:start;margin-top:0}
+ body #collection#collection #creatures.grid[data-layout=large]{grid-template-columns:minmax(0,1fr)!important;gap:12px!important}
+ #creatures .premium-large .premium-header{min-height:44px;padding-left:12px}
+ #creatures .premium-large .premium-header h3{font-size:20px}
+ #creatures .premium-large .premium-body{display:grid;grid-template-columns:minmax(0,42fr) minmax(0,58fr);gap:8px;padding:8px;align-items:stretch}
+ #creatures .premium-large .premium-art{aspect-ratio:auto;border-radius:10px;min-height:190px}
+ #creatures .premium-large .premium-info{margin:0;padding:0 9px}
+ #creatures .premium-large .premium-meta{padding:8px 0;border-bottom:1px solid var(--premium-line);min-height:34px;gap:5px}
+ #creatures .premium-large .premium-location{padding:9px 0}
+ #creatures .premium-large .premium-equipment{margin-top:auto}
+}
+@media(max-width:360px){
+ #creatures .premium-card .premium-header{padding-left:8px;min-height:43px}
+ #creatures .premium-card .premium-header h3{font-size:13px}
+ #creatures .premium-card .premium-meta{gap:3px 5px;padding-left:7px;padding-right:7px}
+ #creatures .premium-info{margin-left:6px;margin-right:6px;padding-left:7px;padding-right:7px}
+ #creatures .premium-held-icon{width:26px;min-width:26px;height:29px;flex-basis:26px}
+ #creatures .premium-item-button{gap:5px}
+ #creatures .premium-large .premium-header h3{font-size:18px}
+}
+@media(min-width:1024px){
+ body #collection#collection #creatures.grid article.creature.premium-desktop{display:flex!important;grid-row:auto!important;border-radius:12px!important}
+ #creatures .premium-desktop-head{display:grid;grid-template-columns:70px minmax(0,1fr);gap:9px;padding:12px;min-height:122px;align-items:center;border-bottom:1px solid var(--line)}
+ #creatures .premium-desktop-head .premium-art{width:70px;height:98px;aspect-ratio:auto;border-radius:9px}
+ #creatures .premium-desktop .premium-header{border:0;min-height:28px;padding:0;background:transparent;border-radius:0;align-items:start}
+ #creatures .premium-desktop .premium-header h3{font-size:17px;align-self:center}
+ #creatures .premium-desktop .premium-menu summary{width:27px;height:28px}
+ #creatures .premium-identity{min-width:0}
+ #creatures .premium-desktop .premium-meta{padding:7px 0 0;min-height:0;gap:4px 5px}
+ #creatures .premium-desktop .premium-info{border:0;background:transparent;margin:0;padding:0 14px;flex:1;display:grid;grid-template-rows:minmax(82px,auto) minmax(66px,auto)}
+ #creatures .premium-desktop .premium-location{padding:10px 0;justify-content:center}
+ #creatures .premium-desktop .premium-equipment{padding:9px 0;margin:0;display:flex;align-items:center}
+ #creatures .premium-desktop .premium-item-copy strong{font-size:14px}
+ body #collection#collection #creatures .premium-desktop .premium-location .origin-world{font-size:13px!important}
+ body #collection#collection #creatures .premium-desktop .premium-location .origin-bloom{font-size:12px!important}
+ #creatures .premium-desktop .premium-footer{min-height:50px;padding:8px 12px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--line);border-radius:0 0 12px 12px;background:var(--surface-low,var(--panel));margin-top:auto}
+ #creatures .premium-footer .premium-status{background:transparent;padding:0;font-size:11px;font-weight:500}
+ #creatures .premium-primary{font-size:12px;font-weight:600;min-height:32px;padding:6px 10px;border:1px solid var(--line);border-radius:7px;background:var(--panel2);color:var(--text);white-space:normal}
+ #creatures [data-state=progress] .premium-primary{color:var(--yellow);border-color:color-mix(in srgb,var(--yellow) 35%,var(--line));background:color-mix(in srgb,var(--yellow) 7%,var(--panel))}
+ #creatures .premium-desktop.desk-selected{outline:2px solid var(--green);outline-offset:2px}
+}
+
+@media(min-width:1024px){
+ body #collection#collection .collection-section-heading,body #collection#collection .collection-explore-heading,body #collection#collection .collection-meta,body #collection#collection .collection-overview{display:none!important}
+ #premiumDesktopHeading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:18px 0 20px}
+ #premiumDesktopHeading h2{font-size:28px;letter-spacing:-.035em;margin:0 0 6px;font-weight:700}
+ #premiumDesktopHeading p{margin:0;color:var(--muted);font-size:13px}
+ #premiumHeadingActions{display:flex;align-items:center;gap:8px}
+ #premiumHeadingActions button{font-size:13px;min-height:36px;padding:8px 13px;border-radius:8px}
+ body #collection#collection #pcStickyTools{position:relative!important;top:auto!important;display:grid!important;grid-template-columns:minmax(220px,2fr) minmax(170px,1fr) minmax(190px,1fr) auto!important;gap:10px!important;padding:14px!important;border:1px solid var(--line)!important;border-radius:12px!important;background:var(--panel)!important;margin:0 0 12px!important;box-shadow:none!important}
+ body #collection#collection #pcStickyTools>.toolbar,body #collection#collection #pcStickyTools>.collection-filters{display:contents!important}
+ body #collection#collection #pcStickyTools>.layout-toolbar{display:none!important}
+ body #collection#collection #pcStickyTools #search,body #collection#collection #pcStickyTools #collectionFilterTrigger,body #collection#collection #pcStickyTools .region-filter,body #collection#collection #pcStickyTools #favoritesOnly{width:100%!important;min-width:0!important;min-height:42px!important;height:42px!important;margin:0!important;border-radius:8px!important;font-size:13px!important;box-sizing:border-box!important}
+ body #collection#collection #pcStickyTools #search{grid-column:1;padding:10px 13px!important}
+ body #collection#collection #pcStickyTools #collectionFilterTrigger{grid-column:2}
+ body #collection#collection #pcStickyTools .region-filter{grid-column:3;display:flex!important;align-items:center;gap:7px;padding:0 10px!important}
+ body #collection#collection #pcStickyTools .region-filter select{min-width:0!important;width:100%!important;height:38px!important;padding:4px!important;font-size:13px!important}
+ body #collection#collection #pcStickyTools #favoritesOnly{grid-column:4;padding:8px 12px!important}
+ body #collection#collection #pcStickyTools #collectionFilterPanel{position:absolute;top:60px;right:14px;z-index:45;width:min(600px,90%)}
+ body #collection#collection #pcStickyTools #pcReleaseControls{grid-column:1/-1;display:flex!important;align-items:center;gap:16px!important;border-top:1px solid var(--line);padding:10px 0 0!important;margin:2px 0 0!important;background:transparent!important}
+ #premiumResults{margin-right:auto;color:var(--muted);font-size:12px}
+ body #collection#collection #pcReleaseControls .desk-sort{display:flex;align-items:center;gap:8px;margin:0!important;font-size:12px!important}
+ body #collection#collection #pcReleaseControls .desk-sort select{min-height:32px!important;height:32px!important;font-size:12px!important;padding:4px 8px!important;max-width:220px}
+ body #collection#collection #pcReleaseControls .pc-gallery-choice{font-size:12px!important;margin:0!important}
+ body #collection#collection #desktopBrowse{margin:0 0 10px!important;padding:0!important;min-height:0!important;border:0!important;background:transparent!important}
+ body #collection#collection #desktopBrowse:empty{display:none!important}
+ body #collection#collection #creatures.pc-information-view{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:16px!important}
+ body #backupReminder{font-size:12px;padding:9px 12px!important;min-height:0!important;border-radius:9px!important;margin:0 0 12px!important}
+ body #backupReminder button{min-height:30px!important;font-size:12px!important;padding:5px 10px!important}
+}
+@media(max-width:1023px){#premiumDesktopHeading,#premiumResults{display:none!important}}
+</style><script id="premium-collection-menus">
+(()=>{
+ const mq=matchMedia('(min-width:1024px)');
+ function polishPremiumMenus(){
+  if(!mq.matches)return;
+  const section=document.getElementById('collection'),tools=document.getElementById('pcStickyTools'),controls=document.getElementById('pcReleaseControls');if(!section||!tools||!controls)return;
+  let heading=document.getElementById('premiumDesktopHeading');
+  if(!heading){heading=document.createElement('div');heading.id='premiumDesktopHeading';heading.innerHTML='<div><h2>Your Aniimo</h2><p></p></div><div id="premiumHeadingActions"></div>';tools.before(heading)}
+  heading.querySelector('p').textContent=data.creatures.filter(c=>c.caught).length+' caught · '+data.creatures.filter(c=>profileFullyDone(c)).length+' complete';
+  const actions=heading.querySelector('#premiumHeadingActions');
+  for(const node of controls.querySelectorAll('#pcCompareTrigger,.collection-guide-link'))actions.append(node);
+  let results=document.getElementById('premiumResults');if(!results){results=document.createElement('span');results.id='premiumResults'}controls.prepend(results);
+  const count=document.getElementById('collectionCount');results.textContent=count?count.textContent:'Your collection';
+ }
+ const previous=window.render;window.render=function(...args){const result=previous.apply(this,args);polishPremiumMenus();return result};
+ mq.addEventListener('change',polishPremiumMenus);polishPremiumMenus();
+})();
+</script></body></html>
