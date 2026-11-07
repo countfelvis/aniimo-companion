@@ -4084,9 +4084,9 @@ if(artworkVisibilityObserver)artworkVisibilityObserver.disconnect();$("creatures
  const quickCaught=!c.caught||canQuickUncatch(c)?`<label class="quick-caught" onclick="event.stopPropagation()"><input type="checkbox" ${c.caught?"checked":""} onchange="${c.caught?"quickUncatch":"toggleCaught"}('${esc(c.name)}')" aria-label="Mark ${esc(displayName(c))} as ${c.caught?"not caught":"caught"}"><span>Caught</span></label>`:"";
  const cardIndex=`<div class="card-index" aria-label="Aniilog number ${numberFor(c)}"><span class="index-label">ANIILOG</span><span class="index-number">${numberFor(c)}</span></div>`;
  const role=combatRoleCard(c);
- const twoCardMeta=twoCards?`<div class="two-card-meta">${cardIndex}${role}${personality}</div>`:"";
+ const twoCardMeta="";
  const actions=`<div class="cardactions">${twoCards&&uncaught?caughtButton:nextStep}<button class="btn primary manage-btn" onclick="managePrismana('${esc(c.name)}')" aria-label="Edit ${esc(displayName(c))}"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5-12 12-6 1 1-6Z"/><path d="m14 5 5 5"/></svg> Edit <span aria-hidden="true">›</span></button></div>`;
- return `<article class="creature${nextStep?" has-next-step":""}" data-species="${esc(c.name)}" data-state="${collectionCardState(c)}" onclick="if(data.collectionView.layout==='compact'){openCompactCompanion('${esc(c.name)}')}"><div class="card-topline">${profileFullyDone(c)?`<button type="button" class="completed-custom-name" onclick="event.stopPropagation();renameCompanion('${esc(c.name)}')" aria-label="Rename ${esc(personalizedName(c))}" title="Edit nickname"><span class="completed-name-text">${esc(personalizedName(c))}</span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5-12 12-6 1 1-6Z"/><path d="m14 5 5 5"/></svg></button>`:''}${profileFullyDone(c)?``:`<span class="incomplete-header-name">${esc(displayName(c))}</span>${quickCaught}`}${twoCards?"":cardIndex}<button class="favorite-toggle" type="button" aria-label="${c.favorite===true?'Remove':'Add'} ${esc(displayName(c))} ${c.favorite===true?'from':'to'} favorites" aria-pressed="${c.favorite===true}" onclick="toggleFavorite('${esc(c.name)}')">${c.favorite===true?'★':'☆'}</button>${twoCards?twoCardMeta:large?role+personality:""}</div><div class="portrait">${isAlpha(c)?`<div class="alpha-corner" aria-label="Alpha Prismana">✦ Alpha</div>`:''}${portraitFor(c)}${canChangeAppearanceFromPortrait(c)?`<button type="button" class="portrait-appearance-shortcut" onclick="event.stopPropagation();managePrismana('${esc(c.name)}','appearance')" aria-label="Change active appearance for ${esc(displayName(c))}" title="Change active appearance"></button>`:""}${large?`<div class="mobile-card-caption">${cardIndex}${role}${personality}</div>`:""}</div><div class="body"><div class="card-name-row"><h3 class="name">${profileFullyDone(c)?esc(personalizedName(c)):esc(displayName(c))}</h3>${!c.caught?`<span class="card-name-uncaught"><span aria-hidden="true">○</span> Not caught</span>`:''}</div>${large?`<div class="card-location-group">${location}</div>`:location}${large?"":progress}${speciesRules(c).stage==='pre-evolution'?'':heldItemChip(c)}<button type="button" class="acquisition-card-link acquisition-bottom" onclick="event.stopPropagation();openAcquisition('${esc(c.name)}')" title="View acquisition details" aria-label="Acquisition details for ${esc(displayName(c))}">${acquisitionCompactChip(c.name)}</button>${large?"":actions}${large?`<div class="mobile-inline-actions">${nextStep?"":quickCaught}${actions}</div>`:""}</div>${large&&!nextStep?`<footer class="card-footer has-inline-actions">${quickCaught?`<div class="mobile-card-caught">${quickCaught}</div>`:""}${actions}</footer>`:""}</article>`;}).join('')||'<div class="collection-empty"><strong>No companions found</strong><p>Try another name, number, region, or status—or turn off Favorites.</p></div>';
+ return `<article class="creature${nextStep?" has-next-step":""}" data-species="${esc(c.name)}" data-state="${collectionCardState(c)}" onclick="if(data.collectionView.layout==='compact'){openCompactCompanion('${esc(c.name)}')}"><div class="card-topline">${profileFullyDone(c)?`<button type="button" class="completed-custom-name" onclick="event.stopPropagation();renameCompanion('${esc(c.name)}')" aria-label="Rename ${esc(personalizedName(c))}" title="Edit nickname"><span class="completed-name-text">${esc(personalizedName(c))}</span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5-12 12-6 1 1-6Z"/><path d="m14 5 5 5"/></svg></button>`:''}${profileFullyDone(c)?``:`<span class="incomplete-header-name">${esc(displayName(c))}</span>${quickCaught}`}${twoCards?"":cardIndex}<button class="favorite-toggle" type="button" aria-label="${c.favorite===true?'Remove':'Add'} ${esc(displayName(c))} ${c.favorite===true?'from':'to'} favorites" aria-pressed="${c.favorite===true}" onclick="toggleFavorite('${esc(c.name)}')">${c.favorite===true?'★':'☆'}</button>${twoCards?twoCardMeta:large?"":""}</div><div class="portrait">${isAlpha(c)?`<div class="alpha-corner" aria-label="Alpha Prismana">✦ Alpha</div>`:''}${portraitFor(c)}${canChangeAppearanceFromPortrait(c)?`<button type="button" class="portrait-appearance-shortcut" onclick="event.stopPropagation();managePrismana('${esc(c.name)}','appearance')" aria-label="Change active appearance for ${esc(displayName(c))}" title="Change active appearance"></button>`:""}</div><div class="body"><div class="card-name-row"><h3 class="name">${profileFullyDone(c)?esc(personalizedName(c)):esc(displayName(c))}</h3>${!c.caught?`<span class="card-name-uncaught"><span aria-hidden="true">○</span> Not caught</span>`:''}</div>${large?`<div class="mock-meta">${cardIndex}${role}${personality}</div><div class="card-location-group">${location}</div>`:twoCards?`<div class="mock-meta">${cardIndex}${role}${personality}</div>${location}`:location}${large?"":progress}${speciesRules(c).stage==='pre-evolution'?'':heldItemChip(c)}<button type="button" class="acquisition-card-link acquisition-bottom" onclick="event.stopPropagation();openAcquisition('${esc(c.name)}')" title="View acquisition details" aria-label="Acquisition details for ${esc(displayName(c))}">${acquisitionCompactChip(c.name)}</button>${large?"":actions}${large?`<div class="mobile-inline-actions">${nextStep?"":quickCaught}${actions}</div>`:""}</div>${large&&!nextStep?`<footer class="card-footer has-inline-actions">${quickCaught?`<div class="mobile-card-caught">${quickCaught}</div>`:""}${actions}</footer>`:""}</article>`;}).join('')||'<div class="collection-empty"><strong>No companions found</strong><p>Try another name, number, region, or status—or turn off Favorites.</p></div>';
 
 const itemEntries=Object.entries(data.items);
 const itemNeeded=name=>data.creatures.filter(c=>c.caught&&!isAlpha(c)&&c.ideal===name&&!hasBinding(c,name)).length;
@@ -9112,107 +9112,38 @@ body #collection#collection #creatures.grid[data-layout="cards"] article.creatur
  body #collection#collection #creatures.grid[data-layout="large"] article.creature.has-next-step>.card-topline>.quick-caught>span{display:none!important;}
 }
 </style>
-<style id="mockup-final-responsive-v403">
-/* Final approved collection mockups: visual-only responsive layer.
-   Existing profile, storage, Discord sync and card actions remain intact. */
-@media(min-width:1024px){
- body #collection#collection #creatures.grid[data-layout="compact"].pc-information-view{
-  display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;
-  gap:12px!important;align-items:stretch!important;
- }
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card{
-  min-width:0!important;overflow:hidden!important;border-radius:11px!important;
-  display:flex!important;flex-direction:column!important;background:var(--panel)!important;
- }
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card>.pc-head{
-  display:grid!important;grid-template-columns:60px minmax(0,1fr)!important;
-  grid-template-rows:auto!important;gap:9px!important;
-  min-height:0!important;margin:0!important;padding:10px!important;
-  align-items:center!important;border-bottom:1px solid var(--line)!important;
- }
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card .pc-avatar{
-  grid-column:1!important;grid-row:1!important;width:60px!important;height:84px!important;
-  max-width:60px!important;border-radius:8px!important;
- }
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card .pc-identity{
-  grid-column:2!important;grid-row:1!important;align-self:center!important;padding:0 18px 0 0!important;
-  min-width:0!important;display:flex!important;flex-wrap:wrap!important;align-content:center!important;gap:4px!important;
- }
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card .pc-title{
-  width:100%!important;font-size:13px!important;font-weight:700!important;
-  text-align:left!important;overflow-wrap:anywhere!important;
- }
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card .pc-index{font-size:10px!important;}
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card .pc-role{font-size:10px!important;}
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card .pc-acquisition-badge{display:none!important;}
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card .pc-favorite{
-  position:absolute!important;right:9px!important;top:9px!important;font-size:17px!important;
- }
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card .pc-profile-group{
-  display:none!important;
- }
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card>.pc-content{
-  display:block!important;flex:1!important;padding:10px 12px!important;min-height:105px!important;
- }
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card .pc-equipment-group{
-  padding:0!important;margin:0!important;border:0!important;
- }
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card .pc-location{
-  display:block!important;margin:0 0 12px!important;padding-bottom:10px!important;
-  border-bottom:1px solid var(--line)!important;font-size:11px!important;
- }
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card>.pc-footer{
-  margin-top:auto!important;padding:8px 10px!important;border-top:1px solid var(--line)!important;
-  display:flex!important;align-items:center!important;justify-content:space-between!important;gap:5px!important;
- }
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card .pc-next-copy{
-  min-width:0!important;font-size:10px!important;
- }
- body #collection#collection #creatures.grid[data-layout="compact"] .pc-info-card .pc-primary-action{
-  flex:0 0 auto!important;padding:6px 8px!important;font-size:10px!important;white-space:normal!important;
- }
- body #collection#collection #pcStickyTools{gap:8px!important;}
- body #collection#collection #pcStickyTools :is(input,select,button){border-radius:8px!important;}
-}
-@media(min-width:1024px) and (max-width:1199px){
- body #collection#collection #creatures.grid[data-layout="compact"].pc-information-view{
-  grid-template-columns:repeat(3,minmax(0,1fr))!important;
- }
-}
+<style id="approved-mockup-v404">
 @media(max-width:1023px){
- body #collection#collection #creatures.grid[data-layout="large"] article.creature{
-  border-radius:16px!important;overflow:hidden!important;
- }
- body #collection#collection #creatures.grid[data-layout="large"] article.creature>.card-topline{
-  padding:12px!important;min-height:0!important;border-bottom:1px solid var(--line)!important;
- }
- body #collection#collection #creatures.grid[data-layout="large"] article.creature>.body{
-  gap:10px!important;padding:12px!important;align-items:start!important;
- }
- body #collection#collection #creatures.grid[data-layout="large"] article.creature .card-origin{
-  border-radius:10px!important;min-height:0!important;padding:10px!important;
- }
- body #collection#collection #creatures.grid[data-layout="large"] article.creature .held-chip{
-  border-radius:10px!important;min-height:0!important;
- }
- body #collection#collection #creatures.grid[data-layout="cards"] article.creature{
-  overflow:hidden!important;border-radius:15px!important;
- }
- body #collection#collection #creatures.grid[data-layout="cards"] article.creature>.card-topline{
-  padding:10px!important;min-height:0!important;border-bottom:1px solid var(--line)!important;
- }
- body #collection#collection #creatures.grid[data-layout="cards"] article.creature>.body{
-  padding:10px!important;gap:8px!important;
- }
- body #collection#collection #creatures.grid[data-layout="cards"] article.creature .card-origin{
-  border-radius:8px!important;padding:8px!important;
- }
- body #collection#collection #creatures.grid[data-layout="cards"] article.creature .held-chip{
-  border-radius:8px!important;
- }
- body #collection#collection #creatures.grid[data-layout="cards"] article.creature .cardactions{
-  border-top:1px solid var(--line)!important;padding-top:7px!important;
- }
+#collection #creatures.grid[data-layout="cards"]{gap:12px!important}
+#collection #creatures.grid[data-layout="cards"] article.creature,#collection #creatures.grid[data-layout="large"] article.creature{background:#1b2730!important;border:1px solid #354552!important;border-radius:17px!important;overflow:hidden!important;box-shadow:none!important}
+#collection #creatures.grid[data-layout="cards"] .card-topline,#collection #creatures.grid[data-layout="large"] .card-topline{display:flex!important;min-height:0!important;padding:14px 12px!important;align-items:center!important;gap:4px!important;background:#15212a!important;border-bottom:1px solid #354552!important}
+#collection #creatures.grid[data-layout="cards"] .card-topline .incomplete-header-name,#collection #creatures.grid[data-layout="cards"] .card-topline .completed-custom-name{font-size:clamp(15px,3.6vw,21px)!important;line-height:1.15!important;font-weight:750!important;letter-spacing:-.025em!important;min-width:0!important;max-width:calc(100% - 30px)!important}
+#collection #creatures.grid[data-layout="cards"] .card-topline .quick-caught,#collection #creatures.grid[data-layout="large"] .card-topline .quick-caught{display:none!important}
+#collection #creatures.grid[data-layout="cards"] .card-topline .favorite-toggle,#collection #creatures.grid[data-layout="large"] .card-topline .favorite-toggle{margin-left:auto!important;position:static!important;font-size:20px!important}
+#collection #creatures.grid[data-layout="cards"] .portrait{order:2!important;aspect-ratio:1/1.12!important;min-height:0!important;height:auto!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:#121c25!important}
+#collection #creatures.grid[data-layout="cards"] .portrait .art-window,#collection #creatures.grid[data-layout="cards"] .portrait img{height:100%!important;max-height:100%!important;object-fit:contain!important}
+#collection #creatures.grid[data-layout="cards"] .body{order:3!important;padding:0 11px 12px!important;display:flex!important;flex-direction:column!important;gap:0!important}
+#collection #creatures.grid[data-layout="cards"] .card-name-row,#collection #creatures.grid[data-layout="large"] .card-name-row{display:none!important}
+#collection #creatures.grid[data-layout="cards"] .mock-meta{order:0!important;padding:10px 0!important;border-bottom:1px solid #354552!important;display:flex!important;align-items:center!important;gap:5px!important;flex-wrap:wrap!important;min-height:40px!important}
+#collection #creatures.grid[data-layout="cards"] .card-badges{order:1!important;margin:0!important;padding:11px 0 3px!important;justify-content:center!important}
+#collection #creatures.grid[data-layout="cards"] .card-origin{order:2!important;margin:0!important;padding:3px 7px 10px!important;border-bottom:1px solid #354552!important;background:transparent!important;border-radius:0!important;min-height:0!important}
+#collection #creatures.grid[data-layout="cards"] .held-chip{order:3!important;margin:0!important;padding:12px 0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;min-height:65px!important}
+#collection #creatures.grid[data-layout="cards"] .cardactions{order:5!important;margin-top:auto!important;padding:10px 0 0!important;border-top:1px solid #354552!important;gap:5px!important}
+#collection #creatures.grid[data-layout="cards"] .cardactions .btn{min-width:0!important;padding:7px!important;font-size:11px!important}
+#collection #creatures.grid[data-layout="cards"] .acquisition-bottom,#collection #creatures.grid[data-layout="cards"] .card-progress-slot{display:none!important}
+#collection #creatures.grid[data-layout="cards"] .mock-meta .card-index,#collection #creatures.grid[data-layout="large"] .mock-meta .card-index{position:static!important;margin:0!important;display:inline-flex!important;align-items:center!important;border:0!important;background:none!important;padding:0!important}
+#collection #creatures .mock-meta .index-label{display:none!important}
+#collection #creatures .mock-meta .index-number{font-size:12px!important;letter-spacing:.07em!important}
+#collection #creatures.grid[data-layout="large"] .card-topline{padding:15px!important}
+#collection #creatures.grid[data-layout="large"] .portrait{grid-column:1!important;grid-row:2!important;width:100%!important;height:auto!important;aspect-ratio:0.83!important;min-height:0!important;align-self:stretch!important;margin:0!important;padding:9px!important;background:#16212a!important;border-radius:12px!important}
+#collection #creatures.grid[data-layout="large"] .body{grid-column:2!important;grid-row:2!important;display:flex!important;flex-direction:column!important;gap:0!important;padding:8px!important;min-width:0!important}
+#collection #creatures.grid[data-layout="large"] .mock-meta{display:flex!important;gap:6px!important;align-items:center!important;flex-wrap:wrap!important;padding:10px 4px!important;border-bottom:1px solid #354552!important}
+#collection #creatures.grid[data-layout="large"] .card-location-group{padding:10px 4px!important;border-bottom:1px solid #354552!important}
+#collection #creatures.grid[data-layout="large"] .card-badges{padding:0!important;margin:0!important}
+#collection #creatures.grid[data-layout="large"] .card-origin{padding:3px 0!important;margin:0!important;border:0!important;background:none!important}
+#collection #creatures.grid[data-layout="large"] .held-chip{padding:10px 4px!important;margin:0!important;min-height:0!important;border:0!important;background:none!important;box-shadow:none!important}
+#collection #creatures.grid[data-layout="large"] .mobile-inline-actions{margin-top:auto!important;padding:6px 0!important}
+#collection #creatures.grid[data-layout="large"] .acquisition-bottom{display:none!important}
 }
 </style>
 </body></html>
