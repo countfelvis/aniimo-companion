@@ -3663,7 +3663,58 @@ article.creature[data-species*="Scorchhowl"] .portrait img {
 .form-preview-toggle.is-shown{background:#24363d;color:#a7e5d7}
 .form-preview-note{margin:9px 2px 0;color:#aabac3;font-size:12px;line-height:1.4}
 @media(max-width:540px){.form-preview-card{max-height:50vh}.form-preview-card .premium-large .premium-body{gap:8px}.form-preview-card .premium-large .premium-info{min-width:0}}
-</style></head><body><header class="app-header"><div class="app-brand"><div><small>ANIIMO COMPANION <span class="version-mark">DEV 4.70</span></small><h1 id="page-title">My Collection</h1></div></div><div class="header-actions"><div id="localSaveStatus" role="status" aria-live="polite">Saving locally…</div><label class="theme-dropdown-wrap" aria-label="Appearance theme"><select id="themeSwitch" class="theme-dropdown" aria-label="Appearance theme" onchange="setAniimoTheme(this.value)"><option value="dark">☾ Dark</option><option value="light">☀ Light</option><option value="rainbow">🌈 Rainbow</option><option value="system">◐ Auto</option></select><span class="theme-dropdown-chevron" aria-hidden="true">⌄</span></label><span class="pill session-pill"><span class="session-dot"></span> On device</span></div></header><nav class="tabs" id="tabs" aria-label="Main navigation"><button data-tab="collection" class="active"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="m8 12 3 3 5-6"/></svg></span><span>Collection</span></button><button data-tab="items"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M9 10v10"/></svg></span><span>Items</span></button><button data-tab="upgrades"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8z"/></svg></span><span>Upgrades</span></button><button data-tab="settings"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.85 2.85-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1.2 1.55V21h-4v-.05A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.85-2.85.06-.06A1.7 1.7 0 0 0 4.2 15a1.7 1.7 0 0 0-1.55-1.2H2.6v-4h.05A1.7 1.7 0 0 0 4.2 8.6a1.7 1.7 0 0 0-.34-1.88L3.8 6.66 6.65 3.8l.06.06A1.7 1.7 0 0 0 8.6 4.2a1.7 1.7 0 0 0 1.2-1.55V2.6h4v.05A1.7 1.7 0 0 0 15 4.2a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.85 2.85-.06.06A1.7 1.7 0 0 0 19.4 8.6a1.7 1.7 0 0 0 1.55 1.2H21v4h-.05A1.7 1.7 0 0 0 19.4 15Z"/></svg></span><span>Settings</span></button></nav><main class="shell"><section id="collection"><div class="collection-overview"><div class="collection-overview-top"><div><span class="overview-eyebrow">MY PRISMANA · COLLECTION PROGRESS</span><strong id="collectionProgressLabel">0 / 0 configured</strong></div><span class="overview-percent" id="collectionProgressPercent">0%</span></div><div class="bar" role="progressbar" aria-label="Caught Prismana configured" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress"></div></div><div class="stats" id="stats"></div><div id="collectionDimensions" class="collection-dimensions" aria-live="polite"></div></div><div class="catch-onboarding inventory-onboarding setup-reminder" id="catchOnboarding" hidden>
+</style><style id="dev474-preview-rebuild">
+/* A self-contained, non-interactive preview; no collection-grid CSS leaks into the modal. */
+.form-preview-card{max-height:none!important;overflow:visible!important;border:0!important;border-radius:0!important}
+.form-preview-summary{width:100%;min-width:0;overflow:hidden;border:1px solid #3b5361;border-radius:14px;background:#17232e;color:#edf5f8}
+.form-preview-summary-head{display:flex;align-items:center;gap:9px;padding:12px 13px;border-bottom:1px solid #354754;min-width:0}
+.form-preview-summary-head>strong{font-size:18px;line-height:1.2;min-width:0}
+.form-preview-form-label{font-size:12px;font-weight:650;white-space:nowrap;border:1px solid #39606a;border-radius:20px;padding:4px 8px;color:#c2e7e6}
+.form-preview-summary-body{display:grid;grid-template-columns:minmax(0,42fr) minmax(0,58fr);gap:9px;padding:10px;align-items:stretch}
+.form-preview-art{position:relative;overflow:hidden;border-radius:11px;background:#101b25;min-width:0;min-height:225px;display:flex;align-items:center;justify-content:center}
+.form-preview-art .art-window{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;background:transparent!important}
+.form-preview-art img.creature-art{display:block!important;position:static!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;transform:none!important;margin:0!important}
+.form-preview-art .art-caption{display:none!important}
+.form-preview-details{min-width:0;display:flex;flex-direction:column;padding:10px;border:1px solid #364956;border-radius:11px;background:#23333f;gap:12px}
+.form-preview-details .premium-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:12px;font-weight:650;border-bottom:1px solid #3a4d58;padding:0 0 12px}
+.form-preview-details .premium-meta .premium-separator{width:1px;height:12px;background:#52616d}
+.form-preview-details .premium-meta .type-badge{max-width:100%}
+.form-preview-details .premium-meta button{pointer-events:none}
+.form-preview-location{display:grid;gap:8px;font-size:12px;color:#afc1cc;line-height:1.4;min-width:0}
+.form-preview-location button{pointer-events:none;color:inherit}
+.form-preview-location .origin-world{font-weight:650}
+.form-preview-location .origin-bloom{padding-left:10px}
+.form-preview-item{display:flex;gap:8px;align-items:center;margin-top:auto;padding-top:12px;border-top:1px solid #3a4d58;min-width:0}
+.form-preview-item-icon{width:34px;height:36px;flex:0 0 34px;overflow:hidden;border-radius:7px}
+.form-preview-item-icon img{display:block;width:100%!important;height:100%!important;object-fit:cover!important;max-width:none!important}
+.form-preview-item>span:last-child{display:grid;gap:3px;min-width:0}
+.form-preview-item strong{font-size:12px;overflow-wrap:anywhere}
+.form-preview-item small{font-size:11px;color:#a8b8c4}
+@media(max-width:390px){.form-preview-summary-body{gap:7px;padding:7px}.form-preview-details{padding:8px;gap:8px}.form-preview-art{min-height:200px}.form-preview-summary-head>strong{font-size:16px}}
+</style><style id="dev475-consistent-scorchhowl-form-framing">
+/* Keep the existing full-size collection framing untouched. Match its visual centering
+   in the miniature form picker and the four-across collection gallery. */
+.collection-forms-dialog .collection-form-thumb{position:relative;overflow:hidden;isolation:isolate}
+.collection-forms-dialog .collection-form-thumb img{
+ display:block!important;width:100%!important;height:100%!important;
+ max-width:100%!important;max-height:100%!important;
+ object-fit:contain!important;object-position:center center!important;
+ transform:translate(3px,3px) scale(.91)!important;
+ transform-origin:center center!important;
+ margin:0!important;padding:0!important;
+}
+/* These five independent form entries are the only Scorchhowl portraits adjusted.
+   Leave Prismana and every other species' artwork unchanged. */
+body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] article.creature[data-species="Scorchhowl-basic"] .portrait img.creature-art,
+body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] article.creature[data-species="Scorchhowl-highland"] .portrait img.creature-art,
+body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] article.creature[data-species="Scorchhowl-thunderstorm"] .portrait img.creature-art,
+body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] article.creature[data-species="Scorchhowl-timberline"] .portrait img.creature-art{
+ object-fit:contain!important;object-position:center!important;
+ transform:translate(5px,5px) scale(.94)!important;
+ transform-origin:center center!important;
+}
+</style>
+</head><body><header class="app-header"><div class="app-brand"><div><small>ANIIMO COMPANION <span class="version-mark">DEV 4.75</span></small><h1 id="page-title">My Collection</h1></div></div><div class="header-actions"><div id="localSaveStatus" role="status" aria-live="polite">Saving locally…</div><label class="theme-dropdown-wrap" aria-label="Appearance theme"><select id="themeSwitch" class="theme-dropdown" aria-label="Appearance theme" onchange="setAniimoTheme(this.value)"><option value="dark">☾ Dark</option><option value="light">☀ Light</option><option value="rainbow">🌈 Rainbow</option><option value="system">◐ Auto</option></select><span class="theme-dropdown-chevron" aria-hidden="true">⌄</span></label><span class="pill session-pill"><span class="session-dot"></span> On device</span></div></header><nav class="tabs" id="tabs" aria-label="Main navigation"><button data-tab="collection" class="active"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="m8 12 3 3 5-6"/></svg></span><span>Collection</span></button><button data-tab="items"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M9 10v10"/></svg></span><span>Items</span></button><button data-tab="upgrades"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8z"/></svg></span><span>Upgrades</span></button><button data-tab="settings"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.85 2.85-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1.2 1.55V21h-4v-.05A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.85-2.85.06-.06A1.7 1.7 0 0 0 4.2 15a1.7 1.7 0 0 0-1.55-1.2H2.6v-4h.05A1.7 1.7 0 0 0 4.2 8.6a1.7 1.7 0 0 0-.34-1.88L3.8 6.66 6.65 3.8l.06.06A1.7 1.7 0 0 0 8.6 4.2a1.7 1.7 0 0 0 1.2-1.55V2.6h4v.05A1.7 1.7 0 0 0 15 4.2a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.85 2.85-.06.06A1.7 1.7 0 0 0 19.4 8.6a1.7 1.7 0 0 0 1.55 1.2H21v4h-.05A1.7 1.7 0 0 0 19.4 15Z"/></svg></span><span>Settings</span></button></nav><main class="shell"><section id="collection"><div class="collection-overview"><div class="collection-overview-top"><div><span class="overview-eyebrow">MY PRISMANA · COLLECTION PROGRESS</span><strong id="collectionProgressLabel">0 / 0 configured</strong></div><span class="overview-percent" id="collectionProgressPercent">0%</span></div><div class="bar" role="progressbar" aria-label="Caught Prismana configured" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress"></div></div><div class="stats" id="stats"></div><div id="collectionDimensions" class="collection-dimensions" aria-live="polite"></div></div><div class="catch-onboarding inventory-onboarding setup-reminder" id="catchOnboarding" hidden>
   <div class="onboarding-copy"><strong>Ready to set up your collection?</strong><span>Add your Aniimo and held items whenever you're ready.</span></div>
   <div class="onboarding-actions"><button class="btn primary" type="button" onclick="openFirstCollectionSetup()">Set up collection</button><button class="onboarding-skip" type="button" onclick="dismissCollectionSetupForever()">No thanks</button></div>
 </div><div class="collection-section-heading"><div><small>THE COLLECTION</small><h2>Discover your Aniimo</h2></div><button class="btn collection-guide-link" type="button" onclick="openCollectionGuide()">✦ Explore &amp; learn</button></div><div class="toolbar"><input class="input" id="search" placeholder="Name or Aniilog nº…" aria-label="Search by name or Aniilog number"><button class="multi-filter-trigger input" id="collectionFilterTrigger" type="button" onclick="toggleMultiFilters('collection')" aria-expanded="false">☷ <span id="collectionFilterLabel">All statuses</span><span class="filter-chevron">⌄</span></button><div class="multi-filter-panel hide" id="collectionFilterPanel"></div></div><div class="collection-filters"><label class="region-filter"><span>Region</span><select id="regionFilter" aria-label="Filter companions by region" onchange="setCollectionRegion(this.value)"><option value="all">All regions</option><option value="Breezy Plains">Breezy Plains</option><option value="Whisperwake Isles">Whisperwake Isles</option><option value="Keepsakes">Keepsakes</option><option value="Starter Choice">Starters</option></select></label><button class="favorites-filter" id="favoritesOnly" type="button" aria-pressed="false" onclick="toggleFavoritesFilter()">☆ Favorites</button></div><div class="view-controls layout-toolbar"><span class="layout-title">View</span><div class="layout-segments" role="group" aria-label="Collection card layout"><button type="button" data-view="large" onclick="setCollectionLayout('large')" aria-label="One card per row" title="Showcase"><span class="layout-glyph">▤</span><span>1</span></button><button type="button" data-view="cards" onclick="setCollectionLayout('cards')" aria-label="Two cards per row" title="Grid"><span class="layout-glyph">▦</span><span>2</span></button><button type="button" data-view="compact" onclick="setCollectionLayout('compact')" aria-label="Four cards per row" title="Compact"><span class="layout-glyph">▦</span><span>4</span></button></div><select id="layoutChoice" aria-label="Collection view" onchange="setCollectionLayout(this.value)" hidden><option value="cards">2 cards per row</option><option value="large">1 per row</option><option value="compact">4 cards per row</option></select></div><div id="backupReminder" class="backup-reminder" hidden><span>Keep a copy of your collection.</span><button class="btn" id="reminderExport">Export backup</button><button class="btn" onclick="snoozeBackup()">In a week</button></div><div class="collection-explore-heading"><span class="explore-heading-label">YOUR ANIIMO</span><span class="explore-heading-hint">✧ Tap an Aniimo to Explore</span></div><div class="collection-meta"><span>Aniilog order <span aria-hidden="true">↑</span></span><span id="collectionCount" aria-live="polite"></span></div><div class="grid" id="creatures"></div><details id="hiddenStarters" class="panel" hidden><summary>Other Aniimo</summary><p class="hint" id="otherAniimoEmpty">Optional Aniimo will appear here as their cards are added.</p><label class="hidden-aniimo-toggle" id="hiddenStarterToggle" hidden><input id="showHiddenAniimo" type="checkbox" onchange="setShowHiddenAniimo(this.checked)"> Show unchosen starter in Collection</label><div id="hiddenStarterList"></div><div class="other-aniimo-search-wrap">
@@ -3959,6 +4010,10 @@ function collectionPreferences(){
  data.collectionView.formVisibility=Object.fromEntries(Object.keys(companionForms)
   .filter(name=>typeof formVisibility?.[name]==="boolean")
   .map(name=>[name,formVisibility[name]]));
+ const starterVisibility=data.collectionView.starterVisibility;
+ data.collectionView.starterVisibility=Object.fromEntries(['Helion','Lunara']
+  .filter(name=>typeof starterVisibility?.[name]==='boolean')
+  .map(name=>[name,starterVisibility[name]]));
  const shown=data.collectionView.shownNovaAniimo;
  data.collectionView.shownNovaAniimo=Array.isArray(shown)?[...new Set(shown.filter(name=>approvedNovaNames.has(name)))]:[];
  // Keep the display preference separate from collection records so it survives refreshes and development data resets.
@@ -4341,12 +4396,20 @@ function updateCollectionHeading(){
  title.textContent=name&&name!=='Guest'?`${name}${/s$/i.test(name)?"’":"’s"} Collection`:'My Collection';
 }
 const showHiddenAniimo=()=>data.collectionView.showHiddenAniimo===true;
+const starterShown=c=>{
+ if(!isStarter(c))return false;
+ const overrides=data.collectionView.starterVisibility||{};
+ if(c.caught)return true;
+ if(typeof overrides[c.name]==='boolean')return overrides[c.name];
+ return Boolean(c.caught); // A chosen starter appears automatically; the other remains optional.
+};
 const hiddenNova=c=>{
  const form=formFor(c.name);
+ if(isStarter(c))return !starterShown(c);
  if(form)return !(data.collectionView.formVisibility[c.name]??Boolean(form.prismana));
  return isOptionalNova(c)&&!data.collectionView.shownNovaAniimo.includes(c.name);
 };
-const shownInCollection=c=>!hiddenNova(c)&&(showHiddenAniimo()||!hiddenStarter(c));
+const shownInCollection=c=>isStarter(c)?starterShown(c):!hiddenNova(c);
 const collectionCardCount=()=>data.creatures.filter(shownInCollection).length;
 window.setShowHiddenAniimo=show=>{data.collectionView.showHiddenAniimo=show;render();};
 window.setNovaCollectionVisibility=(name,show)=>{
@@ -4457,7 +4520,11 @@ function renderOtherAniimo(){
 }
 window.setOtherCardVisibility=(name,checked)=>{
  const c=data.creatures.find(c=>c.name===name);if(!c)return;
- if(isStarter(c)){data.collectionView.showHiddenAniimo=Boolean(checked);}
+ if(isStarter(c)){
+  data.collectionView.starterVisibility ||= {};
+  data.collectionView.starterVisibility[name]=Boolean(checked);
+  save();
+}
  else setNovaCollectionVisibility(name,checked);
  render();
 };
@@ -4826,7 +4893,7 @@ window.previewCollectionForm=function(name){
  const c=data.creatures.find(entry=>entry.name===name),f=c&&formFor(c.name);
  if(!c||!f)return;
  const shown=!hiddenNova(c);
- const previewCard=premiumCard(c,'large',true);
+ const previewCard=`<article class="form-preview-summary" aria-label="${esc(f.species)} ${esc(f.label)} preview"><div class="form-preview-summary-head"><strong>${esc(f.species)}</strong><span class="form-preview-form-label">◇ ${esc(f.label)}</span></div><div class="form-preview-summary-body"><div class="form-preview-art">${portraitFor(c)}</div><div class="form-preview-details">${premiumMetadata(c)}<div class="form-preview-location">${acquisitionCompactChip(c.name)}${cardBloomLocation(c)}</div><div class="form-preview-item"><span class="form-preview-item-icon">${heldThumb(c.ideal||'')}</span><span><strong>${esc(c.ideal||'Held item')}</strong><small>${c.ideal?'Recommended':'Recommendation pending'}</small></span></div></div></div></article>`;
  $('dialog').innerHTML=`<div class="collection-forms-dialog collection-form-detail"><div class="collection-forms-head"><div><h2>${esc(f.species)} · ${esc(f.label)}</h2><p>Collection card preview</p></div><button type="button" class="btn" onclick="closeDialog()" aria-label="Close preview">✕</button></div><button type="button" class="btn form-preview-back" data-form-back="${esc(name)}">‹ All forms</button><div class="form-preview-card">${previewCard}</div><button type="button" class="btn form-preview-toggle ${shown?'is-shown':''}" data-form-toggle="${esc(name)}">${shown?'✓ Shown in Collection':'＋ Add to Collection'}</button><p class="form-preview-note">Adding a form displays its own card without marking it as caught.</p></div>`;
  $('modal').classList.remove('hide');
 };
