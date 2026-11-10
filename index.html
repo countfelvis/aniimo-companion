@@ -3463,6 +3463,21 @@ body #upgrades#upgrades .boss-drop small{font-size:12px;color:var(--muted);line-
 body #upgrades#upgrades .boss-drop .drop-map-hint{font-size:10px;color:var(--green);margin-top:3px}
 body #upgrades#upgrades a.boss-drop:hover{border-color:var(--green)!important}
 body #upgrades#upgrades a.boss-drop:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+</style><style id="dev446-form-badges">
+.premium-name-group{display:flex;align-items:center;gap:9px;min-width:0;flex-wrap:wrap}
+.premium-name-group h3{margin:0;min-width:0}
+.collection-form-badge{display:inline-flex;align-items:center;gap:5px;border:1px solid #658c9a80;border-radius:999px;padding:4px 9px;background:#24404b;color:#c4e6ed;font-size:12px;font-weight:700;line-height:1.3;cursor:pointer;white-space:nowrap;box-shadow:inset 0 1px #ffffff12}
+.collection-form-badge:hover,.collection-form-badge:focus-visible{border-color:#79d2c8;background:#2b5058;outline-offset:2px}
+.form-badge-dot{color:#7ad7c7;font-size:13px}.form-badge-chevron{opacity:.7}
+.collection-forms-dialog{max-width:540px;margin:auto}.collection-forms-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}.collection-forms-head h2{margin:0 0 5px}.collection-forms-head p,.collection-forms-footnote{font-size:13px;color:var(--muted,#9eacb7);line-height:1.5;margin:0}
+.collection-form-list{display:grid;gap:8px;max-height:min(58vh,520px);overflow-y:auto;padding:3px}
+.collection-form-row{display:flex;align-items:center;gap:8px;border:1px solid #62778470;border-radius:14px;padding:7px;background:#1d2a33}.collection-form-row.is-current{border-color:#69b8aa}
+.collection-form-preview{display:flex;align-items:center;gap:10px;min-width:0;flex:1;border:0;background:transparent;color:inherit;text-align:left;cursor:pointer;padding:3px}
+.collection-form-thumb{display:flex;align-items:center;justify-content:center;width:47px;height:47px;flex:none;overflow:hidden;border-radius:9px;background:#15222c}.collection-form-thumb img{width:100%;height:100%;object-fit:contain}
+.collection-form-copy{display:flex;flex-direction:column;gap:3px;min-width:0}.collection-form-copy strong{font-size:14px}.collection-form-copy small{font-size:11px;opacity:.7}
+.collection-form-check{display:flex;align-items:center;gap:5px;font-size:11px;white-space:nowrap;cursor:pointer}.collection-form-check input{accent-color:#6acdbd;width:16px;height:16px}
+.collection-forms-footnote{margin-top:12px}
+@media(max-width:480px){.premium-name-group{gap:7px}.collection-form-badge{font-size:11px;padding:3px 7px}.collection-form-row{gap:4px;padding:5px}.collection-form-thumb{width:40px;height:40px}.collection-form-check{font-size:10px}}
 </style></head><body><header class="app-header"><div class="app-brand"><div><small>ANIIMO COMPANION <span class="version-mark">DEV 4.45</span></small><h1 id="page-title">My Collection</h1></div></div><div class="header-actions"><div id="localSaveStatus" role="status" aria-live="polite">Saving locally…</div><label class="theme-dropdown-wrap" aria-label="Appearance theme"><select id="themeSwitch" class="theme-dropdown" aria-label="Appearance theme" onchange="setAniimoTheme(this.value)"><option value="dark">☾ Dark</option><option value="light">☀ Light</option><option value="rainbow">🌈 Rainbow</option><option value="system">◐ Auto</option></select><span class="theme-dropdown-chevron" aria-hidden="true">⌄</span></label><span class="pill session-pill"><span class="session-dot"></span> On device</span></div></header><nav class="tabs" id="tabs" aria-label="Main navigation"><button data-tab="collection" class="active"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="m8 12 3 3 5-6"/></svg></span><span>Collection</span></button><button data-tab="items"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M9 10v10"/></svg></span><span>Items</span></button><button data-tab="upgrades"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8z"/></svg></span><span>Upgrades</span></button><button data-tab="settings"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.85 2.85-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1.2 1.55V21h-4v-.05A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.85-2.85.06-.06A1.7 1.7 0 0 0 4.2 15a1.7 1.7 0 0 0-1.55-1.2H2.6v-4h.05A1.7 1.7 0 0 0 4.2 8.6a1.7 1.7 0 0 0-.34-1.88L3.8 6.66 6.65 3.8l.06.06A1.7 1.7 0 0 0 8.6 4.2a1.7 1.7 0 0 0 1.2-1.55V2.6h4v.05A1.7 1.7 0 0 0 15 4.2a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.85 2.85-.06.06A1.7 1.7 0 0 0 19.4 8.6a1.7 1.7 0 0 0 1.55 1.2H21v4h-.05A1.7 1.7 0 0 0 19.4 15Z"/></svg></span><span>Settings</span></button></nav><main class="shell"><section id="collection"><div class="collection-overview"><div class="collection-overview-top"><div><span class="overview-eyebrow">MY PRISMANA · COLLECTION PROGRESS</span><strong id="collectionProgressLabel">0 / 0 configured</strong></div><span class="overview-percent" id="collectionProgressPercent">0%</span></div><div class="bar" role="progressbar" aria-label="Caught Prismana configured" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress"></div></div><div class="stats" id="stats"></div><div id="collectionDimensions" class="collection-dimensions" aria-live="polite"></div></div><div class="catch-onboarding inventory-onboarding setup-reminder" id="catchOnboarding" hidden>
   <div class="onboarding-copy"><strong>Ready to set up your collection?</strong><span>Add your Aniimo and held items whenever you're ready.</span></div>
   <div class="onboarding-actions"><button class="btn primary" type="button" onclick="openFirstCollectionSetup()">Set up collection</button><button class="onboarding-skip" type="button" onclick="dismissCollectionSetupForever()">No thanks</button></div>
@@ -4511,9 +4526,43 @@ function premiumEquipment(c){
  const label={bound:'✓ Bound',suggested:'Suggested',optional:'Binding optional',ready:'Ready to bind',missing:'Not available'}[state];
  return `<div class="premium-equipment">${premiumActionButton(c,'edit',`<span class="premium-held-icon">${item?heldThumb(item):heldItemGlyph}</span><span class="premium-item-copy"><strong>${esc(item||'Held item')}</strong><span class="premium-item-state premium-item-${state}">${item?label:'Recommendation pending'}</span></span>`,'premium-item-button','item')}${binding&&c.ideal&&binding!==c.ideal?premiumHint('Recommended held item',c.ideal):''}</div>`;
 }
+// DEV 4.46: species form badge and independent form browser.
+const formsForSpecies=species=>data.creatures.filter(entry=>formFor(entry.name)?.species===species).sort((a,b)=>{
+ const fa=formFor(a.name),fb=formFor(b.name);
+ return (fa.prismana?-1:0)-(fb.prismana?-1:0)||fa.label.localeCompare(fb.label);
+});
+function formBadge(c){
+ const form=formFor(c.name);
+ if(!form||formsForSpecies(form.species).length<2)return '';
+ return `<button type="button" class="collection-form-badge" data-form-badge="${esc(c.name)}" aria-label="Browse ${esc(form.species)} forms"><span class="form-badge-dot" aria-hidden="true">◈</span>${esc(form.label)}<span class="form-badge-chevron" aria-hidden="true">⌄</span></button>`;
+}
+window.openCollectionForms=function(name){
+ const entry=data.creatures.find(c=>c.name===name),form=entry&&formFor(entry.name);
+ if(!form)return;
+ const rows=formsForSpecies(form.species).map(c=>{
+  const f=formFor(c.name),shown=!hiddenNova(c),current=c.name===name;
+  return `<div class="collection-form-row ${current?'is-current':''}"><button type="button" class="collection-form-preview" data-form-preview="${esc(c.name)}"><span class="collection-form-thumb">${caughtChoicePortrait(c)}</span><span class="collection-form-copy"><strong>${esc(f.label)}</strong><small>${c.caught?'Caught':'Not caught'}${current?' · Current form':''} · Tap to browse</small></span><span aria-hidden="true">›</span></button><label class="collection-form-check"><input type="checkbox" data-form-add="${esc(c.name)}" ${shown?'checked':''}><span>Show card</span></label></div>`;
+ }).join('');
+ $('dialog').innerHTML=`<div class="collection-forms-dialog"><div class="collection-forms-head"><div><h2>${esc(form.species)} forms</h2><p>Browse any form, or show it as a separate collection card.</p></div><button type="button" class="btn" onclick="closeDialog()" aria-label="Close form selector">✕</button></div><div class="collection-form-list">${rows}</div><p class="collection-forms-footnote">Browsing does not mark a form as caught. “Show card” only controls whether its independent profile appears in your collection.</p></div>`;
+ $('modal').classList.remove('hide');
+};
+document.addEventListener('click',e=>{
+ const badge=e.target.closest('[data-form-badge]');
+ if(badge){e.preventDefault();e.stopPropagation();window.openCollectionForms(badge.dataset.formBadge);return;}
+ const preview=e.target.closest('[data-form-preview]');
+ if(preview){e.preventDefault();e.stopPropagation();const name=preview.dataset.formPreview;closeDialog();if(matchMedia('(min-width:1024px)').matches&&window.desktopOpen)desktopOpen(name,'overview');else managePrismana(name,'details');}
+});
+document.addEventListener('change',e=>{
+ const check=e.target.closest('[data-form-add]');if(!check)return;
+ const name=check.dataset.formAdd,show=check.checked;
+ // Preserve independent caught and build state; displaying a card is not catching it.
+ window.setNovaCollectionVisibility(name,show);
+ // The normal render updates the underlying cards, but leave this selector open.
+ window.openCollectionForms(name);
+});
 function premiumCard(c,mode){
  const name=c.customName||profileFullyDone(c)?personalizedName(c):displayName(c);
- const title=`<header class="premium-header"><h3>${esc(name)}</h3>${premiumMenu(c)}</header>`;
+ const form=formFor(c.name); const title=`<header class="premium-header"><div class="premium-name-group"><h3>${esc(form?form.species:name)}</h3>${formBadge(c)}</div>${premiumMenu(c)}</header>`;
  const metadata=premiumMetadata(c),location=premiumLocation(c),equipment=premiumEquipment(c);
  let content='';
  if(mode==='desktop'){
