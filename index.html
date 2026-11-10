@@ -3359,7 +3359,7 @@ html[data-aniimo-theme="light"] #collection :is(#creatures,#otherFullCardGrid).g
 <script id="dev329-blank-slate">
 /* Development releases are isolated: clear only this release's test namespace once.
    Do not touch beta or production localStorage. Refreshes within a release still save. */
-(function(){try{const marker='aniimo-dev-v452-initialized';if(localStorage.getItem(marker)!=='yes'){for(let i=localStorage.length-1;i>=0;i--){const k=localStorage.key(i);if(k&&k.startsWith('aniimo-dev-v452::'))localStorage.removeItem(k)}localStorage.setItem(marker,'yes')}}catch(e){}})();
+(function(){try{const marker='aniimo-dev-v454-initialized';if(localStorage.getItem(marker)!=='yes'){for(let i=localStorage.length-1;i>=0;i--){const k=localStorage.key(i);if(k&&k.startsWith('aniimo-dev-v456::'))localStorage.removeItem(k)}localStorage.setItem(marker,'yes')}}catch(e){}})();
 </script>
 <style id="dev343-personality-badge-edit">
 #collection .card-personality{cursor:pointer!important;min-height:36px!important;touch-action:manipulation}
@@ -3444,7 +3444,7 @@ button.quick-uncatch:focus-visible{outline:2px solid currentColor;outline-offset
 .item-wizard-bindings label{display:flex;align-items:center;gap:10px;padding:9px;border:1px solid var(--line);border-radius:10px;cursor:pointer;}
 .item-wizard-bindings input{width:auto;flex:none;}
 #itemWizardError{color:var(--amber);}
-</style><meta name="aniimo-build" content="DEV 4.52 · other-aniimo-uniform-cards-no-editor-button"><style id="dialog-layer-fix">
+</style><meta name="aniimo-build" content="DEV 4.56 · other-aniimo-uniform-cards-no-editor-button"><style id="dialog-layer-fix">
 /* Keep all collection tools below dialogs, including desktop drawers. */
 body #modal.modal{z-index:1000!important}
 body #collection#collection #pcStickyTools{z-index:10}
@@ -3511,7 +3511,7 @@ body #upgrades#upgrades a.boss-drop:focus-visible{outline:2px solid var(--green)
 .other-card-top input{accent-color:var(--green);width:16px;height:16px}
 .other-card-entry>.creature{width:100%;max-width:none}
 @media(max-width:700px){.other-full-card-grid{grid-template-columns:1fr}.other-card-top{font-size:12px}}
-</style><style>.other-aniimo-search-wrap{margin:14px 0 18px}.other-aniimo-search-wrap .input{width:100%;box-sizing:border-box}.other-card-entry[hidden]{display:none!important}#otherAniimoNoMatches{padding:16px;text-align:center}</style><style id="dev452-other-uniform">
+</style><style>.other-aniimo-search-wrap{margin:14px 0 18px}.other-aniimo-search-wrap .input{width:100%;box-sizing:border-box}.other-card-entry[hidden]{display:none!important}#otherAniimoNoMatches{padding:16px;text-align:center}</style><style id="dev453-other-uniform">
 #otherFullCardGrid.other-full-card-grid{grid-template-columns:repeat(1,minmax(0,1fr));gap:14px}
 #otherFullCardGrid .other-card-entry{min-width:0;width:100%;max-width:none;overflow:hidden}
 #otherFullCardGrid .other-card-entry .premium-portrait,
@@ -3522,14 +3522,39 @@ body #upgrades#upgrades a.boss-drop:focus-visible{outline:2px solid var(--green)
 #otherFullCardGrid .other-card-visibility input{width:16px;height:16px;margin:0;accent-color:var(--green)}
 @media(min-width:701px) and (max-width:1023px){#otherFullCardGrid.other-full-card-grid[data-layout="cards"]{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:1024px){#otherFullCardGrid.other-full-card-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-</style><style id="dev452-compact-form-labels">
+</style><style id="dev453-compact-form-labels">
 /* Four-card gallery: species stays readable, with a separate restrained form chip. */
 #collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] .body .card-name-row{display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:4px!important;min-height:48px!important;padding:5px 2px 7px!important;box-sizing:border-box!important}
 #collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] .body .card-name-row .name{width:100%!important;max-width:100%!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;font-size:clamp(10px,2.6vw,13px)!important;font-weight:700!important;line-height:1.15!important}
 #collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] .body .card-name-row .compact-form-tag{display:inline-flex!important;align-items:center;justify-content:center;gap:3px;max-width:95%;box-sizing:border-box;padding:2px 7px;border-radius:999px;border:1px solid rgba(125,164,177,.38);background:rgba(84,117,132,.16);color:#c2d5de;font-size:clamp(8px,2vw,10px);font-weight:650;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] .body .card-name-row .compact-form-tag.is-prismana{border-color:rgba(104,205,188,.43);background:rgba(60,144,139,.17);color:#a9e5dc}
 #collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] .compact-form-glyph{font-size:10px;flex:none}
-</style></head><body><header class="app-header"><div class="app-brand"><div><small>ANIIMO COMPANION <span class="version-mark">DEV 4.52</span></small><h1 id="page-title">My Collection</h1></div></div><div class="header-actions"><div id="localSaveStatus" role="status" aria-live="polite">Saving locally…</div><label class="theme-dropdown-wrap" aria-label="Appearance theme"><select id="themeSwitch" class="theme-dropdown" aria-label="Appearance theme" onchange="setAniimoTheme(this.value)"><option value="dark">☾ Dark</option><option value="light">☀ Light</option><option value="rainbow">🌈 Rainbow</option><option value="system">◐ Auto</option></select><span class="theme-dropdown-chevron" aria-hidden="true">⌄</span></label><span class="pill session-pill"><span class="session-dot"></span> On device</span></div></header><nav class="tabs" id="tabs" aria-label="Main navigation"><button data-tab="collection" class="active"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="m8 12 3 3 5-6"/></svg></span><span>Collection</span></button><button data-tab="items"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M9 10v10"/></svg></span><span>Items</span></button><button data-tab="upgrades"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8z"/></svg></span><span>Upgrades</span></button><button data-tab="settings"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.85 2.85-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1.2 1.55V21h-4v-.05A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.85-2.85.06-.06A1.7 1.7 0 0 0 4.2 15a1.7 1.7 0 0 0-1.55-1.2H2.6v-4h.05A1.7 1.7 0 0 0 4.2 8.6a1.7 1.7 0 0 0-.34-1.88L3.8 6.66 6.65 3.8l.06.06A1.7 1.7 0 0 0 8.6 4.2a1.7 1.7 0 0 0 1.2-1.55V2.6h4v.05A1.7 1.7 0 0 0 15 4.2a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.85 2.85-.06.06A1.7 1.7 0 0 0 19.4 8.6a1.7 1.7 0 0 0 1.55 1.2H21v4h-.05A1.7 1.7 0 0 0 19.4 15Z"/></svg></span><span>Settings</span></button></nav><main class="shell"><section id="collection"><div class="collection-overview"><div class="collection-overview-top"><div><span class="overview-eyebrow">MY PRISMANA · COLLECTION PROGRESS</span><strong id="collectionProgressLabel">0 / 0 configured</strong></div><span class="overview-percent" id="collectionProgressPercent">0%</span></div><div class="bar" role="progressbar" aria-label="Caught Prismana configured" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress"></div></div><div class="stats" id="stats"></div><div id="collectionDimensions" class="collection-dimensions" aria-live="polite"></div></div><div class="catch-onboarding inventory-onboarding setup-reminder" id="catchOnboarding" hidden>
+</style><style id="dev453-form-selector-polish">
+.collection-forms-dialog{max-width:500px;padding:0 1px 2px}
+.collection-forms-head{margin-bottom:15px;align-items:center}
+.collection-forms-head h2{font-size:21px;letter-spacing:-.035em;margin:0 0 3px}
+.collection-forms-head p{font-size:12px;color:#91a7b2}
+.collection-form-list{gap:6px;max-height:min(65vh,560px);padding:1px}
+.collection-form-row{min-height:62px;padding:5px 10px 5px 6px;gap:8px;border-radius:12px;background:#1c2a34;border-color:#52677455}
+.collection-form-row.is-current{background:#20373b;border-color:#5dbba899}
+.collection-form-preview{gap:10px}
+.collection-form-thumb{width:49px;height:49px;border-radius:9px}
+.collection-form-copy{justify-content:center;gap:0}
+.collection-form-copy strong{font-size:14px;line-height:1.25;gap:8px}
+.collection-form-copy small{display:none!important}
+.form-current-tag{font-size:9px;letter-spacing:.045em;padding:3px 7px}
+.collection-form-check{font-size:11px;gap:6px;padding-left:10px;min-height:30px}
+.collection-form-check input{width:18px;height:18px}
+.form-row-chevron{font-size:19px;opacity:.7}
+@media(max-width:480px){.collection-form-row{padding:5px 8px 5px 5px;gap:5px}.collection-form-thumb{width:46px;height:46px}.collection-form-preview{gap:9px}.collection-form-copy strong{font-size:13.5px}.collection-form-check{padding-left:8px;font-size:11px}.collection-forms-head h2{font-size:20px}}
+</style><style id="dev455-form-chip-fit">
+/* Keep the form chip entirely within the compact tile and visually subordinate to the name. */
+#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] .body .card-name-row{gap:2px!important;min-height:0!important;padding:4px 3px 6px!important;overflow:visible!important}
+#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] .body .card-name-row .name{font-size:clamp(10px,2.55vw,13px)!important;line-height:1.2!important;margin:0!important}
+#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] .body .card-name-row .compact-form-tag{font-size:clamp(8px,1.8vw,9px)!important;line-height:1.1!important;min-height:17px!important;padding:2px 6px!important;max-width:100%!important;gap:3px!important;border-radius:5px!important;overflow:hidden!important;text-overflow:ellipsis!important}
+#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] .body .card-name-row .compact-form-glyph{font-size:9px!important}
+#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] article.creature .body{min-width:0!important;overflow:visible!important}
+</style><style id="dev456-static-other-form-badges">#otherFullCardGrid .collection-form-badge-static{cursor:default;pointer-events:none;box-shadow:none}#otherFullCardGrid .collection-form-badge-static:hover{background:#24404b;border-color:#658c9a80}#otherFullCardGrid .collection-form-badge-static .form-badge-chevron{display:none}</style></head><body><header class="app-header"><div class="app-brand"><div><small>ANIIMO COMPANION <span class="version-mark">DEV 4.56</span></small><h1 id="page-title">My Collection</h1></div></div><div class="header-actions"><div id="localSaveStatus" role="status" aria-live="polite">Saving locally…</div><label class="theme-dropdown-wrap" aria-label="Appearance theme"><select id="themeSwitch" class="theme-dropdown" aria-label="Appearance theme" onchange="setAniimoTheme(this.value)"><option value="dark">☾ Dark</option><option value="light">☀ Light</option><option value="rainbow">🌈 Rainbow</option><option value="system">◐ Auto</option></select><span class="theme-dropdown-chevron" aria-hidden="true">⌄</span></label><span class="pill session-pill"><span class="session-dot"></span> On device</span></div></header><nav class="tabs" id="tabs" aria-label="Main navigation"><button data-tab="collection" class="active"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="m8 12 3 3 5-6"/></svg></span><span>Collection</span></button><button data-tab="items"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M9 10v10"/></svg></span><span>Items</span></button><button data-tab="upgrades"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8z"/></svg></span><span>Upgrades</span></button><button data-tab="settings"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.85 2.85-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1.2 1.55V21h-4v-.05A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.85-2.85.06-.06A1.7 1.7 0 0 0 4.2 15a1.7 1.7 0 0 0-1.55-1.2H2.6v-4h.05A1.7 1.7 0 0 0 4.2 8.6a1.7 1.7 0 0 0-.34-1.88L3.8 6.66 6.65 3.8l.06.06A1.7 1.7 0 0 0 8.6 4.2a1.7 1.7 0 0 0 1.2-1.55V2.6h4v.05A1.7 1.7 0 0 0 15 4.2a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.85 2.85-.06.06A1.7 1.7 0 0 0 19.4 8.6a1.7 1.7 0 0 0 1.55 1.2H21v4h-.05A1.7 1.7 0 0 0 19.4 15Z"/></svg></span><span>Settings</span></button></nav><main class="shell"><section id="collection"><div class="collection-overview"><div class="collection-overview-top"><div><span class="overview-eyebrow">MY PRISMANA · COLLECTION PROGRESS</span><strong id="collectionProgressLabel">0 / 0 configured</strong></div><span class="overview-percent" id="collectionProgressPercent">0%</span></div><div class="bar" role="progressbar" aria-label="Caught Prismana configured" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress"></div></div><div class="stats" id="stats"></div><div id="collectionDimensions" class="collection-dimensions" aria-live="polite"></div></div><div class="catch-onboarding inventory-onboarding setup-reminder" id="catchOnboarding" hidden>
   <div class="onboarding-copy"><strong>Ready to set up your collection?</strong><span>Add your Aniimo and held items whenever you're ready.</span></div>
   <div class="onboarding-actions"><button class="btn primary" type="button" onclick="openFirstCollectionSetup()">Set up collection</button><button class="onboarding-skip" type="button" onclick="dismissCollectionSetupForever()">No thanks</button></div>
 </div><div class="collection-section-heading"><div><small>THE COLLECTION</small><h2>Discover your Aniimo</h2></div><button class="btn collection-guide-link" type="button" onclick="openCollectionGuide()">✦ Explore &amp; learn</button></div><div class="toolbar"><input class="input" id="search" placeholder="Name or Aniilog nº…" aria-label="Search by name or Aniilog number"><button class="multi-filter-trigger input" id="collectionFilterTrigger" type="button" onclick="toggleMultiFilters('collection')" aria-expanded="false">☷ <span id="collectionFilterLabel">All statuses</span><span class="filter-chevron">⌄</span></button><div class="multi-filter-panel hide" id="collectionFilterPanel"></div></div><div class="collection-filters"><label class="region-filter"><span>Region</span><select id="regionFilter" aria-label="Filter companions by region" onchange="setCollectionRegion(this.value)"><option value="all">All regions</option><option value="Breezy Plains">Breezy Plains</option><option value="Whisperwake Isles">Whisperwake Isles</option><option value="Keepsakes">Keepsakes</option><option value="Starter Choice">Starters</option></select></label><button class="favorites-filter" id="favoritesOnly" type="button" aria-pressed="false" onclick="toggleFavoritesFilter()">☆ Favorites</button></div><div class="view-controls layout-toolbar"><span class="layout-title">View</span><div class="layout-segments" role="group" aria-label="Collection card layout"><button type="button" data-view="large" onclick="setCollectionLayout('large')" aria-label="One card per row" title="Showcase"><span class="layout-glyph">▤</span><span>1</span></button><button type="button" data-view="cards" onclick="setCollectionLayout('cards')" aria-label="Two cards per row" title="Grid"><span class="layout-glyph">▦</span><span>2</span></button><button type="button" data-view="compact" onclick="setCollectionLayout('compact')" aria-label="Four cards per row" title="Compact"><span class="layout-glyph">▦</span><span>4</span></button></div><select id="layoutChoice" aria-label="Collection view" onchange="setCollectionLayout(this.value)" hidden><option value="cards">2 cards per row</option><option value="large">1 per row</option><option value="compact">4 cards per row</option></select></div><div id="backupReminder" class="backup-reminder" hidden><span>Keep a copy of your collection.</span><button class="btn" id="reminderExport">Export backup</button><button class="btn" onclick="snoozeBackup()">In a week</button></div><div class="collection-explore-heading"><span class="explore-heading-label">YOUR ANIIMO</span><span class="explore-heading-hint">✧ Tap an Aniimo to Explore</span></div><div class="collection-meta"><span>Aniilog order <span aria-hidden="true">↑</span></span><span id="collectionCount" aria-live="polite"></span></div><div class="grid" id="creatures"></div><details id="hiddenStarters" class="panel" hidden><summary>Other Aniimo</summary><p class="hint" id="otherAniimoEmpty">Optional Aniimo will appear here as their cards are added.</p><label class="hidden-aniimo-toggle" id="hiddenStarterToggle" hidden><input id="showHiddenAniimo" type="checkbox" onchange="setShowHiddenAniimo(this.checked)"> Show unchosen starter in Collection</label><div id="hiddenStarterList"></div><div class="other-aniimo-search-wrap"><input id="otherAniimoSearch" class="input" type="search" placeholder="Search by Aniimo name or form…" aria-label="Filter Other Aniimo cards by name or form" oninput="filterOtherAniimoCards()"></div></details></section><section id="items" class="hide"><div class="section-intro"><div><div class="section-eyebrow">YOUR EQUIPMENT</div><h2>Held-item inventory</h2><p class="muted">Owned, equipped and ready to bind.</p></div><span class="section-sparkle" aria-hidden="true">▣</span></div><button class="btn primary bulk-inventory-entry" type="button" onclick="openBulkInventory()">▣ Edit inventory</button><div class="equipment-dashboard"><div class="equipment-metrics" id="equipmentMetrics"></div><div class="equipment-controls"><input id="itemsearch" class="input" placeholder="Search held items…" aria-label="Search held items"><div class="equipment-view-switch"><button id="itemGridView" type="button" onclick="setItemLayout('grid')">▦ Grid</button><button id="itemListView" type="button" onclick="setItemLayout('list')">☷ List</button></div></div><div class="inventory-sortbar"><label for="itemSort">Sort by</label><select id="itemSort" class="input" aria-label="Sort held items" onchange="setItemSort(this.value)"><option value="owned-first">Owned first</option><option value="name-asc">Name A–Z</option><option value="name-desc">Name Z–A</option><option value="amount-desc">Most owned</option><option value="amount-asc">Fewest owned</option><option value="free-desc">Most available</option><option value="bound-desc">Most bound</option><option value="needed-desc">Most needed</option></select><button class="btn inventory-clear" type="button" onclick="clearItemBrowse()">Clear</button></div><div class="inventory-results" id="inventoryResults" role="status" aria-live="polite"></div><div class="equipment-filters" id="equipmentFilters"><button class="multi-filter-trigger input" type="button" id="inventoryFilterTrigger" onclick="toggleMultiFilters('inventory')" aria-expanded="false">☷ <span id="inventoryFilterLabel">All held items</span><span class="filter-chevron">⌄</span></button><div class="multi-filter-panel hide" id="inventoryFilterPanel"></div></div></div><div id="itemlist" class="equipment-grid"></div></section><section id="upgrades" class="hide"><div class="upgrade-hero upgrade-hero-refined"><div class="section-eyebrow">YOUR EQUIPMENT ROADMAP</div><h2>Next upgrades</h2><p>Recommended equipment for your Aniimo.</p></div><div class="upgrade-metrics upgrade-metrics-refined"><div><strong id="readyMetric">0</strong><span>Ready to bind</span></div><div><strong id="missingMetric">0</strong><span>Copies to obtain</span></div></div><div class="upgrade-section"><div class="upgrade-section-title"><div><h3><span class="upgrade-section-glyph">✓</span> Ready to bind</h3><p class="upgrade-section-description">Already bound it in-game? Record it here.</p></div><span id="bindCount" class="upgrade-count-pill"></span></div><div id="needs" class="upgrade-action-stack"></div></div><div class="upgrade-section"><div class="upgrade-section-title"><div><h3><span class="upgrade-section-glyph farm">✦</span> Obtain missing items</h3><p class="upgrade-section-description">See the copies you need and where to obtain them.</p></div></div><label class="upgrade-future"><input type="checkbox" id="includeFutureItems"> Include uncaught Aniimo</label><div id="shortages" class="upgrade-action-stack"></div><p id="bindingSummary" class="upgrade-footnote" aria-live="polite"></p></div></section><section id="settings" class="hide compact-settings" aria-label="Settings"><div class="settings-card beta-feedback-card"><div><strong>Beta feedback</strong><small>Copy a report with app version and screen details</small></div><button class="btn" type="button" onclick="window.aniimoReportIssue()">Report issue ›</button></div>
@@ -3539,9 +3564,9 @@ body #upgrades#upgrades a.boss-drop:focus-visible{outline:2px solid var(--green)
 <div class="settings-card"><div class="settings-card-heading"><strong>Backup & recovery</strong><button class="settings-text-action" type="button" onclick="openRecoveryManager()">Recovery ›</button></div><p id="backupStatus" role="status"></p><div class="settings-button-grid"><button class="btn" id="export" type="button">Export backup</button><label class="btn settings-import">Import backup<input id="restore" type="file" accept=".json,application/json" hidden></label></div><button id="undoImport" class="settings-text-action" onclick="previewPreviousImport()" hidden>Undo last import ›</button></div>
 <div class="settings-footer"><button class="btn" type="button" onclick="openSettingsTools()">Tools & feedback</button><button class="btn" type="button" onclick="openSettingsPrivacy()">Storage & privacy</button></div>
 <div class="settings-support"><div><strong>Support Aniimo Companion</strong><span>Enjoying the app? Optional donations help support development.</span></div><a class="settings-support-link" href="https://ko-fi.com/countfelvis" target="_blank" rel="noopener noreferrer" aria-label="Support on Ko-fi (opens in a new tab)"><img class="kofi-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR0AAADlCAMAAABZAtOJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD8UExURQAAAP/////////////////////////////////////////////////////////////////////////////////////////18f/18PHx8f/r4v/q4v/h1P/g0//f0+Pj4//Wxf/Vxf/Mtv/Lt//LttXV1f/CqP/BqP/Bp//Ap/+3mv+3mf+3mP+2mcfHx/+ti/+tiv+si/+siv+jfP+ifLm5uf+Ybv+Ybf+Xbaurq/+OX/+OXv+NX/+DUf+DUJ2dnf95Qv95Qf9vM/9uM5CQkI+Pj/9lJP9kJf9aFoKCgoGBgXR0dHNzc2ZmZmVlZVhYWEpKSjw8PC4uLiAgILWDVz0AAAAWdFJOUwAQIDBAUF9gb3B/gI+Qn6CvsL/P3++NaW4cAAAN50lEQVR42uzYwa6jIBSAYaV2HNvGGAonccXKLTsXrNxcF8QYBN7/Xcb23kzuZKjSWm/V9HuEP+cIEswrRL2ot48/Hf+T/uPoFH+JLnYIoTBYH7SL4jg5ntIUY0IIhVkRcsY463smfTW02CT7+JhmZ0LhtcglVR8qXEaWfZJmhMLi0HN22kfBy4RRklFYuHOWvCARSjCFtcDHnywUHQisDM1i9CMLdcCwTnj2QFFGYcVwPGcbDGtHU/RuMwTH7zZDyJP7IAy9dx+nAwWAdx+niMAWERQ8wQm2KkXvL86M67WncPEeH5cDTJYzxgreE1dV/ZdsRsn6O3FV8gvGWP7a8QlTuBtjXIi6bppWdVobOy+jtVJtH7EqecHgIafwsThn/yZcVLJR2tiXMp1qZR+KzX94IQIeCiFbbRena+uyAE90P0cc/qGMXTCjag5eDs+Ow6Wxa6Aq5pPnmXHyD2PXo5MFjEkDf+FgHK7s2nSCwTAcBr7wqtu4NRwGnX3znNbexk2JkTwTb8i5tKumxeRvzw5u4dquneZw22nCcZVLuwUNm3Kwp+DGtN2ID7jpVzDsN7iVxm6GZnAD3QVDEAWn2m5KBTeQ8IG9qu3GNDm4ZcFt8Vic7W9Xcu8fRG03SBfgRNF998DabpMAJxy4IXCp7GRG99RV23xXu7ifndUXfTFrnuSOT3LxQIvPt15RXl/HYR759TW/FFXf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" alt="" aria-hidden="true"> Support on Ko-fi <span aria-hidden="true">↗</span></a></div>
-<details class="settings-card build-about"><summary>About</summary><p>Build <strong>DEV 4.52</strong> · <code>other-aniimo-uniform-cards-no-editor-button</code></p><button class="btn" type="button" id="checkPublishedBuild">Check hosted build</button><p class="muted" id="publishedBuildStatus" role="status"></p></details><div class="settings-bottom"><span>✓ Saved on this device</span><button class="settings-reset" id="reset" type="button">Reset collection</button></div>
+<details class="settings-card build-about"><summary>About</summary><p>Build <strong>DEV 4.56</strong> · <code>other-aniimo-uniform-cards-no-editor-button</code></p><button class="btn" type="button" id="checkPublishedBuild">Check hosted build</button><p class="muted" id="publishedBuildStatus" role="status"></p></details><div class="settings-bottom"><span>✓ Saved on this device</span><button class="settings-reset" id="reset" type="button">Reset collection</button></div>
 </section></main><div id="elementMatchups" role="region" aria-labelledby="elementMatchupTitle" tabindex="-1" hidden></div><div id="modal" class="modal hide"><div class="dialog" id="dialog"></div></div><script>
-const STAR_REF_KEY = "aniimo-dev-v452::star-reference";
+const STAR_REF_KEY = "aniimo-dev-v456::star-reference";
 const base=[
 ["Scorchhowl","Explosive Gauntlet",1],["Stellarys","Fission Needle",1],["Infergon","Omenbone Flute",1],["Hexxin","Heartseeker Pendant",1],["Somniwing","Spirited Feather",1],["Glacy","Miraculous Fleece",1],["Sparkelf","Miraculous Fleece",1],["Blazen","Gargantuan Horn",1],["Magmarex","Gargantuan Horn",1],["Panpanta","Gargantuan Horn",1],["Inferlupa","Gargantuan Horn",1],["Fenmane","Fission Needle",1],["Fulmintis","Heartseeker Pendant",1],["Glynsera","Heartseeker Pendant",1],["Irisalis","Floral Rainbow Feather",1],["Sherro","Capacitous Battery",1],["Thornblade","Fission Needle",0],["Ignitis","Ferocious Fang",0],["Grizbo","Fission Needle",0],["Pawney","Capacitous Battery",0],["Melloblum","Auspicious Bell",0],["Turbo","Heritage Amulet",0],["Luminelle","Spirited Feather",0],["Coronet","Ferocious Fang",0],["Waleetle","Ferocious Fang",0],["Irisal","Ferocious Fang",0]];
 // Add a species here after its Nova card data has been reviewed.
@@ -3554,6 +3579,9 @@ const companionForms={
  "Scorchhowl-timberline":{species:"Scorchhowl",label:"Timberline",elements:["Fire"],source:"timberline-form",evolvesFrom:"Timberline Flameruff"}
 };
 const formFor=name=>Object.hasOwn(companionForms,name)?companionForms[name]:null;
+const scorchhowlFamily=name=>name==="Scorchhowl"||/^Scorchhowl-(basic|highland|thunderstorm|timberline)$/.test(name);
+const bindingFamilyKey=name=>scorchhowlFamily(name)?"Scorchhowl":name;
+const formCategory=name=>{const form=formFor(name);if(!form)return "";if(form.prismana)return "Prismana form";if(form.label==="Basic")return "Basic form";if(["Highland","Timberline"].includes(form.label))return "Regional form";if(form.label==="Thunderstorm")return "Weather form";return "Other form";};
 const approvedNovaNames=new Set(["Mesmerowl",...Object.keys(companionForms).filter(name=>!companionForms[name].prismana)]);
 const novaBaseStats={Scorchhowl:{"ATK":119,"REGEN":90,"BREAK":52,"P.DEF":80,"M.DEF":75,"HP":95},Mesmerowl:{"ATK":110,"REGEN":109,"BREAK":50,"P.DEF":70,"M.DEF":70,"HP":111}};
 const isOptionalNova=c=>approvedNovaNames.has(c.name);
@@ -3609,9 +3637,9 @@ async function prepareStarterBinding(c,replacing=null,autoAdd=false){
 }
 const additions=["Iris","Whirlbite","Gachapus","Jabster","Sugartini","Pouchwisp","Royalby","Jeburst","Glameep","Hypnyto","Ekrim"];
 const initialItems={"Gargantuan Horn":4,"Ferocious Fang":11,"Spirited Feather":5,"Heartseeker Pendant":2,"Floral Rainbow Feather":1,"Miraculous Fleece":13,"Fission Needle":3,"Explosive Gauntlet":2,"Capacitous Battery":2,"Lightning Needle":19,"Echoing Grimoire":4,"Marching Flask":1,"Heritage Amulet":1,"Giant Tortoise Shell":1,"Auspicious Bell":1,"Avenging Gear":1,"Breathbinder Sash":0,"Riftbreaker Goggles":0,"Omenbone Flute":0,"Ambusher's Cloak":0,"Destiny's Dice":0,"Finisher Bell":0,"Nature's Breath":0,"Rekindling Feather":0,"Supreme Elixir":0,"Vanguard's Whistle":0,"Seeds of Spring":0};
-const all=base.map(([name,ideal,bound])=>({name,ideal,caught:true,bound:bound?ideal:null})).concat(additions.map(name=>({name,ideal:({"Whirlbite":"Ferocious Fang","Gachapus":"Ferocious Fang","Jabster":"Gargantuan Horn","Sugartini":"Heritage Amulet","Pouchwisp":"Spirited Feather","Royalby":"Spirited Feather","Jeburst":"Gargantuan Horn","Glameep":"Miraculous Fleece","Hypnyto":"Heartseeker Pendant","Ekrim":"Riftbreaker Goggles"})[name]||null,caught:false,bound:null})),starterNames.map(name=>({name,ideal:starterFang,caught:false,bound:null})),[...approvedNovaNames].map(name=>({name,ideal:null,caught:false,bound:null})));
+const all=base.map(([name,ideal,bound])=>({name,ideal,caught:true,bound:bound?ideal:null})).concat(additions.map(name=>({name,ideal:({"Whirlbite":"Ferocious Fang","Gachapus":"Ferocious Fang","Jabster":"Gargantuan Horn","Sugartini":"Heritage Amulet","Pouchwisp":"Spirited Feather","Royalby":"Spirited Feather","Jeburst":"Gargantuan Horn","Glameep":"Miraculous Fleece","Hypnyto":"Heartseeker Pendant","Ekrim":"Riftbreaker Goggles"})[name]||null,caught:false,bound:null})),starterNames.map(name=>({name,ideal:starterFang,caught:false,bound:null})),[...approvedNovaNames].map(name=>({name,ideal:scorchhowlFamily(name)?"Explosive Gauntlet":null,caught:false,bound:null})));
 const fresh=()=>({version:1,creatures:all.map(c=>({...c,caught:false,bound:null,alpha:false})),items:Object.fromEntries(Object.keys(initialItems).map(k=>[k,0])),builds:{}});
-let data;try{const stored=JSON.parse(localStorage.getItem("aniimo-dev-v452::aniimo-companion-dev-v155-data"));if(stored?.items&&stored.version===1){for(const [k,v] of Object.entries(initialItems))if(stored.items[k]===undefined)stored.items[k]=0;}if(stored?.version===1&&Array.isArray(stored.creatures)&&stored.creatures.length<all.length){
+let data;try{const stored=JSON.parse(localStorage.getItem("aniimo-dev-v456::aniimo-companion-dev-v155-data"));if(stored?.items&&stored.version===1){for(const [k,v] of Object.entries(initialItems))if(stored.items[k]===undefined)stored.items[k]=0;}if(stored?.version===1&&Array.isArray(stored.creatures)&&stored.creatures.length<all.length){
  const byName=new Map(stored.creatures.map(c=>[c.name,c]));
  if(byName.size===stored.creatures.length&&[...byName.keys()].every(name=>all.some(c=>c.name===name))&&all.every(c=>c.name==='Iris'||isOptionalNova(c)||byName.has(c.name))){
   stored.creatures=all.map(c=>byName.get(c.name)||{...c,caught:false,bound:null,alpha:false});
@@ -3624,8 +3652,8 @@ data.builds ||= {};
 // Development builds start empty; reference examples are not imported into user data.
 const $=id=>document.getElementById(id);
 let lastSavedSnapshot="";
-const SAVE_KEY="aniimo-dev-v452::aniimo-companion-dev-v155-data";
-const RECOVERY_KEY="aniimo-dev-v452::aniimo-companion-recovery-v1";
+const SAVE_KEY="aniimo-dev-v456::aniimo-companion-dev-v155-data";
+const RECOVERY_KEY="aniimo-dev-v456::aniimo-companion-recovery-v1";
 const RECOVERY_LIMIT=5;
 function saveHistory(){
  try{const v=JSON.parse(localStorage.getItem(RECOVERY_KEY)||"[]");return Array.isArray(v)?v.filter(x=>x&&typeof x.snapshot==="string").slice(-RECOVERY_LIMIT):[]}catch{return []}
@@ -3654,7 +3682,7 @@ const save=()=>{try{
  if(window.aniimoSyncState?.state==='synced')window.aniimoSyncState={...window.aniimoSyncState,state:'syncing'};
  const el=$("localSaveStatus");if(el){el.textContent="Saved locally";el.classList.remove("save-error")}
 }catch(e){const el=$("localSaveStatus");if(el){el.textContent="⚠ Not saved — export backup";el.classList.add("save-error")}}};
-const LOCAL_PROFILE_KEY="aniimo-dev-v452::aniimo-companion-local-profile";
+const LOCAL_PROFILE_KEY="aniimo-dev-v456::aniimo-companion-local-profile";
 window.renameCompanion=(name,finish=()=>closeDialog())=>{
  const c=data.creatures.find(x=>x.name===name);if(!c)return;
  const original=displayName(c);
@@ -3686,7 +3714,7 @@ window.restoreRecovery=index=>{
  data=restored;lastSavedSnapshot="";save();closeDialog();render();
 };
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const boundCount=item=>data.creatures.filter(c=>hasBinding(c,item)).length;
+const boundCount=item=>new Set(data.creatures.filter(c=>hasBinding(c,item)).map(c=>bindingFamilyKey(c.name))).size;
 const available=item=>(data.items[item]||0)-boundCount(item);
 const supportsAlpha=c=>c.name!=="Irisalis"&&!isStarter(c);
 const isAlpha=c=>supportsAlpha(c)&&!!c.alpha;
@@ -3816,7 +3844,7 @@ function collectionPreferences(){
  const shown=data.collectionView.shownNovaAniimo;
  data.collectionView.shownNovaAniimo=Array.isArray(shown)?[...new Set(shown.filter(name=>approvedNovaNames.has(name)))]:[];
  // Keep the display preference separate from collection records so it survives refreshes and development data resets.
- try{const savedLayout=localStorage.getItem('aniimo-dev-v452::aniimo-companion-collection-layout');
+ try{const savedLayout=localStorage.getItem('aniimo-dev-v456::aniimo-companion-collection-layout');
  if(['cards','large','compact'].includes(savedLayout))data.collectionView.layout=savedLayout;}catch(e){}
  if(!['cards','large','compact'].includes(data.collectionView.layout))data.collectionView.layout='compact';
  return data.collectionView;
@@ -3865,7 +3893,7 @@ const chosenAppearance=c=>{
  const variant=appearanceOf(c).variant;
  return appearanceOptionsFor(c).includes(variant)?variant:"Basic";
 };
- const boundList=c=>[...new Set([...(Array.isArray(c.boundItems)?c.boundItems:[]),...(c.bound?[c.bound]:[])].filter(Boolean))];
+ const boundList=c=>{const members=scorchhowlFamily(c.name)?data.creatures.filter(x=>scorchhowlFamily(x.name)):[c];return [...new Set(members.flatMap(x=>[...(Array.isArray(x.boundItems)?x.boundItems:[]),...(x.bound?[x.bound]:[])].filter(Boolean)))];};
  
 window.runCollectionAudit=()=>{
  const issues=[];const usage=Object.create(null);
@@ -3888,7 +3916,7 @@ window.runCollectionAudit=()=>{
  const note=document.createElement('p');note.textContent='Read-only check · Export a JSON backup before making corrections.';el.appendChild(note)}
  return issues;
 };
-const displayBinding=c=>boundList(c).includes(c.boundDisplay)?c.boundDisplay:(c.bound||boundList(c)[0]||null);
+const displayBinding=c=>boundList(c).includes(c.boundDisplay)?c.boundDisplay:(boundList(c).includes(c.bound)?c.bound:(boundList(c)[0]||null));
  const hasBinding=(c,item)=>boundList(c).includes(item);
  const unlockedLooks=c=>{
  const options=appearanceOptionsFor(c),unlocked=appearanceOf(c).unlocked;
@@ -3968,23 +3996,23 @@ function alternateBindingBadge(label){
 }
 function heldItemChip(c){
  const binding=c.caught?displayBinding(c):null;
- const item=binding||c.ideal;
+ const item=binding||(scorchhowlFamily(c.name)?"Explosive Gauntlet":c.ideal);
  if(!item)return `<div class="held-chip missing"><span class="held-thumb">${heldItemGlyph}</span><span class="held-copy"><span class="held-name">Held item</span><span class="held-state">Recommendation pending</span></span></div>`;
- const state=binding?'bound':available(c.ideal)>0?'ready':'missing';
+ const state=binding?'bound':available(item)>0?'ready':'missing';
  const alternate=alternateBindingLabel(c,binding);
  const label=!c.caught?'Suggested':state==='bound'?'✓ Bound':state==='ready'?'◆ Ready to bind':'○ Not available';
  return `<button type="button" class="held-chip ${state}" onclick="managePrismana('${esc(c.name)}','item')" aria-label="${esc(item)}: ${label}. ${alternate?esc(alternate)+". ":""}Open held item details"><span class="held-thumb">${heldThumb(item)}</span><span class="held-copy"><span class="held-name">${esc(item)}${alternateBindingBadge(alternate)}</span><span class="held-state">${label}</span></span><span class="held-arrow" aria-hidden="true">›</span></button>`;
 }
 const expandedHeldItems=new Set();
 window.toggleHeldItem=code=>{const name=decodeURIComponent(code);if(expandedHeldItems.has(name))expandedHeldItems.delete(name);else expandedHeldItems.add(name);render();};
-const ONBOARDING_KEY='aniimo-dev-v452::aniimo-companion-dev-v155-caught-onboarding-done';
+const ONBOARDING_KEY='aniimo-dev-v456::aniimo-companion-dev-v155-caught-onboarding-done';
 let onboardingDone=false;
 try{onboardingDone=localStorage.getItem(ONBOARDING_KEY)==='1'}catch{}
 function setOnboardingDone(done){onboardingDone=done;try{if(done)localStorage.setItem(ONBOARDING_KEY,'1');else localStorage.removeItem(ONBOARDING_KEY)}catch{}}
 
 // Acquisition-source registry: separate shared reference facts from personal collection state.
 // Unknown entries are deliberately not represented as permanent or currently available.
-const ACQUISITION_KEY="aniimo-dev-v452::aniimo-acquisition-notes-v1";
+const ACQUISITION_KEY="aniimo-dev-v456::aniimo-acquisition-notes-v1";
 const acquisitionKinds={
  "starter":"Starter Choice",
  "permanent-bloom":"Permanent Bloom",
@@ -4024,7 +4052,7 @@ const acquisitionSafe=v=>esc(String(v??""));
 function compactSeasonLabel(value){
  return String(value||"").replace(/Season\s+(\d+)\s*(?:·\s*)?Part\s+(\d+)/gi,(_,season,part)=>`S${season}P${part}`);
 }
-const ACQ_REGION_KEY="aniimo-dev-v452::aniimo-acquisition-region";
+const ACQ_REGION_KEY="aniimo-dev-v456::aniimo-acquisition-region";
 const acqRegions={americas:"America/Los_Angeles",europe:"Europe/London",asia:"Asia/Singapore"};
 const acqRegion=()=>{try{return localStorage.getItem(ACQ_REGION_KEY)||"americas"}catch{return "americas"}};
 window.setAcqRegion=v=>{if(!acqRegions[v])return;try{localStorage.setItem(ACQ_REGION_KEY,v)}catch{}render()};
@@ -4044,7 +4072,7 @@ const dualBloomLocations={
  Jeburst:{whisperwake:'Cloudreach Falls',breezy:'Russet Highlands'},
  Glameep:{whisperwake:'Crescent Bay',breezy:'Echoback Landing'}
 };
-const dualBloomStorageKey='aniimo-dev-v452::bloom-region-selections';
+const dualBloomStorageKey='aniimo-dev-v456::bloom-region-selections';
 let dualBloomChoices={};
 try{const saved=JSON.parse(localStorage.getItem(dualBloomStorageKey)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))dualBloomChoices=saved;}catch{}
 function selectedBloomRegion(name){return dualBloomChoices[name]==='breezy'?'breezy':'whisperwake'}
@@ -4151,13 +4179,13 @@ window.saveAcquisitionNote=name=>{
 };
 window.openCollectionGuide=()=>{
  const count=data.creatures.filter(c=>c.caught).length;
- let profile="";try{profile=localStorage.getItem("aniimo-dev-v452::aniimo-companion-local-profile")||""}catch{}
+ let profile="";try{profile=localStorage.getItem("aniimo-dev-v456::aniimo-companion-local-profile")||""}catch{}
  const title=profile?`Welcome back, ${profile}!`:count?"Your collection is growing.":"Organize and get to know your Aniimo.";
  const description=count?`You've collected ${count} Prismana. Keep exploring and make every companion your own.`:"Organize your collection, explore each Aniimo’s strengths, and learn how to make the most of your companions.";
  $("dialog").innerHTML=`<div class="row"><h2>Explore Aniimo Companion</h2><button class="btn" onclick="closeDialog()">✕</button></div><div class="collection-guide-content"><h3>${esc(title)}</h3><p>${esc(description)}</p><button class="welcome-discover" type="button" onclick="openAcquisitionPlanner()"><span class="welcome-discover-icon">✦</span><span><strong>Explore missing Prismana</strong><small>See what's available and coming next</small></span><span class="welcome-arrow">›</span></button><p class="hint">Track your collection, manage held items, and open any Aniimo to explore its builds and appearances.</p></div>`;
  $("modal").classList.remove("hide");
 };
-const MULTI_FILTER_KEY="aniimo-dev-v452::aniimo-multi-filters-v1";
+const MULTI_FILTER_KEY="aniimo-dev-v456::aniimo-multi-filters-v1";
 const FILTER_GROUPS={collection:[
  {title:"Collection progress",items:[["complete","Complete"],["progress","In progress"],["none","Not caught"],["ready","Ready to bind"],["shortage","Needs an item"]]},
  {title:"Evolution",items:[["baby","Pre-evolutions"]]},
@@ -4168,7 +4196,7 @@ const defaultMatchupFilter=()=>({mode:"attack",element:""});
 let multiFilters={collection:[],inventory:[],matchup:defaultMatchupFilter()};
 try{const old=JSON.parse(localStorage.getItem(MULTI_FILTER_KEY)||"{}");for(const type of Object.keys(FILTER_GROUPS)){const allowed=FILTER_GROUPS[type].flatMap(g=>g.items.map(i=>i[0]));if(Array.isArray(old[type]))multiFilters[type]=old[type].filter(v=>allowed.includes(v))}}catch{}
 // Keep older single-choice preferences when upgrading.
-try{if(!multiFilters.inventory.length){const old=localStorage.getItem("aniimo-dev-v452::aniimo-item-filter");if(["owned","available","bound","needed"].includes(old))multiFilters.inventory=[old]}}catch{}
+try{if(!multiFilters.inventory.length){const old=localStorage.getItem("aniimo-dev-v456::aniimo-item-filter");if(["owned","available","bound","needed"].includes(old))multiFilters.inventory=[old]}}catch{}
 function multiFilterMatches(type,record){const selected=multiFilters[type];if(!selected.length)return true;
  // OR within each category, AND between categories.
  return FILTER_GROUPS[type].every(group=>{const active=group.items.map(i=>i[0]).filter(id=>selected.includes(id));if(!active.length)return true;return active.some(id=>type==="collection"?matchesCollectionStatus(record,id):inventoryMatches(record,id))});
@@ -4191,7 +4219,7 @@ function updateCollectionHeading(){
  const activeTab=document.querySelector('#tabs [data-tab].active')?.dataset.tab;
  if(activeTab&&activeTab!=='collection'){title.textContent=({items:'Held Items',upgrades:'Upgrades',settings:'Settings'})[activeTab]||'My Collection';return;}
  let name='';
- try{name=(localStorage.getItem('aniimo-dev-v452::aniimo-companion-local-profile')||'').trim()}catch{}
+ try{name=(localStorage.getItem('aniimo-dev-v456::aniimo-companion-local-profile')||'').trim()}catch{}
  title.textContent=name&&name!=='Guest'?`${name}${/s$/i.test(name)?"’":"’s"} Collection`:'My Collection';
 }
 const showHiddenAniimo=()=>data.collectionView.showHiddenAniimo===true;
@@ -4245,8 +4273,8 @@ function novaStatsMarkup(c){
  if(!stats)return "";
  return `<details class="nova-base-stats"><summary>Nova Stage · Base stats</summary><p class="hint">${Object.entries(stats).map(([label,value])=>`${label} ${value}`).join(" · ")}</p></details>`;
 }
-function renderCollectionCard(c){
-if(!matchMedia('(min-width:1024px)').matches&&['large','cards'].includes(data.collectionView.layout))return premiumCard(c,data.collectionView.layout);
+function renderCollectionCard(c,otherSection=false){
+if(!matchMedia('(min-width:1024px)').matches&&['large','cards'].includes(data.collectionView.layout))return premiumCard(c,data.collectionView.layout,otherSection);
  const large=data.collectionView.layout==="large";
  const location=`<div class="card-badges"><button type="button" class="acquisition-card-link acquisition-top" onclick="event.stopPropagation();openAcquisition('${esc(c.name)}')" title="View acquisition details" aria-label="Acquisition details for ${esc(displayName(c))}">${acquisitionCompactChip(c.name)}</button>${data.collectionView.layout==='compact'?combatRoleCard(c):''}</div><div class="card-origin">${cardBloomLocation(c)}</div>`;
  const twoCards=data.collectionView.layout==="cards";
@@ -4274,8 +4302,8 @@ function renderOtherAniimo(){
  grid.dataset.layout=data.collectionView.layout;
  grid.innerHTML=excluded.map(c=>{
   const searchText=[displayName(c),c.name,formFor(c.name)?.species||"",formFor(c.name)?.form||"",isStarter(c)?"starter":""].join(" ");
-  const card=renderCollectionCard(c);
-  const control=`<div class="other-card-visibility"><span>${isStarter(c)?"Unchosen starter":"Other form"}</span><label><input type="checkbox" onchange="setOtherCardVisibility('${esc(c.name)}',this.checked)"> Show in Collection</label></div>`;
+  const card=renderCollectionCard(c,true);
+  const control=`<div class="other-card-visibility"><span>${isStarter(c)?"Unchosen starter":formCategory(c.name)||"Other form"}</span><label><input type="checkbox" onchange="setOtherCardVisibility('${esc(c.name)}',this.checked)"> Show in Collection</label></div>`;
   return card.replace('class="creature','class="other-card-entry creature').replace('data-species=',`data-search="${esc(searchText)}" data-species=`).replace(/<\/article>$/,`${control}</article>`);
  }).join("");
  filterOtherAniimoCards();
@@ -4615,14 +4643,15 @@ function premiumEquipment(c){
  const label={bound:'✓ Bound',suggested:'Suggested',optional:'Binding optional',ready:'Ready to bind',missing:'Not available'}[state];
  return `<div class="premium-equipment">${premiumActionButton(c,'edit',`<span class="premium-held-icon">${item?heldThumb(item):heldItemGlyph}</span><span class="premium-item-copy"><strong>${esc(item||'Held item')}</strong><span class="premium-item-state premium-item-${state}">${item?label:'Recommendation pending'}</span></span>`,'premium-item-button','item')}${binding&&c.ideal&&binding!==c.ideal?premiumHint('Recommended held item',c.ideal):''}</div>`;
 }
-// DEV 4.52: species form badge and independent form browser.
+// DEV 4.56: species form badge and independent form browser.
 const formsForSpecies=species=>data.creatures.filter(entry=>formFor(entry.name)?.species===species).sort((a,b)=>{
  const fa=formFor(a.name),fb=formFor(b.name);
  return (fa.prismana?-1:0)-(fb.prismana?-1:0)||fa.label.localeCompare(fb.label);
 });
-function formBadge(c){
+function formBadge(c,staticOnly=false){
  const form=formFor(c.name);
  if(!form||formsForSpecies(form.species).length<2)return '';
+ if(staticOnly)return `<span class="collection-form-badge collection-form-badge-static" aria-label="${esc(form.label)} form"><span class="form-badge-dot" aria-hidden="true">◈</span>${esc(form.label)}</span>`;
  return `<button type="button" class="collection-form-badge" data-form-badge="${esc(c.name)}" aria-label="Browse ${esc(form.species)} forms"><span class="form-badge-dot" aria-hidden="true">◈</span>${esc(form.label)}<span class="form-badge-chevron" aria-hidden="true">⌄</span></button>`;
 }
 window.openCollectionForms=function(name){
@@ -4630,9 +4659,9 @@ window.openCollectionForms=function(name){
  if(!form)return;
  const rows=formsForSpecies(form.species).map(c=>{
   const f=formFor(c.name),shown=!hiddenNova(c),current=c.name===name;
-  return `<div class="collection-form-row ${current?'is-current':''}"><button type="button" class="collection-form-preview" data-form-preview="${esc(c.name)}" aria-label="Browse ${esc(f.label)} form"><span class="collection-form-thumb">${caughtChoicePortrait(c)}</span><span class="collection-form-copy"><strong>${esc(f.label)}${current?'<span class="form-current-tag">Viewing</span>':''}</strong><small>${c.caught?'● Caught':'○ Not caught'}</small></span><span class="form-row-chevron" aria-hidden="true">›</span></button><label class="collection-form-check" title="Display independent collection card"><input type="checkbox" data-form-add="${esc(c.name)}" aria-label="Show ${esc(f.label)} card" ${shown?'checked':''}><span>Show</span></label></div>`;
+  return `<div class="collection-form-row ${current?'is-current':''}"><button type="button" class="collection-form-preview" data-form-preview="${esc(c.name)}" aria-label="Browse ${esc(f.label)} form"><span class="collection-form-thumb">${caughtChoicePortrait(c)}</span><span class="collection-form-copy"><strong>${esc(f.label)}${current?'<span class="form-current-tag">Viewing</span>':''}</strong></span><span class="form-row-chevron" aria-hidden="true">›</span></button><label class="collection-form-check" title="Display independent collection card"><input type="checkbox" data-form-add="${esc(c.name)}" aria-label="Show ${esc(f.label)} card" ${shown?'checked':''}><span>Show</span></label></div>`;
  }).join('');
- $('dialog').innerHTML=`<div class="collection-forms-dialog"><div class="collection-forms-head"><div><h2>${esc(form.species)} forms</h2><p>Select a form to preview its profile.</p></div><button type="button" class="btn" onclick="closeDialog()" aria-label="Close form selector">✕</button></div><div class="collection-form-list">${rows}</div><p class="collection-forms-footnote">Select <strong>Show</strong> to add a separate collection card. Browsing never marks a form as caught.</p></div>`;
+ $('dialog').innerHTML=`<div class="collection-forms-dialog"><div class="collection-forms-head"><div><h2>${esc(form.species)} forms</h2><p>Tap a form to preview it.</p></div><button type="button" class="btn" onclick="closeDialog()" aria-label="Close form selector">✕</button></div><div class="collection-form-list">${rows}</div></div>`;
  $('modal').classList.remove('hide');
 };
 document.addEventListener('click',e=>{
@@ -4649,9 +4678,9 @@ document.addEventListener('change',e=>{
  // The normal render updates the underlying cards, but leave this selector open.
  window.openCollectionForms(name);
 });
-function premiumCard(c,mode){
+function premiumCard(c,mode,otherSection=false){
  const name=c.customName||profileFullyDone(c)?personalizedName(c):displayName(c);
- const form=formFor(c.name); const title=`<header class="premium-header"><div class="premium-name-group"><h3>${esc(form?form.species:name)}</h3>${formBadge(c)}</div>${premiumMenu(c)}</header>`;
+ const form=formFor(c.name); const title=`<header class="premium-header"><div class="premium-name-group"><h3>${esc(form?form.species:name)}</h3>${formBadge(c,otherSection)}</div>${premiumMenu(c)}</header>`;
  const metadata=premiumMetadata(c),location=premiumLocation(c),equipment=premiumEquipment(c);
  let content='';
  if(mode==='desktop'){
@@ -4707,7 +4736,7 @@ if(artworkVisibilityObserver)artworkVisibilityObserver.disconnect();$("creatures
 const itemEntries=Object.entries(data.items);
 const itemNeeded=name=>data.creatures.filter(c=>c.caught&&!isAlpha(c)&&c.ideal===name&&!hasBinding(c,name)).length;
 const itemLayout=window.equipmentLayout||'grid';updateMultiFilterUI("inventory");
-const itemSort=window.equipmentSort||(localStorage.getItem('aniimo-dev-v452::aniimo-item-sort')||'owned-first');const sortControl=$('itemSort');if(sortControl&&sortControl.value!==itemSort)sortControl.value=itemSort;
+const itemSort=window.equipmentSort||(localStorage.getItem('aniimo-dev-v456::aniimo-item-sort')||'owned-first');const sortControl=$('itemSort');if(sortControl&&sortControl.value!==itemSort)sortControl.value=itemSort;
 const ownedTypes=itemEntries.filter(([k,n])=>Number(n)>0).length;
 const freeCopies=itemEntries.reduce((sum,[k])=>sum+Math.max(0,available(k)),0);
 const missingCopies=itemEntries.reduce((sum,[k])=>sum+Math.max(0,itemNeeded(k)-Math.max(0,available(k))),0);
@@ -4930,7 +4959,7 @@ window.openAppearance=name=>{
  $("appearanceClear").onclick=()=>{c.appearance||={};c.appearance.images||={};delete c.appearance.images[variantEl.value];c.appearance.variant=variantEl.value;render();managePrismana(name,"appearance")};
 };
 window.equipmentFilter='all';window.equipmentLayout='grid';
-window.setItemSort=value=>{window.equipmentSort=value;try{localStorage.setItem('aniimo-dev-v452::aniimo-item-sort',value)}catch(e){}render()};
+window.setItemSort=value=>{window.equipmentSort=value;try{localStorage.setItem('aniimo-dev-v456::aniimo-item-sort',value)}catch(e){}render()};
 window.clearItemBrowse=()=>{window.equipmentSort='owned-first';window.equipmentFilter='all';$('itemsearch').value='';render()};
 window.setItemFilter=value=>{multiFilters.inventory=value==="all"?[]:[value];render()};
 window.setItemLayout=value=>{window.equipmentLayout=value;render()};
@@ -6254,7 +6283,7 @@ window.openCompactCompanion=name=>{
  requestAnimationFrame(()=>requestAnimationFrame(focus));
 };
 window.setCollectionLayout=layout=>{data.collectionView.layout=['cards','large','compact'].includes(layout)?layout:'cards';
- try{localStorage.setItem('aniimo-dev-v452::aniimo-companion-collection-layout',data.collectionView.layout)}catch(e){}const grid=document.getElementById('creatures');if(grid)grid.dataset.layout=data.collectionView.layout;const picker=document.getElementById('layoutChoice');if(picker)picker.value=data.collectionView.layout;document.querySelectorAll('.layout-segments button').forEach(b=>{const on=b.dataset.view===data.collectionView.layout;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});save();render();};
+ try{localStorage.setItem('aniimo-dev-v456::aniimo-companion-collection-layout',data.collectionView.layout)}catch(e){}const grid=document.getElementById('creatures');if(grid)grid.dataset.layout=data.collectionView.layout;const picker=document.getElementById('layoutChoice');if(picker)picker.value=data.collectionView.layout;document.querySelectorAll('.layout-segments button').forEach(b=>{const on=b.dataset.view===data.collectionView.layout;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});save();render();};
 function recommendationLabel(c){return !c.bound&&newPrismanaInfo[c.name]&&c.ideal===newPrismanaInfo[c.name].item?'Sourced baseline':'Your choice';}
 function bindingRequirements(includeFuture=false){
  const groups=new Map();
@@ -6318,7 +6347,7 @@ function renderPlanningExtras(){
  $('backupStatus').innerHTML=backupStatusHTML();
  const overdue=!data.backup?.lastExportAt||Date.now()-Date.parse(data.backup.lastExportAt)>7*864e5;
  $('backupReminder').hidden=!overdue||Date.now()<(Number(data.backup?.snoozeUntil)||0);
- $('undoImport').hidden=!localStorage.getItem('aniimo-dev-v452::aniimo-companion-dev-v155-pre-import');
+ $('undoImport').hidden=!localStorage.getItem('aniimo-dev-v456::aniimo-companion-dev-v155-pre-import');
 }
 function stableJSON(v){return JSON.stringify(v,(_,x)=>x&&typeof x==='object'&&!Array.isArray(x)?Object.fromEntries(Object.entries(x).sort(([a],[b])=>a.localeCompare(b))):x);}
 function collectionFingerprint(v){const s=stableJSON({creatures:v.creatures,items:v.items,builds:v.builds});let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return (h>>>0).toString(16);}
@@ -6356,7 +6385,7 @@ function prepareBackup(v){
  }}else notes.push('This backup has no builds; current builds will be preserved.');
  const creatures=all.map(c=>records.get(c.name)||structuredClone(data.creatures.find(x=>x.name===c.name)));
  if(creatures.filter(c=>isStarter(c)&&c.caught).length>1)throw Error('A collection can only have one caught starter.');
- for(const [item,n] of Object.entries(items)){if(creatures.filter(c=>c.bound===item).length>n)throw Error(item+' has more bindings than owned copies. Correct the backup before importing.');}
+ for(const [item,n] of Object.entries(items)){if(new Set(creatures.filter(c=>c.bound===item).map(c=>bindingFamilyKey(c.name))).size>n)throw Error(item+' has more bindings than owned copies. Correct the backup before importing.');}
  const view=v.collectionView&&typeof v.collectionView==='object'&&!Array.isArray(v.collectionView)?structuredClone(v.collectionView):{};
  return {next:{version:1,creatures,items,builds,collectionView:view,backup:structuredClone(data.backup||{})},notes};
 }
@@ -6367,9 +6396,9 @@ function previewBackup(v,label='Backup import'){
  for(const [item,n] of Object.entries(next.items))if(n!==data.items[item])changes.push(`${item}: ${data.items[item]} → ${n} owned`);
  for(const [name,b] of Object.entries(next.builds))if(stableJSON(b)!==stableJSON(data.builds[name]))changes.push(displayName({name})+': build updated');
  $('dialog').innerHTML=`<div class="row"><h2>${esc(label)}</h2><button class="btn" onclick="closeDialog()" aria-label="Cancel import">✕</button></div><p>${changes.length} collection, inventory or build changes. ${next.creatures.filter(c=>c.caught).length} caught · ${next.creatures.filter(c=>c.bound).length} bound after import.</p><p class="hint">View preferences from the backup will also be restored. Nothing changes until you apply. A recovery copy of your current collection will be saved on this device.</p>${notes.map(n=>`<p class="hint">${esc(n)}</p>`).join('')}<ul class="import-changes">${changes.map(s=>`<li>${esc(s)}</li>`).join('')||'<li>No collection changes.</li>'}</ul><div class="toolbar"><button class="btn primary" id="applyBackup">Apply import</button><button class="btn" onclick="closeDialog()">Cancel</button></div>`;$('modal').classList.remove('hide');
- $('applyBackup').onclick=()=>{const before=JSON.stringify(data),after=JSON.stringify(next);if(!createRecoveryPoint(before,'Before reviewed collection replacement')){alert('Could not save a recovery copy. Your current collection was kept. Export a backup and try again.');return;}try{localStorage.setItem('aniimo-dev-v452::aniimo-companion-dev-v155-pre-import',before);localStorage.setItem(SAVE_KEY,after);}catch{alert('Not enough local storage to safely import. Your current collection has been kept.');return;}createRecoveryPoint(before,'Before backup import');data=next;lastSavedSnapshot=after;render();close();};
+ $('applyBackup').onclick=()=>{const before=JSON.stringify(data),after=JSON.stringify(next);if(!createRecoveryPoint(before,'Before reviewed collection replacement')){alert('Could not save a recovery copy. Your current collection was kept. Export a backup and try again.');return;}try{localStorage.setItem('aniimo-dev-v456::aniimo-companion-dev-v155-pre-import',before);localStorage.setItem(SAVE_KEY,after);}catch{alert('Not enough local storage to safely import. Your current collection has been kept.');return;}createRecoveryPoint(before,'Before backup import');data=next;lastSavedSnapshot=after;render();close();};
 }
-window.previewPreviousImport=()=>{try{const raw=localStorage.getItem('aniimo-dev-v452::aniimo-companion-dev-v155-pre-import');if(raw)previewBackup(JSON.parse(raw),'Recover previous collection');}catch(e){alert(e.message);}};
+window.previewPreviousImport=()=>{try{const raw=localStorage.getItem('aniimo-dev-v456::aniimo-companion-dev-v155-pre-import');if(raw)previewBackup(JSON.parse(raw),'Recover previous collection');}catch(e){alert(e.message);}};
 function plannerInputError(b){
  const good=(a,max,nullable=false)=>Array.isArray(a)&&a.length===6&&a.every(n=>nullable&&n===null||typeof n==='number'&&Number.isInteger(n)&&n>=0&&n<=max);
  if(!b||!good(b.innate,10)||!good(b.spent,20)||!good(b.bonuses||Array(6).fill(0),99))return 'Enter six whole-number innate, acquired and bonus values. Unknown values need review.';
@@ -6477,7 +6506,7 @@ document.addEventListener('DOMContentLoaded',()=>render(),{once:true});
 </style>
 <script>
 /* Independent, per-device personality preferences. Never alter awakening or inventory. */
-const personalityRecommendations={"Scorchhowl": {"type": "ESTJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Stellarys": {"type": "ESFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Infergon": {"type": "ESTJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Hexxin": {"type": "ISFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Somniwing": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Glacy": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Sparkelf": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Blazen": {"type": "ENTP", "basis": "species", "reason": "Crit rate helps trigger Power Sustain; attack and BREAK support its breaker role.", "source": "https://lum.gg/aniimo/blazen", "reviewed": "2026-11-03"}, "Magmarex": {"type": "ENTP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Panpanta": {"type": "ENTP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Inferlupa": {"type": "ENTP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Fenmane": {"type": "ENFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Fulmintis": {"type": "ENTP", "basis": "species", "reason": "A crit-focused damage recommendation, with attack and physical durability.", "source": "https://lum.gg/aniimo/fulmintis", "reviewed": "2026-11-03"}, "Glynsera": {"type": "ENTP", "basis": "species", "reason": "A crit-focused damage recommendation for its attack rotation.", "source": "https://lum.gg/aniimo/glynsera", "reviewed": "2026-11-03"}, "Irisalis": {"type": "ENFP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Sherro": {"type": "ESTP", "basis": "species", "reason": "Attack, BREAK and direct damage support its combat rotation; physical defense and damage reduction add durability.", "source": "https://lum.gg/aniimo/sherro", "reviewed": "2026-11-03"}, "Thornblade": {"type": "ENTP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Ignitis": {"type": "ENTJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Grizbo": {"type": "ESTP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Pawney": {"type": "ESTJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Melloblum": {"type": "ISFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Turbo": {"type": "ISTJ", "basis": "species", "reason": "Regeneration and HP support its team utility; physical defense adds durability.", "source": "https://lum.gg/aniimo/turbo", "reviewed": "2026-11-03"}, "Luminelle": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Cornet": {"type": "ENFP", "basis": "species", "reason": "Crit rate complements Air Superiority; attack supports its damage role.", "source": "https://lum.gg/aniimo/cornet", "reviewed": "2026-11-03"}, "Waleetle": {"type": "ESTJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Irisal": {"type": "ENFP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Iris": {"type": "ENFP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Gachapus": {"type": "ESFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Whirlbite": {"type": "ENTJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Jabster": {"type": "ENTP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Sugartini": {"type": "ISFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Pouchwisp": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Royalby": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Jeburst": {"type": "ENFP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Glameep": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Hypnyto": {"type": "ENFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Ekrim": {"type": "ENFP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}};
+const personalityRecommendations={"Scorchhowl-basic":{"type":"ESTJ","basis":"family-shared","reason":"Matches the Scorchhowl Prismana recommendation.","source":""},"Scorchhowl-highland":{"type":"ESTJ","basis":"family-shared","reason":"Matches the Scorchhowl Prismana recommendation.","source":""},"Scorchhowl-thunderstorm":{"type":"ESTJ","basis":"family-shared","reason":"Matches the Scorchhowl Prismana recommendation.","source":""},"Scorchhowl-timberline":{"type":"ESTJ","basis":"family-shared","reason":"Matches the Scorchhowl Prismana recommendation.","source":""},"Scorchhowl": {"type": "ESTJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Stellarys": {"type": "ESFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Infergon": {"type": "ESTJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Hexxin": {"type": "ISFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Somniwing": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Glacy": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Sparkelf": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Blazen": {"type": "ENTP", "basis": "species", "reason": "Crit rate helps trigger Power Sustain; attack and BREAK support its breaker role.", "source": "https://lum.gg/aniimo/blazen", "reviewed": "2026-11-03"}, "Magmarex": {"type": "ENTP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Panpanta": {"type": "ENTP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Inferlupa": {"type": "ENTP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Fenmane": {"type": "ENFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Fulmintis": {"type": "ENTP", "basis": "species", "reason": "A crit-focused damage recommendation, with attack and physical durability.", "source": "https://lum.gg/aniimo/fulmintis", "reviewed": "2026-11-03"}, "Glynsera": {"type": "ENTP", "basis": "species", "reason": "A crit-focused damage recommendation for its attack rotation.", "source": "https://lum.gg/aniimo/glynsera", "reviewed": "2026-11-03"}, "Irisalis": {"type": "ENFP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Sherro": {"type": "ESTP", "basis": "species", "reason": "Attack, BREAK and direct damage support its combat rotation; physical defense and damage reduction add durability.", "source": "https://lum.gg/aniimo/sherro", "reviewed": "2026-11-03"}, "Thornblade": {"type": "ENTP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Ignitis": {"type": "ENTJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Grizbo": {"type": "ESTP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Pawney": {"type": "ESTJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Melloblum": {"type": "ISFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Turbo": {"type": "ISTJ", "basis": "species", "reason": "Regeneration and HP support its team utility; physical defense adds durability.", "source": "https://lum.gg/aniimo/turbo", "reviewed": "2026-11-03"}, "Luminelle": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Cornet": {"type": "ENFP", "basis": "species", "reason": "Crit rate complements Air Superiority; attack supports its damage role.", "source": "https://lum.gg/aniimo/cornet", "reviewed": "2026-11-03"}, "Waleetle": {"type": "ESTJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Irisal": {"type": "ENFP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Iris": {"type": "ENFP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Gachapus": {"type": "ESFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Whirlbite": {"type": "ENTJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Jabster": {"type": "ENTP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Sugartini": {"type": "ISFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Pouchwisp": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Royalby": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Jeburst": {"type": "ENFP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Glameep": {"type": "INFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Hypnyto": {"type": "ENFJ", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}, "Ekrim": {"type": "ENFP", "basis": "user-reviewed", "reason": "Personality recommendation confirmed by the user.", "source": "", "reviewed": "2026-11-03"}};
 const personalityTypes=['ESTJ','ESTP','ESFJ','ESFP','ENTJ','ENTP','ENFJ','ENFP','ISTJ','ISTP','ISFJ','ISFP','INTJ','INTP','INFJ','INFP'];
 const personalityEffects={E:'ATK +2%, BREAK +2%',I:'REGEN +4%',S:'DMG +4%',N:'Crit Rate +5%',T:'P.DEF +6%',F:'M.DEF +6%',J:'HP +4%',P:'Damage reduction +4%'};
 // Migrate legacy personality selections into the main data model.
@@ -6485,13 +6514,13 @@ try{
  let migrated=false;
  for(const c of data.creatures){
   if(!c.personality){
-   const old=localStorage.getItem('aniimo-dev-v452::aniimo-personality-dev-v163-'+c.name);
+   const old=localStorage.getItem('aniimo-dev-v456::aniimo-personality-dev-v163-'+c.name);
    if(old&&personalityTypes.includes(old)){c.personality=old;migrated=true}
   }
  }
  if(migrated)save();
 }catch(e){}
-function personalityKey(name){return 'aniimo-dev-v452::aniimo-personality-dev-v163-'+name}
+function personalityKey(name){return 'aniimo-dev-v456::aniimo-personality-dev-v163-'+name}
 function personalityGet(name){
  if(starterNames.includes(name))return "";
  const c=data.creatures.find(x=>x.name===name);
@@ -6606,7 +6635,7 @@ function personalitySave(name){
  const q=(sel,root=document)=>root.querySelector(sel);
  const qa=(sel,root=document)=>Array.from(root.querySelectorAll(sel));
  const editor=()=>q('.shot-compact-grid');
- const draftKey='aniimo-dev-v452::aniimo-build-edit-draft-v166';
+ const draftKey='aniimo-dev-v456::aniimo-build-edit-draft-v166';
  let mode='quick',undo=null,prior=null,restoring=false,editorIdentity=null;
  const fields=()=>qa('[data-shotinnate],[data-shotacquired],[data-shotbonus],[data-shotstat],#shotSpent,#shotLevel,#shotStars');
  const snapshot=()=>Object.fromEntries(fields().map(e=>[e.id||e.getAttributeNames().find(x=>x.startsWith('data-shot'))+':'+(e.getAttribute('data-shotinnate')||e.getAttribute('data-shotacquired')||e.getAttribute('data-shotbonus')||e.getAttribute('data-shotstat')||''),e.value]));
@@ -6649,7 +6678,7 @@ function personalitySave(name){
   if(e.target.closest('#applyScreenshot')){ /* Retain draft until confirmed save succeeds. */ }
   if(e.target.closest('#discardScreenshot')){try{localStorage.removeItem(draftKey)}catch{}}
   if(e.target.closest('#copyBetaDiagnostic')){
-   const report=`Aniimo Companion DEV 4.52\nDate: ${new Date().toISOString()}\nBrowser: ${navigator.userAgent}\nViewport: ${innerWidth}x${innerHeight}\nStorage available: ${(()=>{try{return !!localStorage}catch{return false}})()}\nNo collection, build, or screenshot data included.`;
+   const report=`Aniimo Companion DEV 4.56\nDate: ${new Date().toISOString()}\nBrowser: ${navigator.userAgent}\nViewport: ${innerWidth}x${innerHeight}\nStorage available: ${(()=>{try{return !!localStorage}catch{return false}})()}\nNo collection, build, or screenshot data included.`;
    const done=()=>{const status=q('#betaDiagnosticStatus');if(status)status.textContent=' Copied';};
    if(navigator.clipboard?.writeText)navigator.clipboard.writeText(report).then(done).catch(()=>{const status=q('#betaDiagnosticStatus');if(status)status.textContent=' Copy unavailable'});
    else{const status=q('#betaDiagnosticStatus');if(status)status.textContent=' Clipboard unavailable';}
@@ -6670,7 +6699,7 @@ function personalitySave(name){
 </script>
 <script id="aniimo-v168-theme">
 (function(){
- const KEY='aniimo-dev-v452::aniimo-companion-theme';
+ const KEY='aniimo-dev-v456::aniimo-companion-theme';
  const choices=['dark','light','rainbow','system'];
  function preference(){try{const v=localStorage.getItem(KEY);return choices.includes(v)?v:'dark'}catch{return 'dark'}}
  function apply(){
@@ -6712,7 +6741,7 @@ function personalitySave(name){
  function apply(){
   const grid=document.getElementById('creatures');if(!grid)return;
   let choice='cards';
-  try{const saved=localStorage.getItem('aniimo-dev-v452::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(saved))choice=saved;else if(typeof data!=='undefined'&&data.collectionView&&['large','cards','compact'].includes(data.collectionView.layout))choice=data.collectionView.layout;}catch(e){if(typeof data!=='undefined'&&data.collectionView)choice=data.collectionView.layout||'compact'}
+  try{const saved=localStorage.getItem('aniimo-dev-v456::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(saved))choice=saved;else if(typeof data!=='undefined'&&data.collectionView&&['large','cards','compact'].includes(data.collectionView.layout))choice=data.collectionView.layout;}catch(e){if(typeof data!=='undefined'&&data.collectionView)choice=data.collectionView.layout||'compact'}
   if(typeof data!=='undefined'&&data.collectionView)data.collectionView.layout=choice;
   if(grid.dataset.layout!==choice)grid.dataset.layout=choice;
   const picker=document.getElementById('layoutChoice');if(picker&&picker.value!==choice)picker.value=choice;
@@ -6721,7 +6750,7 @@ function personalitySave(name){
  function init(){apply();requestAnimationFrame(()=>{apply();requestAnimationFrame(apply)});
   const grid=document.getElementById('creatures');if(grid){const observer=new MutationObserver(()=>{if(grid.dataset.layout!==getChoice())apply()});observer.observe(grid,{attributes:true,attributeFilter:['data-layout']});}
  }
- function getChoice(){try{const v=localStorage.getItem('aniimo-dev-v452::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(v))return v}catch(e){}return typeof data!=='undefined'&&data.collectionView?data.collectionView.layout:'cards'}
+ function getChoice(){try{const v=localStorage.getItem('aniimo-dev-v456::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(v))return v}catch(e){}return typeof data!=='undefined'&&data.collectionView?data.collectionView.layout:'cards'}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
 </script><script id="dev223-first-render-recovery">
@@ -6751,8 +6780,8 @@ function personalitySave(name){
 
 <script id="dev235-first-visit-username">
 (()=>{
-  const seenKey='aniimo-dev-v452::username-prompt-seen';
-  const nameKey='aniimo-dev-v452::aniimo-companion-local-profile';
+  const seenKey='aniimo-dev-v456::username-prompt-seen';
+  const nameKey='aniimo-dev-v456::aniimo-companion-local-profile';
   const escapeText=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function dismiss(){
     try{localStorage.setItem(seenKey,'1')}catch{}
@@ -6834,9 +6863,9 @@ function personalitySave(name){
 </style>
 <script id="dev240-collection-setup">
 (()=>{
- const stateKey='aniimo-dev-v452::collection-setup-choice';
- const seenKey='aniimo-dev-v452::username-prompt-seen';
- const usernameKey='aniimo-dev-v452::aniimo-companion-local-profile';
+ const stateKey='aniimo-dev-v456::collection-setup-choice';
+ const seenKey='aniimo-dev-v456::username-prompt-seen';
+ const usernameKey='aniimo-dev-v456::aniimo-companion-local-profile';
  const read=()=>{try{return localStorage.getItem(stateKey)||''}catch{return ''}};
  const write=v=>{try{localStorage.setItem(stateKey,v)}catch{}};
  const hasProgress=()=>{
@@ -6955,7 +6984,7 @@ window.toggleScanTableEditing=button=>{
 </style>
 <script id="aniimo-release-safety">
 (function(){
-  const release='DEV 4.52';
+  const release='DEV 4.56';
   window.aniimoCopyIssue=function(){const e=document.getElementById('aniimoIssueText');navigator.clipboard?.writeText(e.value).then(()=>alert('Report copied')).catch(()=>e.select());};
   window.aniimoReportIssue=function(){
     const section=[...document.querySelectorAll('main > section')].find(x=>!x.classList.contains('hide'))?.id||'unknown';
