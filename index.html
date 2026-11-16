@@ -4853,7 +4853,7 @@ function updateCollectionHeading(){
  const title=document.getElementById('page-title');
  if(!title)return;
  const activeTab=document.querySelector('#tabs [data-tab].active')?.dataset.tab;
- if(activeTab&&activeTab!=='collection'){title.textContent=({items:'Held Items',upgrades:'Upgrades',settings:'Settings'})[activeTab]||'My Collection';return;}
+ if(activeTab&&activeTab!=='collection'){title.textContent=({items:'Workshop',upgrades:'Workshop',settings:'Settings'})[activeTab]||'My Collection';return;}
  let name='';
  try{name=(localStorage.getItem('aniimo-dev-v63191::aniimo-companion-local-profile')||'').trim()}catch{}
  title.textContent=name&&name!=='Guest'?`${name}${/s$/i.test(name)?"’":"’s"} Collection`:'My Collection';
@@ -7351,7 +7351,7 @@ function openCaughtChecklist(intake=false){$("dialog").innerHTML=`<div class="ro
 $("bulk").onclick=()=>openCaughtChecklist();
 window.handleSettingsScreens=e=>{const files=[...e.target.files].filter(f=>f.type.startsWith("image/"));$("shotlist").innerHTML="";files.forEach(file=>{const url=URL.createObjectURL(file),d=document.createElement("div");d.className="panel";d.innerHTML=`<strong>${esc(file.name)}</strong><img class="previewimg" alt="Screenshot preview"><p class="hint">Review this image and manually enter the detected Prismana or held-item details in Collection or Items. Automatic recognition is planned for a future version.</p><button class="btn">Done reviewing</button>`;d.querySelector("img").src=url;d.querySelector("button").onclick=()=>{URL.revokeObjectURL(url);d.remove()};$("shotlist").appendChild(d)});e.target.value=""};
 document.addEventListener('DOMContentLoaded',()=>render(),{once:true});
-(function(){const titles={collection:'My Collection',items:'Held Items',upgrades:'Upgrades',settings:'Settings'};const nav=document.getElementById('tabs');if(!nav)return;nav.addEventListener('click',e=>{const btn=e.target.closest('button[data-tab]');if(!btn)return;const title=document.getElementById('page-title');if(title)title.textContent=titles[btn.dataset.tab]||'My Collection';});})();
+(function(){const titles={collection:'My Collection',items:'Workshop',upgrades:'Workshop',settings:'Settings'};const nav=document.getElementById('tabs');if(!nav)return;nav.addEventListener('click',e=>{const btn=e.target.closest('button[data-tab]');if(!btn)return;const title=document.getElementById('page-title');if(title)title.textContent=titles[btn.dataset.tab]||'My Collection';});})();
 (()=>{
  const launch=document.getElementById('bh-open');if(!launch)return;
  launch.addEventListener('click',()=>{
@@ -13216,3 +13216,99 @@ body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout=
   }
 }
 </style>
+
+<style id="aurora-workshop-settings">
+/* Carry the dark collection palette into Workshop and Settings. */
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body :is(#items,#upgrades,#settings) {
+  --menu-gold:#ffe0a0;
+  --menu-mint:#9cf6da;
+  --menu-edge:#826b9b;
+  --menu-surface:radial-gradient(ellipse at 12% 0%,#23403970,transparent 52%),linear-gradient(150deg,#222138,#101929 60%,#1e172d);
+  --menu-control:linear-gradient(145deg,#1c2538,#101827);
+  --menu-inset:inset 0 1px 0 #e0b6ff20,inset 0 0 14px #9466bb19,0 4px 12px #0005;
+}
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body :is(#items#items,#upgrades#upgrades) .workshop-switch,
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #items#items #itemlist :is(.equipment-card,.item-card,.itemrow),
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #upgrades#upgrades :is(.pp-farm,.upgrade-metrics button),
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #settings#settings :is(.settings-card,.pp-help,.settings-support) {
+  background:var(--menu-surface)!important;
+  border-color:var(--menu-edge)!important;
+  box-shadow:var(--menu-inset)!important;
+}
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #items#items #equipmentMetrics {
+  background:var(--menu-surface)!important;border-color:var(--menu-edge)!important;box-shadow:var(--menu-inset)!important;
+}
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #items#items #equipmentMetrics strong,
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #upgrades#upgrades .upgrade-metrics strong {
+  font-family:Georgia,serif!important;letter-spacing:0!important;
+}
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #items#items #equipmentMetrics>[data-metric="owned"] strong,
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #upgrades#upgrades .upgrade-metrics button:nth-child(2) strong {
+  color:var(--menu-gold)!important;
+}
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #settings#settings :is(.settings-card>strong,.settings-card-heading>strong,.settings-profile .settings-name-copy strong,.settings-support>strong,.pp-help>.btn),
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #upgrades#upgrades :is(.upgrade-section-title,.pp-farm-heading strong) {
+  font-family:Georgia,serif!important;color:#f8ead7!important;font-weight:700!important;letter-spacing:0!important;
+}
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #items#items #itemlist :is(.equipment-name,.equipment-card h3,.item-card h3) {
+  font-family:Georgia,serif!important;color:#f8ead7!important;
+}
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body :is(#items#items,#upgrades#upgrades) .workshop-switch button[aria-pressed="true"],
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #items#items #equipmentMetrics>[aria-pressed="true"],
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #upgrades#upgrades .upgrade-metrics button:first-child[aria-pressed="true"],
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #settings#settings .theme-choice button[aria-pressed="true"] {
+  color:var(--menu-mint)!important;
+  border-color:#70c6b6!important;
+  background:linear-gradient(145deg,#214341,#172a31)!important;
+  box-shadow:inset 0 0 12px #87ecd128!important;
+}
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #upgrades#upgrades .upgrade-metrics button:nth-child(2)[aria-pressed="true"] {
+  border-color:#c49a65!important;
+  background:linear-gradient(145deg,#473448,#1e2333)!important;
+  box-shadow:inset 0 0 12px #f9bf6e23!important;
+}
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #settings#settings .settings-profile {
+  border-left:3px solid #92dec8!important;
+}
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #settings#settings .theme-choice button:not([aria-pressed="true"]),
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #settings#settings :is(.settings-import,.settings-text-action),
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #items#items .bulk-inventory-entry {
+  background:var(--menu-control)!important;border-color:#65567d!important;
+}
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #settings#settings .settings-support {
+  border-color:#9f815c!important;
+}
+html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #settings#settings .settings-support-link {
+  color:var(--menu-gold)!important;border-color:#a17e58!important;background:#252235!important;
+}
+</style>
+
+<style id="mobile-collection-clearance">
+@media (max-width:749px) {
+  body main.shell:has(>#collection:not(.hide)) {
+    padding-bottom:var(--collection-end-clearance,calc(82px + env(safe-area-inset-bottom,0px)))!important;
+  }
+  body main.shell>#collection#collection {
+    padding-bottom:0!important;
+  }
+}
+</style>
+<script id="mobile-collection-clearance-sizing">
+(() => {
+  const nav = document.getElementById('tabs');
+  const shell = document.querySelector('main.shell');
+  if (!nav || !shell) return;
+  const mobile = matchMedia('(max-width:749px)');
+  const updateClearance = () => {
+    if (!mobile.matches) return;
+    const height = nav.getBoundingClientRect().height;
+    if (!height) return;
+    const bottom = Math.max(0, parseFloat(getComputedStyle(nav).bottom) || 0);
+    const clearance = Math.ceil(height + bottom) + 10;
+    shell.style.setProperty('--collection-end-clearance', clearance + 'px');
+  };
+  if (typeof ResizeObserver === 'function') new ResizeObserver(updateClearance).observe(nav);
+  window.addEventListener('resize', updateClearance, {passive:true});
+  updateClearance();
+})();
+</script>
