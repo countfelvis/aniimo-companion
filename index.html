@@ -3359,7 +3359,7 @@ html[data-aniimo-theme="light"] #collection :is(#creatures,#otherFullCardGrid).g
 <script id="dev329-blank-slate">
 /* Development releases are isolated: clear only this release's test namespace once.
    Do not touch beta or production localStorage. Refreshes within a release still save. */
-(function(){try{const marker='aniimo-dev-v710rc26::initialized';if(localStorage.getItem(marker)!=='yes'){for(let i=localStorage.length-1;i>=0;i--){const k=localStorage.key(i);if(k&&(/^aniimo-dev-v\d+(?:rc\d+)?::/.test(k)))localStorage.removeItem(k)}localStorage.setItem(marker,'yes')}}catch(e){}})();
+(function(){try{const marker='aniimo-dev-v710rc32::initialized';if(localStorage.getItem(marker)!=='yes'){for(let i=localStorage.length-1;i>=0;i--){const k=localStorage.key(i);if(k&&(/^aniimo-dev-v\d+(?:rc\d+)?::/.test(k)))localStorage.removeItem(k)}localStorage.setItem(marker,'yes')}}catch(e){}})();
 </script>
 <style id="dev343-personality-badge-edit">
 #collection .card-personality{cursor:pointer!important;min-height:36px!important;touch-action:manipulation}
@@ -3444,7 +3444,7 @@ button.quick-uncatch:focus-visible{outline:2px solid currentColor;outline-offset
 .item-wizard-bindings label{display:flex;align-items:center;gap:10px;padding:9px;border:1px solid var(--line);border-radius:10px;cursor:pointer;}
 .item-wizard-bindings input{width:auto;flex:none;}
 #itemWizardError{color:var(--amber);}
-</style><meta name="aniimo-channel" content="development"><meta name="aniimo-storage-policy" content="reset-on-new-dev-version"><meta name="aniimo-build" content="DEV 7.1.0 RC26 · Adaptive Studio showcase"><style id="dialog-layer-fix">
+</style><meta name="aniimo-channel" content="development"><meta name="aniimo-storage-policy" content="reset-on-new-dev-version"><meta name="aniimo-build" content="DEV 7.1.0 RC32 · Definitive equipment editor"><style id="dialog-layer-fix">
 /* Keep all collection tools below dialogs, including desktop drawers. */
 body #modal.modal{z-index:1000!important}
 body #collection#collection #pcStickyTools{z-index:10}
@@ -4151,7 +4151,22 @@ html[data-aniimo-theme="rainbow"] body :is(#items#items,#upgrades#upgrades) :is(
 @media(max-width:360px){body #items#items .equipment-view-switch button{min-width:30px!important}body #items#items .equipment-dashboard{gap:5px!important}body #items#items #itemlist#itemlist.equipment-compact .equipment-stock-group[open]>.equipment-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
 @media(min-width:1024px){body #upgrades#upgrades:not(.hide)>.iw19{grid-column:1/-1}body #items#items .equipment-dashboard{gap:10px!important}}
 </style>
-</head><body><header class="app-header"><div class="app-brand"><div><small>ANIIMO COMPANION <span class="version-mark">DEV 7.1.0 RC26</span></small><h1 id="page-title">My Collection</h1></div></div><div class="header-actions"><div id="localSaveStatus" role="status" aria-live="polite">Saving locally…</div><label class="theme-dropdown-wrap" aria-label="Appearance theme"><select id="themeSwitch" class="theme-dropdown" aria-label="Appearance theme" onchange="setAniimoTheme(this.value)"><option value="dark">☾ Dark</option><option value="light">☀ Light</option><option value="rainbow">🌈 Rainbow</option><option value="system">◐ Auto</option></select><span class="theme-dropdown-chevron" aria-hidden="true">⌄</span></label><span class="pill session-pill"><span class="session-dot"></span> On device</span></div></header><nav class="tabs" id="tabs" aria-label="Main navigation"><button data-tab="collection" class="active"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="m8 12 3 3 5-6"/></svg></span><span>Collection</span></button><button data-tab="items"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M9 10v10"/></svg></span><span>Items</span></button><button data-tab="upgrades"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8z"/></svg></span><span>Upgrades</span></button><button data-tab="settings"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.85 2.85-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1.2 1.55V21h-4v-.05A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.85-2.85.06-.06A1.7 1.7 0 0 0 4.2 15a1.7 1.7 0 0 0-1.55-1.2H2.6v-4h.05A1.7 1.7 0 0 0 4.2 8.6a1.7 1.7 0 0 0-.34-1.88L3.8 6.66 6.65 3.8l.06.06A1.7 1.7 0 0 0 8.6 4.2a1.7 1.7 0 0 0 1.2-1.55V2.6h4v.05A1.7 1.7 0 0 0 15 4.2a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.85 2.85-.06.06A1.7 1.7 0 0 0 19.4 8.6a1.7 1.7 0 0 0 1.55 1.2H21v4h-.05A1.7 1.7 0 0 0 19.4 15Z"/></svg></span><span>Settings</span></button></nav><main class="shell"><section id="collection"><div class="collection-overview"><div class="collection-overview-top"><div><span class="overview-eyebrow">MY PRISMANA · COLLECTION PROGRESS</span><strong id="collectionProgressLabel">0 / 0 configured</strong></div><span class="overview-percent" id="collectionProgressPercent">0%</span></div><div class="bar" role="progressbar" aria-label="Caught Prismana configured" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress"></div></div><div class="stats" id="stats"></div><div id="collectionDimensions" class="collection-dimensions" aria-live="polite"></div></div><div class="catch-onboarding inventory-onboarding setup-reminder" id="catchOnboarding" hidden>
+<style id="rc28-capability-entry">
+html body #modal.modal.rc24-workspace #dialog.dialog:has(.studio-hero-rc2)>.planner-head{top:-12px!important;margin-top:-12px!important;padding:12px 0 8px!important;isolation:isolate;box-shadow:0 -16px 0 var(--co-bg),0 1px 0 var(--co-line)!important;background:var(--co-bg)!important;}
+html body #modal.modal #dialog.dialog #shotReview .rc28-metadata{display:grid!important;grid-template-columns:minmax(0,1.35fr) minmax(0,.8fr) minmax(0,1fr)!important;gap:6px!important;margin:10px 0!important;align-items:end!important;}
+html body #modal.modal #dialog.dialog #shotReview .rc28-metadata label{display:grid!important;gap:4px!important;font-size:12px!important;min-width:0!important;margin:0!important;}
+html body #modal.modal #dialog.dialog #shotReview :is(.rc28-metadata input,#shotStars){min-height:44px!important;height:44px!important;padding:7px 8px!important;font-size:16px!important;width:100%!important;box-sizing:border-box!important;}
+html body #modal.modal #dialog.dialog #shotReview .shot-star-picker{padding:8px!important;margin:8px 0!important;}
+html body #modal.modal #dialog.dialog #shotReview .scan-stage-label{scroll-margin-top:80px!important;}
+html body #modal.modal #dialog.dialog #scanCaughtNotice:not(:empty){padding:8px 0!important;color:var(--co-muted,var(--muted))!important;font-size:12px!important;}
+html body #modal.modal #dialog.dialog #scanCaughtNotice:empty,html body #modal.modal #dialog.dialog #shotReview .scan-progress-top[hidden]{display:none!important;}
+html body #modal.modal #dialog.dialog #shotReview.scan-busy .scan-progress-top{display:flex!important;}
+html body #modal.modal #dialog.dialog #shotReview.scan-busy .shot-actions{pointer-events:none;opacity:.55;}
+html body #modal.modal #dialog.dialog #scanPanel :is(button,summary){touch-action:manipulation;}
+html body #modal.modal #dialog.dialog #scanPanel button:active:not(:disabled){filter:brightness(1.15);}
+html body #modal.modal #dialog.dialog #scanPanel :is(#startScreenshotScan,#startManualBuild):disabled{opacity:.55!important;cursor:wait;}
+</style>
+</head><body><header class="app-header"><div class="app-brand"><div><small>ANIIMO COMPANION <span class="version-mark">DEV 7.1.0 RC32</span></small><h1 id="page-title">My Collection</h1></div></div><div class="header-actions"><div id="localSaveStatus" role="status" aria-live="polite">Saving locally…</div><label class="theme-dropdown-wrap" aria-label="Appearance theme"><select id="themeSwitch" class="theme-dropdown" aria-label="Appearance theme" onchange="setAniimoTheme(this.value)"><option value="dark">☾ Dark</option><option value="light">☀ Light</option><option value="rainbow">🌈 Rainbow</option><option value="system">◐ Auto</option></select><span class="theme-dropdown-chevron" aria-hidden="true">⌄</span></label><span class="pill session-pill"><span class="session-dot"></span> On device</span></div></header><nav class="tabs" id="tabs" aria-label="Main navigation"><button data-tab="collection" class="active"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="m8 12 3 3 5-6"/></svg></span><span>Collection</span></button><button data-tab="items"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M9 10v10"/></svg></span><span>Items</span></button><button data-tab="upgrades"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8z"/></svg></span><span>Upgrades</span></button><button data-tab="settings"><span class="nav-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.85 2.85-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1.2 1.55V21h-4v-.05A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.85-2.85.06-.06A1.7 1.7 0 0 0 4.2 15a1.7 1.7 0 0 0-1.55-1.2H2.6v-4h.05A1.7 1.7 0 0 0 4.2 8.6a1.7 1.7 0 0 0-.34-1.88L3.8 6.66 6.65 3.8l.06.06A1.7 1.7 0 0 0 8.6 4.2a1.7 1.7 0 0 0 1.2-1.55V2.6h4v.05A1.7 1.7 0 0 0 15 4.2a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.85 2.85-.06.06A1.7 1.7 0 0 0 19.4 8.6a1.7 1.7 0 0 0 1.55 1.2H21v4h-.05A1.7 1.7 0 0 0 19.4 15Z"/></svg></span><span>Settings</span></button></nav><main class="shell"><section id="collection"><div class="collection-overview"><div class="collection-overview-top"><div><span class="overview-eyebrow">MY PRISMANA · COLLECTION PROGRESS</span><strong id="collectionProgressLabel">0 / 0 configured</strong></div><span class="overview-percent" id="collectionProgressPercent">0%</span></div><div class="bar" role="progressbar" aria-label="Caught Prismana configured" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress"></div></div><div class="stats" id="stats"></div><div id="collectionDimensions" class="collection-dimensions" aria-live="polite"></div></div><div class="catch-onboarding inventory-onboarding setup-reminder" id="catchOnboarding" hidden>
   <div class="onboarding-copy"><strong>Ready to set up your collection?</strong><span>Add your Aniimo and held items whenever you're ready.</span></div>
   <div class="onboarding-actions"><button class="btn primary" type="button" onclick="openFirstCollectionSetup()">Set up collection</button><button class="onboarding-skip" type="button" onclick="dismissCollectionSetupForever()">Skip setup</button></div>
 </div><div id="bh-launch" style="margin:12px 0"><button type="button" class="btn" id="bh-open" style="width:100%;min-height:44px">⚔ Battle Helper</button></div><div class="collection-section-heading"><div><small>THE COLLECTION</small><h2>Discover your Aniimo</h2></div><button class="btn collection-guide-link" type="button" onclick="openCollectionGuide()">✦ Explore &amp; learn</button></div><div id="aniilogRegions" aria-label="Aniilog region navigation"></div><div class="toolbar"><input class="input" id="search" placeholder="Name or Aniilog nº…" aria-label="Search by name or Aniilog number"><button class="multi-filter-trigger input" id="collectionFilterTrigger" type="button" onclick="toggleMultiFilters('collection')" aria-expanded="false">☷ <span id="collectionFilterLabel">All statuses</span><span class="filter-chevron">⌄</span></button><div class="multi-filter-panel hide" id="collectionFilterPanel"></div></div><div class="collection-filters"><label class="region-filter"><span>Aniilog</span><select id="regionFilter" aria-label="Filter companions by Aniilog" onchange="setCollectionRegion(this.value)"><option value="all">All Aniilogs</option><option value="Breezy Plains">Breezy Plains</option><option value="Whisperwake Isles">Whisperwake Isles</option><option value="Seasonal Keepsakes">Seasonal Keepsakes</option><option value="Starter Choice">Starters</option></select></label><button class="favorites-filter" id="favoritesOnly" type="button" aria-pressed="false" onclick="toggleFavoritesFilter()">☆ Favorites</button></div><details id="advancedCollectionFilters" hidden style="display:none"><summary>Advanced filters<span id="advancedFilterCount" aria-live="polite"></span></summary><div class="adv-filter-grid"><label for="advElement">Element<select id="advElement" onchange="render()"><option value="">Any</option><option value="Fire">Fire</option><option value="Water">Water</option><option value="Grass">Grass</option><option value="Lightning">Lightning</option><option value="Rock">Rock</option><option value="Wind">Wind</option><option value="Dark">Dark</option><option value="Ice">Ice</option><option value="Light">Light</option></select></label><label for="advRole">Role<select id="advRole" onchange="render()"><option value="">Any</option><option value="DPS">DPS</option><option value="BREAK">BREAK</option><option value="REGEN">REGEN</option></select></label><label for="advAcq">Acquisition<select id="advAcq" onchange="render()"><option value="">Any</option><option value="habitat">Wild habitat</option><option value="evolution">Evolution</option><option value="permanent-bloom">Permanent bloom</option><option value="event-bloom">Limited-time bloom</option><option value="handbook">Companion handbook</option><option value="achievement">Achievement</option><option value="event">Event</option><option value="starter">Starter</option></select></label><label for="advBuilt">Build<select id="advBuilt" onchange="render()"><option value="">Any</option><option value="built">Built</option><option value="unbuilt">Not built</option></select></label><button type="button" class="btn" onclick="clearAdvancedCollectionFilters()">Reset advanced</button></div><p class="hint">Applies to Collection and Other Aniimo. Combine with region, search and existing filters.</p></details><div class="view-controls layout-toolbar"><span class="layout-title">View</span><div class="layout-segments" role="group" aria-label="Collection card layout"><button type="button" data-view="large" onclick="setCollectionLayout('large')" aria-label="One card per row" title="Showcase"><span class="layout-glyph">▤</span><span>1</span></button><button type="button" data-view="cards" onclick="setCollectionLayout('cards')" aria-label="Two cards per row" title="Grid"><span class="layout-glyph">▦</span><span>2</span></button><button type="button" data-view="compact" onclick="setCollectionLayout('compact')" aria-label="Four cards per row" title="Compact"><span class="layout-glyph">▦</span><span>4</span></button></div><select id="layoutChoice" aria-label="Collection view" onchange="setCollectionLayout(this.value)" hidden><option value="cards">2 cards per row</option><option value="large">1 per row</option><option value="compact">4 cards per row</option></select></div><div class="collection-explore-heading"><span class="explore-heading-label">YOUR ANIIMO</span><span class="explore-heading-hint">✧ Tap an Aniimo to Explore</span></div><div class="collection-meta"><label class="catalog-sort-label"><span>Sort</span><select id="catalogSort" aria-label="Sort collection and Other Aniimo" onchange="setCatalogSort(this.value)"><option value="aniilog">Aniilog order</option><option value="name">Name A–Z</option><option value="reverse">Name Z–A</option><option value="favorites">Favorites first</option><option value="built">Built first</option><option value="caught">Caught first</option></select></label><span id="collectionCount" aria-live="polite"></span></div><div class="grid" id="creatures"></div><details id="hiddenStarters" class="panel" hidden><summary><span class="other-heading-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg></span><span>Other Aniimo</span><span id="otherAvailableCount" class="other-count" aria-label="Available Aniimo">0</span><span class="other-chevron" aria-hidden="true"></span></summary><p class="hint other-section-description">Browse additional forms.</p><p class="hint" id="otherAniimoEmpty">Optional Aniimo will appear here as their cards are added.</p><label class="hidden-aniimo-toggle" id="hiddenStarterToggle" hidden><input id="showHiddenAniimo" type="checkbox" onchange="setShowHiddenAniimo(this.checked)"> Show unchosen starter in Collection</label><div id="hiddenStarterList"></div><div class="other-aniimo-search-wrap">
@@ -4168,9 +4183,9 @@ html[data-aniimo-theme="rainbow"] body :is(#items#items,#upgrades#upgrades) :is(
 <div class="settings-card"><div class="settings-card-heading"><strong>Backup & recovery</strong><button class="settings-text-action" type="button" onclick="openRecoveryManager()">Recovery ›</button></div><p id="backupStatus" role="status"></p><div id="backupReminder" class="backup-reminder" hidden><span>Keep a copy of your collection.</span><button class="btn" id="reminderExport">Back up</button><button class="btn" onclick="snoozeBackup()" aria-label="Dismiss backup reminder for one week">×</button></div><div class="settings-button-grid"><button class="btn" id="export" type="button">Export backup</button><label class="btn settings-import">Import backup<input id="restore" type="file" accept=".json,application/json" hidden></label></div><button id="undoImport" class="settings-text-action" onclick="previewPreviousImport()" hidden>Undo last import ›</button></div>
 <div class="settings-footer"><button class="btn" type="button" onclick="openSettingsTools()">Tools & feedback</button><button class="btn" type="button" onclick="openSettingsPrivacy()">Storage & privacy</button></div>
 <div class="settings-support"><div><strong>Support Aniimo Companion</strong><span>Enjoying the app? Optional donations help support development.</span></div><a class="settings-support-link" href="https://ko-fi.com/countfelvis" target="_blank" rel="noopener noreferrer" aria-label="Support on Ko-fi (opens in a new tab)"><img class="kofi-logo" src="data:image/webp;base64,UklGRh4OAABXRUJQVlA4TBEOAAAvHAE5EJfCoG0kRzkAN/wRPaTZ79cPA0I2ktQDuHE4f7sXeMZt2wZSvu2d918z7gAykLZN/Jt9r2Bq0zZgnDL7jvIdCAQCgQfb/hCxHvS+cbcKhCpUIFQBKyiBVQGoQHigAonsKTAcrKACoaBiWEFWkFWBsIph67hDhQoVKvL+0ozlVahQoUIFvG3bbaetbVsVoY4hhE5HgCO7pzntlGM7Oe3oNBoNdAhWpEhI4v//GRvjUt5SalU+RvQfEiTJbZtdoA5ZwSYFHCK/B+VcLu4Y3HE2PeaYwOEjHBM5fcDgnvPFYrE8OJiLeTCdTsZPhkPf9zyvZ5TT8/q+PxiOx5NpECzc9ZeYTcfDQf/ub2A7vfu/0DQIlo4obzYZDu7+FA5irz94MgssxjKYDHrGeewPJjYmXUz8nnEn/bFVUcFTzziXvcF0YcdV/NQ3rqavPyB4cHtzeIBql2/cz95wYYHL9cl1ujqEnjbH4sj1peJ4en/7/1JxBJ7pJnoLFXhiuovDhaoyvzwyzY7L/EIJfGoUMGzbtqnvWB2xLE4wzwDMi9Osjriv79m2bWh54HJoBNC2dVUVRZbt0iSOo612RnGcprssL8p93bRSjidLIdtH/inqqsyzNI62ljNK0l1e7uvWgp/LBajm0FT5Lt46iMmu2DfAht5Mpa0/p9HWaYzSokY5nqqzdR5t3ci0bDFGlQ0/R1uXMskbRF0CWhrT1unWvUwqfnZ/iYPPdTmaWc3uIYGZJ0yXw5lWbCNdHw/zreMZV/IZ5pzQeOt+xrxinkBKx4U6++Va0RelN+TaeNsZ/Mwx/+Piv4aKfbTtEMaMwN6cGdajoth2DEtG63fJC6PbzmEWks2AgynbdmKqCae5QredZBpymgW92km2XcWK3Loj5zE0lDrUqHdMj7jLTrN4nBzVdvqA8T2VmwkyTyPyJzjWJ1f7IwW80crwqMNgX5VFfq8oj4QMMmghXeeMkiwv901rrGXY1Psy3yUajI+TKSbvLq+a0LiDzT4H6o2pTbwAJQtAXFa1xklsSlBU1BIFSLbsj5TXxmmssxjxosQrbYqRzA+V7kPjPu53ANUbsfUCqZRXvA9TG0ey/cROXkKEBy4xro1LWXEdDUAEhgKOVi0PjVvZFtw0/EKG0DzRUahrHRlP68YvpEdBhtBRdUWmqOWKKUlyrYsDY3CBo1MYkBq6DOtufsJW0HtLnj+mW5ezwIoJK3fF+L11u4EKn5U7pXenuN5AxUNvH5Y6NqazTM3wLnD+2nQAd1TsGN4ZzH9rugBhTK1jhXTviPLWtzS0phNYA9u9M3LMHqFV6JxqVkqvf8KaLFVXIIxgl6NHrl0lXVIKrs1RUiMmlBgnpw7LXZKkKWZYeEz0UiNGqJi96/4NT16kcVaLiJAY4aOqaCEcl6+u33/4554fbq5ffgXA+Yt3728evs93L86FL9G4EojeU2pYRM3sTkHuF9f/bB7j6tcXvJB3N+vNY7x5eSGrB4lbeCE5RSNwlxOVMkfi/Kf1hsbVSzIurqlv9OYlDHt0A7SGRSxpw1aJMXAX0nF+vWG9UdGmWg5OHJHUkKSyGlklyZv1hsfVxeP4hvtG/76QbMfmYG9D6hmaov7bUa6Lmw2b/759PJTPnyQb+SXWW5EyjkE/sQkI3683G/CXfLHaIPjhQg5RS86M+v8eklDI5fxxA+KvJMu+B0gqXqlMQLXr/uGMgFtaTpSFGbTdbP59DgFW9XULuii9wwBUvSpAFmhOWKBhAy5KVMaDD9KwlVCLyfDAIs2FFLYhskJGqmChUPHxzQbMK2M+bLBcnbMBLqRFaUsWFMQidc+LFRqru1dF808pfKRmhMEDoWbj1w2cqw2ebxFAqr9QPxqBErzciBGchgV8RKwM/DAreCOEBoi9INglWsIrGVRAVILgS0uEu8COt0Y4GXfSGuFivNhYxHMH41eb8FYCe9uxtgk3EqhlC+qjmi1Mv1VeAbSylU9Um65iaavtwjd4RMZy/G4XrvFIyW06OSRorOzCnwKqEmFtgLwe6dnGLqzwaJHdHqFGJdv/LcPmXIl6toKpZ+XxwjZcolEhexMTSie9At31S9vwFQfQkV4pSFfZPwxAKNyBKzAa4c7E/5D6y3ZuBnikf41q34xonYndgY+GjAz13z3B9bQ6GWkoP/QFhlsGvnVCkoo4LEjFoKkx5feVBofUr2CjC+O9MWB/QRpuRxvdAcalbUD1uUcFa1xpC1Op+AcNQ18sw9+QIb5RVofG8CQqZkwbG16isbILN4x/w2qXxmma5VUjNAX3I3Fm8hR0W405+M0u/GQUMMe1b5ZAuEPJpmHuNq632idOgatpijwOrixr7ypARq6nEmcVBPKjWJ+t7UopjwrYNxIQZ5a28OmBf9mEX9UuiBAb0qQCKBwRcSWPlCo/kRetXuK03k5Q0K70Ttlu6VNLUagMy+tOf0m2t1Q/cSpTDMcbZ/r3W6Qc0pEQB0DzMjvS30R0yVm4xwepIG+dMKLse2HUEVR6jEV7bonaPJ5woqw4S5+x1pk7w3WY2D/65WfhF0IvWL14gDFyRoLlyqTVpSTCFD2qashZKKySmJX8q+NkHXPsztAkB43E8iKXa5fFhxl+zdgha+OWljxsjVmI1aXI7gJW0SVjTSPyGBJmISv1Y16Uura3/L2AKIgZcwQtVidd6nRt45ArDwcP1r/P5i/OyROWqdQi1UPuDmy31KVpbA66wauL9jlmFfi94UhG7bMUWmHkyuKqVVOdYFHkWRLJbpQ0PpzGGNVsbozFQd/DVWey1uOv3t2KLYf1l7WJIjELWb17jioqR+BSaZo/ACvHCVnUln5LUlFiK0U8X6tMdA5QLMpY3P7OHihjBFpFw8527k5m3zFAGEOTVAquTvODOqzvap0KYyJ6G2x0IGCEylgaK81ziNpV0ZZjHm0nNuwifLa93ncY3SIcH0NjkBsjzXGj9VD81TZrMnQyzoU3I+5TB7u3tjhjmTXgTcjSoy+PVyVHZCzJEXZFrlHdYy0+lFECFWfQgZ4WFbZ+LtedIbTFSv9AxgS1+mMUIo0iq6l2dcu7HXlL6BbXqfj65q8t6uOIcC65k0/0UP1LuUHy+UoWHy6lO94pQ34lT4XhkyK4hWpv/f6KXC82gxx+ohY+MccIdpXUWPNM8BXfGCQjwG6DgDt0n3uakIB0f2V49Rexwo5wqZj7U5YP/ouEj2WwpERUdK/+VDeXCsbPRfEuK/ewuvKZyDEnQiX7cTz7VXv/RoubUQqvj7P11ybVsq/C9yuRZOKpWyB6mJPvBNAl0vGpoBrt63MdI3ZTfQe76VG8/A2SFFbT118LjISS9o9g5wc5I91jOYmVvtgf5waPmOrXd+KdGc2racOSH9aYUC3yowFhgDxJ0pLkjThb3YgUiQhVIytQmcEBSp/Uzla2u9b3K+6Pox4ZY3KN0QeQmtI66ZTtknT5K+/HUZH8hID/4PRRsl6TqNuY7Vti4M2VsoGpLcAVHI4o7i25QkltYv1G26ykWwmXVP0zjBh7+klm4uSCV8pFZG/48ICiKrwFXQg7VidSXF/qmyOait7+4cqkkL5UkDSv3ly/f3/9kq6dlu0IqhkhI+FTrQbAayYK3bUTaEoPUXCsXh940eQO2Lw6IkvFJ6GdIG+3tfWIyRJzsjG5xECR2L+9LrKU+UELx7TtxZ0U1EDHwfuKDshLQhg5KKiNoVLT4UzPkJdObHOBCX18IWIclL6CQ/pN1z2JYsOX8gVDO3pz5+yTX1GlKoEdmF5aengJxqwkslQvWnpXb+WS0rdxS5XKBHivvMZCy+iSr8jSAmEShrHPgsN8hQdIp15EDOMKG7fUGVv6OAJPa4isylBF6OlsQ5XnSO+hp1J9tgclfHpJT+exwMdU3YT9JufYhDxuQyc9+Ji/pLWiHZfg51B4ao/aLrBhngVF1JHApmuzg1YOBGZw5qFuhDl3zhYrj9Is1JavrYF1LDJ/VvMZ/ydkhTH3QJtqQ7mDeDNDxPSgmT698sf832E6tC6CkRitYSJHzKzYU+8+txpdXBuywjQHSU0AjrNWq4ulBuUp8xUXKHZayKxW04D7HMlNEh1b8DQanpzZxuWjyYWXTpGo9PpWPMWIYRjI91U2oiHVg1MIAnIwE2lPI73wQCx1AMS6TIEnUmUm0p+GpbKARe3KOsSutoM8mXluuOdRtTeNaWL0Yc+zoqobzquEbV0VWRLB18CAlKC9lqXsJMZRnBKYCB2/NNrT7cCqR8vhtCVsPz0x4nzAthRAf0XbDwcsUbpWdSSjCGvPq18alrWNZ5xzJVqaKm0N70TSDjGmiq0MVWzFnjjCIYFpy7WWGl6gZaFc6yBjisgaVxGyrc3G/ky3rYFZKwuz3XG80gPvVe3myFjt2NVGwFpXC+U7YsX3OMQjVNjPCWL0Rarz6UQAqpbRwQmce8boSw49FrRleiO1D1lTZ7GiEIHZxfYXjwnIEw3PsoLqO/EXB5dw0kOuLy4Zd2IdImAZDkvFUMTV5Q6eNM5O6LpRydzDMf487GX+yNHqGasQVSeedwq8zoPrAmEXeFPXR4+OdZLl0ZNgPXb2ffyDKTkpUDHxq8o4KlApsGW6jVOrHb2xAx/Cdmx5Lgc6ztQBWt3sagdoeRCHOmx0dbcDsnKKex2KfjHZK6c4m8GZTWU7OnlfL/oP0rs+YKIywBufTu/87L6yq3i8OHQMl8Gor6Tc0XR56CYuZyPZx7Du+fdxHcf5bDzoC/yfDkbT+aE7OQ8mo4EPePpzrz8YTabz5aGruZgHwWxK4SyYL9z1tzgAAA==" alt="" aria-hidden="true"> Support on Ko-fi <span aria-hidden="true">↗</span></a></div>
-<details class="settings-card build-about"><summary>About</summary><p>Build <strong>DEV 7.1.0 RC26</strong> · <code>Integrated refinement candidate</code></p><p class="muted">Development build · Local-only data. New DEV releases start fresh; refreshing this release retains test data. Do not deploy this file as Beta.</p><button class="btn" type="button" id="checkPublishedBuild">Check hosted build</button><p class="muted" id="publishedBuildStatus" role="status"></p></details><div class="settings-bottom"><span>✓ Saved on this device</span><button class="settings-reset" id="reset" type="button">Reset collection</button></div>
+<details class="settings-card build-about"><summary>About</summary><p>Build <strong>DEV 7.1.0 RC32</strong> · <code>Integrated refinement candidate</code></p><p class="muted">Development build · Local-only data. New DEV releases start fresh; refreshing this release retains test data. Do not deploy this file as Beta.</p><button class="btn" type="button" id="checkPublishedBuild">Check hosted build</button><p class="muted" id="publishedBuildStatus" role="status"></p></details><div class="settings-bottom"><span>✓ Saved on this device</span><button class="settings-reset" id="reset" type="button">Reset collection</button></div>
 </section></main><div id="elementMatchups" role="region" aria-labelledby="elementMatchupTitle" tabindex="-1" hidden></div><div id="modal" class="modal hide"><div class="dialog" id="dialog"></div></div><script>
-const STAR_REF_KEY = "aniimo-dev-v710rc26::star-reference";
+const STAR_REF_KEY = "aniimo-dev-v710rc32::star-reference";
 const base=[
 ["Scorchhowl","Explosive Gauntlet",1],["Stellarys","Fission Needle",1],["Infergon","Omenbone Flute",1],["Hexxin","Heartseeker Pendant",1],["Somniwing","Spirited Feather",1],["Glacy","Miraculous Fleece",1],["Sparkelf","Miraculous Fleece",1],["Blazen","Gargantuan Horn",1],["Magmarex","Gargantuan Horn",1],["Panpanta","Gargantuan Horn",1],["Inferlupa","Gargantuan Horn",1],["Fenmane","Fission Needle",1],["Fulmintis","Heartseeker Pendant",1],["Glynsera","Heartseeker Pendant",1],["Irisalis","Floral Rainbow Feather",1],["Sherro","Capacitous Battery",1],["Thornblade","Fission Needle",0],["Ignitis","Ferocious Fang",0],["Grizbo","Fission Needle",0],["Pawney","Capacitous Battery",0],["Melloblum","Auspicious Bell",0],["Turbo","Heritage Amulet",0],["Luminelle","Spirited Feather",0],["Cornet","Ferocious Fang",0],["Waleetle","Ferocious Fang",0],["Irisal","Ferocious Fang",0]];
 // Add a species here after its Nova card data has been reviewed.
@@ -4285,7 +4300,7 @@ function normalizeLocal37(raw){
  return v;
 }
 let startupBlocked37=false, data;
-try{const raw=localStorage.getItem("aniimo-dev-v710rc26::aniimo-companion-dev-v155-data");data=raw===null?fresh():normalizeLocal37(raw)}catch{startupBlocked37=true;data=fresh()}
+try{const raw=localStorage.getItem("aniimo-dev-v710rc32::aniimo-companion-dev-v155-data");data=raw===null?fresh():normalizeLocal37(raw)}catch{startupBlocked37=true;data=fresh()}
 function valid(v){return v&&v.version===1&&Array.isArray(v.creatures)&&v.creatures.length===all.length&&v.creatures.every((x,i)=>x.name===all[i].name&&(x.alpha===undefined||typeof x.alpha==="boolean")&&typeof x.caught==="boolean"&&(x.bound===null||typeof x.bound==="string"))&&v.items&&Object.keys(initialItems).every(k=>Number.isInteger(v.items[k])&&v.items[k]>=0)}
 data.builds ||= {};
 // User-provided screenshots. Current innate values already include Capafruit.
@@ -4293,8 +4308,8 @@ data.builds ||= {};
 // Development builds start empty; reference examples are not imported into user data.
 const $=id=>document.getElementById(id);
 let lastSavedSnapshot="";
-const SAVE_KEY="aniimo-dev-v710rc26::aniimo-companion-dev-v155-data";
-const RECOVERY_KEY="aniimo-dev-v710rc26::aniimo-companion-recovery-v1";
+const SAVE_KEY="aniimo-dev-v710rc32::aniimo-companion-dev-v155-data";
+const RECOVERY_KEY="aniimo-dev-v710rc32::aniimo-companion-recovery-v1";
 const RECOVERY_LIMIT=5;
 function saveHistory(){
  try{const v=JSON.parse(localStorage.getItem(RECOVERY_KEY)||"[]");return Array.isArray(v)?v.filter(x=>x&&typeof x.snapshot==="string").slice(-RECOVERY_LIMIT):[]}catch{return []}
@@ -4325,7 +4340,7 @@ const save=()=>{try{
  if(window.aniimoSyncState?.state==='synced')window.aniimoSyncState={...window.aniimoSyncState,state:'syncing'};
  const el=$("localSaveStatus");if(el){el.textContent="Saved locally";el.classList.remove("save-error")}
 }catch(e){const el=$("localSaveStatus");if(el){el.textContent="⚠ Not saved — export backup";el.classList.add("save-error")}}};
-const LOCAL_PROFILE_KEY="aniimo-dev-v710rc26::aniimo-companion-local-profile";
+const LOCAL_PROFILE_KEY="aniimo-dev-v710rc32::aniimo-companion-local-profile";
 window.renameCompanion=(name,finish=()=>closeDialog())=>{
  const c=data.creatures.find(x=>x.name===name);if(!c)return;
  const original=displayName(c);
@@ -4484,7 +4499,7 @@ function collectionPreferences(){
  const shown=data.collectionView.shownNovaAniimo;
  data.collectionView.shownNovaAniimo=Array.isArray(shown)?[...new Set(shown.filter(name=>approvedNovaNames.has(name)))]:[];
  // Keep the display preference separate from collection records so it survives refreshes and development data resets.
- try{const savedLayout=localStorage.getItem('aniimo-dev-v710rc26::aniimo-companion-collection-layout');
+ try{const savedLayout=localStorage.getItem('aniimo-dev-v710rc32::aniimo-companion-collection-layout');
  if(['cards','large','compact'].includes(savedLayout))data.collectionView.layout=savedLayout;}catch(e){}
  if(!['cards','large','compact'].includes(data.collectionView.layout))data.collectionView.layout='compact';
  return data.collectionView;
@@ -4648,14 +4663,14 @@ function heldItemChip(c){
 }
 const expandedHeldItems=new Set();
 window.toggleHeldItem=code=>{const name=decodeURIComponent(code);if(expandedHeldItems.has(name))expandedHeldItems.delete(name);else expandedHeldItems.add(name);render();};
-const ONBOARDING_KEY='aniimo-dev-v710rc26::aniimo-companion-dev-v155-caught-onboarding-done';
+const ONBOARDING_KEY='aniimo-dev-v710rc32::aniimo-companion-dev-v155-caught-onboarding-done';
 let onboardingDone=false;
 try{onboardingDone=localStorage.getItem(ONBOARDING_KEY)==='1'}catch{}
 function setOnboardingDone(done){onboardingDone=done;try{if(done)localStorage.setItem(ONBOARDING_KEY,'1');else localStorage.removeItem(ONBOARDING_KEY)}catch{}}
 
 // Acquisition-source registry: separate shared reference facts from personal collection state.
 // Unknown entries are deliberately not represented as permanent or currently available.
-const ACQUISITION_KEY="aniimo-dev-v710rc26::aniimo-acquisition-notes-v1";
+const ACQUISITION_KEY="aniimo-dev-v710rc32::aniimo-acquisition-notes-v1";
 const acquisitionKinds={
  "starter":"Starter Choice",
  "permanent-bloom":"Permanent Bloom",
@@ -4692,7 +4707,7 @@ const acquisitionSafe=v=>esc(String(v??""));
 function compactSeasonLabel(value){
  return String(value||"").replace(/Season\s+(\d+)\s*(?:·\s*)?Part\s+(\d+)/gi,(_,season,part)=>`S${season}P${part}`);
 }
-const ACQ_REGION_KEY="aniimo-dev-v710rc26::aniimo-acquisition-region";
+const ACQ_REGION_KEY="aniimo-dev-v710rc32::aniimo-acquisition-region";
 const acqRegions={americas:"America/Los_Angeles",europe:"Europe/London",asia:"Asia/Singapore"};
 const acqRegion=()=>{try{const value=localStorage.getItem(ACQ_REGION_KEY);return Object.hasOwn(acqRegions,value)?value:"americas"}catch{return "americas"}};
 window.setAcqRegion=v=>{if(!acqRegions[v])return;try{localStorage.setItem(ACQ_REGION_KEY,v)}catch{}render()};
@@ -4712,7 +4727,7 @@ const dualBloomLocations={
  Jeburst:{whisperwake:'Cloudreach Falls',breezy:'Russet Highlands'},
  Glameep:{whisperwake:'Crescent Bay',breezy:'Echoback Landing'}
 };
-const dualBloomStorageKey='aniimo-dev-v710rc26::bloom-region-selections';
+const dualBloomStorageKey='aniimo-dev-v710rc32::bloom-region-selections';
 let dualBloomChoices={};
 try{const saved=JSON.parse(localStorage.getItem(dualBloomStorageKey)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))dualBloomChoices=saved;}catch{}
 function selectedBloomRegion(name){return dualBloomChoices[name]==='breezy'?'breezy':'whisperwake'}
@@ -4802,7 +4817,7 @@ function acquisitionShortLabel(name){
  if(prefix)return `${prefix} Reward`;
  return r.kind==="other"?"Reward":"Source";
 }
-const plannerKey="aniimo-dev-v710rc26::acquisition-wishlist";
+const plannerKey="aniimo-dev-v710rc32::acquisition-wishlist";
 let plannerWish=new Set();try{const saved=JSON.parse(localStorage.getItem(plannerKey)||"[]");if(Array.isArray(saved))plannerWish=new Set(saved.map(canonicalAniimoName).filter(n=>typeof n==="string"&&all.some(c=>c.name===n)))}catch{}
 const plannerSources={
  encounters:["habitat","permanent-bloom"], events:["event-bloom","event","handbook"],
@@ -4870,13 +4885,13 @@ window.saveAcquisitionNote=name=>{
 };
 window.openCollectionGuide=()=>{
  const count=data.creatures.filter(c=>c.caught).length;
- let profile="";try{profile=localStorage.getItem("aniimo-dev-v710rc26::aniimo-companion-local-profile")||""}catch{}
+ let profile="";try{profile=localStorage.getItem("aniimo-dev-v710rc32::aniimo-companion-local-profile")||""}catch{}
  const title=profile?`Welcome back, ${profile}!`:count?"Your collection is growing.":"Organize and get to know your Aniimo.";
  const description=count?`You've collected ${count} Prismana. Keep exploring and make every companion your own.`:"Organize your collection, explore each Aniimo’s strengths, and learn how to make the most of your companions.";
  $("dialog").innerHTML=`<div class="row"><h2>Explore Aniimo Companion</h2><button class="btn" onclick="closeDialog()">✕</button></div><div class="collection-guide-content"><h3>${esc(title)}</h3><p>${esc(description)}</p><button class="welcome-discover" type="button" onclick="openAcquisitionPlanner()"><span class="welcome-discover-icon">✦</span><span><strong>Acquisition Planner</strong><small>Find uncaught Aniimo by region, source, and availability</small></span><span class="welcome-arrow">›</span></button><p class="hint">Track your collection, manage held items, and open any Aniimo to explore its builds and appearances.</p></div>`;
  $("modal").classList.remove("hide");
 };
-const MULTI_FILTER_KEY="aniimo-dev-v710rc26::aniimo-multi-filters-v1";
+const MULTI_FILTER_KEY="aniimo-dev-v710rc32::aniimo-multi-filters-v1";
 const FILTER_GROUPS={collection:[
  {title:"Build status",items:[["built-yes","Built"],["built-no","Not built"]]},
  {title:"Collection progress",items:[["complete","Complete"],["progress","In progress"],["none","Not caught"],["ready","Ready to bind"],["shortage","Needs an item"]]},
@@ -4888,7 +4903,7 @@ const defaultMatchupFilter=()=>({mode:"attack",element:""});
 let multiFilters={collection:[],inventory:[],matchup:defaultMatchupFilter()};
 try{const old=JSON.parse(localStorage.getItem(MULTI_FILTER_KEY)||"{}");for(const type of Object.keys(FILTER_GROUPS)){const allowed=FILTER_GROUPS[type].flatMap(g=>g.items.map(i=>i[0]));if(Array.isArray(old[type]))multiFilters[type]=old[type].filter(v=>allowed.includes(v))}}catch{}
 // Keep older single-choice preferences when upgrading.
-try{if(!multiFilters.inventory.length){const old=localStorage.getItem("aniimo-dev-v710rc26::aniimo-item-filter");if(["owned","available","bound","needed"].includes(old))multiFilters.inventory=[old]}}catch{}
+try{if(!multiFilters.inventory.length){const old=localStorage.getItem("aniimo-dev-v710rc32::aniimo-item-filter");if(["owned","available","bound","needed"].includes(old))multiFilters.inventory=[old]}}catch{}
 
 function advancedCollectionMatches(c){
  const val=id=>document.getElementById(id)?.value||'';
@@ -4938,7 +4953,7 @@ function updateCollectionHeading(){
  const activeTab=document.querySelector('#tabs [data-tab].active')?.dataset.tab;
  if(activeTab&&activeTab!=='collection'){title.textContent=({items:'Workshop',upgrades:'Workshop',settings:'Settings'})[activeTab]||'My Collection';return;}
  let name='';
- try{name=(localStorage.getItem('aniimo-dev-v710rc26::aniimo-companion-local-profile')||'').trim()}catch{}
+ try{name=(localStorage.getItem('aniimo-dev-v710rc32::aniimo-companion-local-profile')||'').trim()}catch{}
  title.textContent=name&&name!=='Guest'?`${name}${/s$/i.test(name)?"’":"’s"} Collection`:'My Collection';
 }
 const showHiddenAniimo=()=>data.collectionView.showHiddenAniimo===true;
@@ -5666,7 +5681,7 @@ if(artworkVisibilityObserver)artworkVisibilityObserver.disconnect();$("creatures
 const itemEntries=Object.entries(data.items);
 const itemNeeded=name=>data.creatures.filter(c=>c.caught&&!isAlpha(c)&&c.ideal===name&&!hasBinding(c,name)).length;
 const itemLayout=window.equipmentLayout||'grid';updateMultiFilterUI("inventory");
-const itemSort=window.equipmentSort||(localStorage.getItem('aniimo-dev-v710rc26::aniimo-item-sort')||'owned-first');const sortControl=$('itemSort');if(sortControl&&sortControl.value!==itemSort)sortControl.value=itemSort;
+const itemSort=window.equipmentSort||(localStorage.getItem('aniimo-dev-v710rc32::aniimo-item-sort')||'owned-first');const sortControl=$('itemSort');if(sortControl&&sortControl.value!==itemSort)sortControl.value=itemSort;
 const ownedTypes=itemEntries.filter(([k,n])=>Number(n)>0).length;
 const freeCopies=itemEntries.reduce((sum,[k])=>sum+Math.max(0,available(k)),0);
 const missingCopies=itemEntries.reduce((sum,[k])=>sum+Math.max(0,itemNeeded(k)-Math.max(0,available(k))),0);
@@ -5800,7 +5815,7 @@ window.managePrismana=(name,tab="build")=>{
  else {
  const bindings=boundList(c);
  const options=Object.keys(data.items).filter(i=>i!==c.ideal).map(i=>`<label class="multi-bind-option"><input type="checkbox" class="binding-choice" value="${esc(i)}" ${bindings.includes(i)?"checked":""}><span class="binding-item-art">${heldThumb(i)}</span><span class="binding-item-name">${esc(i)}<small class="binding-item-available">${Math.max(0,available(i))} free${bindings.includes(i)?" · contracted here":""}</small></span></label>`).join("");
- content=`<section class="binding619" data-equipment-state="${bindings.includes(c.ideal)?'bound':c.ideal&&available(c.ideal)>0?'ready':'missing'}"><div class="binding619-kicker">RECOMMENDED EQUIPMENT</div><div class="recommended-bind-hero">${c.ideal?heldThumb(c.ideal):""}<div><strong>${esc(c.ideal||"Not verified")}</strong><small>${bindings.includes(c.ideal)?"✓ Currently bound":c.ideal&&available(c.ideal)>0?"Ready to bind":"To obtain"}</small></div></div>${c.ideal?`<div class="binding619-counts" aria-live="polite" aria-label="Projected inventory"><div><b>${Number(data.items[c.ideal]||0)}</b><small>Owned</small></div><div><b>${Math.max(0,Number(data.items[c.ideal]||0)-available(c.ideal))}</b><small>Bound</small></div><div><b>${Math.max(0,available(c.ideal))}</b><small>Available</small></div></div>`:""}<label class="profile-toggle binding619-toggle"><span><strong>Bound in-game</strong><small>${esc(formFor(c.name)?.species || c.name)} family</small></span><input id="recommendedBound" type="checkbox" ${bindings.includes(c.ideal)?"checked":""} ${c.ideal?"":"disabled"}></label><p class="hint binding-copy-note">Adds an owned copy if needed.</p></section><details class="alternate-bindings binding619-alternates"><summary>Other held items <small>Optional</small></summary><p class="hint">Select other items already bound in-game.</p><div class="multi-bind-list">${options}</div></details><div class="binding619-display"><span id="equipmentDisplayLabel">Displayed item</span><select id="profileBindingDisplay" hidden aria-hidden="true" tabindex="-1"><option value="">Automatic</option></select><div class="equipment-display-options" role="group" aria-labelledby="equipmentDisplayLabel"></div><small>Does not change bindings.</small></div><div class="profile-actions binding619-actions"><button class="btn primary" id="profileSave">Save &amp; continue</button></div>`;
+ content=`<section class="binding619" data-equipment-state="${bindings.includes(c.ideal)?'bound':c.ideal&&available(c.ideal)>0?'ready':'missing'}"><div class="binding619-kicker">RECOMMENDED EQUIPMENT</div><div class="recommended-bind-hero">${c.ideal?heldThumb(c.ideal):""}<div><strong>${esc(c.ideal||"Not verified")}</strong><small>${bindings.includes(c.ideal)?"✓ Currently bound":c.ideal&&available(c.ideal)>0?"Ready to bind":"To obtain"}</small></div></div>${c.ideal?`<div class="binding619-counts" aria-live="polite" aria-label="Projected inventory"><div><b>${Number(data.items[c.ideal]||0)}</b><small>Owned</small></div><div><b>${Math.max(0,Number(data.items[c.ideal]||0)-available(c.ideal))}</b><small>Bound</small></div><div><b>${Math.max(0,available(c.ideal))}</b><small>Available</small></div></div>`:""}<label class="profile-toggle binding619-toggle"><span><strong>Bound in-game</strong><small>${esc(formFor(c.name)?.species || c.name)} family</small></span><input id="recommendedBound" type="checkbox" ${bindings.includes(c.ideal)?"checked":""} ${c.ideal?"":"disabled"}></label><div class="rc32-binding-status" role="status" aria-live="polite"><strong></strong><p class="hint binding-copy-note">Adds an owned copy if needed.</p></div></section><details class="alternate-bindings binding619-alternates"><summary>Other held items <small>Optional</small></summary><p class="hint">Select other items already bound in-game.</p><div class="multi-bind-list">${options}</div></details><div class="binding619-display"><span id="equipmentDisplayLabel">Displayed item</span><select id="profileBindingDisplay" hidden aria-hidden="true" tabindex="-1"><option value="">Automatic</option></select><div class="equipment-display-options" role="group" aria-labelledby="equipmentDisplayLabel"></div><small>Does not change bindings.</small></div><div class="profile-actions binding619-actions"><p class="rc32-save-error" role="alert" hidden></p><button type="button" class="btn primary" id="profileSave">Save equipment</button><button type="button" class="btn rc32-back" id="rc32Back">Back to Studio</button></div>`;
 
  }
  $("dialog").innerHTML=`<div class="row profile-heading"><div class="profile-identity"><span class="profile-avatar" aria-hidden="true">${(()=>{const variant=chosenAppearance(c),source=artFor(c,variant)||artFor(c,"Basic");return source?`<img decoding="async" class="profile-avatar-art" src="${esc(artworkFrameCache.get(source)||source)}" alt="${esc(displayName(c))} portrait" onload="scheduleArtworkFraming(this)" onerror="this.style.display='none';this.parentElement.classList.add('avatar-fallback')">`:esc(name.slice(0,1).toUpperCase())})()}</span><div class="profile-identity-copy"><span class="profile-kicker">ANIIMO PROFILE</span><h2>My ${esc(displayName({name}))}</h2><span class="profile-current-section">${tab==="collection"?"Collection status":"Held item"}</span></div></div><button class="btn" onclick="closeDialog()" aria-label="Close profile">✕</button></div>${tabs}${content}${researchPanel(c,tab)}`;
@@ -5820,75 +5835,88 @@ window.managePrismana=(name,tab="build")=>{
    if(choices){choices.innerHTML=["",...selected].map(item=>`<button type="button" class="equipment-display-choice" aria-pressed="${item===displaySelect.value}">${item?heldThumb(item):'<span class="equipment-auto-glyph">✧</span>'}<span>${esc(item||"Automatic")}</span><span class="equipment-choice-check">${item===displaySelect.value?"✓":""}</span></button>`).join("");[...choices.children].forEach((button,index)=>button.onclick=()=>{refreshChoices(["",...selected][index]);choices.children[index]?.focus({preventScroll:true})});}
    const panel=$("dialog").querySelector(".binding619");
    if(panel)panel.dataset.pendingBound=String(!!$("recommendedBound")?.checked);
-   if(panel&&c.ideal){const was=boundList(c).includes(c.ideal),now=selected.includes(c.ideal),owned=Number(data.items[c.ideal]||0),bound=boundCount(c.ideal);const shared=data.creatures.some(x=>x!==c&&bindingFamilyKey(x.name)===bindingFamilyKey(c.name)&&hasBinding(x,c.ideal));const add=now&&!was&&!shared, projectedOwned=owned+(add&&available(c.ideal)<1?1:0),projectedBound=bound+(add?1:0)-(was&&!now&&!shared?1:0);const values=panel.querySelectorAll('.binding619-counts b');[projectedOwned,projectedBound,Math.max(0,projectedOwned-projectedBound)].forEach((v,i)=>{if(values[i])values[i].textContent=v});const note=panel.querySelector('.binding-copy-note');if(note)note.textContent=add?'Pending save · '+(projectedOwned>owned?'Adds one owned copy.':'Uses an available copy.'):was&&!now?'Pending removal · shared family bindings may remain.':'Adds an owned copy if needed.';}
+   if(panel&&c.ideal){
+    const item=c.ideal,was=boundList(c).includes(item),now=selected.includes(item),owned=Number(data.items[item]||0),bound=boundCount(item);
+    const shared=data.creatures.some(x=>x!==c&&bindingFamilyKey(x.name)===bindingFamilyKey(c.name)&&((x.boundItems||[]).includes(item)||x.bound===item));
+    const add=now&&!was,remove=was&&!now&&!shared,projectedOwned=owned+(add&&available(item)<1?1:0),projectedBound=bound+(add?1:0)-(remove?1:0);
+    const values=panel.querySelectorAll('.binding619-counts b');[projectedOwned,projectedBound,Math.max(0,projectedOwned-projectedBound)].forEach((v,i)=>{if(values[i])values[i].textContent=v});
+    const status=panel.querySelector('.rc32-binding-status'),note=panel.querySelector('.binding-copy-note');
+    const pending=now!==was;status.dataset.state=pending?'pending':was?'saved':'neutral';
+    status.querySelector('strong').textContent=now&&!was?'Pending binding':was&&!now?'Pending removal':was?'Binding recorded':'Not bound';
+    note.textContent=add?(projectedOwned>owned?'Adds one owned copy when saved.':'Uses an available copy when saved.'):was&&!now?(shared?'Other forms retain this family binding.':'Releases the binding when saved.'):was?'Recorded in your saved companion profile.':'Record the item if it is already bound in-game.';
+   }
    const alternate=$("dialog").querySelector('.binding619-alternates summary small');if(alternate){const n=selected.filter(i=>i!==c.ideal).length;alternate.textContent=n?n+' selected':'Optional';} const displayPanel=$("dialog").querySelector('.binding619-display');if(displayPanel)displayPanel.hidden=selected.length<2;const state=panel?.querySelector('.recommended-bind-hero small');if(state&&c.ideal)state.textContent=selected.includes(c.ideal)?(boundList(c).includes(c.ideal)?'Currently bound':'Pending binding'):(boundList(c).includes(c.ideal)?'Pending removal':available(c.ideal)>0?'Ready to bind':'To obtain');
   };
+  const back=$('rc32Back');if(back)back.onclick=()=>{window.rc16Guide=null;managePrismana(name,'build');};
   refreshChoices(c.boundDisplay);
+  $('profileSave').textContent=window.rc16Guide?.name===name&&window.rc16Guide?.tab==='item'?'Save & continue':'Save equipment';
   $("dialog").querySelectorAll(".binding-choice,#recommendedBound").forEach(input=>{
    input.addEventListener("change",()=>refreshChoices(displaySelect.value));
   });
  }
- $("profileSave").onclick=async()=>{
+ const equipmentSave=$('profileSave');let equipmentSaving=false;
+ equipmentSave.onclick=async()=>{
+ if(equipmentSaving)return;
+ if(tab==="equipment"){
+  const selected=selectedBindings();if(selected.length&&!c.caught){alert("Mark this Aniimo caught first.");return;}
+  equipmentSaving=true;equipmentSave.disabled=true;equipmentSave.textContent='Saving…';
+  const error=$('dialog').querySelector('.rc32-save-error');if(error)error.hidden=true;
+  const before={items:{...data.items},bound:c.bound,boundItems:c.boundItems,boundDisplay:c.boundDisplay,bindingReviewed:c.bindingReviewed};
+  try{
+   const previous=boundList(c);
+   for(const item of selected.filter(i=>!previous.includes(i))){if(available(item)<1)data.items[item]=Number(data.items[item]||0)+1;}
+   c.boundItems=selected;c.bound=selected.includes(c.bound)?c.bound:(selected[0]||null);const preferred=displaySelect.value;c.boundDisplay=selected.includes(preferred)?preferred:null;c.bindingReviewed=true;
+   save();if(localStorage.getItem(SAVE_KEY)!==JSON.stringify(data))throw Error('Save could not be verified');
+  }catch(e){data.items=before.items;c.bound=before.bound;c.boundItems=before.boundItems;c.boundDisplay=before.boundDisplay;c.bindingReviewed=before.bindingReviewed;equipmentSaving=false;equipmentSave.disabled=false;equipmentSave.textContent='Retry save';if(error){error.hidden=false;error.textContent='Equipment could not be saved. Your previous bindings are unchanged. Please retry or export a backup.';}return;}
+  render();window.rc16Advance(name,'item');return;
+ }
  if(tab==="details"){
   const caught=$("profileCaught").checked,alpha=$("profileAlpha")?.checked;
   if(caught&&!(await prepareStarterBinding(c)))return;
   if(!caught&&c.bound&&!confirm("Mark as not caught and remove the existing held-item binding?"))return;
   if(!caught){c.bound=null;c.boundItems=[];c.boundDisplay=null}c.caught=caught;if(alpha!==undefined)c.alpha=alpha;
- }else{
-  const selected=selectedBindings();
-  if(selected.length&&!c.caught){alert("Mark this Prismana caught first.");return}
-  const previous=boundList(c);
-  for(const item of selected.filter(i=>!previous.includes(i))){if(!data.creatures.some(x=>x!==c&&bindingFamilyKey(x.name)===bindingFamilyKey(c.name)&&hasBinding(x,item))&&available(item)<1){data.items[item]=Number(data.items[item]||0)+1}}
-  c.boundItems=selected;
-  c.bound=selected.includes(c.bound)?c.bound:(selected[0]||null);
-  const preferred=displaySelect.value;
-  c.boundDisplay=selected.includes(preferred)?preferred:null;
-
  }
- c.bindingReviewed=tab==="equipment"?true:c.bindingReviewed;save();render();if(tab==="equipment")window.rc16Advance(name,"item");else closeDialog();
+ save();render();closeDialog();
  };
 };
 window.openAppearance=name=>{
  const c=data.creatures.find(x=>x.name===name);if(!c)return;
  const a=appearanceOf(c),current=chosenAppearance(c);
- const tabs=`<button class="btn my-profile-back" type="button" onclick="managePrismana('${esc(name)}','build')">‹ Back to My ${esc(displayName(c))}</button>`;
+ const tabs=`<button class="btn my-profile-back" type="button" onclick="managePrismana('${esc(name)}','build')">‹ Back to Studio</button>`;
  const options=appearanceOptionsFor(c).map(v=>`<option value="${v}" ${v===current?"selected":""}>${v==="Basic"?"Basic / default":v==="Dazzling"?"Dazzling Sparkling":v==="Shadow"?"Shadow Sparkling":v==="Umbral"?"Umbral":(name==="Irisalis"?v:"Sparkling Type "+v)}</option>`).join("");
  const url=artFor(c,current)||"";
- $("dialog").innerHTML=`<div class="row profile-heading"><div class="profile-identity"><span class="profile-avatar" aria-hidden="true">${(()=>{const variant=chosenAppearance(c),source=artFor(c,variant)||artFor(c,"Basic");return source?`<img decoding="async" class="profile-avatar-art" src="${esc(artworkFrameCache.get(source)||source)}" alt="${esc(displayName(c))} portrait" onload="scheduleArtworkFraming(this)" onerror="this.style.display='none';this.parentElement.classList.add('avatar-fallback')">`:esc(name.slice(0,1).toUpperCase())})()}</span><div class="profile-identity-copy"><span class="profile-kicker">ANIIMO PROFILE</span><h2>${esc(displayName({name}))}</h2><span class="profile-current-section">Appearance</span></div></div><button class="btn" onclick="closeDialog()">✕</button></div>${tabs}<div class="appearance-hero" hidden><img id="appearancePreview" data-creature="${esc(name)}" onload="scheduleArtworkFraming(this)" class="appearance-preview" alt="Selected appearance preview" style="display:${url?"block":"none"}" src="${esc(url)}"><div><div class="eyebrow">Your selected look</div><h3 id="appearanceLookTitle">${appearanceLabel(current)}</h3><p>Choose an appearance below, then save it to your collection card.</p><button class="btn primary" id="appearanceSave">Save this look</button></div></div><p class="appearance-gallery-instruction">Tap artwork to preview. Use the + or check control to record ownership.</p><div class="appearance-gallery-title"><span id="activeLook610">Active appearance</span><small id="appearanceOwnedCount">${appearanceProgress(c).unlocked} / ${appearanceProgress(c).total} unlocked</small></div>${name==="Irisalis"?`<div class="irisalis-set-tabs" role="group" aria-label="Irisalis appearance sets">${irisalisSets.map((set,i)=>`<button type="button" class="irisalis-set-tab ${i===0?'selected':''}" data-irisalis-set="${i}">${irisalisSets[i]==='Iris in First Bloom'?'In First Bloom':irisalisSets[i]}</button>`).join('')}</div><p class="irisalis-set-caption">All 5 Sets · 80 appearances embedded</p>`:''}<div class="rc18-active" id="rc18Active"></div><div class="rc18-preview" id="rc18Preview" hidden></div><div id="appearanceGallery" class="appearance-gallery"></div><div class="appearance-done610"><button type="button" class="btn primary" onclick="window.rc16AppearanceDone('${esc(name)}')">Done · Continue setup</button><small>Changes saved automatically.</small></div><details class="appearance-advanced"><summary>Custom artwork &amp; advanced options</summary><p class="appearance-help">You can override built-in artwork with your own image. This does not change caught, Alpha, binding, or build status.</p><label for="appearanceVariant">Displayed appearance</label><select id="appearanceVariant">${options}</select><a class="appearance-link" href="https://aniidex.com/aniimo/sparkling/" target="_blank" rel="noopener noreferrer">Browse Sparkling artwork on Aniidex ↗</a><label for="appearanceUrl">Direct image URL (optional)</label><input class="input" id="appearanceUrl" type="url" placeholder="https://…/image.webp" value="${esc(url.startsWith("data:")?"":url)}"><label for="appearanceFile">Or choose an image saved on your device</label><input class="input appearance-file" id="appearanceFile" type="file" accept="image/*"><p class="appearance-help">Uploaded images are stored in this browser. Export a JSON backup regularly.</p><div class="appearance-actions"><button class="btn" id="appearanceClear">Clear custom image for this type</button></div></details>`;
+ $("dialog").innerHTML=`<div class="row profile-heading"><div class="profile-identity"><span class="profile-avatar" aria-hidden="true">${(()=>{const variant=chosenAppearance(c),source=artFor(c,variant)||artFor(c,"Basic");return source?`<img decoding="async" class="profile-avatar-art" src="${esc(artworkFrameCache.get(source)||source)}" alt="${esc(displayName(c))} portrait" onload="scheduleArtworkFraming(this)" onerror="this.style.display='none';this.parentElement.classList.add('avatar-fallback')">`:esc(name.slice(0,1).toUpperCase())})()}</span><div class="profile-identity-copy"><span class="profile-kicker">ANIIMO PROFILE</span><h2>${esc(displayName({name}))}</h2><span class="profile-current-section">Appearance</span></div></div><button class="btn" onclick="closeDialog()">✕</button></div>${tabs}<div class="appearance-hero" hidden><img id="appearancePreview" data-creature="${esc(name)}" onload="scheduleArtworkFraming(this)" class="appearance-preview" alt="Selected appearance preview" style="display:${url?"block":"none"}" src="${esc(url)}"><div><div class="eyebrow">Your selected look</div><h3 id="appearanceLookTitle">${appearanceLabel(current)}</h3><p>Choose an appearance below, then save it to your collection card.</p><button class="btn primary" id="appearanceSave">Save this look</button></div></div><p class="appearance-gallery-instruction">Tap artwork to preview or set active. Use + or ✓ to record ownership.</p>${name==="Irisalis"?`<div class="irisalis-set-tabs" role="group" aria-label="Irisalis appearance sets">${irisalisSets.map((set,i)=>`<button type="button" class="irisalis-set-tab ${i===0?'selected':''}" data-irisalis-set="${i}">${irisalisSets[i]==='Iris in First Bloom'?'In First Bloom':irisalisSets[i]}</button>`).join('')}</div><p class="irisalis-set-caption">All 5 Sets · 80 appearances embedded</p>`:''}<div class="rc18-active" id="rc18Active"></div><div class="rc18-preview" id="rc18Preview" hidden></div><div id="appearanceGallery" class="appearance-gallery"></div><div class="appearance-done610"><button type="button" class="btn primary" onclick="window.rc16AppearanceDone('${esc(name)}')">Done · Continue setup</button><small>Changes saved automatically.</small></div><details class="appearance-advanced"><summary>Custom artwork &amp; advanced options</summary><p class="appearance-help">You can override built-in artwork with your own image. This does not change caught, Alpha, binding, or build status.</p><label for="appearanceVariant">Displayed appearance</label><select id="appearanceVariant">${options}</select><a class="appearance-link" href="https://aniidex.com/aniimo/sparkling/" target="_blank" rel="noopener noreferrer">Browse Sparkling artwork on Aniidex ↗</a><label for="appearanceUrl">Direct image URL (optional)</label><input class="input" id="appearanceUrl" type="url" placeholder="https://…/image.webp" value="${esc(url.startsWith("data:")?"":url)}"><label for="appearanceFile">Or choose an image saved on your device</label><input class="input appearance-file" id="appearanceFile" type="file" accept="image/*"><p class="appearance-help">Uploaded images are stored in this browser. Export a JSON backup regularly.</p><div class="appearance-actions"><button class="btn" id="appearanceClear">Clear custom image for this type</button></div></details>`;
  $("modal").classList.remove("hide");
  const variantEl=$("appearanceVariant"),urlEl=$("appearanceUrl"),fileEl=$("appearanceFile"),preview=$("appearancePreview");let pending=null;
  const show=(src)=>{preview.src=src;preview.style.display=src?"block":"none"};
  const drawUnlocked=()=>{};
  let irisalisSelectedSet=0;
  if(name==="Irisalis")$("dialog").querySelectorAll("[data-irisalis-set]").forEach(b=>b.onclick=()=>{
-  irisalisSelectedSet=Number(b.dataset.irisalisSet);previewLook=null;
+  irisalisSelectedSet=Number(b.dataset.irisalisSet);previewLook=null;previewReturn=null;
   $("dialog").querySelectorAll("[data-irisalis-set]").forEach(x=>x.classList.toggle("selected",x===b));
   drawGallery();
  });
- let previewLook=null;
- const drawPreview=()=>{const p=$("rc18Preview");if(!p)return;p.hidden=!previewLook;if(!previewLook){p.innerHTML="";return;}const v=previewLook,src=artFor(c,v),owned=unlockedLooks(c).includes(v),active=chosenAppearance(c)===v;p.innerHTML=`<div class="rc18-preview-top"><strong>Appearance preview</strong><button type="button" data-rc18-close aria-label="Close preview">✕</button></div>${src?`<img src="${esc(src)}" alt="${esc(appearanceLabel(v))}">`:''}<strong>${esc(appearanceLabel(v))}</strong><small>${active?'Currently active':owned?'Unlocked':'Not recorded as unlocked'}</small><button type="button" class="btn" data-rc18-action ${active?'disabled':''}>${active?'Active':owned?'Set active':'Record as unlocked'}</button>`;p.querySelector('[data-rc18-close]').onclick=()=>{previewLook=null;drawPreview()};p.querySelector('[data-rc18-action]').onclick=()=>{const button=Array.from($("appearanceGallery").querySelectorAll(owned?'[data-activate-look]':'[data-toggle-look]')).find(x=>(owned?x.dataset.activateLook:x.dataset.toggleLook)===v);if(button)button.click();drawPreview()};};
+ let previewLook=null, previewReturn=null;
+ const scrollRegion=()=>$('appearanceGallery')?.closest('.rc24-scroll')||$('dialog');
+ const lookButton=v=>Array.from($('appearanceGallery').querySelectorAll('[data-preview-look]')).find(x=>x.dataset.previewLook===v);
+ const closePreview=()=>{const restore=previewReturn;previewLook=null;previewReturn=null;drawPreview();if(restore){const sc=scrollRegion();sc.scrollTop=restore.y;lookButton(restore.v)?.focus({preventScroll:true});}};
+ const changeLook=(v,activate)=>{const list=unlockedLooks(c),owned=list.includes(v);if(activate?(!owned||chosenAppearance(c)===v):v==='Basic')return;
+ const sc=scrollRegion(),y=sc.scrollTop;c.appearance||={};if(activate){c.appearance.variant=v;c.appearanceReviewed=true;}else{c.appearance.unlocked=owned?list.filter(x=>x!==v):[...new Set([...list,v])];if(owned&&chosenAppearance(c)===v)c.appearance.variant='Basic';}c.appearanceConfirmed=true;save();render();drawGallery();if(sc.isConnected)sc.scrollTop=y;};
+ const drawPreview=()=>{const p=$("rc18Preview");if(!p)return;p.hidden=!previewLook;if(!previewLook){p.innerHTML="";return;}const v=previewLook,src=artFor(c,v),owned=unlockedLooks(c).includes(v),active=chosenAppearance(c)===v;p.innerHTML=`<div class="rc18-preview-top"><strong>Appearance preview</strong><button type="button" data-rc18-close aria-label="Close preview">✕</button></div>${src?`<img src="${esc(src)}" alt="${esc(appearanceLabel(v))}">`:''}<strong>${esc(appearanceLabel(v))}</strong><small>${active?'Currently active':owned?'Unlocked':'Not recorded as unlocked'}</small><button type="button" class="btn" data-rc18-action ${active?'disabled':''}>${active?'Active':owned?'Set active':'Record as unlocked'}</button>`;p.querySelector('[data-rc18-close]').onclick=closePreview;p.querySelector('[data-rc18-action]').onclick=()=>{changeLook(v,owned);p.querySelector('[data-rc18-action]:not(:disabled)')?.focus({preventScroll:true});};};
  const drawGallery=()=>{
-  const ownedLabel=$("appearanceOwnedCount");if(ownedLabel){const p=appearanceProgress(c);ownedLabel.textContent=`${p.unlocked} / ${p.total} unlocked`;}
 
-  const unlocked=unlockedLooks(c),active=chosenAppearance(c);const activeArt=artFor(c,active);$("rc18Active").innerHTML=`${activeArt?`<img src="${esc(activeArt)}" alt="">`:''}<div><small>ACTIVE APPEARANCE</small><strong>${esc(appearanceLabel(active))}</strong><span>${unlocked.length} unlocked</span></div>`;const activeSummary=$('activeLook610');if(activeSummary)activeSummary.textContent='Active: '+appearanceLabel(active);
+
+  const unlocked=unlockedLooks(c),active=chosenAppearance(c);const activeArt=artFor(c,active);$("rc18Active").innerHTML=`${activeArt?`<img src="${esc(activeArt)}" alt="">`:''}<div><small>ACTIVE APPEARANCE</small><strong>${esc(appearanceLabel(active))}</strong><span>${appearanceProgress(c).unlocked} / ${appearanceProgress(c).total} unlocked</span></div>`;
   $("appearanceGallery").innerHTML=appearanceOptionsFor(c).filter(v=>name!=="Irisalis"||v==="Basic"&&irisalisSelectedSet===0||v.startsWith(irisalisSets[irisalisSelectedSet]+" · ")).map(v=>{const src=artFor(c,v),owned=unlocked.includes(v),isActive=active===v,label=appearanceLabel(v);
-   return `<div class="appearance-select-card ${owned?'unlocked':''} ${isActive?'is-active':''}"><button type="button" class="appearance-select-photo" data-preview-look="${esc(v)}" aria-label="Preview ${esc(label)}">${src?`<img src="${esc(artworkFrameCache.get(src)||src)}" data-creature="${esc(name)}" onload="if(this.dataset.creature!=='Gachapus')scheduleArtworkFraming(this)" alt="${esc(label)}" loading="lazy" decoding="async" fetchpriority="low">`:'<div class="empty-art">Artwork unavailable</div>'}</button><button type="button" class="rc18-ownership" data-toggle-look="${esc(v)}" aria-label="${owned?'Remove':'Unlock'} ${esc(label)}" aria-pressed="${owned}" ${v==='Basic'?'disabled':''}>${owned?'✓':'+'}</button><strong>${esc(label)}</strong><button type="button" class="appearance-activate" data-activate-look="${esc(v)}" ${owned&&!isActive?'':'disabled'}>${isActive?'✓ Active':owned?'Set active':'—'}</button></div>`}).join('');
+   return `<div class="appearance-select-card ${owned?'unlocked':''} ${isActive?'is-active':''}"><button type="button" class="appearance-select-photo" data-preview-look="${esc(v)}" aria-label="Preview ${esc(label)}">${src?`<img src="${esc(artworkFrameCache.get(src)||src)}" data-creature="${esc(name)}" onload="if(this.dataset.creature!=='Gachapus')scheduleArtworkFraming(this)" alt="${esc(label)}" loading="lazy" decoding="async" fetchpriority="low">`:'<div class="empty-art">Artwork unavailable</div>'}</button><button type="button" class="rc18-ownership" data-toggle-look="${esc(v)}" aria-label="${owned?'Remove':'Unlock'} ${esc(label)}" aria-pressed="${owned}" ${v==='Basic'?'disabled':''}>${owned?'✓':'+'}</button><strong>${esc(label)}</strong><span class="rc30-look-state">${isActive?'✓ Active':owned?'Unlocked':'Not owned'}</span></div>`}).join('');
   // One delegated listener instead of rebuilding 16 handlers on each gallery refresh.
   // The listener is bound to the persistent gallery element only once.
   const gallery=$("appearanceGallery");
   if(!gallery.dataset.actionsBound){
    gallery.dataset.actionsBound="1";
    gallery.addEventListener("click",e=>{
-    const inspect=e.target.closest('[data-preview-look]');if(inspect){previewLook=inspect.dataset.previewLook;drawPreview();$("rc18Preview").scrollIntoView({block:'nearest',behavior:'auto'});return;}
-    const toggle=e.target.closest('[data-toggle-look]');
-    const activate=e.target.closest('[data-activate-look]');
-    if(!toggle&&!activate)return;
-    const v=(toggle||activate).dataset[toggle?'toggleLook':'activateLook'];
-    const current=gallery._currentCreature;
-    if(!current)return;
-    if(activate&&(!unlockedLooks(current).includes(v)||chosenAppearance(current)===v))return;
-    if(toggle){if(v==='Basic')return;let list=unlockedLooks(current);const owned=list.includes(v);list=owned?list.filter(x=>x!==v):[...new Set([...list,v])];current.appearance||={};current.appearance.unlocked=list;if(owned&&chosenAppearance(current)===v)current.appearance.variant='Basic';current.appearanceConfirmed=true;save();drawGallery();return;}
-    current.appearance||={};current.appearance.variant=v;current.appearanceConfirmed=true;current.appearanceReviewed=true;save();render();drawGallery();
+    const inspect=e.target.closest('[data-preview-look]');if(inspect){previewLook=inspect.dataset.previewLook;previewReturn={v:previewLook,y:scrollRegion().scrollTop};drawPreview();$("rc18Preview").scrollIntoView({block:'nearest',behavior:'auto'});$("rc18Preview").querySelector('[data-rc18-close]')?.focus({preventScroll:true});return;}
+    const toggle=e.target.closest('[data-toggle-look]');if(!toggle)return;const v=toggle.dataset.toggleLook;changeLook(v,false);Array.from(gallery.querySelectorAll('[data-toggle-look]')).find(x=>x.dataset.toggleLook===v)?.focus({preventScroll:true});
    });
   }
   gallery._currentCreature=c;drawPreview();
@@ -5900,11 +5928,11 @@ window.openAppearance=name=>{
  $("appearanceSave").onclick=()=>{c.appearanceConfirmed=true;const variant=variantEl.value,src=pending||urlEl.value.trim()||((appearanceOf(c).images||{})[variant]||"");if(src&&!src.startsWith("data:image/")&&!/^https:\/\//i.test(src)){alert("Use a direct HTTPS image URL or upload an image.");return}c.appearance||={};c.appearance.variant=variant;c.appearance.images||={};if(src)c.appearance.images[variant]=src;else delete c.appearance.images[variant];render();managePrismana(name,"appearance")};
  $("appearanceClear").onclick=()=>{c.appearance||={};c.appearance.images||={};delete c.appearance.images[variantEl.value];c.appearance.variant=variantEl.value;render();managePrismana(name,"appearance")};
 };
-window.equipmentFilter='all';window.equipmentLayout='grid';try{const v=localStorage.getItem('aniimo-dev-v710rc26::aniimo-equipment-layout');if(['grid','list','compact'].includes(v))window.equipmentLayout=v}catch{}
-window.setItemSort=value=>{window.equipmentSort=value;try{localStorage.setItem('aniimo-dev-v710rc26::aniimo-item-sort',value)}catch(e){}render()};
+window.equipmentFilter='all';window.equipmentLayout='grid';try{const v=localStorage.getItem('aniimo-dev-v710rc32::aniimo-equipment-layout');if(['grid','list','compact'].includes(v))window.equipmentLayout=v}catch{}
+window.setItemSort=value=>{window.equipmentSort=value;try{localStorage.setItem('aniimo-dev-v710rc32::aniimo-item-sort',value)}catch(e){}render()};
 window.clearItemBrowse=()=>{window.equipmentSort='owned-first';window.equipmentFilter='all';$('itemsearch').value='';render()};
 window.setItemFilter=value=>{multiFilters.inventory=value==="all"?[]:[value];render()};
-window.setItemLayout=value=>{if(!['grid','list','compact'].includes(value))return;window.equipmentLayout=value;try{localStorage.setItem('aniimo-dev-v710rc26::aniimo-equipment-layout',value)}catch{}render()};
+window.setItemLayout=value=>{if(!['grid','list','compact'].includes(value))return;window.equipmentLayout=value;try{localStorage.setItem('aniimo-dev-v710rc32::aniimo-equipment-layout',value)}catch{}render()};
 window.openEquipmentDetail=code=>{
  const name=decodeURIComponent(code),n=Number(data.items[name]||0),bound=boundCount(name),free=Math.max(0,available(name));
  const assigned=data.creatures.filter(c=>hasBinding(c,name));
@@ -6114,10 +6142,10 @@ return `<div class="row planner-head ${c.caught&&profileChecklist(c).every(t=>t.
 <details class="build-workflow" id="scanPanel" ${b.buildConfirmedAt?"":"open"}><summary>${b.buildConfirmedAt?"Replace saved scan":"Capability build"} <span>⌄</span></summary><section class="shot-import"><div class="entry-methods"><div class="entry-method-title">Import your build</div><p class="hint">Scan your Awakening screen or enter points manually.</p><div class="entry-method-buttons"><button type="button" class="btn primary" id="startScreenshotScan">↥ Scan screenshot</button><button type="button" class="btn" id="startManualBuild" onclick="window.activateManualCapabilityEntry(event)">✎ Enter manually</button></div><p id="entryMethodHint"></p></div><input type="file" id="buildShotFile" accept="image/*" aria-label="Upload Capability Awakening screenshot" style="display:none"><div id="scanCaughtNotice" class="scan-caught-notice" role="status" aria-live="polite"></div><div id="shotReview" class="shot-review"><div class="scan-progress-top"><div class="scan-progress-spinner"></div><span id="scanProgressTopText">Preparing screenshot…</span></div>
 <details class="shot-selected-preview" id="shotSelectedPreview" hidden><summary class="shot-selected-head"><strong>Original screenshot <span class="shot-original-chevron">⌄</span></strong><span><span class="shot-local-dot"></span> Tap to compare</span></summary><img id="shotSelectedImage" alt="Full selected Aniimo Awakening screenshot for cross-checking"></details><div class="scan-stage-label"><span aria-hidden="true">✓</span><div><strong>Review scanned numbers</strong><small>Correct anything the scanner could not read confidently</small></div></div>
 <section id="scanGuided" class="scan-guided" hidden aria-live="polite"><div class="scan-guided-top"><span id="scanGuidedProgress">Review missing readings</span><button type="button" id="scanGuidedClose" class="scan-guided-close" aria-label="Close guided review">×</button></div><div class="scan-guided-title" id="scanGuidedTitle"></div><p id="scanGuidedHelp" class="scan-guided-help"></p><div id="scanGuidedCropWrap" class="scan-guided-crop-wrap" hidden><div class="scan-guided-crop-label">Screenshot detail · zoomed for review</div><canvas id="scanGuidedCrop" class="scan-guided-crop" role="img" aria-label="Enlarged original screenshot area for the missing reading"></canvas><small id="scanGuidedCropHint">Compare the original game screenshot before entering a value.</small></div><div class="scan-guided-input"><input id="scanGuidedValue" class="input" type="number" inputmode="numeric" min="0" placeholder="Enter value"><button type="button" id="scanGuidedZero" class="btn">No bonus (0)</button></div><div class="scan-guided-actions"><button type="button" id="scanGuidedBack" class="btn">Back</button><button type="button" id="scanGuidedNext" class="btn primary">Confirm & next →</button></div></section><div class="shot-star-picker shot-star-dropdown"><label for="shotStars">Detected star rank</label><select id="shotStars" class="input" aria-label="Selected star rank"><option value="">Select star rank…</option>${[1,2,3,4,5,6,7].map(n=>`<option value="${n}" ${b.stars===n?'selected':''}>${n} ★</option>`).join('')}</select></div><button type="button" id="scanGuidedLaunch" class="btn scan-guided-launch" hidden>✎ Review missing readings</button>
-<label>Combat Power (CP)<input id="shotCP" class="input" type="number" min="1" step="1" placeholder="Optional — verify from screenshot"></label><div class="shot-meta"><label>Level<input id="shotLevel" class="input" type="number" min="1" max="70" placeholder="—"></label><label>Points spent<input id="shotSpent" class="input" type="number" min="0" placeholder="—"></label></div>
+<div class="shot-meta rc28-metadata"><label>Combat Power (CP)<input id="shotCP" class="input" type="number" inputmode="numeric" min="1" step="1" placeholder="Optional"></label><label>Level<input id="shotLevel" class="input" type="number" inputmode="numeric" min="1" max="70" placeholder="—"></label><label>Points spent<input id="shotSpent" class="input" type="number" inputmode="numeric" min="0" placeholder="—"></label></div>
 <details class="scan-correction-tools" id="scanCorrectionTools" hidden><summary>✎ Edit scan values <span>Correction tools</span></summary><div class="scan-correction-tools-inner"><div class="build-edit-modes" role="group" aria-label="Build editing mode"><button type="button" class="btn primary" id="buildQuickMode">Quick update</button><button type="button" class="btn" id="buildFullMode">Full correction</button></div>
 <p class="build-mode-help" id="buildModeHelp">Quick update changes gold acquired points only. Use Full correction to fix white innate or cyan bonus readings.</p>
-<div class="scan-review-toolbar"><span id="scanAttentionCount" role="status">Checking scan readings…</span><button type="button" class="btn" id="scanNextAttention">Review next issue</button></div><div class="build-draft-toolbar"><span id="buildDraftStatus">Edits are not saved until you confirm.</span><button type="button" class="btn" id="buildUndo" disabled>Undo</button><button type="button" class="btn" id="buildRestore" hidden>Restore draft</button></div><div id="scanInlineCrop" class="scan-inline-crop" hidden><div class="scan-inline-crop-top"><strong id="scanInlineCropTitle">Screenshot detail</strong><button type="button" class="btn" id="scanInlineCropClose">Close</button></div><canvas id="scanInlineCropCanvas" aria-label="Zoomed screenshot of selected capability"></canvas><p>Use the original screenshot to confirm white, gold and cyan points. Enter the values in the selected capability below.</p></div></div></details><div class="scan-table-section"><div class="scan-table-heading"><strong>Capability summary</strong><button class="scan-table-edit" type="button" id="editScanTable" aria-pressed="false" onclick="toggleScanTableEditing(this)">Edit values</button></div><div class="shot-compact-grid scan-stat-table" role="table" aria-label="Capability values"><div class="scan-table-column-head" role="row"><span role="columnheader">Stat</span><span role="columnheader" class="scan-innate-color">Innate</span><span role="columnheader" class="scan-acquired-color">Acquired</span><span role="columnheader" class="scan-bonus-color">Bonus</span><span role="columnheader" class="scan-total-color">Total</span></div>${capabilityDisplayOrder.map(i=>`<div class="shot-stat-card scan-table-row" data-stat-card="${i}" role="row"><strong class="scan-table-stat" role="rowheader">${esc(attrs[i])}</strong><label class="scan-value-cell scan-innate-color" role="cell"><span class="scan-table-value" data-review-value="innate:${i}">?</span><input class="input" data-shotinnate="${i}" type="number" min="0" max="10" inputmode="numeric" placeholder="?" aria-label="${esc(attrs[i])} innate points"></label><label class="scan-value-cell scan-acquired-color" role="cell"><span class="scan-table-value" data-review-value="acquired:${i}">?</span><input class="input" data-shotacquired="${i}" type="number" min="0" max="24" inputmode="numeric" placeholder="?" aria-label="${esc(attrs[i])} acquired points"></label><label class="scan-value-cell scan-bonus-color" role="cell"><span class="scan-table-value" data-review-value="bonus:${i}">?</span><input class="input" data-shotbonus="${i}" type="number" min="0" max="30" inputmode="numeric" placeholder="?" aria-label="${esc(attrs[i])} bonus points"></label><output class="scan-total-color scan-table-total" role="cell" data-shot-total="${i}">?</output><div hidden class="scan-table-internal"><input data-shotstat="${i}" type="number" min="0" max="99" aria-label="${esc(attrs[i])} base potential"><span data-stat-status="${i}"></span><button data-scan-crop="${i}" type="button" hidden aria-label="View ${esc(attrs[i])} screenshot detail"></button></div></div>`).join('')}</div><p class="scan-table-help">Total = innate + acquired + bonus. Bars show each total’s composition, not its maximum potential.</p></div>${supportsAlpha(c)?`<label class="scan-alpha-toggle scan-deferred-item"><input id="scanAlpha" type="checkbox" ${isAlpha(c)?"checked":""}> <span><strong>Alpha Aniimo</strong><small>Mark this individual Aniimo as an Alpha variant</small></span></label>`:""}
+<div class="scan-review-toolbar"><span id="scanAttentionCount" role="status">Checking scan readings…</span><button type="button" class="btn" id="scanNextAttention">Review next issue</button></div><div class="build-draft-toolbar"><span id="buildDraftStatus">Edits are not saved until you confirm.</span><button type="button" class="btn" id="buildUndo" disabled>Undo</button><button type="button" class="btn" id="buildRestore" hidden>Restore draft</button></div><div id="scanInlineCrop" class="scan-inline-crop" hidden><div class="scan-inline-crop-top"><strong id="scanInlineCropTitle">Screenshot detail</strong><button type="button" class="btn" id="scanInlineCropClose">Close</button></div><canvas id="scanInlineCropCanvas" aria-label="Zoomed screenshot of selected capability"></canvas><p>Use the original screenshot to confirm white, gold and cyan points. Enter the values in the selected capability below.</p></div></div></details><div class="scan-table-section"><div class="scan-table-heading"><strong>Capability summary</strong><button class="scan-table-edit" type="button" id="editScanTable" aria-pressed="false" onclick="toggleScanTableEditing(this)">Edit values</button></div><div class="rc29-relative" aria-label="Relative capability totals"></div><p class="rc29-scale">Bars compare known totals with the highest recorded total, not the game maximum.</p><details class="rc29-breakdown" open><summary>Exact capability breakdown</summary><div class="shot-compact-grid scan-stat-table" role="table" aria-label="Capability values"><div class="scan-table-column-head" role="row"><span role="columnheader">Stat</span><span role="columnheader" class="scan-innate-color">Innate</span><span role="columnheader" class="scan-acquired-color">Acquired</span><span role="columnheader" class="scan-bonus-color">Bonus</span><span role="columnheader" class="scan-total-color">Total</span></div>${capabilityDisplayOrder.map(i=>`<div class="shot-stat-card scan-table-row" data-stat-card="${i}" role="row"><strong class="scan-table-stat" role="rowheader">${esc(attrs[i])}</strong><label class="scan-value-cell scan-innate-color" role="cell"><span class="scan-table-value" data-review-value="innate:${i}">?</span><input class="input" data-shotinnate="${i}" type="number" min="0" max="10" inputmode="numeric" placeholder="?" aria-label="${esc(attrs[i])} innate points"></label><label class="scan-value-cell scan-acquired-color" role="cell"><span class="scan-table-value" data-review-value="acquired:${i}">?</span><input class="input" data-shotacquired="${i}" type="number" min="0" max="24" inputmode="numeric" placeholder="?" aria-label="${esc(attrs[i])} acquired points"></label><label class="scan-value-cell scan-bonus-color" role="cell"><span class="scan-table-value" data-review-value="bonus:${i}">?</span><input class="input" data-shotbonus="${i}" type="number" min="0" max="30" inputmode="numeric" placeholder="?" aria-label="${esc(attrs[i])} bonus points"></label><output class="scan-total-color scan-table-total" role="cell" data-shot-total="${i}">?</output><div hidden class="scan-table-internal"><input data-shotstat="${i}" type="number" min="0" max="99" aria-label="${esc(attrs[i])} base potential"><span data-stat-status="${i}"></span><button data-scan-crop="${i}" type="button" hidden aria-label="View ${esc(attrs[i])} screenshot detail"></button></div></div>`).join('')}</div><p class="scan-table-help">Total = innate + acquired + bonus.</p></details></div>${supportsAlpha(c)?`<label class="scan-alpha-toggle scan-deferred-item"><input id="scanAlpha" type="checkbox" ${isAlpha(c)?"checked":""}> <span><strong>Alpha Aniimo</strong><small>Mark this individual Aniimo as an Alpha variant</small></span></label>`:""}
 <div id="scanReadiness" class="shot-totals-note" role="status" aria-live="polite">Your changes are a preview until you confirm. Check highlighted stats first.</div>
 <div id="shotEffective" class="shot-totals-note" role="status">Missing bonuses are shown as ? until confirmed.</div>
 <div id="bonusSource" class="hint" role="status" hidden></div>
@@ -6789,7 +6817,7 @@ function setupBuildScreenshot(name){
  if(scanButton)scanButton.onclick=()=>{const apply=$('applyScreenshot');if(apply)apply.textContent='✓ Confirm & save build';review.classList.remove('manual-entry-mode');const hint=$('entryMethodHint');if(hint)hint.textContent='Select a screenshot to scan, then review and correct its values.';file.click();};
  let objectUrl=null;
  let scanGeneration=0;
- const setScanning=(active,message)=>{const area=$("shotReview"),btn=document.getElementById("startScreenshotScan");if(area)area.classList.toggle("scan-busy",active);if(btn)btn.classList.toggle("scan-busy",active);if(note&&message)note.textContent=message;const topText=document.getElementById("scanProgressTopText");if(topText&&message)topText.textContent=message;};
+ const setScanning=(active,message)=>{if(!review.isConnected)return;const area=review,btn=scanButton;area.classList.toggle("scan-busy",active);area.setAttribute('aria-busy',String(active));if(btn){btn.classList.toggle("scan-busy",active);btn.disabled=active;btn.textContent=active?'Reading screenshot…':'↥ Scan screenshot';}if(manualButton)manualButton.disabled=active;const progress=area.querySelector('.scan-progress-top');if(progress)progress.hidden=!active;const chip=$("scanCaughtNotice");if(chip)chip.textContent=active?'':(message||'');if(note&&message)note.textContent=message;const topText=area.querySelector("#scanProgressTopText");if(topText&&message)topText.textContent=message;};
  const creature=data.creatures.find(x=>x.name===name);
  if(creature){$('scanHeldItem').value=displayBinding(creature)||creature.ideal||'';$('scanItemBound').checked=!!($('scanHeldItem').value&&boundList(creature).includes($('scanHeldItem').value));}
  $('scanHeldItem').addEventListener('change',()=>{$('scanItemBound').checked=!!(creature&&boundList(creature).includes($('scanHeldItem').value));});
@@ -6881,7 +6909,7 @@ function setupBuildScreenshot(name){
   objectUrl=URL.createObjectURL(f);$("buildShotPreview").src=objectUrl;const selectedImage=review.querySelector("#shotSelectedImage"),selectedPreview=review.querySelector("#shotSelectedPreview");if(selectedImage){selectedImage.decoding="async";selectedImage.onload=()=>{if(!guided.hidden&&guidedQueue[guidedIndex])updateGuidedCrop(guidedQueue[guidedIndex]);};selectedImage.src=objectUrl;}if(selectedPreview)selectedPreview.hidden=false;review.classList.add("show");requestAnimationFrame(()=>{const panel=$("scanPanel");if(panel)panel.scrollIntoView({behavior:"smooth",block:"start"});});
   setScanning(true,"Reading screenshot — this may take a few moments…");
   const b=buildFor(name);
-  const caughtNotice=$("scanCaughtNotice");if(caughtNotice)caughtNotice.textContent="Scanning screenshot…";
+  const caughtNotice=$("scanCaughtNotice");if(caughtNotice)caughtNotice.textContent="";
   $("shotLevel").value="";$("shotCP").value="";
   $("shotStars").value="";syncStars();
   $("shotSpent").value="";$("shotSpent").dispatchEvent(new Event("input"));
@@ -6895,7 +6923,7 @@ function setupBuildScreenshot(name){
   try{
    setScanning(true,"Loading recognition tools (first use may take longer)…");
    const img=$("buildShotPreview");await img.decode();renderScreenshotEvidence(img,review);updateScreenshotEvidence(review);
-   const detected=await scanAniimoScreenshot(img,(message)=>{if(generation===scanGeneration)setScanning(true,message||"Analyzing capability circles…")});
+   const detected=await scanAniimoScreenshot(img,(message)=>{if(review.isConnected&&generation===scanGeneration)setScanning(true,message||"Analyzing capability circles…")});
    if(!review.isConnected||generation!==scanGeneration)return;
    // A successfully processed Capability Awakening screenshot establishes ownership,
    // even if some numeric readings require manual correction.
@@ -6948,15 +6976,15 @@ function setupBuildScreenshot(name){
     card.querySelector('.build-stat-toggle')?.setAttribute('aria-expanded','false');
    });
    const bonusCount=(detected.bonus||[]).filter(v=>v!==null).length;
-   setScanning(false);guidedLaunch.hidden=false;guidedLaunch.textContent=`✎ Complete ${collectMissing().length} missing readings`;if(collectMissing().length){startGuided()}else{
+   setScanning(false,collectMissing().length?"Scan ready — some readings need review.":"Scan ready — review and confirm your values.");guidedLaunch.hidden=false;guidedLaunch.textContent=`✎ Complete ${collectMissing().length} missing readings`;if(collectMissing().length){startGuided()}else{
     guidedLaunch.hidden=true;
     note.textContent='All readings detected. Review the summary and confirm your build.';
     requestAnimationFrame(()=>setTimeout(()=>{
       const confirm=$('applyScreenshot');
-      if(confirm){confirm.scrollIntoView({behavior:'smooth',block:'center'});confirm.classList.add('scan-ready-confirm');}
+      if(review.isConnected&&generation===scanGeneration&&confirm){review.querySelector('.scan-stage-label')?.scrollIntoView({behavior:'auto',block:'start'});confirm.classList.add('scan-ready-confirm');}
     },170));
    }note.textContent=`${collectMissing().length===0?"All readings captured — confirm below. ":""}Detected ${count}/6 base capabilities, ${bonusCount}/6 cyan bonuses${detected.level!==null?", level "+detected.level:""}${detected.spent!==null?", spent "+detected.spent:""}. Stars: ${detected.stars?detected.stars+"★ ("+detected.starSource+"; confirm)":"not detected — select manually"}. Preferred markers: ${detected.preferred?detected.preferred.filter(Boolean).length+" detected":"not certain (kept existing choices)"}. Verify before applying. ${detected.warning||""}`;
-  }catch(e){if(generation!==scanGeneration)return;setScanning(false);updateEffective();guidedLaunch.hidden=false;startGuided();note.textContent="Automatic scan unavailable: "+(e?.message||"unknown error")+". You can still enter the values manually.";}
+  }catch(e){if(!review.isConnected||generation!==scanGeneration)return;setScanning(false,"Scan unavailable — review manually.");updateEffective();guidedLaunch.hidden=false;startGuided();note.textContent="Automatic scan unavailable: "+(e?.message||"unknown error")+". You can still enter the values manually.";}
 
  };
  const syncStars=()=>{};
@@ -6968,6 +6996,16 @@ function setupBuildScreenshot(name){
   const base=statInputs(review,'data-shotstat').map(el=>el.value===""?null:Number(el.value));
   const bonus=statInputs(review,'data-shotbonus').map(el=>el.value===""?null:Number(el.value));
   review.querySelectorAll('[data-shot-total]').forEach(el=>{const i=Number(el.dataset.shotTotal);const ok=base[i]!==null&&bonus[i]!==null;el.textContent=ok?String(base[i]+bonus[i]):'?';el.classList.toggle('missing',!ok);const row=el.closest('.scan-table-row');if(row){const vals=['innate','acquired','bonus'].map(k=>{const f=row.querySelector('[data-shot'+k+']');return f&&f.value!==''?Number(f.value):null;});const valid=ok&&vals.every(v=>v!==null&&Number.isFinite(v)&&v>=0);const sum=valid?vals.reduce((a,b)=>a+b,0):0;row.style.setProperty('--rc17-innate',sum?100*vals[0]/sum+'%':'0%');row.style.setProperty('--rc17-acquired',sum?100*(vals[0]+vals[1])/sum+'%':'0%');row.classList.toggle('rc17-composition',valid&&sum>0);}});
+  // RC29: presentation only; preserve the exact existing totals and validation.
+  const relative=review.querySelector('.rc29-relative'), breakdown=review.querySelector('.rc29-breakdown');
+  if(relative){
+    const order=capabilityDisplayOrder;
+    const values=order.map(i=>{const el=review.querySelector(`[data-shot-total="${i}"]`);const n=Number(el?.textContent);return el&&!el.classList.contains('missing')&&el.textContent.trim()!==''&&Number.isFinite(n)&&n>=0?n:null;});
+    const max=Math.max(0,...values.filter(v=>v!==null));
+    relative.innerHTML=order.map((i,j)=>{const n=values[j],pct=n===null||!max?0:100*n/max;return `<div class="rc29-stat" data-cap="${i}"><span>${esc(attrs[i])}</span><span class="rc29-track" aria-hidden="true"><i style="width:${pct}%"></i></span><strong>${n===null?'?':n}</strong></div>`;}).join('');
+    if(breakdown&&(values.some(v=>v===null)||review.classList.contains('manual-entry-mode')||review.classList.contains('table-editing')))breakdown.open=true;
+    else if(breakdown&&!breakdown.dataset.ready){breakdown.open=false;breakdown.dataset.ready='1';}
+  }
   // Five groups of four points; each point occupies 18 degrees.
  // A 1.5-degree seam is left after each group, including at the 20/0 boundary.
  // Points 21–24 wrap onto the first group, overlaying the earlier color.
@@ -7090,6 +7128,7 @@ function setupBuildScreenshot(name){
  };
  acquiredInputs.forEach(el=>el.addEventListener("input",checkSpent));spentInput.addEventListener("input",checkSpent);
  $("applyScreenshot").onclick=async()=>{
+  if(!review.isConnected||review.classList.contains("scan-busy")||review.dataset.rc29Saving==="1")return;
   const scannerInputs=[...review.querySelectorAll('[data-shotstat],[data-shotbonus],[data-shotinnate],[data-shotacquired],#shotSpent,#shotLevel,#shotStars')];
   const invalid=scannerInputs.find(el=>el.value!==''&&!Number.isSafeInteger(Number(el.value)));if(invalid){invalid.focus();alert('Capability values, stars, level and points must be whole numbers.');return;}
   const vals=statInputs(review,'data-shotstat').map(el=>el.value===""?null:Number(el.value));
@@ -7137,7 +7176,8 @@ function setupBuildScreenshot(name){
   const savedAt=buildFor(name).buildConfirmedAt;
   const firstBuild=!profileChecklist(creature).find(t=>t.tab==='build')?.done;
   const requestedAlpha=$('scanAlpha')?.checked;
-  await $("bSave").onclick();
+  review.dataset.rc29Saving="1";
+  try{await $("bSave").onclick();}finally{delete review.dataset.rc29Saving;}
   const updated=buildFor(name);
   if(updated.buildConfirmedAt&&updated.buildConfirmedAt!==savedAt){
     creature.caught=true;
@@ -7182,7 +7222,25 @@ window.rc16AppearanceDone=function(name){
  return window.rc16Advance(name,'appearance');
 };
 window.openBuild=name=>{$("dialog").innerHTML=buildHTML(name);setupBuildScreenshot(name);
- const updateSetup=()=>{const c=data.creatures.find(x=>x.name===name);if(!c)return;const tasks=profileChecklist(c);const order=['collection','build','appearance','personality','item'];const actions={collection:async()=>{if(c.caught||!(await prepareStarterBinding(c)))return;c.caught=true;save();render();openBuild(name)},build:()=>{window.rc16Guide={name,tab:'build'};const p=$('scanPanel');if(p){p.open=true;p.scrollIntoView({behavior:'smooth',block:'start'})}},appearance:()=>window.rc16StartStage(name,'appearance'),personality:()=>window.rc16StartStage(name,'personality'),item:()=>window.rc16StartStage(name,'item')};const steps=order.map(tab=>tasks.find(t=>t.tab===tab)).filter(Boolean).map(t=>({...t,title:t.label,action:actions[t.tab]}));const count=steps.filter(t=>t.done).length,next=steps.findIndex(t=>!t.done),root=$('companionSetup');if(!root)return;root.hidden=false;root.classList.toggle('is-complete',next<0);$('setupCount').textContent=count+' / '+steps.length;$('setupSubtitle').textContent=next<0?'Every profile requirement is complete.':'Next · '+steps[next].title;$('setupProgress').innerHTML=steps.map(t=>`<span class="${t.done?'done':''}"></span>`).join('');$('setupSteps').innerHTML=steps.map((t,i)=>`<button type="button" class="companion-setup-step ${t.done?'done':i===next?'current':''}" data-setup-step="${i}"><i>${t.done?'✓':i+1}</i><span>${esc(t.title)}</span><small>${t.done?'Done':i===next?'Next':'Pending'}</small></button>`).join('');root.querySelectorAll('[data-setup-step]').forEach(el=>el.onclick=()=>steps[Number(el.dataset.setupStep)]?.action());const btn=$('setupNextAction');btn.hidden=next<0;btn.textContent=next<0?'Setup complete':steps[next].title+' →';btn.onclick=()=>{if(next>=0)steps[next].action()};$('setupFinished').hidden=next>=0;const progress=$('dialog').querySelector('.rc4-studio-progress');if(progress){progress.max=Math.max(1,steps.length);progress.value=count;progress.previousElementSibling.textContent=count+' / '+steps.length+' profile requirements met';}};
+ let stageBusy27=false;
+ const updateSetup=()=>{
+ const c=data.creatures.find(x=>x.name===name),root=$('companionSetup');if(!c||!root)return;
+ const tasks=profileChecklist(c),next=tasks.findIndex(t=>!t.done),count=tasks.filter(t=>t.done).length;
+ const labels={collection:'Caught',build:'Stats',appearance:'Looks',personality:'Personality',item:'Gear'};
+ const glyphs={collection:'✓',build:'▥',appearance:'✧',personality:'◎',item:'◇'};
+ const titles={collection:'Register companion',build:'Capability awakening',appearance:'Choose appearance',personality:'Record personality',item:'Confirm equipment'};
+ root.hidden=next<0;root.classList.toggle('is-complete',next<0);
+ root.innerHTML=`<div class="rc27-navhead"><span>DEVELOPMENT</span><strong>${count} / ${tasks.length}</strong></div><nav class="rc27-stages" aria-label="Development stages" style="--stage-count:${tasks.length}">${tasks.map((t,i)=>`<button type="button" class="rc27-stage ${t.done?'done':i===next?'current':''}" data-setup-step="${i}" ${i===next?'aria-current="step"':''} aria-label="${esc(t.label)}: ${t.done?'complete':i===next?'next':'pending'}" ${t.tab==='collection'&&t.done?'disabled':''}><span class="rc27-stage-icon" aria-hidden="true">${t.done?'✓':glyphs[t.tab]||'·'}</span><span>${labels[t.tab]||t.tab}</span><i aria-hidden="true"></i></button>`).join('')}</nav>${next<0?'':`<div class="rc27-next"><span>Next · ${esc(titles[tasks[next].tab]||tasks[next].label)}</span>${tasks[next].tab==='build'?'':`<button class="btn primary" type="button" id="setupNextAction">${esc(titles[tasks[next].tab]||tasks[next].label)} →</button>`}</div><button class="rc27-later" type="button">Finish later</button>`}`;
+ const go=async i=>{const t=tasks[i];if(!t||stageBusy27)return;stageBusy27=true;try{
+ if(t.tab==='collection'){if(c.caught)return;if(!(await prepareStarterBinding(c)))return;c.caught=true;save();render();const first=profileChecklist(c).find(x=>!x.done);if(first)return window.rc16StartStage(name,first.tab);return openBuild(name);}
+ if(t.tab==='build'){window.rc16Guide={name,tab:'build'};const p=$('scanPanel');if(p){p.open=true;p.scrollIntoView({behavior:'auto',block:'nearest'});$('startScreenshotScan')?.focus({preventScroll:true});}return;}
+ return window.rc16StartStage(name,t.tab);
+ }finally{stageBusy27=false;}};
+ root.querySelectorAll('[data-setup-step]').forEach(el=>el.onclick=()=>go(Number(el.dataset.setupStep)));
+ const btn=$('setupNextAction');if(btn)btn.onclick=()=>go(next);
+ root.querySelector('.rc27-later')?.addEventListener('click',()=>{window.rc16Guide=null;closeDialog()});
+ const progress=$('dialog').querySelector('.rc4-studio-progress');if(progress){progress.max=Math.max(1,tasks.length);progress.value=count;progress.previousElementSibling.textContent=count+' / '+tasks.length+' profile requirements met';}
+ };
  updateSetup();
 
  const companion=data.creatures.find(x=>x.name===name);
@@ -7198,6 +7256,7 @@ window.openBuild=name=>{$("dialog").innerHTML=buildHTML(name);setupBuildScreensh
  const openWorkflow=id=>{const section=$(id);if(!section)return;section.open=true;section.scrollIntoView({behavior:"smooth",block:"start"})};
  
  const buildDialog=$("dialog");
+ for(const id27 of ['startScreenshotScan','startManualBuild'])$(id27)?.addEventListener('click',()=>{const c=data.creatures.find(x=>x.name===name);if(c&&profileChecklist(c).find(t=>t.tab==='build')?.done===false)window.rc16Guide={name,tab:'build'};},{capture:true});
  const setup609=$("companionSetup"),scan609=$("scanPanel");if(setup609&&scan609){scan609.before(setup609);scan609.open=false;}
  const quick611=buildDialog.querySelector('.my-profile-unified');
  if(quick611){
@@ -7233,7 +7292,7 @@ window.openBuild=name=>{$("dialog").innerHTML=buildHTML(name);setupBuildScreensh
  }
 }
 
- select6225(companion&&profileChecklist(companion).every(t=>t.done)?'Customize':'Build');buildDialog.scrollTop=0;if(scan609&&!buildFor(name).buildConfirmedAt){scan609.open=true;const next=$('setupNextAction');if(companion?.caught&&next?.textContent.includes('capability'))next.hidden=true;}if($('optimizerPanel'))$('optimizerPanel').open=true;
+ select6225(companion&&profileChecklist(companion).every(t=>t.done)?'Customize':'Build');buildDialog.scrollTop=0;if(scan609&&companion){const next27=profileChecklist(companion).find(t=>!t.done);scan609.open=next27?.tab==='build'||window.rc16Guide?.name===name&&window.rc16Guide?.tab==='build';}if($('optimizerPanel'))$('optimizerPanel').open=true;
  if(setup609)setup609.addEventListener('click',e=>{const step=e.target.closest('[data-setup-step],#setupNextAction');if(step&&step.textContent.includes('capability'))select6225('Build');},true);
   const buildTitle=buildDialog.querySelector("h2");
  if(buildTitle&&!document.querySelector('.compact-completed-profile')){$("scanPanel").insertAdjacentHTML("beforeend",'<p class="build-safety-hint">Review detected values before saving. Incomplete scans cannot replace a saved build.</p>');}
@@ -7283,7 +7342,7 @@ window.openCompactCompanion=name=>{
  requestAnimationFrame(()=>requestAnimationFrame(focus));
 };
 window.setCollectionLayout=layout=>{data.collectionView.layout=['cards','large','compact'].includes(layout)?layout:'cards';
- try{localStorage.setItem('aniimo-dev-v710rc26::aniimo-companion-collection-layout',data.collectionView.layout)}catch(e){}const grid=document.getElementById('creatures');if(grid)grid.dataset.layout=data.collectionView.layout;const picker=document.getElementById('layoutChoice');if(picker)picker.value=data.collectionView.layout;document.querySelectorAll('.layout-segments button').forEach(b=>{const on=b.dataset.view===data.collectionView.layout;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});save();render();};
+ try{localStorage.setItem('aniimo-dev-v710rc32::aniimo-companion-collection-layout',data.collectionView.layout)}catch(e){}const grid=document.getElementById('creatures');if(grid)grid.dataset.layout=data.collectionView.layout;const picker=document.getElementById('layoutChoice');if(picker)picker.value=data.collectionView.layout;document.querySelectorAll('.layout-segments button').forEach(b=>{const on=b.dataset.view===data.collectionView.layout;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});save();render();};
 function recommendationLabel(c){return !c.bound&&newPrismanaInfo[c.name]&&c.ideal===newPrismanaInfo[c.name].item?'Sourced baseline':'Your choice';}
 function bindingRequirements(includeFuture=false){
  const groups=new Map();
@@ -7349,7 +7408,7 @@ function renderPlanningExtras(){
  $('backupStatus').innerHTML=backupStatusHTML();
  const overdue=!data.backup?.lastExportAt||collectionFingerprint(data)!==data.backup.fingerprint;
  $('backupReminder').hidden=!(data.creatures.some(c=>c.caught||c.favorite||isBuiltAniimo(c))||Object.values(data.items||{}).some(v=>Number(v)>0))||!overdue||Date.now()<(Number(data.backup?.snoozeUntil)||0);
- $('undoImport').hidden=!localStorage.getItem('aniimo-dev-v710rc26::aniimo-companion-dev-v155-pre-import');
+ $('undoImport').hidden=!localStorage.getItem('aniimo-dev-v710rc32::aniimo-companion-dev-v155-pre-import');
 }
 function stableJSON(v){return JSON.stringify(v,(_,x)=>x&&typeof x==='object'&&!Array.isArray(x)?Object.fromEntries(Object.entries(x).sort(([a],[b])=>a.localeCompare(b))):x);}
 function collectionFingerprint(v){const s=stableJSON({creatures:v.creatures,items:v.items,builds:v.builds});let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return (h>>>0).toString(16);}
@@ -7421,9 +7480,9 @@ function previewBackup(v,label='Backup import'){
  for(const [item,n] of Object.entries(next.items))if(n!==data.items[item])changes.push(`${item}: ${data.items[item]} → ${n} owned`);
  for(const [name,b] of Object.entries(next.builds))if(stableJSON(b)!==stableJSON(data.builds[name]))changes.push(displayName({name})+': build updated');
  $('dialog').innerHTML=`<div class="row"><h2>${esc(label)}</h2><button class="btn" onclick="closeDialog()" aria-label="Cancel import">✕</button></div><p>${changes.length} collection, inventory or build changes. ${next.creatures.filter(c=>c.caught).length} caught · ${next.creatures.filter(c=>c.bound).length} bound after import.</p><p class="hint">View preferences from the backup will also be restored. Nothing changes until you apply. A recovery copy of your current collection will be saved on this device.</p>${notes.map(n=>`<p class="hint">${esc(n)}</p>`).join('')}<ul class="import-changes">${changes.map(s=>`<li>${esc(s)}</li>`).join('')||'<li>No collection changes.</li>'}</ul><div class="toolbar"><button class="btn primary" id="applyBackup">Apply import</button><button class="btn" onclick="closeDialog()">Cancel</button></div>`;$('modal').classList.remove('hide');
- $('applyBackup').onclick=()=>{const before=JSON.stringify(data),after=JSON.stringify(next);if(startupBlocked37){try{const raw=localStorage.getItem(SAVE_KEY);if(raw!==null){const key=SAVE_KEY+'::protected-original-v1';if(localStorage.getItem(key)!==null&&localStorage.getItem(key)!==raw)throw Error('Protected copy already exists');localStorage.setItem(key,raw);}}catch{alert('Original save could not be protected. Import cancelled.');return;}}if(!createRecoveryPoint(before,'Before reviewed collection replacement')){alert('Could not save a recovery copy. Your current collection was kept. Export a backup and try again.');return;}const previous=new Map();try{for(const k of [SAVE_KEY,...extraKeys.map(k=>SAVE_KEY+'::'+k)])previous.set(k,localStorage.getItem(k));const recovery={...JSON.parse(before),optionalFeatures:completeExtras35()};localStorage.setItem('aniimo-dev-v710rc26::aniimo-companion-dev-v155-pre-import',JSON.stringify(recovery));for(const k of extraKeys)localStorage.setItem(SAVE_KEY+'::'+k,JSON.stringify(extras[k]));localStorage.setItem(SAVE_KEY,after);}catch{for(const [k,v] of previous){try{if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch{}}alert('Import could not be completed. Local restoration was attempted; check your collection before retrying.');return;}data=next;startupBlocked37=false;lastSavedSnapshot=after;if(extraKeys.length){location.reload();return}render();close();};
+ $('applyBackup').onclick=()=>{const before=JSON.stringify(data),after=JSON.stringify(next);if(startupBlocked37){try{const raw=localStorage.getItem(SAVE_KEY);if(raw!==null){const key=SAVE_KEY+'::protected-original-v1';if(localStorage.getItem(key)!==null&&localStorage.getItem(key)!==raw)throw Error('Protected copy already exists');localStorage.setItem(key,raw);}}catch{alert('Original save could not be protected. Import cancelled.');return;}}if(!createRecoveryPoint(before,'Before reviewed collection replacement')){alert('Could not save a recovery copy. Your current collection was kept. Export a backup and try again.');return;}const previous=new Map();try{for(const k of [SAVE_KEY,...extraKeys.map(k=>SAVE_KEY+'::'+k)])previous.set(k,localStorage.getItem(k));const recovery={...JSON.parse(before),optionalFeatures:completeExtras35()};localStorage.setItem('aniimo-dev-v710rc32::aniimo-companion-dev-v155-pre-import',JSON.stringify(recovery));for(const k of extraKeys)localStorage.setItem(SAVE_KEY+'::'+k,JSON.stringify(extras[k]));localStorage.setItem(SAVE_KEY,after);}catch{for(const [k,v] of previous){try{if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch{}}alert('Import could not be completed. Local restoration was attempted; check your collection before retrying.');return;}data=next;startupBlocked37=false;lastSavedSnapshot=after;if(extraKeys.length){location.reload();return}render();close();};
 }
-window.previewPreviousImport=()=>{try{const raw=localStorage.getItem('aniimo-dev-v710rc26::aniimo-companion-dev-v155-pre-import');if(raw)previewBackup(JSON.parse(raw),'Recover previous collection');}catch(e){alert(e.message);}};
+window.previewPreviousImport=()=>{try{const raw=localStorage.getItem('aniimo-dev-v710rc32::aniimo-companion-dev-v155-pre-import');if(raw)previewBackup(JSON.parse(raw),'Recover previous collection');}catch(e){alert(e.message);}};
 function plannerInputError(b){
  const good=(a,max,nullable=false)=>Array.isArray(a)&&a.length===6&&a.every(n=>nullable&&n===null||typeof n==='number'&&Number.isInteger(n)&&n>=0&&n<=max);
  if(!b||!good(b.innate,10)||!good(b.spent,20)||!good(b.bonuses||Array(6).fill(0),99))return 'Enter six whole-number innate, acquired and bonus values. Unknown values need review.';
@@ -7563,13 +7622,13 @@ try{
  let migrated=false;
  for(const c of data.creatures){
   if(!c.personality){
-   const old=localStorage.getItem('aniimo-dev-v710rc26::aniimo-personality-dev-v163-'+c.name);
+   const old=localStorage.getItem('aniimo-dev-v710rc32::aniimo-personality-dev-v163-'+c.name);
    if(old&&personalityTypes.includes(old)){c.personality=old;migrated=true}
   }
  }
  if(migrated)save();
 }catch(e){}
-function personalityKey(name){return 'aniimo-dev-v710rc26::aniimo-personality-dev-v163-'+name}
+function personalityKey(name){return 'aniimo-dev-v710rc32::aniimo-personality-dev-v163-'+name}
 function personalityGet(name){
  if(starterNames.includes(name))return "";
  const c=data.creatures.find(x=>x.name===name);
@@ -7635,19 +7694,26 @@ return `<section class="personality-panel" id="personalityPanel"><div class="per
 function personalityEdit(name){
  if(starterNames.includes(name))return;
  const root=document.getElementById('personalityPanel');if(!root)return;
- const existing=root.querySelector('.personality-picker');if(existing){existing.remove();return}
+ const existing=root.querySelector('.personality-picker');if(existing){existing.remove();return;}
  const current=personalityGet(name),rec=personalityRecommend(name);
+ const guided=window.__aniimoPersonalityIntake===name;
  const quoted=JSON.stringify(name).replace(/"/g,'&quot;');
  const choices=personalityTypes.map(t=>`<button type="button" class="personality-choice ${current===t?'selected':''} ${t===rec?'top-recommended':''}" data-personality="${t}" aria-pressed="${current===t}">${t.split('').map(letter=>`<span class="${'INFP'.includes(letter)?'personality-pink':'personality-blue'}">${esc(letter)}</span>`).join('')}${t===rec?'<small>Recommended</small>':''}</button>`).join('');
- root.insertAdjacentHTML('beforeend',`<div class="personality-picker personality-picker-modern"><div class="personality-picker-top"><div><strong>Select personality</strong></div><button type="button" class="personality-clear" data-personality="">Clear selection</button></div><select id="personalitySelect" class="personality-native-hidden" aria-label="Selected personality"><option value="">Choose later</option>${personalityTypes.map(t=>`<option value="${t}" ${t===current?'selected':''}>${t}</option>`).join('')}</select><div class="rc19-recommend"><span>Suggested build</span><strong>${esc(rec||"Under review")}</strong></div><div id="personalityEffects" class="personality-effects" aria-live="polite"></div><div class="personality-choice-grid" role="group" aria-label="Personality types">${choices}</div><p class="personality-note">Psyche Fruit rerolls randomly. This app only records your choice.</p><div class="personality-actions"><button class="btn primary" onclick="personalitySave(${quoted})">Save personality</button><button class="btn" onclick="personalityEdit(${quoted})">Cancel</button></div></div>`);
- const select=root.querySelector('#personalitySelect');
+ root.insertAdjacentHTML('beforeend',`<div class="personality-picker personality-picker-modern rc31-editor"><div class="rc31-heading"><span>${guided?'COMPANION DEVELOPMENT':'COMPANION CUSTOMIZATION'}</span><h2>Personality</h2><p>Record your current in-game personality.</p></div><select id="personalitySelect" class="personality-native-hidden" aria-label="Selected personality"><option value="">Choose later</option>${personalityTypes.map(t=>`<option value="${t}" ${t===current?'selected':''}>${t}</option>`).join('')}</select><div id="personalityEffects" class="personality-effects" aria-live="polite"></div><div class="personality-choice-grid" role="group" aria-label="Personality types">${choices}</div><p class="personality-note">Psyche Fruit rerolls randomly. This app only records your choice.</p><div class="personality-actions"><button type="button" class="btn primary rc31-save" disabled> Select a personality </button><div class="rc31-secondary"><button type="button" class="btn rc31-back">Back</button>${guided?'<button type="button" class="btn personality-skip">Choose later</button>':''}</div>${current?'<button type="button" class="btn rc31-remove">Remove recorded personality</button>':''}</div></div>`);
+ const editor=root.querySelector('.rc31-editor'),select=editor.querySelector('#personalitySelect'),saveButton=editor.querySelector('.rc31-save');
+ let busy=false;
  const update=()=>{
-  root.querySelectorAll('[data-personality]').forEach(btn=>{const active=btn.dataset.personality===select.value;btn.classList.toggle('selected',active&&!!select.value);if(btn.classList.contains('personality-choice'))btn.setAttribute('aria-pressed',String(active))});
-  const target=root.querySelector('#personalityEffects');
-  const preview=select.value||rec; target.innerHTML=preview?`<div class="rc19-effect-title"><strong>${esc(preview)} bonuses</strong><small>${select.value?'Selected':'Recommended preview'}</small></div><div class="rc19-effect-grid">${preview.split('').map(x=>`<span>${esc(personalityEffects[x])}</span>`).join('')}</div>`:'Select a personality to preview its bonuses.'; const saveButton=root.querySelector('.personality-actions .btn.primary');if(saveButton)saveButton.textContent=select.value?'Save '+select.value+(window.__aniimoPersonalityIntake===name?' & continue':''):'Save without personality';
+  editor.querySelectorAll('[data-personality]').forEach(btn=>{const active=btn.dataset.personality===select.value;btn.classList.toggle('selected',active);btn.setAttribute('aria-pressed',String(active));});
+  const preview=select.value||rec,target=editor.querySelector('#personalityEffects');
+  target.innerHTML=`<div class="rc31-recommend"><span>RECOMMENDED PERSONALITY</span><strong>${esc(rec||'Under review')}</strong></div>${preview?`<div class="rc19-effect-title"><strong>${esc(preview)} bonuses</strong><small>${select.value?'Selected':'Recommended preview'}</small></div><div class="rc19-effect-grid">${preview.split('').map(x=>`<span>${esc(personalityEffects[x])}</span>`).join('')}</div>`:'<p>Select a personality to preview its bonuses.</p>'}`;
+  saveButton.disabled=busy||!personalityTypes.includes(select.value);saveButton.textContent=select.value?'Save '+select.value+(guided?' & continue':''):'Select a personality';
  };
- root.querySelector('.personality-picker-modern').addEventListener('click',e=>{const button=e.target.closest('[data-personality]');if(!button)return;select.value=button.dataset.personality;update();if(window.__aniimoPersonalityIntake===name&&select.value){const saveButton=root.querySelector('.personality-actions .btn.primary');if(saveButton){requestAnimationFrame(()=>setTimeout(()=>{saveButton.classList.remove('scan-ready-confirm')},90));}}});
- update();
+ editor.addEventListener('click',e=>{const button=e.target.closest('[data-personality]');if(!button||busy)return;select.value=button.dataset.personality;update();});
+ saveButton.onclick=()=>{if(busy||!personalityTypes.includes(select.value))return;busy=true;update();try{personalitySave(name);}finally{busy=false;if(editor.isConnected)update();}};
+ editor.querySelector('.rc31-back').onclick=()=>{if(busy)return;editor.remove();if(guided){window.__aniimoPersonalityIntake=null;window.rc16Guide=null;document.querySelector('#dialog .profile-tabs6225 button[data-section="Build"]')?.click();}document.getElementById('dialog').scrollTop=0;};
+ const skip=editor.querySelector('.personality-skip');if(skip)skip.onclick=()=>{if(busy)return;busy=true;window.__aniimoPersonalityIntake=null;window.rc16Advance(name,'personality');};
+ const remove=editor.querySelector('.rc31-remove');if(remove)remove.onclick=()=>{if(busy||!confirm('Remove the recorded personality from this companion?'))return;busy=true;select.value='';try{personalitySave(name);}finally{busy=false;if(editor.isConnected)update();}};
+ update();document.getElementById('dialog').scrollTop=0;
 }
 
 function openPersonalityFromCard(name,fromIntake=false){
@@ -7666,7 +7732,7 @@ function openPersonalityFromCard(name,fromIntake=false){
   else if(typeof window.showCreature==='function')window.showCreature(name);
  }catch(e){}
  const requestedPanel=document.getElementById('personalityPanel');
- setTimeout(()=>{if(requestedPanel&&requestedPanel===document.getElementById('personalityPanel')&&!document.getElementById('modal')?.classList.contains('hide')){document.querySelector('#dialog .profile-tabs6225 button[data-section="Customize"]')?.click();if(!document.querySelector('#personalityPanel .personality-picker'))personalityEdit(name);document.getElementById('personalityPanel')?.scrollIntoView({block:'start',behavior:'smooth'});if(fromIntake){const panel=document.getElementById('personalityPanel');panel.scrollIntoView({block:"start",behavior:"smooth"});const actions=panel.querySelector('.personality-actions');if(actions&&!actions.querySelector('.personality-skip'))actions.insertAdjacentHTML("beforeend",`<button type="button" class="btn personality-skip" onclick="window.__aniimoPersonalityIntake=null;window.rc16Advance(${JSON.stringify(name).replace(/"/g,"&quot;")},'personality')">Choose later</button>`);}}},0);
+ setTimeout(()=>{if(requestedPanel&&requestedPanel===document.getElementById('personalityPanel')&&!document.getElementById('modal')?.classList.contains('hide')){document.querySelector('#dialog .profile-tabs6225 button[data-section="Customize"]')?.click();if(!requestedPanel.querySelector('.personality-picker'))personalityEdit(name);document.getElementById('dialog').scrollTop=0;}},0);
 }
 function personalitySave(name){
  if(starterNames.includes(name))return;
@@ -7686,7 +7752,7 @@ function personalitySave(name){
  const q=(sel,root=document)=>root.querySelector(sel);
  const qa=(sel,root=document)=>Array.from(root.querySelectorAll(sel));
  const editor=()=>q('.shot-compact-grid');
- const draftKey='aniimo-dev-v710rc26::aniimo-build-edit-draft-v166';
+ const draftKey='aniimo-dev-v710rc32::aniimo-build-edit-draft-v166';
  let mode='quick',undo=null,prior=null,restoring=false,editorIdentity=null;
  const fields=()=>qa('[data-shotinnate],[data-shotacquired],[data-shotbonus],[data-shotstat],#shotSpent,#shotLevel,#shotStars');
  const snapshot=()=>Object.fromEntries(fields().map(e=>[e.id||e.getAttributeNames().find(x=>x.startsWith('data-shot'))+':'+(e.getAttribute('data-shotinnate')||e.getAttribute('data-shotacquired')||e.getAttribute('data-shotbonus')||e.getAttribute('data-shotstat')||''),e.value]));
@@ -7729,7 +7795,7 @@ function personalitySave(name){
   if(e.target.closest('#applyScreenshot')){ /* Retain draft until confirmed save succeeds. */ }
   if(e.target.closest('#discardScreenshot')){try{localStorage.removeItem(draftKey)}catch{}}
   if(e.target.closest('#copyBetaDiagnostic')){
-   const report=`Aniimo Companion DEV 7.1.0 RC26\nDate: ${new Date().toISOString()}\nBrowser: ${navigator.userAgent}\nViewport: ${innerWidth}x${innerHeight}\nStorage available: ${(()=>{try{return !!localStorage}catch{return false}})()}\nNo collection, build, or screenshot data included.`;
+   const report=`Aniimo Companion DEV 7.1.0 RC32\nDate: ${new Date().toISOString()}\nBrowser: ${navigator.userAgent}\nViewport: ${innerWidth}x${innerHeight}\nStorage available: ${(()=>{try{return !!localStorage}catch{return false}})()}\nNo collection, build, or screenshot data included.`;
    const done=()=>{const status=q('#betaDiagnosticStatus');if(status)status.textContent=' Copied';};
    if(navigator.clipboard?.writeText)navigator.clipboard.writeText(report).then(done).catch(()=>{const status=q('#betaDiagnosticStatus');if(status)status.textContent=' Copy unavailable'});
    else{const status=q('#betaDiagnosticStatus');if(status)status.textContent=' Clipboard unavailable';}
@@ -7750,7 +7816,7 @@ function personalitySave(name){
 </script>
 <script id="aniimo-v168-theme">
 (function(){
- const KEY='aniimo-dev-v710rc26::aniimo-companion-theme';
+ const KEY='aniimo-dev-v710rc32::aniimo-companion-theme';
  const choices=['dark','light','rainbow','system'];
  function preference(){try{const v=localStorage.getItem(KEY);return choices.includes(v)?v:'dark'}catch{return 'dark'}}
  function apply(){
@@ -7792,7 +7858,7 @@ function personalitySave(name){
  function apply(){
   const grid=document.getElementById('creatures');if(!grid)return;
   let choice='cards';
-  try{const saved=localStorage.getItem('aniimo-dev-v710rc26::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(saved))choice=saved;else if(typeof data!=='undefined'&&data.collectionView&&['large','cards','compact'].includes(data.collectionView.layout))choice=data.collectionView.layout;}catch(e){if(typeof data!=='undefined'&&data.collectionView)choice=data.collectionView.layout||'compact'}
+  try{const saved=localStorage.getItem('aniimo-dev-v710rc32::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(saved))choice=saved;else if(typeof data!=='undefined'&&data.collectionView&&['large','cards','compact'].includes(data.collectionView.layout))choice=data.collectionView.layout;}catch(e){if(typeof data!=='undefined'&&data.collectionView)choice=data.collectionView.layout||'compact'}
   if(typeof data!=='undefined'&&data.collectionView)data.collectionView.layout=choice;
   if(grid.dataset.layout!==choice)grid.dataset.layout=choice;
   const picker=document.getElementById('layoutChoice');if(picker&&picker.value!==choice)picker.value=choice;
@@ -7801,7 +7867,7 @@ function personalitySave(name){
  function init(){apply();requestAnimationFrame(()=>{apply();requestAnimationFrame(apply)});
   const grid=document.getElementById('creatures');if(grid){const observer=new MutationObserver(()=>{if(grid.dataset.layout!==getChoice())apply()});observer.observe(grid,{attributes:true,attributeFilter:['data-layout']});}
  }
- function getChoice(){try{const v=localStorage.getItem('aniimo-dev-v710rc26::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(v))return v}catch(e){}return typeof data!=='undefined'&&data.collectionView?data.collectionView.layout:'cards'}
+ function getChoice(){try{const v=localStorage.getItem('aniimo-dev-v710rc32::aniimo-companion-collection-layout');if(['large','cards','compact'].includes(v))return v}catch(e){}return typeof data!=='undefined'&&data.collectionView?data.collectionView.layout:'cards'}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
 </script><script id="dev223-first-render-recovery">
@@ -7831,8 +7897,8 @@ function personalitySave(name){
 
 <script id="dev235-first-visit-username">
 (()=>{
-  const seenKey='aniimo-dev-v710rc26::username-prompt-seen';
-  const nameKey='aniimo-dev-v710rc26::aniimo-companion-local-profile';
+  const seenKey='aniimo-dev-v710rc32::username-prompt-seen';
+  const nameKey='aniimo-dev-v710rc32::aniimo-companion-local-profile';
   const escapeText=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function dismiss(){
     try{localStorage.setItem(seenKey,'1')}catch{}
@@ -7915,9 +7981,9 @@ function personalitySave(name){
 </style>
 <script id="dev240-collection-setup">
 (()=>{
- const stateKey='aniimo-dev-v710rc26::collection-setup-choice';
- const seenKey='aniimo-dev-v710rc26::username-prompt-seen';
- const usernameKey='aniimo-dev-v710rc26::aniimo-companion-local-profile';
+ const stateKey='aniimo-dev-v710rc32::collection-setup-choice';
+ const seenKey='aniimo-dev-v710rc32::username-prompt-seen';
+ const usernameKey='aniimo-dev-v710rc32::aniimo-companion-local-profile';
  const read=()=>{try{return localStorage.getItem(stateKey)||''}catch{return ''}};
  const write=v=>{try{localStorage.setItem(stateKey,v)}catch{}};
  const hasProgress=()=>{
@@ -8021,7 +8087,7 @@ window.openSettingsPrivacy=()=>{
 </script><script id="dev287-scan-table-editing">
 window.toggleScanTableEditing=button=>{
  const review=document.getElementById('shotReview');if(!review)return;
- const editing=!review.classList.contains('table-editing');review.classList.toggle('table-editing',editing);button.textContent=editing?'Done editing':'Edit values';button.setAttribute('aria-pressed',String(editing));
+ const editing=!review.classList.contains('table-editing');review.classList.toggle('table-editing',editing);button.textContent=editing?'Done editing':'Edit values';button.setAttribute('aria-pressed',String(editing));if(editing){const d=review.querySelector('.rc29-breakdown');if(d)d.open=true;}
  if(editing){const fields=[...review.querySelectorAll('.scan-stat-table input:not([data-shotstat])')];(fields.find(e=>e.value==='')||fields[0])?.focus({preventScroll:true});}
 };
 </script><style>#dialog #shotReview .scan-table-row>.scan-table-stat{grid-column:auto!important;grid-row:auto!important;margin:0!important}#dialog #shotReview .scan-table-row{height:auto!important;max-height:none!important;overflow:visible!important}</style><style id="dev288-refined-card-header">
@@ -8036,7 +8102,7 @@ window.toggleScanTableEditing=button=>{
 </style>
 <script id="aniimo-release-safety">
 (function(){
-  const release='DEV 7.1.0 RC26';
+  const release='DEV 7.1.0 RC32';
   window.aniimoCopyIssue=function(){const e=document.getElementById('aniimoIssueText');navigator.clipboard?.writeText(e.value).then(()=>alert('Report copied')).catch(()=>e.select());};
   window.aniimoReportIssue=function(){
     const section=[...document.querySelectorAll('main > section')].find(x=>!x.classList.contains('hide'))?.id||'unknown';
@@ -12607,7 +12673,7 @@ html body :is(#dialog,#settings,#upgrades) a{overflow-wrap:anywhere}
 @media(max-width:480px){html body #dialog{max-width:calc(100vw - 16px)}html body #dialog :is(input,select,textarea){font-size:max(16px,1em)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}html body *,html body *::before,html body *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 </style><style id="roadmap-610">
-/* DEV 7.1.0 RC26: second refinement pass; data and calculation handlers retained. */
+/* DEV 7.1.0 RC32: second refinement pass; data and calculation handlers retained. */
 body #dialog:has(#appearanceGallery) .profile-heading{position:sticky;top:0;z-index:6;background:var(--panel);margin:0!important;padding:8px 0!important}
 body #dialog #appearanceGallery{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important}
 body #dialog #appearanceGallery .appearance-select-card{min-width:0!important;border-radius:10px!important;padding:5px!important;gap:3px!important;background:var(--panel2)!important;display:flex!important;flex-direction:column!important}
@@ -13968,7 +14034,7 @@ body #settings#settings #backupStatus{padding:5px 7px!important;border-radius:7p
 @media(max-width:749px){body #settings#settings:not(.hide){gap:7px!important}body #settings#settings .pp-help{border-radius:10px 10px 0 0!important}body #settings#settings .settings-support{border-radius:0 0 10px 10px!important;margin-top:-8px!important;border-top:0!important}body #settings#settings .settings-card{padding:8px 10px!important}}
 @media(max-height:700px){body #settings#settings .pathfinder-footer{display:none}body #settings#settings .sig-theme-preview{grid-template-rows:3px 15px!important}}
 </style><script id="pathfinder-control-center-actions">
-(()=>{const editIcon='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5 4 4M4 20l5-1L20 8a2.8 2.8 0 0 0-4-4L5 15z"/></svg>';function update(){const s=document.getElementById('settings'),p=s?.querySelector('.settings-profile');if(!p)return;let stats=p.querySelector('.pathfinder-stats');if(!stats){stats=document.createElement('div');stats.className='pathfinder-stats';stats.innerHTML='<div><b>—</b><small>Prismana collected</small></div><div><b>—</b><small>Profiles complete</small></div>';p.append(stats)}const values=document.querySelectorAll('#collectionDimensions > div > strong');stats.querySelectorAll('b').forEach((b,i)=>{const v=values[i]?.textContent||'—';if(b.textContent!==v)b.textContent=v});const btn=p.querySelector('button');if(btn&&!btn.querySelector('svg')){btn.innerHTML=editIcon;btn.setAttribute('aria-label','Edit profile name')}if(!s.querySelector('.pathfinder-footer')){const f=document.createElement('div');f.className='pathfinder-footer';f.innerHTML='<b>✦ ANIIMO COMPANION</b>DEV 7.1.0 RC26 · Made for Pathfinders';s.append(f)}}let pending=false;function schedule(){if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;update()})}new MutationObserver(schedule).observe(document.body,{childList:true,subtree:true,characterData:true});schedule()})();
+(()=>{const editIcon='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5 4 4M4 20l5-1L20 8a2.8 2.8 0 0 0-4-4L5 15z"/></svg>';function update(){const s=document.getElementById('settings'),p=s?.querySelector('.settings-profile');if(!p)return;let stats=p.querySelector('.pathfinder-stats');if(!stats){stats=document.createElement('div');stats.className='pathfinder-stats';stats.innerHTML='<div><b>—</b><small>Prismana collected</small></div><div><b>—</b><small>Profiles complete</small></div>';p.append(stats)}const values=document.querySelectorAll('#collectionDimensions > div > strong');stats.querySelectorAll('b').forEach((b,i)=>{const v=values[i]?.textContent||'—';if(b.textContent!==v)b.textContent=v});const btn=p.querySelector('button');if(btn&&!btn.querySelector('svg')){btn.innerHTML=editIcon;btn.setAttribute('aria-label','Edit profile name')}if(!s.querySelector('.pathfinder-footer')){const f=document.createElement('div');f.className='pathfinder-footer';f.innerHTML='<b>✦ ANIIMO COMPANION</b>DEV 7.1.0 RC32 · Made for Pathfinders';s.append(f)}}let pending=false;function schedule(){if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;update()})}new MutationObserver(schedule).observe(document.body,{childList:true,subtree:true,characterData:true});schedule()})();
 </script>
 <style id="premium-interactions-6331815">
 body dialog.direct-edit6314{border-radius:18px!important;border:1px solid var(--line)!important;color:var(--text)!important;box-shadow:0 18px 60px #0007!important;max-height:85dvh!important;box-sizing:border-box}
@@ -15010,4 +15076,137 @@ html body #modal.modal.rc24-workspace #dialog.dialog:has(.studio-hero-rc2):has(.
 html body #modal.modal.rc24-workspace #dialog.dialog:has(.studio-hero-rc2):has(.profile-tabs6225 button[data-section="Optimizer"][aria-pressed="true"],#scanPanel:not(.profile-tab-hidden6225)[open] #shotReview:is(.show,.manual-entry-mode,.scan-busy),#buildEditor:not(.profile-tab-hidden6225)[open],.my-profile-unified:not(.profile-tab-hidden6225) .personality-picker) .studio-hero-rc2 .rc21-meta {margin:3px 0 0!important;}
 html body #modal.modal.rc24-workspace #dialog.dialog:has(.studio-hero-rc2):has(.profile-tabs6225 button[data-section="Optimizer"][aria-pressed="true"],#scanPanel:not(.profile-tab-hidden6225)[open] #shotReview:is(.show,.manual-entry-mode,.scan-busy),#buildEditor:not(.profile-tab-hidden6225)[open],.my-profile-unified:not(.profile-tab-hidden6225) .personality-picker) .rc4-studio-progress {margin-top:3px!important;}
 @media(max-width:360px){html body #modal.modal.rc24-workspace #dialog.dialog:has(.studio-hero-rc2) .profile-tabs6225 button {font-size:10px!important;gap:3px!important;}html body #modal.modal.rc24-workspace #dialog.dialog:has(.studio-hero-rc2) .profile-tabs6225 button svg {width:13px;height:13px;flex-basis:13px;}}
+</style>
+
+<style id="rc27-development-navigator">
+html body #modal.modal #dialog.dialog:has(.studio-hero-rc2) #companionSetup:not([hidden]):not(.profile-tab-hidden6225){display:block!important;background:transparent!important;border:0!important;box-shadow:none!important;padding:8px 0!important;margin:0 0 8px!important;}
+html body #modal.modal #dialog.dialog #companionSetup[hidden]{display:none!important;}
+#dialog .rc27-navhead{display:flex;justify-content:space-between;align-items:center;color:var(--co-muted);font-size:11px;letter-spacing:.1em;margin-bottom:8px;}
+#dialog .rc27-navhead strong{color:var(--co-gold);font-size:13px;letter-spacing:0;}
+#dialog .rc27-stages{display:grid;grid-template-columns:repeat(var(--stage-count),minmax(0,1fr));gap:4px;}
+html body #modal.modal #dialog.dialog .rc27-stage{appearance:none;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-width:0;min-height:66px;padding:4px 1px!important;background:transparent!important;border:0!important;border-radius:8px;color:var(--co-muted)!important;font-size:clamp(9px,2.65vw,12px);font-weight:600;touch-action:manipulation;cursor:pointer;}
+#dialog .rc27-stage-icon{display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--co-line);background:var(--co-surface);border-radius:50%;font-size:17px;}
+#dialog .rc27-stage.done .rc27-stage-icon{color:var(--co-success);border-color:var(--co-success);}
+#dialog .rc27-stage.current .rc27-stage-icon{color:var(--co-gold);border-color:var(--co-gold);background:var(--co-deep);}
+#dialog .rc27-stage i{display:block;height:3px;width:85%;background:var(--co-line);border-radius:3px;}
+#dialog .rc27-stage.done i{background:var(--co-success);}
+#dialog .rc27-stage.current i{background:var(--co-gold);}
+html body #modal.modal #dialog.dialog .rc27-stage.done:disabled{opacity:1!important;cursor:default;}
+#dialog .rc27-next{display:grid;gap:8px;margin-top:10px;color:var(--co-gold);font-size:13px;}
+#dialog .rc27-next button{width:100%;}
+#dialog .rc27-later{display:block;margin:0 auto;min-height:44px;background:transparent;border:0;color:var(--co-muted);font-size:12px;touch-action:manipulation;cursor:pointer;}
+html body #modal.modal #dialog.dialog:has(#companionSetup:not([hidden]):not(.profile-tab-hidden6225)) .studio-hero-rc2 .rc4-studio-progress{display:none!important;}
+html body #modal.modal #dialog.dialog:has(#companionSetup:not([hidden]):not(.profile-tab-hidden6225)) .studio-hero-rc2 small:has(+.rc4-studio-progress){display:none!important;}
+html body #modal.modal #dialog.dialog:has(.studio-hero-rc2) :is(button,summary){touch-action:manipulation;}
+#dialog :is(.rc27-stage,.rc27-later,.rc27-next button):active:not(:disabled){filter:brightness(1.2);}
+</style>
+
+<style id="rc29-capability-confirmation">
+html body #modal.modal #dialog.dialog #shotReview .scan-table-row.rc17-composition::after{content:none!important;display:none!important;}
+html body #modal.modal #dialog.dialog #shotReview .scan-table-row{padding:5px 8px!important;min-height:38px!important;}
+#dialog .rc29-relative{display:grid;gap:10px;padding:12px 10px 4px;}
+#dialog .rc29-stat{display:grid;grid-template-columns:minmax(55px,auto) minmax(0,1fr) 30px;align-items:center;gap:10px;font-size:12px;color:var(--co-ink,var(--text));}
+#dialog .rc29-stat strong{text-align:right;color:var(--co-gold,var(--yellow));font-variant-numeric:tabular-nums;font-size:16px;}
+#dialog .rc29-track{display:block;height:6px;border-radius:8px;overflow:hidden;background:var(--co-line,var(--line));}
+#dialog .rc29-track i{display:block;height:100%;background:var(--co-accent,#9baec4);border-radius:8px;}
+#dialog .rc29-scale{font-size:11px;line-height:1.4;color:var(--co-muted,var(--muted));padding:4px 10px 10px;margin:0;}
+#dialog .rc29-breakdown{border-top:1px solid var(--co-line,var(--line));margin:0;}
+#dialog .rc29-breakdown>summary{padding:12px 10px;min-height:44px;cursor:pointer;color:var(--co-accent,var(--text));font-size:12px;touch-action:manipulation;}
+html body #modal.modal #dialog.dialog #shotReview:is(.manual-entry-mode,.table-editing) :is(.rc29-relative,.rc29-scale){display:none!important;}
+html body #modal.modal.rc24-workspace #dialog.dialog.rc29-review-frame{display:flex!important;flex-direction:column!important;overflow:hidden!important;gap:0!important;}
+html body #modal.modal.rc24-workspace #dialog.dialog.rc29-review-frame>.planner-head{position:static!important;inset:auto!important;flex:0 0 auto!important;background:transparent!important;}
+html body #modal.modal.rc24-workspace #dialog.dialog.rc29-review-frame>.rc29-scroll{min-height:0;flex:1 1 auto;overflow:auto;overscroll-behavior:contain;scroll-padding:10px;padding-bottom:8px;}
+html body #modal.modal.rc24-workspace #dialog.dialog.rc29-review-frame #shotReview .shot-actions{display:none!important;}
+#dialog .rc29-footer{flex:0 0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:4px;padding:9px 0 0;border-top:1px solid var(--co-line,var(--line));}
+#dialog .rc29-footer button{min-height:44px;touch-action:manipulation;}
+#dialog .rc29-footer .rc29-discard{background:transparent!important;border:0!important;color:var(--co-muted,var(--muted))!important;font-size:12px;}
+#dialog .rc29-footer button:active:not(:disabled){filter:brightness(1.2);}
+#dialog .rc29-footer button:disabled{opacity:.45!important;cursor:default;}
+</style>
+<script id="rc29-review-frame">
+(()=>{
+ const dialog=document.getElementById('dialog'),modal=document.getElementById('modal');if(!dialog||!modal)return;
+ let pending=false,busy=false;
+ function unwrap(){const body=dialog.querySelector(':scope > .rc29-scroll'),foot=dialog.querySelector(':scope > .rc29-footer');if(body){const y=body.scrollTop;while(body.firstChild)dialog.insertBefore(body.firstChild,body);body.remove();dialog.scrollTop=y;}foot?.remove();dialog.classList.remove('rc29-review-frame');}
+ function sync(){const r=dialog.querySelector('#shotReview'),panel=dialog.querySelector('#scanPanel'),head=dialog.querySelector(':scope > .planner-head');const active=!modal.classList.contains('hide')&&!!head&&!!r&&!!panel&&panel.open&&!panel.classList.contains('profile-tab-hidden6225')&&(r.classList.contains('show')||r.classList.contains('manual-entry-mode'))&&!r.classList.contains('scan-busy');
+ if(!active){if(dialog.classList.contains('rc29-review-frame'))unwrap();return;}
+ const save=r.querySelector('#applyScreenshot'),discard=r.querySelector('#discardScreenshot');if(!save||!discard)return;
+ let body=dialog.querySelector(':scope > .rc29-scroll'),foot=dialog.querySelector(':scope > .rc29-footer');
+ if(!body){const y=dialog.scrollTop;body=document.createElement('div');body.className='rc29-scroll';body.setAttribute('role','region');body.setAttribute('aria-label','Capability review content');const nodes=[...dialog.childNodes].filter(n=>n!==head);dialog.append(body);for(const n of nodes)body.append(n);foot=document.createElement('div');foot.className='rc29-footer';foot.innerHTML='<button type="button" class="btn primary rc29-save">Confirm build</button><button type="button" class="btn rc29-discard">Discard draft</button>';dialog.append(foot);dialog.classList.add('rc29-review-frame');body.scrollTop=y;
+ const primary=foot.querySelector('.rc29-save');primary.addEventListener('click',async()=>{if(busy||save.disabled||!save.isConnected||r.classList.contains('scan-busy'))return;busy=true;primary.disabled=true;try{save.click();}finally{busy=false;if(primary.isConnected){primary.disabled=save.disabled;schedule();}}});
+ foot.querySelector('.rc29-discard').addEventListener('click',()=>{if(!busy&&discard.isConnected&&!discard.disabled)discard.click();});
+ }
+ const primary=foot.querySelector('.rc29-save'),secondary=foot.querySelector('.rc29-discard');const label=save.textContent.trim();if(primary.textContent!==label)primary.textContent=label;if(primary.disabled!==(busy||save.disabled||r.dataset.rc29Saving==='1'))primary.disabled=busy||save.disabled||r.dataset.rc29Saving==='1';if(secondary.disabled!==(busy||discard.disabled||r.dataset.rc29Saving==='1'))secondary.disabled=busy||discard.disabled||r.dataset.rc29Saving==='1';
+ }
+ function schedule(){if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;sync();});}
+ new MutationObserver(schedule).observe(dialog,{childList:true,subtree:true,attributes:true,attributeFilter:['class','open','disabled','hidden','data-rc29-saving']});new MutationObserver(schedule).observe(modal,{attributes:true,attributeFilter:['class']});schedule();
+})();
+</script>
+
+<style id="rc30-definitive-appearance">
+html body #modal #dialog.dialog:has(#rc18Active) .my-profile-back{margin:0!important;padding:4px 8px!important;align-self:start;text-align:left;min-height:44px!important;}
+html body #modal #dialog.dialog:has(#rc18Active) .appearance-gallery-instruction{margin:4px 0 8px!important;font-size:12px!important;line-height:1.4;}
+html body #modal #dialog.dialog #rc18Active{margin:4px 0 10px!important;padding:6px 10px!important;gap:12px!important;}
+html body #modal #dialog.dialog #rc18Active img{height:86px!important;width:32%!important;object-fit:contain!important;}
+html body #modal #dialog.dialog #appearanceGallery{gap:7px!important;margin:6px 0!important;overflow-anchor:none;}
+html body #modal #dialog.dialog #appearanceGallery .appearance-select-card{display:grid!important;grid-template-rows:auto minmax(18px,auto) 18px!important;gap:2px!important;align-content:start!important;padding:4px!important;min-height:0!important;}
+html body #modal #dialog.dialog #appearanceGallery .appearance-select-card strong{margin:2px 0 0!important;line-height:1.25!important;overflow-wrap:anywhere;}
+html body #modal #dialog.dialog #appearanceGallery .rc30-look-state{display:block;text-align:center;font-size:10px;line-height:18px;color:var(--ap-muted);white-space:nowrap;}
+html body #modal #dialog.dialog #appearanceGallery .unlocked .rc30-look-state{color:var(--ap-gold);}
+html body #modal #dialog.dialog #appearanceGallery .is-active .rc30-look-state{color:var(--co-success);font-weight:650;}
+html body #modal #dialog.dialog #appearanceGallery .rc18-ownership{width:30px!important;height:30px!important;min-width:30px!important;min-height:30px!important;top:5px!important;right:5px!important;touch-action:manipulation;}
+html body #modal #dialog.dialog #appearanceGallery .rc18-ownership::after{content:'';position:absolute;inset:-7px;border-radius:50%;}
+html body #modal #dialog.dialog #appearanceGallery .rc18-ownership:disabled{opacity:1!important;}
+html body #modal #dialog.dialog #appearanceGallery :is(button):active:not(:disabled){filter:brightness(1.22);}
+html body #modal #dialog.dialog #rc18Preview{padding:8px!important;gap:5px!important;margin:4px 0 10px!important;}
+html body #modal #dialog.dialog #rc18Preview img{height:clamp(120px,36vw,220px)!important;object-fit:contain!important;}
+html body #modal #dialog.dialog #rc18Preview .btn{touch-action:manipulation;}
+html body #modal #dialog.dialog #rc18Preview .btn:active:not(:disabled){filter:brightness(1.18);}
+html body #modal #dialog.dialog:has(#rc18Active) .rc24-scroll{overflow-anchor:none;}
+</style>
+
+<style id="rc31-dedicated-personality">
+html body #modal.modal #dialog.dialog:has(.rc31-editor) > :not(.planner-head):not(.my-profile-unified):not(:has(.rc31-editor)){display:none!important;}
+html body #modal.modal #dialog.dialog:has(.rc31-editor) .my-profile-unified > :not(#personalityPanel):not(:has(.rc31-editor)){display:none!important;}
+html body #modal.modal #dialog.dialog #personalityPanel:has(.rc31-editor) > :not(.rc31-editor){display:none!important;}
+html body #modal.modal #dialog.dialog:has(.rc31-editor) :is(.my-profile-unified,#personalityPanel,.rc31-editor){background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0!important;min-height:0!important;}
+html body #modal.modal #dialog.dialog .rc31-editor{display:grid!important;gap:12px!important;}
+#dialog .rc31-heading span{font-size:10px;letter-spacing:1.2px;color:var(--co-muted);}
+#dialog .rc31-heading h2{display:block!important;margin:3px 0!important;color:var(--co-gold);font-size:24px;}
+#dialog .rc31-heading p{margin:0;color:var(--co-muted);font-size:12px;}
+html body #modal.modal #dialog.dialog .rc31-editor #personalityEffects{margin:0!important;padding:12px!important;background:var(--co-surface,var(--panel))!important;border:1px solid var(--co-line,var(--line))!important;border-radius:12px!important;}
+#dialog .rc31-recommend{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-bottom:10px;border-bottom:1px solid var(--co-line);margin-bottom:8px;color:var(--co-gold);font-size:11px;}
+#dialog .rc31-recommend strong{font-size:20px;}
+html body #modal.modal #dialog.dialog .rc31-editor .personality-choice-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px!important;margin:0!important;}
+html body #modal.modal #dialog.dialog .rc31-editor .personality-choice{min-height:48px!important;padding:6px 2px!important;touch-action:manipulation;}
+html body #modal.modal #dialog.dialog .rc31-editor .personality-actions{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:6px!important;margin:0!important;position:static!important;}
+#dialog .rc31-secondary{display:flex;justify-content:space-between;gap:8px;}
+html body #modal.modal #dialog.dialog .rc31-editor .rc31-secondary button,html body #modal.modal #dialog.dialog .rc31-editor .rc31-remove{background:transparent!important;border:0!important;box-shadow:none!important;color:var(--co-muted)!important;min-height:44px!important;font-size:12px!important;}
+#dialog .rc31-save{min-height:48px;touch-action:manipulation;}
+#dialog .rc31-save:disabled{opacity:.45!important;cursor:default;}
+#dialog .rc31-editor button:active:not(:disabled){filter:brightness(1.2);}
+#dialog .rc31-editor .personality-note{margin:0!important;font-size:11px!important;}
+</style>
+
+<style id="rc32-equipment-finish">
+html body #modal #dialog.dialog:has(.binding619) .profile-next-steps{display:none!important;}
+html body #modal #dialog.dialog:has(.binding619) .binding619{padding:12px!important;gap:9px!important;}
+html body #modal #dialog.dialog:has(.binding619) .recommended-bind-hero{margin:0!important;padding:4px 0!important;min-height:0!important;}
+html body #modal #dialog.dialog:has(.binding619) .binding619-counts{margin:0!important;padding:8px 0!important;}
+html body #modal #dialog.dialog .binding619-toggle{min-height:48px!important;touch-action:manipulation;cursor:pointer;}
+html body #modal #dialog.dialog .binding619-toggle input:checked{accent-color:#709b85!important;background-color:#709b85!important;}
+#dialog .rc32-binding-status{padding:9px 10px;border:1px solid var(--co-line,#405063);border-radius:9px;background:var(--co-surface,#1b2531);font-size:12px;}
+#dialog .rc32-binding-status strong{color:var(--co-muted,#aab9ca);font-size:12px;}
+#dialog .rc32-binding-status[data-state=pending]{border-color:#8a7552;}
+#dialog .rc32-binding-status[data-state=pending] strong{color:var(--co-gold,#ead5ac);}
+#dialog .rc32-binding-status[data-state=saved] strong{color:var(--co-success,#83b49a);}
+html body #modal #dialog.dialog .rc32-binding-status .binding-copy-note{margin:4px 0 0!important;padding:0!important;font-size:11px!important;}
+html body #modal #dialog.dialog .binding619-actions{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:3px!important;}
+html body #modal #dialog.dialog .binding619-actions button{touch-action:manipulation;min-height:44px!important;}
+html body #modal #dialog.dialog .binding619-actions .rc32-back{background:transparent!important;border:0!important;box-shadow:none!important;color:var(--co-muted,#aab9ca)!important;}
+#dialog .rc32-save-error{color:var(--co-gold,#ead5ac);font-size:12px;margin:4px 0;}
+#dialog .binding619-actions button:active:not(:disabled){filter:brightness(1.2);}
+#dialog .binding619-actions button:disabled{opacity:.6;cursor:wait;}
+#dialog .binding619-alternates summary{min-height:44px;touch-action:manipulation;}
+#dialog .binding619-alternates .multi-bind-option{min-height:44px;touch-action:manipulation;}
 </style>
