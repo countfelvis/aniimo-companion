@@ -13104,3 +13104,57 @@ body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout=
   }
 }
 </style>
+
+<style id="mobile-aurora-spacing">
+/* Dark mobile collection refinements from the iPhone review. */
+@media (max-width:749px) {
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body nav#tabs.tabs {
+    padding:3px 5px!important;
+  }
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body nav#tabs.tabs>button[data-tab] {
+    min-height:44px!important;padding:3px 2px 5px!important;gap:2px!important;
+  }
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body nav#tabs.tabs .nav-symbol,
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body nav#tabs.tabs .nav-symbol svg {
+    width:17px!important;height:17px!important;
+  }
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="compact"] article.creature:not([data-state="complete"])>.portrait {
+    background:radial-gradient(ellipse at 55% 20%,#9e61c32b,transparent 62%),radial-gradient(ellipse at 27% 56%,#328d8b26,transparent 58%)!important;
+  }
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="cards"] article.premium-cards {
+    display:flex!important;flex-direction:column!important;gap:0!important;
+  }
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="cards"] article.premium-cards .premium-info {
+    flex:1 1 auto;gap:3px!important;padding-bottom:6px!important;
+  }
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="cards"] article.premium-cards :is(.premium-location,.dossier-mini-summary) {
+    margin-top:3px!important;margin-bottom:3px!important;padding-block:2px!important;
+  }
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="cards"] article.premium-cards .premium-equipment {
+    margin-top:auto!important;min-height:51px;display:flex!important;align-items:center;padding-top:4px!important;
+  }
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="cards"] article.premium-cards .premium-equipment>button {width:100%;min-width:0}
+}
+@media (min-width:375px) and (max-width:749px) {
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="large"] article.creature.battle631 {
+    grid-template-columns:minmax(0,45%) minmax(0,1fr)!important;column-gap:7px!important;
+    background-size:auto,auto 90%!important;background-position:center,left bottom!important;
+    background-color:#0a1320!important;
+  }
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="large"] article.creature.battle631 .premium-art {
+    background:radial-gradient(ellipse at 45% 58%,#268d6138,transparent 64%)!important;
+  }
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="large"] article.creature.battle631 .premium-art .art-window img.creature-art {
+    object-position:50% 27%!important;
+  }
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="large"] article.creature.battle631 .battle6327-flow {gap:2px!important}
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="large"] article.creature.battle631 .battle6327-flow>.battle631-power {
+    min-height:0!important;gap:0!important;padding-block:1px!important;
+  }
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="large"] article.creature.battle631 .battle6327-flow>.battle631-rank {min-height:24px!important;padding:0!important}
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="large"] article.creature.battle631 .dossier-level-type {gap:3px 6px!important;display:flex!important;align-items:center!important}
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="large"] article.creature.battle631 .dossier-level-type .battle631-level {min-height:24px!important;font-size:11px!important}
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="large"] article.creature.battle631 .dossier-level-type .premium-types {margin:0!important;padding:0!important;min-height:0!important}
+  html:not([data-aniimo-theme="light"]):not([data-aniimo-theme="rainbow"]) body #collection#collection :is(#creatures,#otherFullCardGrid).grid[data-layout="large"] article.creature.battle631 .battle631-detail {margin-top:6px!important}
+}
+</style>
